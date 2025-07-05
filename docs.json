@@ -7,6 +7,9 @@
     "light": "#fafafa",
     "dark": "#0a0a0a"
   },
+  "icons": {
+    "library": "fontawesome"
+  },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
@@ -22,7 +25,13 @@
           {
             "group": "Integrations",
             "pages": [
-              "Email"
+              "Email",
+              "Jira",
+              "Calender",
+              "Github",
+              "Confluence",
+              "Google_Sheets",
+              "Google_Docs"
             ]
           }
         ]
@@ -30,11 +39,7 @@
     ],
     "global": {
       "anchors": [
-        {
-          "anchor": "Community",
-          "href": "https://discord.gg/8qVb5tC4",
-          "icon": "discord"
-        },
+        
         {
           "anchor": "Blog",
           "href": "https://www.dume.ai/blog",
@@ -50,8 +55,8 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:support@dume.ai"
+        "label": "Community",
+        "href": "https://discord.gg/8qVb5tC4"
       }
     ],
     "primary": {
