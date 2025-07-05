@@ -56,7 +56,7 @@
     "primary": {
       "type": "button",
       "label": "Try Now",
-      "href": "https://dume.ai"
+      "href": "https://app.dume.ai"
     }
   },
   "footer": {
