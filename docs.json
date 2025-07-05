@@ -10,6 +10,12 @@
   "icons": {
     "library": "fontawesome"
   },
+  "seo": {
+    "indexing": "all",
+     "metatags": {
+        "og:image": "/images/default_meta_tag.png"
+    }
+},
   "favicon": "/favicon.svg",
   "navigation": {
     "groups":[ {
