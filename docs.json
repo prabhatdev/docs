@@ -12,11 +12,7 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "tabs": [
-      {
-        "tab": "Guides",
-        "groups": [
-          {
+    "groups":[ {
             "group": "Get Started",
             "pages": [
               "index"
@@ -33,10 +29,8 @@
               "Google_Sheets",
               "Google_Docs"
             ]
-          }
-        ]
-      }
-    ],
+          }],
+    
     "global": {
       "anchors": [
         
