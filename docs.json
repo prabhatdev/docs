@@ -24,6 +24,14 @@
               "index"
             ]
           },
+      {
+            "group": "Features",
+            "pages": [
+              "Tell Dume who you are",
+              "Deep Research",
+              "MCP Servers"
+            ]
+          },
           {
             "group": "Integrations",
             "pages": [
@@ -35,7 +43,9 @@
               "Google_Sheets",
               "Google_Docs"
             ]
-          }],
+          }
+    
+    ],
     
     "global": {
       "anchors": [
