@@ -1,0 +1,66 @@
+---
+title: "MCP Servers"
+description: "Dume supports integration of remote MPC servers within few clicks."
+---
+
+## What is MCP server?
+
+An MCP server implements the Model Context Protocol, acting as a middleware that offers tools, data, and prompts to AI models via a standardized interface. It handles context management, tool discovery, and state persistence—enabling AI agents to connect seamlessly with external systems and maintain multi‑turn interactions.
+
+## Popular remote MCP servers
+
+<Note>
+  You can use https://composio.dev/ for remote MCP servers
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Notion" icon="sparkles">
+    ## Use Notion to store all the details from your conversations in the Dume app. It can also fetch any document from Notion and add it as additional context to the discussion.
+  </Card>
+  <Card title="Figma" icon="sparkles">
+    You’ll thank the Lord after using Figma MCP in your Dume ai. You can code any Figma design files. It will definitely make your life easier as a developer.
+  </Card>
+  <Card title="Supabase" icon="sparkles">
+    ## Supabase for managing the database from Dume. This is yet another popular use case of MCP servers. You can connect Dume.ai with your Supabase database.
+  </Card>
+  <Card title="Blender" icon="sparkles">
+    Blender MCP is the hottest thing right now. You can connect Dume AI to this and interactively build 3d renders just by prompting it.
+  </Card>
+</CardGroup>
+
+<Steps>
+  <Step title="Visit Dume.ai">
+    Select MCP server on left.
+  </Step>
+  <Step title="Add your first Server">
+    <img
+      src="/images/Screenshot2025-07-08at12.01.03AM.png"
+      alt="Screenshot2025 07 08at12 01 03AM Pn"
+      title="Screenshot2025 07 08at12 01 03AM Pn"
+      style={{ width:"59%" }}
+    />
+  </Step>
+  <Step title="Select SSE or HTTP server.">
+    Select whether your MCP server is SSE or HTTP server.
+
+    <img
+      src="/images/Screenshot2025-07-08at12.01.56AM.png"
+      alt="Screenshot2025 07 08at12 01 56AM Pn"
+      title="Screenshot2025 07 08at12 01 56AM Pn"
+      style={{ width:"44%" }}
+    />
+  </Step>
+  <Step title="MCP server details">
+    Enter the MCP server name, Server URL and a brief description about the MPC server.
+
+    <img
+      src="/images/Screenshot2025-07-08at12.04.24AM.png"
+      alt="Screenshot2025 07 08at12 04 24AM Pn"
+      title="Screenshot2025 07 08at12 04 24AM Pn"
+      style={{ width:"56%" }}
+    />
+  </Step>
+  <Step title="Add MCP Server">
+    Click Add Server and wait for [Dume.ai](http://Dume.ai) to connect to the server. Once added, Dume ai will call the MCP server automatically whenever required.
+  </Step>
+</Steps>
