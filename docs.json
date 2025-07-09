@@ -29,7 +29,8 @@
             "pages": [
               "MCPServer",
               "Personalisation",
-              "WebSearch"
+              "WebSearch",
+              "ImageGen"
             ]
           },
           {
