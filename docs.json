@@ -30,7 +30,8 @@
               "MCPServer",
               "Personalisation",
               "WebSearch",
-              "ImageGen"
+              "ImageGen",
+              "MultipleLLM"
             ]
           },
           {
