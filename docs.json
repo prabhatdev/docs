@@ -27,23 +27,23 @@
       {
             "group": "Features",
             "pages": [
-              "MCPServer",
-              "Personalisation",
-              "WebSearch",
-              "ImageGen",
-              "MultipleLLM"
+              "mcp_Server",
+              "personalisation",
+              "webSearch",
+              "image_gen",
+              "multiple_llm"
             ]
           },
           {
             "group": "Integrations",
             "pages": [
-              "Email",
-              "Jira",
-              "Calender",
-              "Github",
-              "Confluence",
-              "Google_Sheets",
-              "Google_Docs"
+              "email",
+              "jira",
+              "calender",
+              "github",
+              "confluence",
+              "google_sheets",
+              "google_docs"
             ]
           }
     
