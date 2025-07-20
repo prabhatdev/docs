@@ -25,6 +25,12 @@
             ]
           },
       {
+            "group": "Workflows",
+            "pages": [
+              "workflows/getting-started"
+            ]
+          },
+      {
             "group": "Features",
             "pages": [
               "mcp_server",
