@@ -27,7 +27,7 @@
       {
             "group": "Features",
             "pages": [
-              "mcp_Server",
+              "mcp_server",
               "personalisation",
               "webSearch",
               "image_gen",
