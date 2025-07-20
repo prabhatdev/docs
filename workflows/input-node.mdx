@@ -1,0 +1,99 @@
+---
+title: "Input Node"
+description: "Define dynamic input fields for user-controlled automation with validation, structure, and reusability."
+---
+
+## Input Node:
+
+The **Input Node** is the foundation of any workflow in Dume AI. It lets you define all the dynamic fields that a user must provide when triggering a workflow — such as the topic of a post, type of audience, desired tone, and more.
+
+<img
+  src="/images/Screenshot2025-07-21at12.51.34AM.png"
+  alt="Screenshot 2025-07-21 at 12.51.34 AM.png"
+  title="Screenshot 2025-07-21 at 12.51.34 AM.png"
+  style={{ width:"36%" }}
+/>
+
+## Configuration Options
+
+Each input field added to this node supports, for exmaple:
+
+| Field           | Description                      | Type   | Required? |
+| --------------- | -------------------------------- | ------ | --------- |
+| `post_topic`    | The main subject of the content  | string | ✅         |
+| `goal`          | Purpose of the post              | select | ✅         |
+| `audience_type` | Who you’re targeting             | select | ✅         |
+| `tone`          | Desired tone (e.g., formal, fun) | select | ✅         |
+
+## Visual Reference
+
+<img
+  src="/images/Screenshot2025-07-21at12.52.45AM.png"
+  alt="Screenshot 2025-07-21 at 12.52.45 AM.png"
+  title="Screenshot 2025-07-21 at 12.52.45 AM.png"
+  style={{ width:"34%" }}
+/>
+
+This is how the Input Node appears when added to your workflow. Each field is marked as **Required** and type-labeled (e.g., `string`, `select`) for easy validation.
+
+## Field Types Supported
+
+- `string` – Plain text input.
+- `number` – Numeric input.
+- `boolean` – True/False switches.
+- `select` – Dropdown menu with predefined values.
+- `object` – JSON-like structure for complex data (advanced).
+- `array` – Lists of items (coming soon).
+
+<img
+  src="/images/Screenshot2025-07-21at12.53.28AM.png"
+  alt="Screenshot 2025-07-21 at 12.53.28 AM.png"
+  title="Screenshot 2025-07-21 at 12.53.28 AM.png"
+  style={{ width:"34%" }}
+/>
+
+---
+
+## Practical Use Cases
+
+<CardGroup cols={2}>
+  <Card title="Social Media Post Generator" icon="sparkles">
+    
+
+    | Field           | Value                   |
+    | :-------------- | :---------------------- |
+    | `post_topic`    | “AI Tools for Founders” |
+    | `goal`          | “Engagement”            |
+    | `audience_type` | “Startup Founders”      |
+    | `tone`          | “Professional”          |
+
+    Use these values to generate a LinkedIn post with an engaging hook, body, and CTA.
+  </Card>
+  <Card title="Ad Copy Generator" icon="sparkles">
+    
+
+    | Field           | Value                        |
+    | :-------------- | :--------------------------- |
+    | `post_topic`    | “Productivity App for Teams” |
+    | `goal`          | “Lead Generation”            |
+    | `audience_type` | “Remote Managers”            |
+    | `tone`          | “Energetic”                  |
+
+    Feed this input into LLM and Template nodes to generate ad titles, descriptions, and call-to-actions.
+  </Card>
+</CardGroup>
+
+## How It Works With Other Nodes
+
+- Refer to inputs in **LLM Nodes** using `/post_topic`, `/goal`, etc.
+- Use inputs in **Condition Nodes** for branching logic.
+- Populate **Templates** dynamically with user data.
+
+## Best Practices
+
+- **Mark all essential fields as required** to avoid runtime errors.
+- `Use select for controlled vocabularies` (like tone or goal).
+- **Avoid using long, ambiguous string fields** when options can be structured.
+- **Test with different combinations of inputs** to ensure downstream nodes handle variability.
+
+---
