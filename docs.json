@@ -39,6 +39,12 @@
               "workflows/output-node"
             ]
           },
+       {
+            "group": "Workflow examples",
+            "pages": [
+              "workflow-examples/linkdin-generator"
+            ]
+          },
       {
             "group": "Features",
             "pages": [
