@@ -1,0 +1,113 @@
+---
+title: "LLM Node"
+description: "Large Language Model (LLM) node can be used to generate dynamic, AI-powered content in your workflows."
+---
+
+import { Alert, Card } from './components'; // Example of MDX component import
+
+# Using the LLM Node
+
+The Large Language Model (LLM) Node is the powerhouse of your Dume AI workflow, enabling you to integrate advanced AI capabilities for a wide range of tasks. Whether you need to generate creative text, summarize complex information, translate languages, or extract structured data, the LLM node provides a flexible and powerful interface to state-of-the-art AI models.
+
+You can chain multiple LLM nodes together to build sophisticated pipelines, where the output of one node becomes the contextual input for the next, allowing for highly refined and specific results.
+
+<Alert type="info">
+  **Key Feature:** The LLM node's core strength is its ability to use dynamic variables from previous nodes, making your prompts context-aware and highly reusable.
+</Alert>
+
+## Configuration Panel
+
+To use the LLM node, you need to configure its properties. The panel is divided into three main sections:
+
+### 1. Model
+
+This dropdown menu allows you to select the AI model that will process your request. Each model may have different strengths, such as proficiency in specific languages, coding ability, or creative writing.
+
+- **Example:** For generating marketing copy, you might select **Dume AI Chat**, which is optimized for conversational and creative text generation.
+
+  <img
+    src="/images/Screenshot2025-07-21at7.39.58AM.png"
+    alt="Screenshot 2025-07-21 at 7.39.58 AM.png"
+    title="Screenshot 2025-07-21 at 7.39.58 AM.png"
+    style={{ width:"59%" }}
+  />
+
+### 2. Messages (The Prompt)
+
+This is where you provide the instructions for the AI. A well-crafted prompt is crucial for getting the desired output. You can add one or more messages to simulate a conversation or provide layered context.
+
+**Dynamic Variables:**
+The most powerful feature here is the ability to insert data from previous nodes. To reference a variable, use the format `{type NODE_NAME/field_name}`. The node will dynamically substitute this placeholder with the actual data when the workflow runs.
+
+- **Example Prompt:**
+  Write body content using tone: tring INPUT tone, goal: string INPUT goal for audience: string INPUT audience_type
+
+In this example, the prompt pulls the `tone`, `goal`, and `audience_type` from a preceding **Input Node** to generate highly targeted content.
+
+<img
+  src="/images/Screenshot2025-07-21at7.40.38AM.png"
+  alt="Screenshot 2025-07-21 at 7.40.38 AM.png"
+  title="Screenshot 2025-07-21 at 7.40.38 AM.png"
+  style={{ width:"61%" }}
+/>
+
+### 3. Output Schema
+
+This section defines the structure of the data that the LLM node will return. You have two options:
+
+- **Simple Output (Default):** The node returns a single text string in a field named `answer`. This is useful for straightforward text generation.
+- **Structured Output:** You can define a specific JSON schema for the output. This is incredibly useful when you need the AI to return data in a predictable format with multiple fields, such as extracting names, dates, and summaries from a block of text.
+
+  <img
+    src="/images/Screenshot2025-07-21at7.41.57AM.png"
+    alt="Screenshot 2025-07-21 at 7.41.57 AM.png"
+    title="Screenshot 2025-07-21 at 7.41.57 AM.png"
+    className="mr-auto"
+    style={{ width:"27%" }}
+  />
+
+<img
+  src="/images/Screenshot2025-07-21at7.41.32AM.png"
+  alt="Screenshot 2025-07-21 at 7.41.32 AM.png"
+  title="Screenshot 2025-07-21 at 7.41.32 AM.png"
+  style={{ width:"37%" }}
+/>
+
+## Examples in Practice
+
+Let's explore how to use the LLM node in a real-world content creation workflow. Here we'll use a LinkdIn post generator as an example.
+
+### Example 1: The Hook Generator
+
+The first step in creating engaging content is a strong opening. We can build a dedicated LLM node for this.
+
+<Card title="Hook Generator Node">
+  - **Goal:** Generate 2-3 engaging hook lines for a social media post.
+  - **Model:** `Dume AI Chat`
+  - **Prompt:** `Write 2-3 hook lines for a LinkedIn post on: {string INPUT/post_topic}`
+  - **Output:** A single string containing the generated hooks.
+</Card>
+
+### Example 2: The Body Content Generator
+
+Once you have a hook, the next step is to write the main body of the post. This node takes multiple inputs to tailor the content precisely.
+
+<Card title="Body Content Generator Node">
+  - **Goal:** Generate the main content for a LinkedIn post based on specific parameters.
+  - **Model:** `Dume AI Chat`
+  - **Prompt:** `Write body content using tone: {string INPUT/tone}, goal: {string INPUT/goal} for audience: {string INPUT/audience_type}`
+  - **Output:** A single string containing the generated post body.
+</Card>
+
+### Example 3: Hashtag and CTA Suggester
+
+To complete the post, a final LLM node can suggest relevant hashtags and a strong call-to-action (CTA). This node would use the outputs from the previous two.
+
+<Card title="Hashtag & CTA Suggester Node">
+  - **Goal:** Suggest relevant hashtags and a compelling CTA for the generated post.
+  - **Model:** `Dume AI Chat`
+  - **Prompt:** `Based on the following post, suggest 5 relevant hashtags and a strong call-to-action. Post: {string Hook_Generator/answer} {string Body_Content_Generator/answer}`
+  - **Output:** A single string with the suggested hashtags and CTA.
+</Card>
+
+This chained approach ensures that each part of the content is coherent and builds upon the previous step, resulting in a high-quality, ready-to-publish post.
