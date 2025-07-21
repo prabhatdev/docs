@@ -40,7 +40,8 @@
               "personalisation",
               "webSearch",
               "image_gen",
-              "multiple_llm"
+              "multiple_llm",
+              "deepresearch"
             ]
           },
           {
