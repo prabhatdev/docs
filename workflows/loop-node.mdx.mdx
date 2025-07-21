@@ -1,0 +1,72 @@
+---
+title: "Loop Node"
+description: "A practical guide to automating repeated actions over lists or arrays in your workflow using the Loop Tool."
+---
+
+<img
+  src="/images/Screenshot2025-07-22at1.05.15AM.png"
+  alt="Screenshot 2025-07-22 at 1.05.15 AM.png"
+  title="Screenshot 2025-07-22 at 1.05.15 AM.png"
+  style={{ width:"30%" }}
+/>
+
+The **Loop Node** (Loop Tool) in Dume AI enables you to automate the repeated execution of workflow steps for every item in an array or list. This is ideal when you want to process a collection of data—such as multiple records, users, or inputs—with the same set of actions, then aggregate and handle the results flexibly.
+
+## Core Features
+
+- **Array Source Selection:** Choose the array or list from any previous node whose items should be processed.
+- **FOR EACH Branch:** Define actions or sub-flows to execute for every item in the selected array.
+- **Aggregation Modes:** Gather the results from each iteration as an array, or choose another aggregation strategy.
+- **Maximum Iterations:** Control upper limits (default: 1000) to prevent infinite or runaway loops.
+- **RESULTS Branch:** Add nodes to process after all iterations have finished, using the aggregated data.
+
+## How It Works
+
+1. **Configure the Array Source:**
+   Click “Select Array Source” to pick the output (list/array) from a previous step.
+2. **Set Aggregation Mode:**
+   Decide how results from each item should be collected (commonly as an array).
+3. **Define Iteration Logic (FOR EACH):**
+   Attach nodes that process each element (e.g., run analysis, transform data, make API calls).
+4. **Safety with Maximum Iterations:**
+   Enter a safeguard value (default: 1000) so your loop cannot run forever by mistake.
+5. **Post-Loop Processing (RESULTS):**
+   After all items are processed, continue your workflow with the aggregated output.
+
+<img
+  src="/images/Screenshot2025-07-22at1.05.59AM.png"
+  alt="Screenshot 2025-07-22 at 1.05.59 AM.png"
+  title="Screenshot 2025-07-22 at 1.05.59 AM.png"
+  style={{ width:"32%" }}
+/>
+
+## Example Use Case
+
+### Scenario: Bulk Email Personalization
+
+- **Input Node** provides an array of user profiles.
+- **Loop Node** iterates over each profile.
+  - In the **FOR EACH** branch, connect a Template or LLM Node to personalize an email for each user.
+- Once all emails are generated, the **RESULTS** branch sends the full batch to an Email Tool Node for delivery.
+
+## Diagram
+
+```plaintext
+[Input Node: User List] 
+      ↓
+   [Loop Node]
+   ├─ FOR EACH ──> [Personalize Email Node]
+   ↓
+ RESULTS
+   ↓
+[Bulk Send Node]
+```
+
+## Best Practices
+
+- **Ensure Array Source Validity:** Always confirm the selected array is not empty or malformed.
+- **Set Maximum Iterations:** Prevent accidental infinite loops with an appropriate safety limit.
+- **Aggregate With Care:** Choose aggregation mode based on how downstream nodes expect the data.
+- **Document Loop Purpose:** Use node description for clarity and maintainability, especially in complex flows.
+
+The **Loop Node** brings repetitive, scalable processing to your automations, letting you handle lists or batches with the same simplicity as single items—powering everything from mass personalization to batch data integrations.
