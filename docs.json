@@ -30,7 +30,12 @@
               "workflows/getting-started",
               "workflows/input-node",
               "workflows/llm-node",
-              "workflows/condition-node"
+              "workflows/condition-node",
+              "workflows/tool-node",
+              "workflows/http-node",
+              "workflows/loop-node",
+              "workflows/template-node",
+              "workflows/output-node"
             ]
           },
       {

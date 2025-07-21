@@ -22,36 +22,36 @@ Building a workflow in Dume AI is a straightforward process:
 Below is a comprehensive list of the nodes you can use to build your workflows. Each node serves a specific function, allowing you to create highly customized and powerful automation tools.
 
 <CardGroup cols={2}>
-  <Card title="Input Node" icon="sparkles" iconType="regular" color="#NaNNaNNaN">
+  <Card title="Input Node" icon="sparkles" iconType="regular" color="#NaNNaNNaN" href="/workflows/input-node">
     The Input Node is the starting point of your workflow. It defines the initial data that your workflow will receive when it's executed as a tool by the chatbot. You can specify the required input fields, their data types (e.g., text, number, boolean), and validation rules.
   </Card>
-  <Card title="LLM Node" icon="robot">
+  <Card title="LLM Node" icon="robot" href="/workflows/llm-node">
     The Large Language Model (LLM) Node allows you to leverage the power of AI to generate text or structured data. You can pass data from previous nodes to the LLM to create context-aware responses. To reference an output from a preceding node, you can use a '/' mention.
   </Card>
-  <Card title="Condition Node" icon="sparkles">
+  <Card title="Condition Node" icon="sparkles" href="/workflows/condition-node">
     The Condition Node adds branching logic to your workflow. It allows you to create if-else statements that route the workflow down different paths based on the evaluation of data from previous nodes.
   </Card>
-  <Card title="Note Node" icon="sparkles">
+  <Card title="Note Node" icon="sparkles" href="/workflows/note-node">
     The Note Node is for documentation purposes. It doesn't affect the workflow's logic but allows you to add comments and explanations. This is incredibly helpful for complex workflows, making them easier for you and your team members to understand and maintain.
   </Card>
-  <Card title="Tool Node" icon="sparkles">
+  <Card title="Tool Node" icon="sparkles" href="/workflows/tool-node">
     The Tool Node enables your workflow to execute other Dume AI (MCP) tools or connect to external services. You provide instructions in natural language, and the LLM will automatically generate the necessary parameters to run the tool based on the context of your workflow.
   </Card>
-  <Card title="Http Node" icon="sparkles">
+  <Card title="Http Node" icon="sparkles" href="/workflows/http-node">
     The Http Node allows your workflow to interact with external APIs and web services. You can make HTTP requests (GET, POST, etc.) to fetch data from or send data to third-party platforms.
   </Card>
-  <Card title="Code Node" icon="sparkles">
+  <Card title="Code Node" icon="sparkles" href="/workflows/code-node">
     The Code Node gives you the ability to run custom code scripts (e.g., JavaScript, Python) within your workflow. This node can access data from previous nodes, allowing for advanced data manipulation, calculations, or logic that goes beyond the capabilities of the other nodes. _(Note: This feature is coming soon.)_
   </Card>
-  <Card title="Template Node" icon="sparkles">
+  <Card title="Template Node" icon="sparkles" href="/workflows/template-node">
     The Template Node is used to create dynamic documents, emails, reports, or other formatted text. It combines static text with variables from previous nodes, allowing for powerful content generation.
   </Card>
-  <Card title="Loop Node" icon="sparkles">
+  <Card title="Loop Node" icon="sparkles" href="/workflows/loop-node">
     The Loop Node allows you to repeat a set of actions for each item in a list, array, or collection. This is essential for processing data in batches.
 
     - **Example:** If your workflow starts with a list of 10 article topics from an Input Node, you can use a Loop Node to run a series of LLM and Tool Nodes for each topic individually, generating a unique article for each one.
   </Card>
-  <Card title="Output Node" icon="sparkles">
+  <Card title="Output Node" icon="sparkles" href="/workflows/output-node">
     The Output Node is the final step in your workflow. It collects data from any of the previous nodes and structures it as the final result of the tool's execution. This is the data that will be returned to the chatbot or the system that initiated the workflow.
   </Card>
 </CardGroup>
