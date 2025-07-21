@@ -44,7 +44,7 @@
             "pages": [
               "mcp_server",
               "personalisation",
-              "webSearch",
+              "web_search",
               "image_gen",
               "multiple_llm",
               "deepresearch"
