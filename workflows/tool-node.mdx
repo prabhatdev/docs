@@ -3,12 +3,31 @@ title: "Tool Node"
 description: "The Tool Node is a versatile component in Dume AI workflows that enables you to execute a wide range of integrated tools or connect with external services directly within your automation pipeline. This node acts as a bridge between your AI-powered logic and actionable APIs, platform integrations, or backend utilities."
 ---
 
+<img
+  src="/images/Screenshot2025-07-22at12.21.13AM.png"
+  alt="Screenshot 2025-07-22 at 12.21.13 AM.png"
+  title="Screenshot 2025-07-22 at 12.21.13 AM.png"
+  style={{ width:"46%" }}
+/>
+
+<Info>
+  Tools Node support MCP tools too. For more on how to link MCP tools please checkout this [guide.](/mcp_server)
+</Info>
+
 ## What Can the Tool Node Do?
 
 - Invoke authenticated platform integrations (e.g., LinkedIn, Slack, CRM systems).
-- Automate business operations by triggering third-party services.
+- Automate business operations by triggering third-party services via MCP servers.
 - Chain external tool responses into broader AI workflows for further processing.
 - Seamlessly extract and utilize output data from any tool for downstream workflow steps.
+
+  <img
+    src="/images/Screenshot2025-07-22at12.29.29AM.png"
+    alt="Screenshot 2025-07-22 at 12.29.29 AM.png"
+    title="Screenshot 2025-07-22 at 12.29.29 AM.png"
+    className="mr-auto"
+    style={{ width:"36%" }}
+  />
 
 ## How the Tool Node Works
 
@@ -19,7 +38,16 @@ When placed in a workflow, the Tool Node:
 3. Executes the tool or integration.
 4. Returns the output for use in next nodes (conditionals, templates, outputs, etc.).
 
+
+
 ## Configuring the Tool Node
+
+<img
+  src="/images/Screenshot2025-07-22at12.21.29AM.png"
+  alt="Screenshot 2025-07-22 at 12.21.29 AM.png"
+  title="Screenshot 2025-07-22 at 12.21.29 AM.png"
+  style={{ width:"72%" }}
+/>
 
 ## 1. Select an Integration
 
@@ -28,7 +56,7 @@ Choose from available integrated platforms or custom tools. For example, you mig
 - LinkedIn (fetch profile, publish posts)
 - Email providers (send mail, check status)
 - Project management tools (create task, update ticket)
-- Custom APIs
+- Custom integrated MCP servers.
 
 ## 2. Choose the Tool or Action
 
