@@ -48,12 +48,14 @@
       {
             "group": "Features",
             "pages": [
+              "dume_ai_llm",
               "mcp_server",
               "personalisation",
               "web_search",
               "image_gen",
               "multiple_llm",
               "deepresearch"
+              
             ]
           },
           {
