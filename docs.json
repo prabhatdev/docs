@@ -16,6 +16,21 @@
         "og:image": "/images/default_meta_tag.png"
     }
 },
+  "redirects": [
+  {
+    "source": "/Github",
+    "destination": "/github"
+  },
+    {
+    "source": "/Calender",
+    "destination": "/calendar"
+  },
+     {
+    "source": "/calender",
+    "destination": "/calendar"
+  }
+    
+],
   "favicon": "/favicon.svg",
   "navigation": {
     "groups":[ {
