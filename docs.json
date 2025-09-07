@@ -57,7 +57,8 @@
        {
             "group": "Workflow examples",
             "pages": [
-              "workflow-examples/linkdin-generator"
+              "workflow-examples/linkdin-generator",
+              "workflow-examples/company-research"
             ]
           },
       {
