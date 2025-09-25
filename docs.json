@@ -1,48 +1,98 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Dume.ai Introduction",
+  "name": "Dume.ai- AI Executive assistant",
   "colors": {
-    "primary": "#155dfc",
-    "light": "#fafafa",
-    "dark": "#0a0a0a"
+    "primary": "#16A34A",
+    "light": "#07C983",
+    "dark": "#15803D"
   },
   "icons": {
     "library": "fontawesome"
   },
   "seo": {
     "indexing": "all",
-     "metatags": {
-        "og:image": "/images/default_meta_tag.png"
+    "metatags": {
+      "og:image": "/images/default_meta_tag.png"
     }
-},
+  },
   "redirects": [
-  {
-    "source": "/Github",
-    "destination": "/github"
-  },
     {
-    "source": "/Calender",
-    "destination": "/calendar"
-  },
-     {
-    "source": "/calender",
-    "destination": "/calendar"
-  }
-    
-],
+      "source": "/Github",
+      "destination": "/github"
+    },
+    {
+      "source": "/Calender",
+      "destination": "/calendar"
+    },
+    {
+      "source": "/calender",
+      "destination": "/calendar"
+    },
+    {
+      "source": "/deepresearch",
+      "destination": "/"
+    }
+  ],
   "favicon": "/favicon.svg",
   "navigation": {
-    "groups":[ {
-            "group": "Get Started",
+    "groups": [
+      {
+        "group": "Get Started",
+        "pages": [
+          "index",
+          "getting-started/personalisation",
+          "getting-started/connect-your-first-tool",
+          "getting-started/chat-interface"
+        ]
+      },
+      {
+        "group": "Integrations",
+        "pages": [
+          {
+            "group": "Email",
+            "icon": "envelope",
             "pages": [
-              "index"
+              "integrations/email",
+              "integrations/multiple-accounts"
             ]
           },
-      {
-            "group": "Workflows",
+          "integrations/calendar",
+          "integrations/notion",
+          "integrations/google_sheets",
+          "integrations/google_docs",
+          "integrations/github",
+          "integrations/microsoft",
+          "integrations/jira",
+          "integrations/confluence",
+          {
+            "group": "MCP",
+            "icon": "arrow-up-right-from-square",
             "pages": [
-              "workflows/getting-started",
+              "integrations/mcp/overview",
+              "integrations/mcp/setup"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Tools",
+        "pages": [
+          "tools/artifacts",
+          "tools/charts",
+          "tools/notification",
+          "tools/people-search",
+          "tools/web-search",
+          "tools/web-scraper"
+        ]
+      },
+      {
+        "group": "Workflows",
+        "pages": [
+          "workflows/getting-started",
+          {
+            "group": "Available Nodes",
+            "pages": [
               "workflows/input-node",
               "workflows/llm-node",
               "workflows/condition-node",
@@ -54,51 +104,38 @@
               "workflows/output-node"
             ]
           },
-       {
-            "group": "Workflow examples",
+          {
+            "group": "How to create workflows",
+            "pages": [
+              "workflows/input-node",
+              "workflows/llm-node",
+              "workflows/condition-node",
+              "workflows/tool-node",
+              "workflows/http-node",
+              "workflows/loop-node",
+              "workflows/template-node",
+              "workflows/note-node",
+              "workflows/output-node"
+            ]
+          },
+          {
+            "group": "Setup public workflows",
+            "expanded": true,
             "pages": [
               "workflow-examples/linkdin-generator",
               "workflow-examples/company-research"
             ]
-          },
-      {
-            "group": "Features",
-            "pages": [
-              "dume_ai_llm",
-              "mcp_server",
-              "personalisation",
-              "web_search",
-              "image_gen",
-              "multiple_llm",
-              "deepresearch"
-              
-            ]
-          },
-          {
-            "group": "Integrations",
-            "pages": [
-              "email",
-              "jira",
-              "calendar",
-              "github",
-              "confluence",
-              "google_sheets",
-              "google_docs"
-            ]
           }
-    
-    ],
-    
-    "global": {
-      "anchors": [
-        
-        {
-          "anchor": "Blog",
-          "href": "https://www.dume.ai/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+        ]
+      },
+      {
+        "group": "Agents",
+        "pages": [
+          "agents/getting-started",
+          "agents/how-to-create-agents"
+        ]
+      }
+    ]
   },
   "logo": {
     "light": "/logo/dume_logo.svg",
@@ -106,6 +143,10 @@
   },
   "navbar": {
     "links": [
+      {
+        "label": "Roadmap",
+        "href": "https://dume-ai-roadmap.notion.site/Dume-Ai-Roadmap-242a6d0d03c1806f8881c74dc4f44739"
+      },
       {
         "label": "Community",
         "href": "https://discord.gg/8qVb5tC4"
@@ -117,11 +158,25 @@
       "href": "https://app.dume.ai"
     }
   },
+  "contextual": {
+    "options": [
+      "copy",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
+  },
   "footer": {
     "socials": {
       "instagram": "https://www.instagram.com/dume.ai/",
       "youtube": "https://www.youtube.com/@dume-ai",
       "linkedin": "https://www.linkedin.com/company/dume-ai"
     }
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
   }
 }
