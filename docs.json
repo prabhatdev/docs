@@ -54,7 +54,7 @@
             "icon": "envelope",
             "pages": [
               "integrations/email",
-              "integrations/multiple-accounts"
+              "features/multiple_accounts"
             ]
           },
           "integrations/calendar",

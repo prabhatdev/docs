@@ -1,25 +1,688 @@
 ---
-title: "Email"
-description: "Have Dume.ai read, draft, and reply to emails in your inbox."
-icon: "envelope"
+title: "Email Integration - Gmail & Microsoft365"
+sidebarTitle: "Email"
+keywords: ['email integration', 'Gmail', 'Microsoft365', 'Outlook', 'email management', 'email triage', 'OAuth', 'productivity']
+description: "Connect your Gmail or Microsoft365 email accounts to Dume for intelligent email management, automated responses, and streamlined communication workflows."
 ---
 
-## **What you can do with it?**
+## Your Executive Communication Command Center
 
-As you can see in below example, you can easily fetch your emails and provide useful insights from it. Like this user is fetching all his food delivery bills and analysing monthly spends.
+Transform your email into a strategic communication hub with Dume's executive assistant capabilities. Whether you use Gmail or Microsoft365, get intelligent email management that understands business priorities, automates professional communications, and provides executive-level insights from your correspondence.
 
-![Email Demo](/images/email_demo.png)
+### Why Dume for Executive Email Management?
 
-## How to integrate?
+<CardGroup cols={2}>
+<Card title="Executive Email Intelligence" icon="brain">
+  AI-powered analysis of business communications that identifies priorities, extracts strategic insights, and manages stakeholder relationships with executive-level sophistication.
+</Card>
 
-1. Login to [Dume.ai](http://Dume.ai)
-2. Go to [Integrations](https://app.dume.ai/integrations) and select available integrations.
-3. Click connect, you'll be redirected to Gmail and allow the permissions.
-4. Once OAuth is complete, [Dume.ai](http://Dume.ai) can then access all your emails.
-5. You can tell Dume to read, draft, and reply to emails on your behalf.
+<Card title="Professional Communication Automation" icon="reply">
+  Generate executive-caliber responses, strategic communications, and professional correspondence that maintains your voice while enhancing business impact.
+</Card>
 
-## Example commands
+<Card title="Strategic Email Organization" icon="folder-tree">
+  Automatically categorize business communications by strategic importance, stakeholder priority, and executive decision requirements for optimal workflow management.
+</Card>
 
-1. Check for all transaction alert emails I recevied last month and summarise my spending.
-2. “Draft a reply to John's new email saying I can meet tomorrow at 9am.”
-3. “Check for emails from Github and tell me all the PRs I need to reivew.”
+<Card title="Business Intelligence Integration" icon="arrows-cross">
+  Transform email insights into actionable business intelligence, strategic planning inputs, and cross-platform workflow automation for executive productivity.
+</Card>
+</CardGroup>
+
+## Supported Email Providers
+
+<Tabs>
+<Tab title="Gmail">
+  <Frame>
+    <img
+      className="block dark:hidden"
+      src="/images/gmail-logo.png"
+      alt="Gmail integration with Dume showing seamless connection"
+      title="Gmail Integration"
+    />
+    <img
+      className="hidden dark:block"
+      src="/images/gmail-logo-dark.png"
+      alt="Gmail integration with Dume showing seamless connection (dark mode)"
+      title="Gmail Integration (dark mode)"
+    />
+  </Frame>
+  
+  **Full Gmail Integration Features:**
+  - Read and search emails across all folders
+  - Compose and send emails with AI assistance
+  - Create and manage labels automatically
+  - Access Gmail contacts and groups
+  - Handle attachments and file sharing
+  - Manage multiple Gmail accounts
+</Tab>
+
+<Tab title="Microsoft365">
+  <Frame>
+    <img
+      className="block dark:hidden"
+      src="/images/microsoft365-logo.png"
+      alt="Microsoft365 Outlook integration with Dume"
+      title="Microsoft365 Integration"
+    />
+    <img
+      className="hidden dark:block"
+      src="/images/microsoft365-logo-dark.png"
+      alt="Microsoft365 Outlook integration with Dume (dark mode)"
+      title="Microsoft365 Integration (dark mode)"
+    />
+  </Frame>
+  
+  **Full Microsoft365 Integration Features:**
+  - Access Outlook email across all folders
+  - Compose and send emails with templates
+  - Manage categories and rules automatically
+  - Integration with Teams and SharePoint
+  - Calendar coordination with email scheduling
+  - Enterprise-grade security and compliance
+</Tab>
+</Tabs>
+
+## How It Works
+
+<iframe
+  className="w-full aspect-video rounded-xl"
+  src="https://www.youtube.com/embed/EMAIL_INTEGRATION_VIDEO_ID"
+  title="How Dume Email Integration Works"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+### The Integration Process
+
+<Steps>
+  <Step title="Secure Authentication">
+    Connect your email account using OAuth 2.0 - your passwords never leave your email provider's secure servers.
+    
+    <Check>
+    Your email credentials remain completely secure with industry-standard OAuth authentication.
+    </Check>
+  </Step>
+  
+  <Step title="Permission Configuration">
+    Choose exactly what Dume can access - from read-only email viewing to full email management capabilities.
+    
+    <Info>
+    You maintain complete control over permissions and can modify them at any time.
+    </Info>
+  </Step>
+  
+  <Step title="AI Analysis and Learning">
+    Dume analyzes your email patterns, frequent contacts, and communication style to provide personalized assistance.
+    
+    <Note>
+    All analysis happens securely and your email content is never stored permanently.
+    </Note>
+  </Step>
+  
+  <Step title="Intelligent Assistance">
+    Start using natural language commands to manage emails, compose responses, and automate routine tasks.
+    
+    <Tip>
+    The more you use the integration, the better Dume becomes at understanding your preferences and style.
+    </Tip>
+  </Step>
+</Steps>
+
+### Executive Email Intelligence Capabilities
+
+<AccordionGroup>
+<Accordion title="Strategic Email Analysis & Business Intelligence">
+  **Executive-Level Email Intelligence:**
+  - Analyze email patterns to identify strategic opportunities, business trends, and stakeholder sentiment
+  - Extract key business insights from customer communications, partner correspondence, and internal discussions
+  - Monitor competitive intelligence from email communications and market correspondence
+  - Track executive communication effectiveness and stakeholder relationship health
+  - Generate business intelligence reports from email interactions and professional correspondence
+  
+  **Executive email analysis commands:**
+  ```
+  "Analyze this week's customer emails and identify strategic opportunities and concerns"
+  "Extract key business insights from investor communications and board member correspondence"
+  "Monitor competitive intelligence from industry emails and partnership discussions"
+  "Generate a stakeholder relationship health report based on email communication patterns"
+  "Identify strategic decision points from executive team email discussions"
+  ```
+</Accordion>
+
+<Accordion title="Professional Communication & Executive Correspondence">
+  **Executive-Caliber Content Creation:**
+  - Generate board-ready communications, investor updates, and strategic stakeholder correspondence
+  - Create professional responses that maintain executive voice while addressing business priorities
+  - Develop strategic communications for partnerships, negotiations, and business development
+  - Compose executive-level internal communications for organizational alignment and decision-making
+  - Craft professional external communications that enhance business relationships and competitive positioning
+  
+  **Executive communication examples:**
+  ```
+  "Draft an executive response to the board inquiry about market expansion strategy"
+  "Compose a professional communication to investors regarding quarterly performance and strategic outlook"
+  "Create a strategic partnership proposal email for potential collaboration opportunities"
+  "Generate an executive internal communication about organizational changes and strategic direction"
+  "Draft professional customer communications addressing service issues with strategic solutions"
+  ```
+</Accordion>
+
+<Accordion title="Executive Workflow Automation & Strategic Organization">
+  **Strategic Email Management:**
+  - Automatically prioritize communications by business impact, stakeholder importance, and strategic relevance
+  - Create intelligent filing systems based on business functions, strategic initiatives, and executive priorities
+  - Set up executive-level alert systems for critical business communications and time-sensitive decisions
+  - Implement automated workflows that connect email insights to strategic planning and business intelligence
+  - Establish communication protocols that ensure executive visibility of important business correspondence
+  
+  **Executive organization examples:**
+  ```
+  "Prioritize all communications by strategic business impact and stakeholder importance"
+  "Create intelligent filing system for board communications, investor relations, and strategic partnerships"
+  "Set up executive alerts for critical customer issues, competitive intelligence, and market opportunities"
+  "Automate workflow that extracts strategic insights from emails and updates business intelligence dashboard"
+  "Establish communication protocol ensuring executive visibility of high-impact business correspondence"
+  ```
+</Accordion>
+
+<Accordion title="Business Intelligence Integration & Strategic Workflow Automation">
+  **Executive Cross-Platform Intelligence:**
+  - Transform email insights into strategic planning inputs, competitive analysis, and business development opportunities
+  - Automatically create executive briefings, strategic reports, and business intelligence summaries from email content
+  - Integrate email intelligence with business systems for comprehensive executive decision support
+  - Generate automated stakeholder relationship management updates and strategic communication tracking
+  - Create cross-functional workflow automation that connects email intelligence to business operations and strategic initiatives
+  
+  **Business integration examples:**
+  ```
+  "Convert customer feedback emails into strategic product development insights and competitive analysis"
+  "Create automated executive briefings from weekly stakeholder communications and business correspondence"
+  "Integrate email intelligence with CRM and business systems for comprehensive relationship management"
+  "Generate strategic communication effectiveness reports and stakeholder engagement analytics"
+  "Automate cross-functional workflows connecting email insights to business operations and strategic planning"
+  ```
+</Accordion>
+</AccordionGroup>
+
+## Setup Guide
+
+<Tabs>
+<Tab title="Gmail Setup">
+  <Steps>
+    <Step title="Navigate to Integrations">
+      Go to Dume's integrations page and locate the Gmail integration option.
+      
+      <Frame>
+        <img
+          className="block dark:hidden"
+          src="/images/light/gmail-integration-select.png"
+          alt="Gmail integration selection in Dume integrations page"
+          title="Select Gmail Integration"
+        />
+        <img
+          className="hidden dark:block"
+          src="/images/dark/gmail-integration-select.png"
+          alt="Gmail integration selection in Dume integrations page (dark mode)"
+          title="Select Gmail Integration (dark mode)"
+        />
+      </Frame>
+    </Step>
+    
+    <Step title="Click Connect Gmail">
+      Start the OAuth authentication process by clicking the "Connect Gmail" button.
+      
+      <Warning>
+      Make sure you're logged into the correct Gmail account in your browser before starting.
+      </Warning>
+    </Step>
+    
+    <Step title="Google OAuth Authorization">
+      You'll be redirected to Google's secure login page to authorize Dume's access.
+      
+      <Frame>
+        <img
+          className="block dark:hidden"
+          src="/images/light/google-oauth-permission.png"
+          alt="Google OAuth permission screen showing Dume requesting Gmail access"
+          title="Google OAuth Permission Screen"
+        />
+        <img
+          className="hidden dark:block"
+          src="/images/dark/google-oauth-permission.png"
+          alt="Google OAuth permission screen showing Dume requesting Gmail access (dark mode)"
+          title="Google OAuth Permission Screen (dark mode)"
+        />
+      </Frame>
+      
+      **Required permissions:**
+      - **Read emails**: View and search your email messages
+      - **Send emails**: Compose and send emails on your behalf
+      - **Manage labels**: Create and organize email labels
+      - **Access contacts**: View contact information for email suggestions
+    </Step>
+    
+    <Step title="Confirm Connection">
+      After authorization, you'll be redirected back to Dume with a confirmation of successful connection.
+      
+      <Check>
+      Gmail integration is now active! You can start using email commands in your Dume conversations.
+      </Check>
+    </Step>
+  </Steps>
+</Tab>
+
+<Tab title="Microsoft365 Setup">
+  <Steps>
+    <Step title="Access Microsoft Integration">
+      From Dume's integrations page, select the Microsoft365/Outlook integration.
+      
+      <Frame>
+        <img
+          className="block dark:hidden"
+          src="/images/light/microsoft365-integration-select.png"
+          alt="Microsoft365 integration selection in Dume integrations page"
+          title="Select Microsoft365 Integration"
+        />
+        <img
+          className="hidden dark:block"
+          src="/images/dark/microsoft365-integration-select.png"
+          alt="Microsoft365 integration selection in Dume integrations page (dark mode)"
+          title="Select Microsoft365 Integration (dark mode)"
+        />
+      </Frame>
+    </Step>
+    
+    <Step title="Begin OAuth Flow">
+      Click "Connect Microsoft365" to start the secure authentication process.
+      
+      <Info>
+      For enterprise accounts, you may need IT approval for third-party app connections.
+      </Info>
+    </Step>
+    
+    <Step title="Microsoft OAuth Authorization">
+      Authenticate with Microsoft and approve the requested permissions.
+      
+      <Frame>
+        <img
+          className="block dark:hidden"
+          src="/images/light/microsoft-oauth-permission.png"
+          alt="Microsoft OAuth permission screen for Dume email integration"
+          title="Microsoft OAuth Permission Screen"
+        />
+        <img
+          className="hidden dark:block"
+          src="/images/dark/microsoft-oauth-permission.png"
+          alt="Microsoft OAuth permission screen for Dume email integration (dark mode)"
+          title="Microsoft OAuth Permission Screen (dark mode)"
+        />
+      </Frame>
+      
+      **Microsoft365 permissions:**
+      - **Read mail**: Access and search your Outlook emails
+      - **Send mail**: Compose and send emails through Outlook
+      - **Manage mail**: Organize emails with categories and rules
+      - **Read contacts**: Access contact information for suggestions
+    </Step>
+    
+    <Step title="Enterprise Verification">
+      For business accounts, additional verification steps may be required by your IT administrator.
+      
+      <Note>
+      If you encounter permission errors, contact your IT team to approve Dume as a trusted application.
+      </Note>
+    </Step>
+    
+    <Step title="Verify Connection">
+      Confirm successful integration and test basic functionality.
+      
+      <Check>
+      Microsoft365 email integration is ready! You can now manage your Outlook emails through Dume.
+      </Check>
+    </Step>
+  </Steps>
+</Tab>
+</Tabs>
+
+## Executive Communication Intelligence Examples
+
+### Strategic Email Management Workflows
+
+<Tabs>
+<Tab title="Executive Email Intelligence & Strategic Analysis">
+  **Business Intelligence from Communications:**
+  ```
+  User: "Analyze this week's customer communications and identify strategic business opportunities and concerns"
+  Dume: "Customer Communication Analysis: 47 customer emails analyzed. Strategic opportunities: 3 enterprise expansion requests ($450K potential), 5 feature requests aligning with roadmap, 12 positive testimonials for case studies. Concerns: 4 pricing objections (avg 15% discount requested), 2 competitor mentions, 1 churn risk (contract renewal due). Recommendation: Prioritize enterprise discussions, address pricing strategy."
+
+  User: "Extract key business insights from this month's investor and board member correspondence"
+  Dume: "Investor Relations Intelligence: 23 communications with investors and board. Key insights: Strong confidence in Q4 performance (8/9 board members positive), 2 strategic partnership opportunities flagged, fundraising interest from 3 potential investors, 1 governance concern about international expansion timeline. Strategic actions: Schedule board strategy session, explore partnership discussions, prepare Series B materials."
+
+  User: "Monitor competitive intelligence from industry emails, partner discussions, and market correspondence"
+  Dume: "Competitive Intelligence Summary: 15 relevant communications analyzed. Market intelligence: Competitor X raised $25M (partnership threat), Industry trend toward AI integration (67% of communications), 3 potential customers evaluating alternatives, 2 strategic partnership opportunities in adjacent markets. Threat level: Medium. Recommendations: Accelerate AI feature development, strengthen customer retention, explore strategic partnerships."
+  ```
+
+  **Executive Stakeholder Management:**
+  ```
+  User: "Generate stakeholder relationship health report based on email communication patterns and engagement levels"
+  Dume: "Stakeholder Health Report: Board engagement 94% (high), Investor communications 78% response rate (good), Customer executive contacts 85% positive sentiment, Strategic partners 3.2 interactions/month average (stable). At-risk relationships: 2 enterprise customers (decreased engagement), 1 strategic partner (contract renewal pending). Priority actions: Schedule customer executive check-ins, partner renewal discussions."
+
+  User: "Identify strategic decision points and business opportunities from executive team email discussions"
+  Dume: "Executive Decision Intelligence: 34 leadership emails analyzed. Key decision points: Market expansion approval needed (deadline Nov 15), Pricing strategy revision (3 executive votes pending), Strategic hire authorization (CEO/CFO alignment required), Partnership negotiations (legal review complete). Business opportunities: International expansion ($2.1M revenue potential), Product bundling strategy (+23% margin improvement)."
+  ```
+</Tab>
+
+<Tab title="Professional Communication & Executive Correspondence">
+  **Strategic Executive Communications:**
+  ```
+  User: "Draft an executive-level response to board inquiries about our market expansion strategy and competitive positioning"
+  Dume: "Executive Board Response: 'Dear Board Members, regarding your strategic inquiries about market expansion: Our analysis indicates strong positioning for European entry with $2.8M TAM opportunity, competitive advantage in 3 key areas, and 18-month ROI timeline. Key strategic advantages: 40% faster implementation than competitors, established partnership channel, regulatory pre-approval complete. Recommended investment: $1.2M across 4 quarters. Request board strategic session to discuss resource allocation and partnership strategies. Best regards, [Your name]'"
+
+  User: "Compose professional communication to investors regarding quarterly performance and strategic outlook with future opportunities"
+  Dume: "Investor Update Communication: 'Dear Valued Investors, Q3 Performance Summary: Revenue $3.2M (+24% YoY), Customer acquisition cost decreased 18%, Market share increased to 19% (industry leadership position). Strategic outlook: Product expansion into 2 adjacent verticals, Partnership agreements with 3 enterprise clients, International expansion initiated (UK/Germany focus). Future opportunities: AI-powered features launching Q1, Enterprise segment growing 145%, Strategic acquisition pipeline active. Looking forward to discussing our continued growth trajectory. Sincerely, [Your name]'"
+
+  User: "Create strategic partnership proposal email for high-value collaboration opportunity with detailed business benefits"
+  Dume: "Strategic Partnership Proposal: 'Dear [Partner Executive], Strategic Partnership Opportunity: Our analysis indicates significant synergy potential between our organizations. Proposed collaboration: Joint go-to-market strategy targeting enterprise segment, Shared technology integration reducing customer acquisition costs by 30%, Cross-selling opportunities worth $1.4M annual revenue potential. Partnership benefits: Market expansion into 3 new verticals, Customer base growth 67%, Operational efficiency gains $340K annually. I propose scheduling executive discussion to explore this strategic opportunity. Best regards, [Your name]'"
+  ```
+
+  **Professional Stakeholder Communications:**
+  ```
+  User: "Generate executive internal communication about organizational changes and strategic direction with leadership alignment"
+  Dume: "Executive Internal Communication: 'Team Leadership, Strategic Organizational Update: Following board approval, we're implementing organizational changes to support our growth trajectory and market leadership goals. Key changes: Engineering team expansion (12 new hires), European operations launch (London office Q1), Product organization restructure (3 vertical teams). Strategic direction: Customer-centric innovation, Market expansion excellence, Operational scaling for 3x growth. Leadership commitment: Full support for team development, Resource allocation approved, Strategic mentorship programs launched. Looking forward to our continued success. [Your name]'"
+
+  User: "Draft professional customer communication addressing service concerns with strategic solutions and relationship strengthening"
+  Dume: "Customer Executive Communication: 'Dear [Customer Executive], Thank you for bringing your service concerns to my attention. I've personally reviewed the situation and implemented immediate strategic solutions: Dedicated customer success manager assigned, Priority support channel established, Service level agreement upgraded at no cost. Strategic partnership enhancements: Quarterly executive reviews, Product roadmap input opportunities, Early access to new features. Your partnership is invaluable, and these improvements reflect our commitment to your success. I welcome the opportunity to discuss our strategic relationship further. Best regards, [Your name]'"
+  ```
+</Tab>
+
+<Tab title="Executive Workflow Automation & Business Intelligence">
+  **Strategic Communication Management:**
+  ```
+  User: "Prioritize this week's communications by strategic business impact, stakeholder importance, and executive decision requirements"
+  Dume: "Executive Communication Prioritization: CRITICAL (3): Board member inquiry about competitive response, Investor question about growth targets, Customer executive escalation requiring immediate attention. HIGH (7): Strategic partner negotiations, Key customer renewal discussions, Leadership team strategic planning. MEDIUM (12): Department budget reviews, Vendor negotiations, Product feedback. MONITOR (23): Industry updates, Newsletter communications, Routine operational updates. Executive actions required: 3 critical responses needed today."
+
+  User: "Create intelligent filing system for board communications, investor relations, strategic partnerships, and executive correspondence"
+  Dume: "Executive Filing System Established: 'Board Communications' (quarterly reviews, strategic decisions, governance), 'Investor Relations' (updates, fundraising, performance reports), 'Strategic Partnerships' (negotiations, agreements, relationship management), 'Executive Correspondence' (leadership communications, external relations), 'Competitive Intelligence' (market analysis, competitor monitoring), 'Customer Executive Relations' (C-level communications, strategic accounts). Auto-filing rules activated, executive dashboard configured."
+
+  User: "Set up executive alert system for critical business communications, market opportunities, and time-sensitive strategic decisions"
+  Dume: "Executive Alert System Active: IMMEDIATE ALERTS for: Customer churn risks >$50K ARR, Competitive threats requiring response, Board/investor urgent communications, Strategic partnership opportunities >$100K value, Media inquiries requiring executive response. DAILY DIGEST: Market intelligence updates, Customer executive communications, Team performance indicators, Financial threshold alerts. WEEKLY SUMMARY: Strategic initiative progress, Stakeholder relationship status, Market position analysis. Mobile/email notifications configured."
+  ```
+
+  **Business Intelligence Integration:**
+  ```
+  User: "Convert customer feedback emails into strategic product development insights and competitive positioning analysis"
+  Dume: "Strategic Product Intelligence: Customer feedback analysis (89 emails): Top feature requests align with roadmap (78% match), Competitive mentions favor our platform (12:1 positive ratio), Pricing feedback indicates 23% willingness to pay premium for advanced features. Strategic insights: Enterprise customers value security features (89% mention), SMB segment prioritizes ease of use (67% feedback), International customers need localization (34% request). Product strategy recommendations: Accelerate enterprise security features, Develop SMB onboarding optimization, Plan international localization roadmap."
+
+  User: "Generate automated executive briefings from stakeholder communications and business correspondence with strategic recommendations"
+  Dume: "Executive Briefing Automation: Weekly stakeholder intelligence compilation includes: Customer health scores from communication sentiment, Investor confidence indicators from correspondence, Partnership opportunity pipeline from business development emails, Competitive intelligence from market communications, Employee engagement signals from internal correspondence. Strategic recommendations: 3 customer accounts need executive attention, 2 partnership opportunities ready for executive engagement, 1 competitive response strategy required, Team morale positive across all departments (94% satisfaction indicators)."
+  ```
+</Tab>
+</Tabs>
+
+### Cross-Tool Email Workflows
+
+<AccordionGroup>
+<Accordion title="Email to Calendar Integration">
+  **Meeting Coordination:**
+  ```
+  User: "Create a calendar event for the client meeting mentioned in Sarah's email"
+  Dume: "Created calendar event 'Client Strategy Meeting' for Thursday 2:00 PM based on Sarah's email. Invited attendees from the email thread."
+
+  User: "Block time on my calendar for all the project deadlines mentioned in today's emails"
+  Dume: "Created 4 calendar blocks for project deadlines: [list of deadline events with dates and project names]"
+  ```
+</Accordion>
+
+<Accordion title="Email to Task Management">
+  **Action Item Creation:**
+  ```
+  User: "Create tasks for all the action items mentioned in the team meeting email"
+  Dume: "Created 6 tasks from the meeting email: [task list with due dates and assignees]"
+
+  User: "Add a reminder task to follow up on the vendor proposal in 3 days"
+  Dume: "Created task 'Follow up on vendor proposal' with reminder set for Monday at 9:00 AM"
+  ```
+</Accordion>
+
+<Accordion title="Email to File Management">
+  **Document Organization:**
+  ```
+  User: "Save all attachments from client emails this week to the 'Client Documents' Drive folder"
+  Dume: "Saved 12 attachments from client emails to 'Client Documents' folder: [list of saved files with client names]"
+
+  User: "Create a document with all the feedback from the design review emails"
+  Dume: "Created 'Design Review Feedback Summary' in your Drive with compiled feedback from 8 emails"
+  ```
+</Accordion>
+</AccordionGroup>
+
+## Security and Privacy
+
+### Data Protection
+
+<AccordionGroup>
+<Accordion title="OAuth Security">
+  **Industry-Standard Protection:**
+  - **No password storage** - Dume never sees or stores your email passwords
+  - **Encrypted connections** - All data transmission uses TLS encryption
+  - **Token-based access** - Secure, revocable access tokens instead of credentials
+  - **Scope-limited permissions** - Access only to explicitly authorized email functions
+</Accordion>
+
+<Accordion title="Data Handling">
+  **Privacy-First Approach:**
+  - **Temporary processing** - Email content is processed in memory, not stored permanently
+  - **User consent** - All actions require explicit user commands or confirmation
+  - **Data minimization** - Only necessary data is accessed for requested operations
+  - **Regular audits** - Security practices are regularly reviewed and updated
+</Accordion>
+
+<Accordion title="Enterprise Compliance">
+  **Business-Grade Security:**
+  - **GDPR compliance** - Full compliance with European data protection regulations
+  - **SOC 2 certification** - Meets enterprise security and availability standards
+  - **HIPAA considerations** - Suitable for healthcare environments with proper configuration
+  - **Custom data retention** - Configurable policies for different business requirements
+</Accordion>
+</AccordionGroup>
+
+## Troubleshooting
+
+<AccordionGroup>
+<Accordion title="Connection Issues">
+  **Common problems and solutions:**
+  
+  **OAuth authentication failed:**
+  - Clear browser cookies and try again in incognito mode
+  - Ensure you're logged into the correct email account
+  - Check if third-party app access is enabled in your email settings
+  - For Microsoft365: Verify enterprise app approval policies
+  
+  **Integration shows connected but doesn't work:**
+  - Test with a simple query like "show me recent emails"
+  - Check if permissions were modified after initial connection
+  - Verify email account is active and accessible
+  - Reconnect the integration to refresh permissions
+</Accordion>
+
+<Accordion title="Performance Issues">
+  **Slow email responses or timeouts:**
+  
+  - **Large mailboxes** can take longer to search - be specific in queries
+  - **Rate limiting** may occur with frequent requests - wait and retry
+  - **Network issues** can cause delays - check internet connection
+  - **Email server problems** - verify email provider service status
+  
+  **Optimization tips:**
+  - Use date ranges in searches: "emails from last week" instead of "all emails"
+  - Specify folders: "emails in inbox" rather than searching all folders
+  - Limit results: "show me 10 most recent emails" for faster responses
+</Accordion>
+
+<Accordion title="Permission and Access Errors">
+  **Authorization problems:**
+  
+  **Gmail errors:**
+  - "Insufficient permissions" - Reconnect and approve all requested scopes
+  - "API quota exceeded" - Wait for quota reset or contact support for higher limits
+  - "Account access blocked" - Check Gmail security settings for third-party apps
+  
+  **Microsoft365 errors:**
+  - "Admin approval required" - Contact IT team to approve Dume application
+  - "Conditional access blocked" - Work with IT to configure access policies
+  - "Multi-factor authentication" - Complete MFA setup in Microsoft portal
+</Accordion>
+
+<Accordion title="Feature Limitations">
+  **Understanding integration boundaries:**
+  
+  **What Dume can do:**
+  ✅ Read and search emails across all folders
+  ✅ Compose and send emails with AI assistance
+  ✅ Organize emails with labels and folders
+  ✅ Access basic contact information
+  
+  **What Dume cannot do:**
+  ❌ Modify email server settings or configurations
+  ❌ Access emails marked as highly confidential (depending on settings)
+  ❌ Perform bulk operations without confirmation
+  ❌ Access other users' emails in shared environments
+</Accordion>
+</AccordionGroup>
+
+## Best Practices
+
+### Effective Email Management
+
+<Tabs>
+<Tab title="Query Optimization">
+  **Write clear, specific queries:**
+  
+  **Good examples:**
+  ```
+  ✅ "Show me unread emails from clients this week"
+  ✅ "Find emails about the Q4 budget meeting"
+  ✅ "Draft a professional response to John's complaint"
+  ✅ "Label all emails from suppliers as 'Vendors'"
+  ```
+  
+  **Avoid vague queries:**
+  ```
+  ❌ "Show me emails" (too broad)
+  ❌ "Find something about the meeting" (unclear)
+  ❌ "Write an email" (no context)
+  ❌ "Fix my inbox" (not specific)
+  ```
+</Tab>
+
+<Tab title="Privacy Management">
+  **Maintain control over your data:**
+  
+  - **Review permissions regularly** - Check what access Dume has and adjust as needed
+  - **Use specific commands** - Be explicit about what actions you want performed
+  - **Confirm sensitive actions** - Always review before sending important emails
+  - **Monitor integration activity** - Check the activity log for integration usage
+  
+  **Privacy tips:**
+  - Ask for summaries instead of full email content when appropriate
+  - Use read-only commands when you just need information
+  - Regularly review and clean up email labels and organization
+</Tab>
+
+<Tab title="Productivity Enhancement">
+  **Maximize your email efficiency:**
+  
+  **Morning routine:**
+  ```
+  "Show me urgent emails that need immediate attention"
+  "Summarize overnight emails by priority"
+  "What meetings do I have today mentioned in emails?"
+  ```
+  
+  **End-of-day cleanup:**
+  ```
+  "Archive all emails I've responded to today"
+  "Label and organize today's emails by project"
+  "What follow-ups do I need to schedule for tomorrow?"
+  ```
+  
+  **Weekly maintenance:**
+  ```
+  "Show me emails that haven't been responded to this week"
+  "Clean up old emails in my promotions folder"
+  "What recurring emails can be automated or filtered?"
+  ```
+</Tab>
+</Tabs>
+
+## Advanced Features
+
+### Email Templates and Automation
+
+<AccordionGroup>
+<Accordion title="Smart Email Templates">
+  Create reusable email templates that adapt to context:
+  
+  **Template creation:**
+  ```
+  User: "Create a template for project status updates"
+  Dume: "Created 'Project Status Update' template with sections for: progress summary, completed tasks, upcoming milestones, blockers, and next steps."
+
+  User: "Make a template for client onboarding emails"
+  Dume: "Created 'Client Onboarding' template including: welcome message, next steps, contact information, and resource links."
+  ```
+  
+  **Template usage:**
+  ```
+  User: "Use the project status template for the Alpha project"
+  Dume: "Using Project Status template with Alpha project details: [customized email with current project data]"
+  ```
+</Accordion>
+
+<Accordion title="Automated Email Rules">
+  Set up intelligent email processing rules:
+  
+  **Smart filtering:**
+  ```
+  "Automatically label emails with invoices as 'Finance' and forward to accounting"
+  "Move all newsletter emails to 'Reading' folder and mark as low priority"
+  "Flag emails from VIP clients for immediate notification"
+  ```
+  
+  **Response automation:**
+  ```
+  "Set up auto-response for support emails with ticket creation"
+  "Create vacation responder with return date and emergency contact"
+  "Auto-acknowledge receipt of client proposals with next steps"
+  ```
+</Accordion>
+
+<Accordion title="Email Analytics">
+  Get insights into your email patterns:
+  
+  **Usage analysis:**
+  ```
+  User: "Show me my email statistics for this month"
+  Dume: "Email stats for November: 342 received, 198 sent, average response time 4.2 hours, top contacts: [list]"
+
+  User: "What are my busiest email days and times?"
+  Dume: "Peak email activity: Tuesdays and Wednesdays, 9-11 AM and 2-4 PM. Lowest activity: Friday afternoons."
+  ```
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Your Executive Communication Intelligence Center
+
+<Check>
+Transform your email from routine correspondence into strategic business intelligence with Dume's executive communication management that turns every interaction into competitive advantage.
+</Check>
+
+With Email integration, you've established a powerful executive assistant that elevates your communication workflow from basic email management to strategic business intelligence. Your inbox now serves as a comprehensive command center for stakeholder relationships, competitive analysis, business development, and executive decision-making—all powered by AI that understands business priorities and professional communication excellence.
+
+<Note>
+**Executive advantage:** Begin by connecting your primary business email account to unlock strategic communication intelligence. Dume will immediately begin analyzing stakeholder relationships, identifying business opportunities, and providing executive-level insights from your professional correspondence. The integration of email intelligence with executive AI assistance creates unprecedented capabilities for strategic communication management, relationship building, and business intelligence that drives competitive advantages and informed decision-making.
+</Note>
