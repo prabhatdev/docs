@@ -12,10 +12,10 @@ keywords: ["artifacts", "content creation", "AI documents", "spreadsheets", "cod
 
 ## Overview
 
-Artifacts in Dume.ai are structured content objects that allow you to create, edit, and manage different types of content including text documents, spreadsheets, code files, and images. The artifact system provides three core functions to work with these content types.
+Artifacts in Dume.ai are structured content objects that allow you to create, edit, and manage different types of content including text documents, spreadsheets, code files, and images. Simply type `@create_artifact` in your chat followed by your prompt to describe what you want to create using natural language.
 
 <Info>
-Artifacts persist across conversations and can be saved externally for later use or sharing.
+Artifacts persist across conversations and can be saved externally for later use or sharing. You can also combine artifacts with other tools - for example, fetch spending details from emails and then ask to "collate into a sheet artifact".
 </Info>
 
 ## Artifact Types
@@ -64,172 +64,131 @@ Artifacts persist across conversations and can be saved externally for later use
 
 ## Available Functions
 
-### Create Artifact
+### Creating Artifacts with Natural Language
 
-Creates a new artifact of the specified type with initial content.
+Simply type `@create_artifact` in your chat followed by your prompt describing what you want to create. Dume.ai will automatically determine the best artifact type and generate the content for you.
 
 <CodeGroup>
 
-```bash Create Text Artifact
-create_artifact(
-  type="text",
-  title="Meeting Notes",
-  content="# Team Meeting - Q1 Planning\n\n## Agenda\n- Budget review\n- Project timeline"
-)
+```bash Create Python Code
+@create_artifact create a python code for binary search
 ```
 
-```bash Create Code Artifact
-create_artifact(
-  type="code",
-  title="API Helper Functions",
-  language="python",
-  content="def fetch_user_data(user_id):\n    return api.get(f'/users/{user_id}')"
-)
+```bash Create Document
+@create_artifact create PRD document for mobile app feature
 ```
 
-```bash Create Sheet Artifact
-create_artifact(
-  type="sheet",
-  title="Budget Tracker",
-  data=[
-    ["Category", "Planned", "Actual"],
-    ["Marketing", 5000, 4800],
-    ["Development", 12000, 11500]
-  ]
-)
+```bash Create Spreadsheet  
+@create_artifact create a budget tracker spreadsheet
 ```
 
-```bash Create Image Artifact
-create_artifact(
-  type="image",
-  title="Process Diagram",
-  prompt="Create a flowchart showing user registration process"
-)
+```bash Create Image
+@create_artifact create a flowchart showing user registration process
 ```
 
 </CodeGroup>
 
 <Note>
-When creating code artifacts, always specify the programming language for proper syntax highlighting.
+No need to specify JSON parameters or function names - just use `@create_artifact` followed by your natural language description.
 </Note>
 
-### Update Artifact
+### Editing Existing Artifacts
 
-Modifies existing artifact content while preserving the artifact structure.
+You can modify any existing artifact by referencing it and describing your changes.
 
-<Accordion title="Update Examples">
+<Accordion title="Edit Examples">
 
 <CodeGroup>
 
-```bash Update Text Content
-update_artifact(
-  artifact_id="text_123",
-  content="# Updated Meeting Notes\n\n## Key Decisions\n- Approved budget increase\n- Extended timeline by 2 weeks"
-)
+```bash Update Code
+@create_artifact update the binary search code to handle edge cases
 ```
 
-```bash Update Code Content
-update_artifact(
-  artifact_id="code_456",
-  content="def fetch_user_data(user_id, include_profile=True):\n    endpoint = f'/users/{user_id}'\n    if include_profile:\n        endpoint += '?include=profile'\n    return api.get(endpoint)"
-)
+```bash Modify Document
+@create_artifact add a risk assessment section to the PRD document
 ```
 
-```bash Update Sheet Data
-update_artifact(
-  artifact_id="sheet_789",
-  data=[
-    ["Category", "Planned", "Actual", "Variance"],
-    ["Marketing", 5000, 4800, -200],
-    ["Development", 12000, 11500, -500],
-    ["Total", 17000, 16300, -700]
-  ]
-)
+```bash Update Spreadsheet
+@create_artifact add a variance column to the budget tracker
+```
+
+```bash Edit Image
+@create_artifact modify the flowchart to include error handling steps
 ```
 
 </CodeGroup>
 
 </Accordion>
 
-### Save Artifact External
+### Exporting Artifacts
 
-Exports artifacts to external formats or locations for sharing and backup.
+Request to save your artifacts in various formats or locations.
 
 <Tabs>
   <Tab title="File Export">
     ```bash
-    save_artifact_external(
-      artifact_id="text_123",
-      format="markdown",
-      filename="meeting_notes.md"
-    )
+    @create_artifact save the meeting notes as a markdown file
     ```
   </Tab>
   
   <Tab title="Cloud Storage">
     ```bash
-    save_artifact_external(
-      artifact_id="sheet_789",
-      destination="google_sheets",
-      share_permissions="view"
-    )
+    @create_artifact export the budget spreadsheet to Google Sheets
     ```
   </Tab>
   
   <Tab title="Version Control">
     ```bash
-    save_artifact_external(
-      artifact_id="code_456",
-      destination="github",
-      repository="my-project",
-      branch="feature/api-helpers"
-    )
+    @create_artifact save the Python code to my GitHub repository
     ```
   </Tab>
 </Tabs>
 
-## Example Commands
+## Combining Artifacts with Other Tools
 
-<RequestExample>
+One of the most powerful features of Dume.ai is the ability to combine artifacts with other tools seamlessly. Here are some common workflows:
 
-```bash Create a Python Script
-create_artifact(
-  type="code",
-  title="Data Processor",
-  language="python",
-  content="""
-import pandas as pd
-import numpy as np
-
-def process_data(file_path):
-    # Load and clean data
-    df = pd.read_csv(file_path)
-    df = df.dropna()
+<Tabs>
+  <Tab title="Email + Spreadsheet">
+    ```bash
+    1. Fetch my spending details from Gmail
+    2. @create_artifact collate this data into a sheet artifact with categories and totals
+    ```
     
-    # Perform calculations
-    df['total'] = df['quantity'] * df['price']
+    **Result:** Automatically extracts financial data from emails and creates an organized expense tracking spreadsheet.
+  </Tab>
+  
+  <Tab title="Code + Documentation">
+    ```bash
+    1. @create_artifact create a REST API for user management in Python
+    2. @create_artifact now create documentation for this API
+    ```
     
-    return df.groupby('category').sum()
-"""
-)
-```
+    **Result:** Generates both functional code and comprehensive documentation artifacts.
+  </Tab>
+  
+  <Tab title="Data Analysis + Report">
+    ```bash
+    1. Analyze the sales data from my CRM
+    2. @create_artifact create a monthly performance report based on this analysis
+    ```
+    
+    **Result:** Processes CRM data and generates a professional report artifact with insights.
+  </Tab>
+  
+  <Tab title="Meeting + Action Items">
+    ```bash
+    1. Transcribe my meeting recording
+    2. @create_artifact create a sheet artifact with action items, owners, and due dates
+    ```
+    
+    **Result:** Converts meeting content into an actionable task tracking spreadsheet.
+  </Tab>
+</Tabs>
 
-</RequestExample>
-
-<ResponseExample>
-
-```json Success Response
-{
-  "artifact_id": "code_892",
-  "type": "code",
-  "title": "Data Processor",
-  "language": "python",
-  "status": "created",
-  "created_at": "2025-09-26T10:30:00Z"
-}
-```
-
-</ResponseExample>
+<Info>
+The `@create_artifact` command works contextually - Dume.ai understands previous conversation context and can reference data from other tools when creating artifacts.
+</Info>
 
 <Warning>
 Large artifacts (>10MB) may take longer to process and save externally. Consider breaking them into smaller components.
@@ -240,21 +199,22 @@ Large artifacts (>10MB) may take longer to process and save externally. Consider
 <Callout icon="lightbulb">
 **Pro Tips for Artifacts**
 
-- Use descriptive titles for easy identification
-- Include comments in code artifacts for better readability
-- Regularly save important artifacts externally as backups
-- Use appropriate file formats when exporting (e.g., .xlsx for sheets, .py for Python code)
+- Be descriptive in your requests: "@create_artifact create a Python script for web scraping with error handling"
+- Reference previous context: "@create_artifact turn this data into a professional-looking spreadsheet"  
+- Combine with other tools: First fetch data, then ask to "@create_artifact organize this into a document"
+- Use conversational language: "@create_artifact make this code more readable" or "@create_artifact add charts to this spreadsheet"
 </Callout>
 
-### Organizing Artifacts
+### Natural Language Best Practices
 
-- **Text artifacts**: Structure with headers and clear sections
-- **Code artifacts**: Include proper documentation and error handling
-- **Sheet artifacts**: Use meaningful column headers and consistent data types
-- **Image artifacts**: Provide detailed prompts for better generation results
+- **Be specific about your needs**: Instead of "create a document", say "@create_artifact create a project proposal document with timeline and budget sections"
+- **Reference existing context**: "@create_artifact collate the email data we just discussed into a tracking sheet"
+- **Ask for iterations**: "@create_artifact improve this code with better error handling" or "@create_artifact make this report more visual"
+- **Combine artifact types**: "@create_artifact create both the code and documentation for this API"
 
-### Performance Considerations
+### Workflow Integration
 
-- Keep individual artifacts under 5MB for optimal performance
-- Use incremental updates rather than recreating large artifacts
-- Save frequently accessed artifacts externally for faster loading
+- **Start broad, then refine**: Create a basic artifact, then ask for specific improvements
+- **Chain with other tools**: Use data from emails, calendars, or databases to populate artifacts
+- **Version control**: Ask to save important artifacts externally for backup and sharing
+- **Collaborate effectively**: Artifacts can be shared and edited collaboratively
