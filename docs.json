@@ -13,7 +13,24 @@
   "seo": {
     "indexing": "all",
     "metatags": {
-      "og:image": "/images/default_meta_tag.png"
+      "description": "Dume.ai is your AI Executive Assistant that simplifies your workday by integrating with your tools, automating workflows, and providing intelligent assistance for productivity.",
+      "keywords": "AI assistant, executive assistant, workflow automation, productivity tools, AI integration, task automation, business intelligence, smart assistant",
+      "author": "Dume.ai Team",
+      "robots": "index, follow",
+      "og:type": "website",
+      "og:title": "Dume.ai - AI Executive Assistant to Simplify Your Workday",
+      "og:description": "Transform your productivity with Dume.ai, the AI Executive Assistant that connects your tools, automates workflows, and provides intelligent assistance.",
+      "og:image": "/images/default_meta_tag.png",
+      "og:url": "https://docs.dume.ai",
+      "og:site_name": "Dume.ai Documentation",
+      "twitter:card": "summary_large_image",
+      "twitter:title": "Dume.ai - AI Executive Assistant Documentation",
+      "twitter:description": "Learn how to use Dume.ai to automate workflows, integrate tools, and boost productivity with AI assistance.",
+      "twitter:image": "/images/default_meta_tag.png",
+      "viewport": "width=device-width, initial-scale=1.0",
+      "theme-color": "#16A34A",
+      "apple-mobile-web-app-capable": "yes",
+      "apple-mobile-web-app-status-bar-style": "default"
     }
   },
   "redirects": [
@@ -104,20 +121,7 @@
               "workflows/output-node"
             ]
           },
-          {
-            "group": "How to create workflows",
-            "pages": [
-              "workflows/input-node",
-              "workflows/llm-node",
-              "workflows/condition-node",
-              "workflows/tool-node",
-              "workflows/http-node",
-              "workflows/loop-node",
-              "workflows/template-node",
-              "workflows/note-node",
-              "workflows/output-node"
-            ]
-          },
+          "workflows/how-to-create-workflows",
           {
             "group": "Setup public workflows",
             "expanded": true,
