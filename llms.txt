@@ -1,0 +1,53 @@
+# Dume.ai Documentation
+
+Dume.ai is an AI Executive Assistant that simplifies your workday through intelligent automation, tool integration, and workflow management.
+
+## Getting Started
+- [Introduction](/index) - Overview of Dume.ai and quick start guide
+- [Personalization](/getting-started/personalisation) - Customize your AI assistant
+- [Connect Tools](/getting-started/connect-your-first-tool) - Link your first integration
+- [Chat Interface](/getting-started/chat-interface) - Learn to communicate with your AI assistant
+
+## Integrations
+- [Email Integration](/integrations/email) - Gmail integration and email management
+- [Calendar Integration](/integrations/calendar) - Google Calendar scheduling and management
+- [GitHub Integration](/integrations/github) - Repository management and PR reviews
+- [Jira Integration](/integrations/jira) - Ticket creation and project management
+- [Confluence Integration](/integrations/confluence) - Document search and creation
+- [Notion Integration](/integrations/notion) - Knowledge base management
+- [Google Docs](/integrations/google_docs) - Document creation and editing
+- [Google Sheets](/integrations/google_sheets) - Spreadsheet management
+- [Microsoft Integration](/integrations/microsoft) - Office 365 and Teams integration
+
+## Tools
+- [Artifacts](/tools/artifacts) - Create and manage documents, spreadsheets, code, and images
+- [Charts](/tools/charts) - Interactive data visualization and chart creation
+- [Web Search](/tools/web-search) - AI-powered internet research tools
+- [Web Scraper](/tools/web-scraper) - Intelligent data extraction from websites
+- [People Search](/tools/people-search) - Professional contact discovery
+- [Notifications](/tools/notification) - Automated email alerts and notifications
+
+## Workflows
+- [Workflow Builder](/workflows/getting-started) - Create custom automation sequences
+- [Workflow Nodes](/workflows/input-node) - Available workflow building blocks
+- [Workflow Examples](/workflow-examples/linkdin-generator) - Pre-built workflow templates
+
+## Key Features
+- **20+ Tool Integrations**: Connect with popular business tools
+- **Workflow Automation**: Create custom automation sequences
+- **Natural Language Interface**: Communicate using conversational language
+- **AI-Powered Assistance**: Intelligent help with daily tasks
+- **Executive Productivity**: Designed for business professionals and leaders
+- **Cross-Platform**: Available on web, mobile, and desktop
+
+## Common Use Cases
+- Email management and drafting
+- Calendar scheduling and meeting coordination
+- Document creation and editing
+- Project management and task tracking
+- Data analysis and visualization
+- Research and information gathering
+- Team collaboration and communication
+- Workflow automation and process optimization
+
+For comprehensive documentation and tutorials, visit https://docs.dume.ai

@@ -1,48 +1,115 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Dume.ai Introduction",
+  "name": "Dume.ai- AI Executive assistant",
   "colors": {
-    "primary": "#155dfc",
-    "light": "#fafafa",
-    "dark": "#0a0a0a"
+    "primary": "#16A34A",
+    "light": "#07C983",
+    "dark": "#15803D"
   },
   "icons": {
     "library": "fontawesome"
   },
   "seo": {
     "indexing": "all",
-     "metatags": {
-        "og:image": "/images/default_meta_tag.png"
+    "metatags": {
+      "description": "Dume.ai is your AI Executive Assistant that simplifies your workday by integrating with your tools, automating workflows, and providing intelligent assistance for productivity.",
+      "keywords": "AI assistant, executive assistant, workflow automation, productivity tools, AI integration, task automation, business intelligence, smart assistant",
+      "author": "Dume.ai Team",
+      "robots": "index, follow",
+      "og:type": "website",
+      "og:title": "Dume.ai - AI Executive Assistant to Simplify Your Workday",
+      "og:description": "Transform your productivity with Dume.ai, the AI Executive Assistant that connects your tools, automates workflows, and provides intelligent assistance.",
+      "og:image": "/images/default_meta_tag.png",
+      "og:url": "https://docs.dume.ai",
+      "og:site_name": "Dume.ai Documentation",
+      "twitter:card": "summary_large_image",
+      "twitter:title": "Dume.ai - AI Executive Assistant Documentation",
+      "twitter:description": "Learn how to use Dume.ai to automate workflows, integrate tools, and boost productivity with AI assistance.",
+      "twitter:image": "/images/default_meta_tag.png",
+      "viewport": "width=device-width, initial-scale=1.0",
+      "theme-color": "#16A34A",
+      "apple-mobile-web-app-capable": "yes",
+      "apple-mobile-web-app-status-bar-style": "default"
     }
-},
+  },
   "redirects": [
-  {
-    "source": "/Github",
-    "destination": "/github"
-  },
     {
-    "source": "/Calender",
-    "destination": "/calendar"
-  },
-     {
-    "source": "/calender",
-    "destination": "/calendar"
-  }
-    
-],
+      "source": "/Github",
+      "destination": "/github"
+    },
+    {
+      "source": "/Calender",
+      "destination": "/calendar"
+    },
+    {
+      "source": "/calender",
+      "destination": "/calendar"
+    },
+    {
+      "source": "/deepresearch",
+      "destination": "/"
+    }
+  ],
   "favicon": "/favicon.svg",
   "navigation": {
-    "groups":[ {
-            "group": "Get Started",
+    "groups": [
+      {
+        "group": "Get Started",
+        "pages": [
+          "index",
+          "getting-started/personalisation",
+          "getting-started/connect-your-first-tool",
+          "getting-started/chat-interface"
+        ]
+      },
+      {
+        "group": "Integrations",
+        "pages": [
+          {
+            "group": "Email",
+            "icon": "envelope",
             "pages": [
-              "index"
+              "integrations/email",
+              "features/multiple_accounts"
             ]
           },
-      {
-            "group": "Workflows",
+          "integrations/calendar",
+          "integrations/notion",
+          "integrations/google_sheets",
+          "integrations/google_docs",
+          "integrations/github",
+          "integrations/microsoft",
+          "integrations/jira",
+          "integrations/confluence",
+          {
+            "group": "MCP",
+            "icon": "arrow-up-right-from-square",
             "pages": [
-              "workflows/getting-started",
+              "integrations/mcp/overview",
+              "integrations/mcp/setup"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Tools",
+        "pages": [
+          "tools/artifacts",
+          "tools/charts",
+          "tools/notification",
+          "tools/people-search",
+          "tools/web-search",
+          "tools/web-scraper"
+        ]
+      },
+      {
+        "group": "Workflows",
+        "pages": [
+          "workflows/getting-started",
+          {
+            "group": "Available Nodes",
+            "pages": [
               "workflows/input-node",
               "workflows/llm-node",
               "workflows/condition-node",
@@ -54,51 +121,25 @@
               "workflows/output-node"
             ]
           },
-       {
-            "group": "Workflow examples",
+          "workflows/how-to-create-workflows",
+          {
+            "group": "Setup public workflows",
+            "expanded": true,
             "pages": [
               "workflow-examples/linkdin-generator",
               "workflow-examples/company-research"
             ]
-          },
-      {
-            "group": "Features",
-            "pages": [
-              "dume_ai_llm",
-              "mcp_server",
-              "personalisation",
-              "web_search",
-              "image_gen",
-              "multiple_llm",
-              "deepresearch"
-              
-            ]
-          },
-          {
-            "group": "Integrations",
-            "pages": [
-              "email",
-              "jira",
-              "calendar",
-              "github",
-              "confluence",
-              "google_sheets",
-              "google_docs"
-            ]
           }
-    
-    ],
-    
-    "global": {
-      "anchors": [
-        
-        {
-          "anchor": "Blog",
-          "href": "https://www.dume.ai/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+        ]
+      },
+      {
+        "group": "Agents",
+        "pages": [
+          "agents/getting-started",
+          "agents/how-to-create-agents"
+        ]
+      }
+    ]
   },
   "logo": {
     "light": "/logo/dume_logo.svg",
@@ -106,6 +147,10 @@
   },
   "navbar": {
     "links": [
+      {
+        "label": "Roadmap",
+        "href": "https://dume-ai-roadmap.notion.site/Dume-Ai-Roadmap-242a6d0d03c1806f8881c74dc4f44739"
+      },
       {
         "label": "Community",
         "href": "https://discord.gg/8qVb5tC4"
@@ -117,11 +162,25 @@
       "href": "https://app.dume.ai"
     }
   },
+  "contextual": {
+    "options": [
+      "copy",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
+  },
   "footer": {
     "socials": {
       "instagram": "https://www.instagram.com/dume.ai/",
       "youtube": "https://www.youtube.com/@dume-ai",
       "linkedin": "https://www.linkedin.com/company/dume-ai"
     }
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
   }
 }

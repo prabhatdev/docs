@@ -1,0 +1,220 @@
+---
+title: "Artifacts - Create and Manage Content with AI"
+sidebarTitle: "Artifacts"
+description: "Learn how to use Dume.ai's artifact system to create, edit, and manage text documents, spreadsheets, code files, and images. Comprehensive guide to artifact types, functions, and best practices."
+keywords: ["artifacts", "content creation", "AI documents", "spreadsheets", "code generation", "image editing", "text editing", "dume.ai tools"]
+"og:title": "Dume.ai Artifacts - AI-Powered Content Creation"
+"og:description": "Master Dume.ai's artifact system for creating and managing documents, spreadsheets, code, and images with AI assistance."
+"twitter:card": "summary"
+"twitter:title": "Artifacts - AI Content Creation Tools"
+"twitter:description": "Create, edit, and manage various content types with Dume.ai's powerful artifact system."
+---
+
+## Overview
+
+Artifacts in Dume.ai are structured content objects that allow you to create, edit, and manage different types of content including text documents, spreadsheets, code files, and images. Simply type `@create_artifact` in your chat followed by your prompt to describe what you want to create using natural language.
+
+<Info>
+Artifacts persist across conversations and can be saved externally for later use or sharing. You can also combine artifacts with other tools - for example, fetch spending details from emails and then ask to "collate into a sheet artifact".
+</Info>
+
+## Artifact Types
+
+<Tabs>
+  <Tab title="Text" icon="file-text">
+    Create and edit rich text documents, markdown files, or plain text content.
+    
+    **Use cases:**
+    - Documentation and reports
+    - Blog posts and articles  
+    - Meeting notes and summaries
+    - Creative writing
+  </Tab>
+  
+  <Tab title="Sheet" icon="table">
+    Generate and manipulate spreadsheet data with calculations and formatting.
+    
+    **Use cases:**
+    - Data analysis and calculations
+    - Budget planning and tracking
+    - Inventory management
+    - Project timelines
+  </Tab>
+  
+  <Tab title="Code" icon="code">
+    Write, edit, and manage code files with syntax highlighting.
+    
+    **Use cases:**
+    - Script development
+    - Configuration files
+    - API implementations  
+    - Code snippets and examples
+  </Tab>
+  
+  <Tab title="Image" icon="image">
+    Generate, edit, and manage visual content and diagrams.
+    
+    **Use cases:**
+    - Illustrations and graphics
+    - Charts and diagrams
+    - UI mockups
+    - Visual documentation
+  </Tab>
+</Tabs>
+
+## Available Functions
+
+### Creating Artifacts with Natural Language
+
+Simply type `@create_artifact` in your chat followed by your prompt describing what you want to create. Dume.ai will automatically determine the best artifact type and generate the content for you.
+
+<CodeGroup>
+
+```bash Create Python Code
+@create_artifact create a python code for binary search
+```
+
+```bash Create Document
+@create_artifact create PRD document for mobile app feature
+```
+
+```bash Create Spreadsheet  
+@create_artifact create a budget tracker spreadsheet
+```
+
+```bash Create Image
+@create_artifact create a flowchart showing user registration process
+```
+
+</CodeGroup>
+
+<Note>
+No need to specify JSON parameters or function names - just use `@create_artifact` followed by your natural language description.
+</Note>
+
+### Editing Existing Artifacts
+
+You can modify any existing artifact by referencing it and describing your changes.
+
+<Accordion title="Edit Examples">
+
+<CodeGroup>
+
+```bash Update Code
+@create_artifact update the binary search code to handle edge cases
+```
+
+```bash Modify Document
+@create_artifact add a risk assessment section to the PRD document
+```
+
+```bash Update Spreadsheet
+@create_artifact add a variance column to the budget tracker
+```
+
+```bash Edit Image
+@create_artifact modify the flowchart to include error handling steps
+```
+
+</CodeGroup>
+
+</Accordion>
+
+### Exporting Artifacts
+
+Request to save your artifacts in various formats or locations.
+
+<Tabs>
+  <Tab title="File Export">
+    ```bash
+    @create_artifact save the meeting notes as a markdown file
+    ```
+  </Tab>
+  
+  <Tab title="Cloud Storage">
+    ```bash
+    @create_artifact export the budget spreadsheet to Google Sheets
+    ```
+  </Tab>
+  
+  <Tab title="Version Control">
+    ```bash
+    @create_artifact save the Python code to my GitHub repository
+    ```
+  </Tab>
+</Tabs>
+
+## Combining Artifacts with Other Tools
+
+One of the most powerful features of Dume.ai is the ability to combine artifacts with other tools seamlessly. Here are some common workflows:
+
+<Tabs>
+  <Tab title="Email + Spreadsheet">
+    ```bash
+    1. Fetch my spending details from Gmail
+    2. @create_artifact collate this data into a sheet artifact with categories and totals
+    ```
+    
+    **Result:** Automatically extracts financial data from emails and creates an organized expense tracking spreadsheet.
+  </Tab>
+  
+  <Tab title="Code + Documentation">
+    ```bash
+    1. @create_artifact create a REST API for user management in Python
+    2. @create_artifact now create documentation for this API
+    ```
+    
+    **Result:** Generates both functional code and comprehensive documentation artifacts.
+  </Tab>
+  
+  <Tab title="Data Analysis + Report">
+    ```bash
+    1. Analyze the sales data from my CRM
+    2. @create_artifact create a monthly performance report based on this analysis
+    ```
+    
+    **Result:** Processes CRM data and generates a professional report artifact with insights.
+  </Tab>
+  
+  <Tab title="Meeting + Action Items">
+    ```bash
+    1. Transcribe my meeting recording
+    2. @create_artifact create a sheet artifact with action items, owners, and due dates
+    ```
+    
+    **Result:** Converts meeting content into an actionable task tracking spreadsheet.
+  </Tab>
+</Tabs>
+
+<Info>
+The `@create_artifact` command works contextually - Dume.ai understands previous conversation context and can reference data from other tools when creating artifacts.
+</Info>
+
+<Warning>
+Large artifacts (>10MB) may take longer to process and save externally. Consider breaking them into smaller components.
+</Warning>
+
+## Best Practices
+
+<Callout icon="lightbulb">
+**Pro Tips for Artifacts**
+
+- Be descriptive in your requests: "@create_artifact create a Python script for web scraping with error handling"
+- Reference previous context: "@create_artifact turn this data into a professional-looking spreadsheet"  
+- Combine with other tools: First fetch data, then ask to "@create_artifact organize this into a document"
+- Use conversational language: "@create_artifact make this code more readable" or "@create_artifact add charts to this spreadsheet"
+</Callout>
+
+### Natural Language Best Practices
+
+- **Be specific about your needs**: Instead of "create a document", say "@create_artifact create a project proposal document with timeline and budget sections"
+- **Reference existing context**: "@create_artifact collate the email data we just discussed into a tracking sheet"
+- **Ask for iterations**: "@create_artifact improve this code with better error handling" or "@create_artifact make this report more visual"
+- **Combine artifact types**: "@create_artifact create both the code and documentation for this API"
+
+### Workflow Integration
+
+- **Start broad, then refine**: Create a basic artifact, then ask for specific improvements
+- **Chain with other tools**: Use data from emails, calendars, or databases to populate artifacts
+- **Version control**: Ask to save important artifacts externally for backup and sharing
+- **Collaborate effectively**: Artifacts can be shared and edited collaboratively

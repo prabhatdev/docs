@@ -1,0 +1,432 @@
+---
+title: "Web Scraper - Intelligent Data Extraction"
+sidebarTitle: "Web Scraper"
+description: "Extract and analyze data from any website or webpage using Dume.ai's intelligent web scraping capabilities. Learn basic and advanced scraping techniques for comprehensive data collection."
+keywords: ["web scraping", "data extraction", "website scraping", "HTML extraction", "data collection", "web automation", "scraping tools", "intelligent scraping", "data mining"]
+"og:title": "Web Scraper Tool - Intelligent Data Extraction"
+"og:description": "Extract structured data from websites with Dume.ai's powerful web scraping tools. Basic and advanced scraping capabilities included."
+"twitter:card": "summary"
+"twitter:title": "Web Scraper - Data Extraction Tool"
+"twitter:description": "Intelligent web scraping and data extraction capabilities for comprehensive website analysis."
+---
+
+## Overview
+
+Dume.ai offers two types of web scraping capabilities: **Basic Scraper** for quick HTML extraction in chat, and **Advanced Scraper** for comprehensive data extraction in workflows.
+
+<Info>
+The Basic Scraper provides simple HTML content, while the Advanced Scraper offers structured data with change tracking, metadata, and multiple output formats.
+</Info>
+
+## Scraper Types
+
+<Tabs>
+  <Tab title="Basic Scraper" icon="code">
+    **Available in:** Chat interface only
+    
+    **Activation:** `@web_scraper`
+    
+    **Output:** Raw HTML content from the webpage
+    
+    **Best for:** Quick content checks, simple data extraction, chat-based research
+  </Tab>
+  
+  <Tab title="Advanced Scraper" icon="cogs">
+    **Available in:** Workflows only
+    
+    **Features:** 
+    - Structured markdown and HTML output
+    - Metadata extraction
+    - Change tracking and monitoring  
+    - JSON structured data
+    - Historical comparison
+    
+    **Best for:** Automated monitoring, data pipelines, comprehensive analysis
+  </Tab>
+</Tabs>
+
+## How It Works
+
+### Basic Scraper (Chat Interface)
+
+<Steps>
+<Step title="Activate the Tool">
+Type `@web_scraper` in the chat interface to activate the basic web scraping functionality.
+</Step>
+
+<Step title="Specify Your Target">
+Provide the website URL and describe what you want to extract.
+
+<CodeGroup>
+```bash Basic HTML Extraction
+@web_scraper Get the HTML content from https://example-store.com/products
+```
+
+```bash Simple Content Check
+@web_scraper Extract text content from https://tech-blog.com/latest-article
+```
+</CodeGroup>
+
+<Note>
+Basic scraper returns raw HTML content that you can analyze directly in the chat.
+</Note>
+</Step>
+
+<Step title="Review Results">
+The tool returns the HTML source code for manual analysis and extraction.
+</Step>
+</Steps>
+
+### Advanced Scraper (Workflows)
+
+The Advanced Scraper is available in workflows and provides comprehensive data extraction with structured output:
+
+```typescript Advanced Scraper Output Schema
+{
+  markdown: string,                    // Clean markdown version
+  html: string | null,                // Full HTML content  
+  metadata: any,                      // Page metadata (title, description, etc.)
+  changeTracking: {
+    previousScrapeAt: string | null,   // ISO datetime of last scrape
+    changeStatus: 'new' | 'same' | 'changed' | 'removed',
+    visibility: 'visible' | 'hidden',
+    diff: string | null,              // Text diff if changed
+    json: any,                        // Structured JSON data
+  }
+}
+```
+
+## Use Cases
+
+<Tabs>
+  <Tab title="Basic Scraper Uses" icon="chat">
+    **Quick Analysis**
+    - Check website structure and content
+    - Verify HTML elements and tags  
+    - Debug web page issues
+    - Extract simple text content
+    
+    **Research Tasks**
+    - Read article content quickly
+    - Check meta tags and SEO elements
+    - Analyze page structure
+    - Get contact information
+  </Tab>
+  
+  <Tab title="Advanced Scraper Uses" icon="workflow">
+    **Automated Monitoring**
+    - Track website changes over time
+    - Monitor competitor pricing updates
+    - Detect new content publications
+    - Alert on structural changes
+    
+    **Data Pipeline Integration**
+    - Feed structured data to analytics tools
+    - Populate databases with web content
+    - Generate reports from web data
+    - Integrate with business workflows
+    
+    **Change Detection**
+    - Monitor product availability
+    - Track price fluctuations
+    - Detect content updates
+    - Archive historical versions
+  </Tab>
+  
+  <Tab title="Market Research" icon="chart-line">
+    **Competitive Analysis** (Both Types)
+    - Extract competitor pricing and features
+    - Monitor competitor website changes
+    - Track new product launches
+    - Collect industry trends
+  </Tab>
+  
+  <Tab title="Lead Generation" icon="users">
+    **Contact Discovery** (Both Types)
+    - Extract email addresses and phone numbers
+    - Find decision maker information
+    - Build prospect lists from directories
+    - Gather company details
+  </Tab>
+</Tabs>
+
+## Example Commands
+
+### Basic Scraper (Chat Interface)
+
+<Accordion title="Basic HTML Extraction">
+
+<CodeGroup>
+
+```bash Get Page Content
+@web_scraper Get HTML from https://company.com/about
+```
+
+```bash Extract Text Content  
+@web_scraper Get the main content from https://blog.com/article-title
+```
+
+```bash Check Page Structure
+@web_scraper Show me the HTML structure of https://ecommerce-site.com/products
+```
+
+```bash Simple Contact Extraction
+@web_scraper Find contact info on https://startup.com/contact
+```
+
+</CodeGroup>
+
+**Output:** Raw HTML content that you can analyze in the chat interface.
+
+</Accordion>
+
+### Advanced Scraper (Workflows Only)
+
+<Accordion title="Structured Data Extraction">
+
+The Advanced Scraper in workflows provides comprehensive output with change tracking:
+
+```json Example Advanced Output
+{
+  "markdown": "# Product Page\n\n**Price:** $99.99\n**Availability:** In Stock\n\n## Description\nHigh-quality wireless headphones...",
+  "html": "<html><head><title>Product</title></head>...",
+  "metadata": {
+    "title": "Wireless Headphones - TechStore",
+    "description": "Premium wireless headphones with noise cancellation",
+    "keywords": ["headphones", "wireless", "audio"],
+    "author": "TechStore",
+    "publishedDate": "2025-09-26T10:00:00Z"
+  },
+  "changeTracking": {
+    "previousScrapeAt": "2025-09-25T10:00:00Z",
+    "changeStatus": "changed", 
+    "visibility": "visible",
+    "diff": "Price changed from $109.99 to $99.99",
+    "json": {
+      "price": "$99.99",
+      "availability": "In Stock",
+      "rating": 4.5,
+      "reviews": 1247
+    }
+  }
+}
+```
+
+</Accordion>
+
+## Data Extraction Comparison
+
+| **Feature** | **Basic Scraper** | **Advanced Scraper** |
+|-------------|-------------------|---------------------|
+| **Availability** | Chat interface only | Workflows only |
+| **Output Format** | Raw HTML | HTML + Markdown + JSON |
+| **Change Tracking** | ❌ None | ✅ Full tracking with diffs |
+| **Metadata** | ❌ Manual extraction | ✅ Automatic extraction |
+| **Structured Data** | ❌ Manual parsing needed | ✅ Auto-parsed JSON |
+| **Historical Data** | ❌ No history | ✅ Previous scrape tracking |
+| **Integration** | Manual analysis | Workflow automation |
+
+<Note>
+Both scrapers respect robots.txt files and implement rate limiting for responsible scraping.
+</Note>
+
+## Scraping Strategies
+
+<AccordionGroup>
+
+<Accordion title="Single Page Scraping" icon="file">
+Extract data from a specific webpage:
+
+```bash
+@web_scraper Get all customer testimonials from https://company.com/testimonials
+@web_scraper Extract FAQ questions and answers from https://support-site.com/faq
+```
+
+**Best for:** Specific data collection, one-time extractions, targeted research
+</Accordion>
+
+<Accordion title="Multi-Page Scraping" icon="files">
+Collect data across multiple pages or sections:
+
+```bash
+@web_scraper Scrape all blog post titles and dates from https://blog.com (all pages)
+@web_scraper Extract product catalog from https://ecommerce.com/categories/electronics
+```
+
+**Best for:** Comprehensive data collection, catalog building, large-scale research
+</Accordion>
+
+<Accordion title="Real-Time Monitoring" icon="clock">
+Track changes and updates on websites:
+
+```bash
+@web_scraper Monitor price changes on https://competitor.com/pricing-page
+@web_scraper Track new job postings on https://company.com/careers
+```
+
+**Best for:** Competitive monitoring, market tracking, opportunity alerts
+</Accordion>
+
+<Accordion title="Data Mining" icon="search">
+Extract insights and patterns from web data:
+
+```bash
+@web_scraper Analyze customer review sentiment from https://product-reviews.com
+@web_scraper Extract trending topics from https://industry-forum.com
+```
+
+**Best for:** Market research, sentiment analysis, trend identification
+</Accordion>
+
+</AccordionGroup>
+
+## Output Formats
+
+<Tabs>
+  <Tab title="Basic Scraper Output" icon="code">
+    ```html Raw HTML
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Product Page</title>
+      <meta name="description" content="Product description">
+    </head>
+    <body>
+      <h1>Wireless Headphones</h1>
+      <p class="price">$99.99</p>
+      <p class="stock">In Stock</p>
+    </body>
+    </html>
+    ```
+    
+    **Format:** Raw HTML content only
+    **Analysis:** Manual parsing required
+  </Tab>
+  
+  <Tab title="Advanced Scraper Output" icon="cogs">
+    ```json Complete Structured Output
+    {
+      "markdown": "# Wireless Headphones\n\n**Price:** $99.99\n**Status:** In Stock",
+      "html": "<!DOCTYPE html><html>...</html>",
+      "metadata": {
+        "title": "Wireless Headphones - Store",
+        "description": "Premium headphones",
+        "publishedDate": "2025-09-26T10:00:00Z"
+      },
+      "changeTracking": {
+        "previousScrapeAt": "2025-09-25T10:00:00Z",
+        "changeStatus": "changed",
+        "visibility": "visible",
+        "diff": "Price changed from $109.99 to $99.99",
+        "json": {
+          "product": {
+            "name": "Wireless Headphones",
+            "price": 99.99,
+            "status": "in_stock"
+          }
+        }
+      }
+    }
+    ```
+    
+    **Format:** Multi-format comprehensive output
+    **Analysis:** Ready-to-use structured data
+  </Tab>
+</Tabs>
+
+## Best Practices
+
+<Tip>
+**Scraper Selection Guide**
+- **Basic Scraper**: Quick checks, research, manual analysis
+- **Advanced Scraper**: Automation, monitoring, data pipelines  
+- **URLs**: Always provide complete, valid URLs
+- **Specificity**: Be clear about what data you need
+- **Rate Limiting**: Respect website performance
+</Tip>
+
+### Responsible Scraping
+
+<Steps>
+<Step title="Check Terms of Service">
+Review the website's terms of service and robots.txt file before scraping.
+</Step>
+
+<Step title="Respect Rate Limits">
+Allow reasonable delays between requests to avoid overloading servers.
+</Step>
+
+<Step title="Use Appropriate Data">
+Only extract publicly available information for legitimate business purposes.
+</Step>
+
+<Step title="Store Data Securely">
+Ensure extracted data is stored and handled according to privacy regulations.
+</Step>
+</Steps>
+
+## Common Applications
+
+<RequestExample>
+
+```bash E-commerce Monitoring
+@web_scraper Monitor competitor prices and product availability on https://competitor-store.com/category/electronics
+```
+
+```bash Lead Generation
+@web_scraper Extract company contact information and key personnel from https://industry-directory.com
+```
+
+```bash Content Research
+@web_scraper Collect all case studies and white papers from https://consulting-firm.com/resources
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Extracted Data Example
+{
+  "extraction_results": {
+    "url": "https://competitor-store.com/category/electronics",
+    "timestamp": "2025-09-26T10:30:00Z",
+    "data": [
+      {
+        "product_name": "Wireless Headphones",
+        "price": "$129.99",
+        "brand": "TechBrand",
+        "rating": "4.5/5",
+        "reviews_count": 1247,
+        "availability": "In Stock"
+      }
+    ],
+    "total_items": 156
+  }
+}
+```
+
+</ResponseExample>
+
+## Legal & Ethical Considerations
+
+<Warning>
+Always ensure compliance with website terms of service, data protection regulations (GDPR, CCPA), and copyright laws when scraping web content.
+</Warning>
+
+### Recommended Guidelines:
+- ✅ Scrape publicly available information only
+- ✅ Respect robots.txt and rate limiting
+- ✅ Use for legitimate business research and analysis
+- ✅ Comply with data protection regulations
+- ✅ Attribute sources when required
+
+### Avoid These Practices:
+- ❌ Scraping private or protected content
+- ❌ Overloading servers with excessive requests
+- ❌ Violating copyright or intellectual property
+- ❌ Collecting personal data without consent
+- ❌ Bypassing authentication or access controls
+
+<Check>
+Use web scraping as a powerful tool for legitimate business intelligence while respecting digital property rights and privacy.
+</Check>

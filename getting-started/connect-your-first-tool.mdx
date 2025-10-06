@@ -1,0 +1,396 @@
+---
+title: "Connect Your First Tool Integration"
+sidebarTitle: "Connect Your First Tool"
+keywords: ['integration', 'OAuth', 'tool connection', 'getting started', 'authentication', 'setup', 'third-party tools', 'AI integrations', 'workflow automation', 'tool setup']
+description: "Learn how to connect your first tool integration to Dume using OAuth authentication. Complete step-by-step guide to unlock powerful integrations and enhance your AI executive assistant experience."
+"og:title": "Connect Your First Tool - Dume.ai Integration Guide"
+"og:description": "Step-by-step guide to connecting your first tool integration with Dume.ai. Unlock powerful workflow automation and AI capabilities."
+"twitter:card": "summary"
+"twitter:title": "Tool Integration Setup - Dume.ai"
+"twitter:description": "Quick setup guide for connecting tools to your AI executive assistant and unlocking automation capabilities."
+---
+
+## Why Connect Tools to Dume?
+
+Integrating external tools with Dume supercharges your AI assistant's capabilities by:
+
+- **Accessing real-time data** from your favorite platforms and services
+- **Automating workflows** across multiple tools and applications
+- **Centralizing information** from various sources into one intelligent interface
+- **Enhancing context** for more accurate and relevant AI responses
+- **Saving time** by eliminating manual data switching between platforms
+
+<Tip>
+Each integration you connect makes Dume more powerful and personalized to your specific workflow and data sources.
+</Tip>
+
+## Prerequisites
+
+Before connecting your first tool, ensure you have:
+
+- **Active Dume account** with appropriate permissions
+- **Account on the service** you want to integrate (e.g., Google, Slack, GitHub)
+- **Admin or integration permissions** for the external service (if required)
+- **Stable internet connection** for OAuth authentication process
+
+<Info>
+Different integrations may require different permission levels. Check the specific requirements for your chosen tool.
+</Info>
+
+## Available Integrations
+
+Dume supports connections to various popular tools and services:
+
+<CardGroup cols={3}>
+<Card title="Productivity" icon="calendar">
+  Google Calendar, Notion, Todoist, Trello
+</Card>
+
+<Card title="Communication" icon="comments">
+  Slack, Discord, Microsoft Teams, Email
+</Card>
+
+<Card title="Development" icon="code">
+  GitHub, GitLab, Jira, Linear
+</Card>
+
+<Card title="Cloud Storage" icon="cloud">
+  Google Drive, Dropbox, OneDrive
+</Card>
+
+<Card title="Analytics" icon="chart-line">
+  Google Analytics, Mixpanel, Amplitude
+</Card>
+
+<Card title="CRM & Sales" icon="handshake">
+  Salesforce, HubSpot, Pipedrive
+</Card>
+</CardGroup>
+
+## Step-by-Step Integration Guide
+
+<Steps>
+  <Step title="Access Integrations Page">
+    Navigate to the integrations section to browse available tools and services.
+
+    <Frame>
+        <img
+            className="block dark:hidden"
+            src="/images/light/integrations-page.png"
+            alt="Dume integrations page showing available third-party tools and services"
+            title="Dume integrations dashboard"
+        />
+        <img
+            className="hidden dark:block"
+            src="/images/dark/integrations-page.png"
+            alt="Dume integrations page showing available third-party tools and services (dark mode)"
+            title="Dume integrations dashboard (dark mode)"
+        />
+    </Frame>
+    
+    **How to access integrations:**
+    1. Log into your Dume account
+    2. Navigate to **Settings** or **Integrations** in the main menu
+    3. Browse the available integration categories
+    
+    <Note>
+    The integrations page displays all available tools, including their current connection status and setup requirements.
+    </Note>
+  </Step>
+  
+  <Step title="Select Your Integration">
+    Choose the tool or service you want to connect from the available options.
+
+    <Frame>
+        <img
+            className="block dark:hidden"
+            src="/images/light/select-integration.png"
+            alt="Integration selection interface showing various third-party tools with connect buttons"
+            title="Selecting an integration to connect"
+        />
+        <img
+            className="hidden dark:block"
+            src="/images/dark/select-integration.png"
+            alt="Integration selection interface showing various third-party tools with connect buttons (dark mode)"
+            title="Selecting an integration to connect (dark mode)"
+        />
+    </Frame>
+    
+    **Selection considerations:**
+    - **Start with frequently used tools** for maximum benefit
+    - **Check permission requirements** before proceeding
+    - **Review data access scope** that will be requested
+    
+    <Tip>
+    Popular first integrations include Google Calendar, Slack, or GitHub as they provide immediate value for most users.
+    </Tip>
+  </Step>
+  
+  <Step title="Initiate OAuth Connection">
+    Click "Connect" to begin the secure OAuth authentication process.
+
+    <Frame>
+        <img
+            className="block dark:hidden"
+            src="/images/light/oauth-initiate.png"
+            alt="OAuth connection initiation showing connect button and permission preview"
+            title="Starting OAuth authentication process"
+        />
+        <img
+            className="hidden dark:block"
+            src="/images/dark/oauth-initiate.png"
+            alt="OAuth connection initiation showing connect button and permission preview (dark mode)"
+            title="Starting OAuth authentication process (dark mode)"
+        />
+    </Frame>
+    
+    **What happens during OAuth initiation:**
+    1. Dume redirects you to the external service's login page
+    2. You'll see a summary of permissions being requested
+    3. The connection process begins securely
+    
+    <Warning>
+    Never enter your credentials directly into Dume. The OAuth process redirects you to the official service login page for security.
+    </Warning>
+  </Step>
+  
+  <Step title="Authenticate with External Service">
+    Log in to the external service and authorize Dume's access permissions.
+
+    <Frame>
+        <img
+            className="block dark:hidden"
+            src="/images/light/oauth-login.png"
+            alt="External service OAuth login page showing permission scopes and authorization options"
+            title="OAuth authentication and permission approval"
+        />
+        <img
+            className="hidden dark:block"
+            src="/images/dark/oauth-login.png"
+            alt="External service OAuth login page showing permission scopes and authorization options (dark mode)"
+            title="OAuth authentication and permission approval (dark mode)"
+        />
+    </Frame>
+    
+    **During authentication:**
+    1. **Log in** with your existing account credentials
+    2. **Review permissions** that Dume is requesting
+    3. **Authorize access** by clicking "Allow" or "Grant Permission"
+    4. **Wait for redirect** back to Dume
+    
+    **Common permission types:**
+    - **Read access** to your data (calendars, files, messages)
+    - **Write access** for creating or updating content
+    - **Profile information** for personalization
+    
+    <Check>
+    The external service will clearly display what data Dume can access. Only approve permissions you're comfortable granting.
+    </Check>
+  </Step>
+  
+  <Step title="Confirm Successful Connection">
+    Verify that your integration is properly connected and functioning.
+
+    <Frame>
+        <img
+            className="block dark:hidden"
+            src="/images/light/integration-success.png"
+            alt="Successful integration confirmation showing connected status and available features"
+            title="Integration successfully connected"
+        />
+        <img
+            className="hidden dark:block"
+            src="/images/dark/integration-success.png"
+            alt="Successful integration confirmation showing connected status and available features (dark mode)"
+            title="Integration successfully connected (dark mode)"
+        />
+    </Frame>
+    
+    **Verification steps:**
+    1. **Check connection status** - should show "Connected" or "Active"
+    2. **Test basic functionality** by asking Dume to access your data
+    3. **Review settings** and permissions if needed
+    4. **Configure specific features** or filters
+    
+    <Check>
+    Success! Your integration is now active and Dume can access the authorized data from your connected service.
+    </Check>
+  </Step>
+</Steps>
+
+## Understanding OAuth Authentication
+
+OAuth (Open Authorization) is the secure industry standard that Dume uses to connect with external services without storing your passwords.
+
+### How OAuth Protects Your Data
+
+<AccordionGroup>
+<Accordion title="What is OAuth and why is it secure?">
+  OAuth creates secure, temporary access tokens instead of sharing your actual passwords. This means:
+  
+  - **Your passwords stay private** - Dume never sees or stores your login credentials
+  - **Limited access scope** - You control exactly what data Dume can access
+  - **Revocable permissions** - You can disconnect integrations anytime
+  - **Time-limited tokens** - Access tokens expire and refresh automatically
+</Accordion>
+
+<Accordion title="What permissions does Dume request?">
+  Permission requests vary by service but typically include:
+  
+  **Read permissions:**
+  - Access to your profile information
+  - Read calendar events, files, or messages
+  - View project data or analytics
+  
+  **Write permissions (if applicable):**
+  - Create calendar events or tasks
+  - Post messages or notifications
+  - Update project status or data
+  
+  <Warning>
+  Always review and understand permissions before granting access. Only approve what you need for your intended use case.
+  </Warning>
+</Accordion>
+
+<Accordion title="How to revoke or modify permissions">
+  You can manage your integrations at any time:
+  
+  **From Dume:**
+  1. Go to Settings → Integrations
+  2. Find the connected service
+  3. Click "Disconnect" or "Modify Permissions"
+  
+  **From the external service:**
+  1. Log into the external service
+  2. Find "Connected Apps" or "Third-party Access"
+  3. Locate Dume and revoke or modify access
+</Accordion>
+</AccordionGroup>
+
+## Testing Your Integration
+
+After connecting your first tool, test the integration to ensure it's working properly:
+
+<Tabs>
+<Tab title="Quick Test">
+  Ask Dume a simple question about your connected service:
+  
+  ```
+  "What's on my calendar today?"
+  "Show me my recent GitHub commits"
+  "What are my unread Slack messages?"
+  ```
+  
+  Dume should be able to access and respond with real data from your connected service.
+</Tab>
+
+<Tab title="Advanced Testing">
+  Try more complex requests that utilize multiple aspects of the integration:
+  
+  ```
+  "Create a summary of my meetings this week"
+  "Find files in my Drive related to [project name]"
+  "What issues are assigned to me in Jira?"
+  ```
+  
+  This tests both data access and Dume's ability to process and present the information.
+</Tab>
+
+<Tab title="Permission Validation">
+  Verify that permission boundaries work correctly:
+  
+  - Try accessing data you didn't grant permission for
+  - Confirm Dume respects scope limitations
+  - Test that unauthorized requests are properly denied
+</Tab>
+</Tabs>
+
+## Troubleshooting Common Issues
+
+<AccordionGroup>
+<Accordion title="OAuth authentication failed or timed out">
+  **Possible causes and solutions:**
+  
+  - **Slow internet connection** - Try again with a stable connection
+  - **Popup blockers** - Disable popup blockers for the OAuth flow
+  - **Browser cookies disabled** - Enable cookies for the authentication process
+  - **Incomplete authorization** - Make sure you clicked "Allow" on the external service
+  
+  **Resolution steps:**
+  1. Clear your browser cache and cookies
+  2. Disable browser extensions temporarily
+  3. Try using an incognito/private browsing window
+  4. Restart the OAuth process from the beginning
+</Accordion>
+
+<Accordion title="Integration shows connected but doesn't work">
+  **Diagnostic steps:**
+  
+  1. **Check permission scope** - Ensure you granted necessary permissions
+  2. **Verify account access** - Make sure you used the correct account
+  3. **Test data availability** - Confirm the external service has data to access
+  4. **Review rate limits** - Some services limit API calls per hour
+  
+  **Quick fixes:**
+  - Disconnect and reconnect the integration
+  - Check the external service for any account restrictions
+  - Wait a few minutes for changes to propagate
+</Accordion>
+
+<Accordion title="Permission denied or access errors">
+  **Common causes:**
+  
+  - **Insufficient account permissions** on the external service
+  - **Organization restrictions** preventing third-party app access
+  - **Expired or revoked tokens** requiring re-authentication
+  
+  **Solutions:**
+  - Contact your IT administrator if in an organization
+  - Re-authenticate to refresh expired tokens
+  - Check the external service's third-party app settings
+</Accordion>
+
+<Accordion title="Can't find the integration I need">
+  **If your desired service isn't listed:**
+  
+  - Check if there's a similar or alternative integration
+  - Look for API-based connection options
+  - Submit a feature request for the specific integration
+  - Consider using webhook or custom integration options (if available)
+</Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<Check>
+Congratulations! You've successfully connected your first tool to Dume. 
+</Check>
+
+Now that you have your first integration working:
+
+1. **Add more integrations** - Connect additional tools to expand Dume's capabilities
+2. **Explore advanced features** - Discover automation and workflow options
+3. **Customize settings** - Fine-tune permissions and data access preferences
+4. **Learn about workflows** - Set up automated tasks between connected services
+
+<CardGroup cols={2}>
+<Card title="Connect More Tools" icon="plus" href="/integrations">
+  Browse and connect additional integrations to expand your AI assistant's capabilities.
+</Card>
+
+<Card title="Workflow Automation" icon="robot" href="/workflows">
+  Learn how to create automated workflows between your connected tools and services.
+</Card>
+
+<Card title="Privacy Settings" icon="shield" href="/privacy">
+  Review and manage your data privacy settings across all connected integrations.
+</Card>
+
+<Card title="Advanced Features" icon="gear" href="/features">
+  Discover advanced integration features and customization options.
+</Card>
+</CardGroup>
+
+<Note>
+Need help with a specific integration? Check our detailed integration guides or contact support for personalized assistance.
+</Note>
