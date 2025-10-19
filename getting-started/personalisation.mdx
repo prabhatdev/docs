@@ -9,26 +9,26 @@ description: "Customize Dume to understand your background and preferences for m
 "twitter:title": "AI Personalization Guide - Dume.ai"
 "twitter:description": "Customize your AI executive assistant for better, more relevant responses tailored to your needs."
 ---
-
 ## Why Personalize Dume?
 
-Personalization transforms Dume from a generic AI assistant into your knowledgeable partner. By understanding your background, expertise, and preferences, Dume can:
-
-- **Provide contextual responses** tailored to your role and industry
-- **Adjust technical depth** based on your experience level
-- **Reference your specific interests** and professional focus areas
-- **Save time** by eliminating the need to repeatedly explain your context
+<CardGroup cols={2}>
+  <Card title="Contextual Responses" icon="sparkles">
+    Tailors answers to your role, industry, and current focus areas instead of generic output.
+  </Card>
+  <Card title="Right Technical Depth" icon="gear-complex-code">
+    Adjusts complexity (high-level vs detailed) based on your stated experience level.
+  </Card>
+  <Card title="Relevant Interests" icon="bullseye-pointer">
+    Weaves in your specialty domains (e.g. activation, onboarding) when generating suggestions.
+  </Card>
+  <Card title="Time Savings" icon="clock">
+    Removes repetitive re‑explaining of background; persistent profile informs every interaction.
+  </Card>
+</CardGroup>
 
 <Tip>
-The more information you provide, the better Dume becomes at understanding your needs and providing relevant assistance.
+Adding precise role + focus areas (e.g. “B2B SaaS PM, activation funnels”) improves relevance across workflows and agents.
 </Tip>
-
-## Prerequisites
-
-Before personalizing Dume, ensure you have:
-- An active Dume account
-- Basic profile information (name, role, interests)
-- Optional: Website URL or social media profiles for auto-research
 
 ## Setup Process
 
@@ -135,7 +135,37 @@ After completing personalization:
 2. **Learning Process**: The AI continues to learn from your interactions and feedback
 3. **Ongoing Refinement**: You can update your profile as your interests or role evolve
 
-## Troubleshooting
+
+## Before vs After
+
+#### Profile
+<CodeGroup>
+  <CodeBlock language="json" title="Sample Profile JSON (Solopreneur)">
+{`{
+  //Example Profile
+  "name": "Leo Martinez",
+  "title": "Founder / Solo SaaS Builder",
+  "industry": "Indie B2B SaaS",
+  "focus": ["automation", "growth experiments", "customer onboarding"],
+  "experienceLevel": "founder",
+  "preferredTone": "pragmatic",
+  "stack": ["Next.js", "Node.js", "PostgreSQL"],
+  "currentGoal": "reach first 200 paying users"
+}`}
+  </CodeBlock>
+</CodeGroup>
+
+| Scenario | Prompt | Before | After |
+|----------|--------|--------|-------|
+| PRD Summary | `Summarize this PRD.` | High-level summary without growth or onboarding emphasis. | Highlights onboarding funnel steps, activation KPIs, lean implementation, quick experiment sequence. |
+| Email Triage | `Triage my unread inbox.` | Lists emails with generic priority labels. | Groups by growth experiments, flags investor updates, suggests follow-ups tied to 200-user goal, surfaces billing risk emails first. |
+
+<Tip type="info">
+Each improvement is driven by role, focus areas, current goal and tone settings in your profile.
+</Tip>
+
+
+## FAQs
 
 <AccordionGroup>
 <Accordion title="I don't see the personalization option">

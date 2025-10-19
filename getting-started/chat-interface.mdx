@@ -1,15 +1,12 @@
 ---
-title: "Using the Chat Interface with Connected Tools"
-sidebarTitle: "Chat Interface"
+title: "Master Chat Interface"
+sidebarTitle: "Master Chat Interface"
 keywords: ['chat interface', 'AI conversation', 'connected tools', 'queries', 'commands', 'tool integration', 'natural language']
-description: "Master Dume's chat interface to seamlessly interact with your connected tools through natural language queries and commands. Learn effective communication patterns."
+description: "Understand Dume's chat interface to seamlessly interact with your connected tools through natural language queries and commands. Learn effective communication patterns."
 ---
 
-## Welcome to Your Enhanced Chat Experience
 
-Now that you've personalized Dume and connected your first tool, it's time to experience the power of unified AI conversations. The chat interface is where your personalized AI assistant meets your connected tools, creating a seamless workspace where you can accomplish tasks across multiple platforms through simple conversations.
-
-### What Makes This Different
+### What Makes Dume.ai Different
 
 <CardGroup cols={2}>
 <Card title="Context-Aware Conversations" icon="brain">
@@ -28,6 +25,9 @@ Now that you've personalized Dume and connected your first tool, it's time to ex
   Get live information from your connected tools, not outdated cached data.
 </Card>
 </CardGroup>
+
+Now that you've personalized Dume and connected your first tool, it's time to experience the power of unified AI conversations. The chat interface is where your personalized AI assistant meets your connected tools, creating a seamless workspace where you can accomplish tasks across multiple platforms through simple conversations.
+
 
 ## Understanding the Chat Interface
 
@@ -54,33 +54,23 @@ Now that you've personalized Dume and connected your first tool, it's time to ex
   - **Your messages** appear on the right in colored bubbles
   - **Dume's responses** appear on the left with profile avatar
   - **Tool actions** are highlighted with service icons
-  - **Citations and sources** are linked for verification
   - **Code blocks** and data tables are formatted for readability
+  - **Rate responses** with 👍 or 👎 to help improve future answers.
 </Accordion>
 
 <Accordion title="Message Input Field">
   **Where you type your queries and commands:**
   - Support for **multi-line messages** with Shift + Enter
-  - **Auto-complete suggestions** for common queries
   - **Upload attachments** like documents or images
   - **Voice input** for hands-free interaction (if enabled)
-  - **Command shortcuts** for quick actions
-</Accordion>
-
-<Accordion title="Connected Tools Sidebar">
-  **Visual indicator of your active integrations:**
-  - **Green dots** indicate connected and active tools
-  - **Status indicators** show real-time connection health
-  - **Quick access buttons** for tool-specific actions
-  - **Usage metrics** for tracking integration activity
+  - **Type @** then start typing a tool name to target specific integrations in your message.
 </Accordion>
 
 <Accordion title="Conversation History">
-  **Access to previous chat sessions:**
-  - **Search conversations** by keywords or dates
-  - **Star important conversations** for quick access
-  - **Export conversations** for documentation
-  - **Continue conversations** across sessions
+  Use **3 dot menu** in conversation history to:
+  - **Pin** important threads to keep them at the top
+  - **Rename** a conversation for quick recall
+  - **Delete** a conversation to remove it permanently
 </Accordion>
 </AccordionGroup>
 
@@ -180,7 +170,7 @@ Now that you've personalized Dume and connected your first tool, it's time to ex
   </Step>
 
   <Step title="Chain Multiple Tool Operations">
-    Combine data from multiple tools in a single conversation to create powerful workflows.
+    Combine data from multiple tools in a single conversation.
 
     <Frame>
         <img
@@ -197,7 +187,7 @@ Now that you've personalized Dume and connected your first tool, it's time to ex
         />
     </Frame>
 
-    **Workflow examples:**
+    **Multiple Tool examples:**
     ```
     "Check my calendar for tomorrow, then send an email to attendees with the meeting agenda from my Drive"
     
@@ -207,7 +197,44 @@ Now that you've personalized Dume and connected your first tool, it's time to ex
     ```
 
     <Check>
-    Dume can execute complex workflows that would normally require switching between multiple applications and copying data manually.
+    Dume can execute multiple tools step by step or at once that would normally require switching between multiple applications and copying data manually.
+    </Check>
+  </Step>
+
+  <Step title="Run Workflows or Target Tools with @">
+    Type **@** in the input to open the tool & workflow picker. Keep typing to filter.  
+    - Select a tool to scope your next command (only that integration is used)  
+    - Select a saved workflow to launch it directly  
+    - Dume will prompt for any missing required fields before execution
+
+    <Frame>
+        <img
+            className="block dark:hidden"
+            src="/images/light/multi-tool-workflow.png"
+            alt="Chat showing @ picker and a workflow being executed across calendar, email, and tasks"
+            title="Selecting a tool or workflow with @"
+        />
+        <img
+            className="hidden dark:block"
+            src="/images/dark/multi-tool-workflow.png"
+            alt="Chat showing @ picker and a workflow being executed across calendar, email, and tasks (dark mode)"
+            title="Selecting a tool or workflow with @ (dark mode)"
+        />
+    </Frame>
+
+    **Examples:**
+    ```
+    "@GitHub create an issue: Login fails on Safari"
+
+    "@Calendar schedule 30m with Sarah tomorrow 2pm"
+    
+    "Run @Daily Digest"
+    
+    "@Company Research run company research on Dume.ai"
+    ```
+
+    <Check>
+      Workflows run once all required inputs are confirmed.
     </Check>
   </Step>
 </Steps>
@@ -334,35 +361,6 @@ User: "Also invite John to that meeting"
 Dume: "Added john@company.com to the Design Review meeting at 3:00 PM tomorrow."
 ```
 
-### Smart Suggestions and Autocomplete
-
-<AccordionGroup>
-<Accordion title="Query Suggestions">
-  Based on your connected tools and recent activity, Dume suggests relevant queries:
-  
-  - "Check my calendar for conflicts"
-  - "Summarize today's Slack mentions"
-  - "Show overdue GitHub issues"
-  - "Find recent files I shared"
-</Accordion>
-
-<Accordion title="Command Completion">
-  Start typing common commands and see intelligent completions:
-  
-  - Type "schedule..." → "schedule a meeting with [recent contacts]"
-  - Type "find..." → "find emails from [frequent senders]"
-  - Type "create..." → "create a task in [active projects]"
-</Accordion>
-
-<Accordion title="Context-Aware Suggestions">
-  Suggestions adapt based on:
-  - **Time of day** (morning tasks, end-of-day summaries)
-  - **Current projects** (relevant files, team members)
-  - **Recent activity** (follow-up actions, related tasks)
-  - **Connected tools** (available actions and data)
-</Accordion>
-</AccordionGroup>
-
 ## Best Practices for Effective Communication
 
 ### Crafting Clear Queries
@@ -435,11 +433,6 @@ Dume: "Added john@company.com to the Design Review meeting at 3:00 PM tomorrow."
   - **Connection errors**: "I can't connect to Slack right now. Let me try again."
   - **Permission issues**: "I need additional permissions to access your Drive files."
   - **Rate limits**: "GitHub API limit reached. I'll retry in a few minutes."
-  
-  **How Dume helps:**
-  - Suggests alternative approaches
-  - Provides direct links to fix permission issues
-  - Automatically retries failed operations when possible
 </Accordion>
 </AccordionGroup>
 
@@ -455,10 +448,9 @@ Dume: "Added john@company.com to the Design Review meeting at 3:00 PM tomorrow."
   - **Service outage** - Verify the external service is operational
   
   **Quick fixes:**
-  1. Ask Dume to "refresh [tool name] connection"
-  2. Try a simpler query to test basic connectivity
-  3. Check your integrations page for connection status
-  4. Disconnect and reconnect the problematic tool
+  1. Try a simpler query to test basic connectivity
+  2. Check your integrations page for connection status.
+  3. Disconnect and reconnect the problematic tool
 </Accordion>
 
 <Accordion title="Dume doesn't understand my query">
@@ -508,82 +500,11 @@ Dume: "Added john@company.com to the Design Review meeting at 3:00 PM tomorrow."
 </Accordion>
 </AccordionGroup>
 
-## Keyboard Shortcuts and Quick Actions
-
-<Tabs>
-<Tab title="Essential Shortcuts">
-  **Navigation:**
-  - `Cmd + Enter` (Mac) / `Ctrl + Enter` (Windows): Send message
-  - `Shift + Enter`: New line without sending
-  - `Cmd + K` (Mac) / `Ctrl + K` (Windows): Focus search
-  - `Esc`: Clear current input
-  
-  **Chat Management:**
-  - `Cmd + N` (Mac) / `Ctrl + N` (Windows): New conversation
-  - `Cmd + S` (Mac) / `Ctrl + S` (Windows): Save/star conversation
-  - `↑/↓ Arrow keys`: Navigate through message history
-</Tab>
-
-<Tab title="Quick Commands">
-  **Type these commands for instant actions:**
-  ```
-  /calendar - Quick calendar view
-  /tasks - Show pending tasks across all tools
-  /files - Recent files from connected storage
-  /status - Check all tool connection status
-  /help - Get help with commands and features
-  ```
-  
-  **Tool-specific shortcuts:**
-  ```
-  @slack [message] - Send direct Slack message
-  @calendar [event] - Quick calendar event creation
-  @github [issue] - Create GitHub issue
-  @drive [filename] - Find file in cloud storage
-  ```
-</Tab>
-
-<Tab title="Voice Commands">
-  **If voice input is enabled:**
-  - "Hey Dume, check my calendar"
-  - "Find emails about the project"
-  - "Create a task to follow up with client"
-  - "Schedule a meeting with the team"
-  
-  **Voice tips:**
-  - Speak clearly and at normal pace
-  - Use specific names and dates
-  - Pause briefly between complex instructions
-  - Say "cancel" to stop voice input
-</Tab>
-</Tabs>
-
-## Next Steps: Mastering Your Workflow
-
 <Check>
 You're now ready to harness the full power of Dume's connected chat interface!
 </Check>
 
-Continue building your productivity superpowers:
-
-<CardGroup cols={2}>
-<Card title="Workflow Automation" icon="robot" href="/workflows">
+## Next Steps: Mastering Workflows
   Set up automated workflows that connect multiple tools and trigger based on events or schedules.
-</Card>
 
-<Card title="Advanced Features" icon="gear" href="/features">
-  Discover advanced chat features like custom commands, templates, and AI model selection.
-</Card>
 
-<Card title="Integration Library" icon="plug" href="/integrations">
-  Connect additional tools to expand your AI assistant's capabilities and data access.
-</Card>
-
-<Card title="Team Collaboration" icon="users" href="/collaboration">
-  Learn how to share conversations, collaborate with teammates, and manage team integrations.
-</Card>
-</CardGroup>
-
-<Note>
-The more you use the chat interface with your connected tools, the smarter Dume becomes at anticipating your needs and suggesting helpful actions. Start with simple queries and gradually explore more complex workflows as you become comfortable with the interface.
-</Note>

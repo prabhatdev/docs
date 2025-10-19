@@ -1,0 +1,78 @@
+---
+title: Getting Started
+description: Connect your first tools and run your first automation with Dume.ai in ~3 minutes.
+---
+
+<Tip>
+Dume.ai becomes extremely useful when you connect at least email + one knowledge source (Notion / Confluence) + one task system (Jira / Linear).
+</Tip>
+
+<CardGroup cols={3}>
+  <Card title="Templates" icon="bolt" href="/templates">
+    Ready-made automations (Inbox Summary, Standup, Company Research).
+  </Card>
+  <Card title="Workflow Studio" icon="arrow-progress" href="/workflows/overview">
+    Drag‑and‑drop multi-step workflows across tools.
+  </Card>
+  <Card title="Agent Studio" icon="robot" href="/agents/overview">
+    Configure autonomous agents with memory + tool access.
+  </Card>
+</CardGroup>
+
+<Image src="/images/getting-started.png" alt="Quick Start" />
+
+<Steps>
+  <Step title="Create an account">
+    Go to <a href="https://app.dume.ai" target="_blank" rel="noopener noreferrer">Dume.ai</a>, enter your email and OTP, set password and login.
+  </Step>
+  <Step title="Connect core tools">
+    Visit <a href="https://app.dume.ai/integrations" target="_blank" rel="noopener noreferrer">Integrations</a> and connect:
+    <ul>
+      <li><strong>Gmail</strong> (email summarization+ triage + search + reply context)</li>
+      <li><strong>Calendar</strong> (meeting scheduling & follow-ups)</li>
+    </ul>
+    All via OAuth. Revocable anytime. Multi-account supported.
+    <Image src="/images/integrations.png" alt="Integrations" />
+  </Step>
+  <Step title="Clone and run a workflow">
+    Open <a href="https://app.dume.ai/workflow" target="_blank" rel="noopener noreferrer">Workflow</a> page → Switch to Public Workflows Tab→ choose <em>Email Triage</em> → <strong>Clone Workflow</strong> → <strong>Run</strong>.
+    <br/><em>Connected email account's emails will be auto triaged once workflow executes.</em>
+  </Step>
+</Steps>
+
+<Tabs>
+  <Tab title="Quick Prompt">
+    Example prompt to convert unread emails to tasks:
+    <CodeGroup>
+      <CodeBlock language="markdown">
+        {"Summarize my last 50 unread emails. Flag any that need a reply today. Output JSON with fields: subject, sender, priority, suggested_action.\n"}
+      </CodeBlock>
+    </CodeGroup>
+  </Tab>
+  <Tab title="PRD → Jira">
+    Use the PRD Generator template then:
+    <CodeGroup>
+      <CodeBlock language="markdown">
+        {"Prompt:\nFrom the PRD in Notion titled 'Mobile Onboarding Revamp', create Jira stories with acceptance criteria, labels=onboarding,mobile, estimate story points by complexity.\n"}
+      </CodeBlock>
+    </CodeGroup>
+  </Tab>
+</Tabs>
+
+
+## Common Quick Wins
+
+<CardGroup cols={2}>
+  <Card title="Morning Digest" icon="envelope-open-text">
+    Unified summary: overnight emails, calendar changes, new tasks, relevant docs.
+  </Card>
+  <Card title="Standup Automation" icon="wand-sparkles">
+    Agent compiles yesterday’s commits, tickets moved, meeting notes → posts to Slack.
+  </Card>
+  <Card title="Company Research" icon="search">
+    Enter domain → collects site, LinkedIn, funding, news → structured profile.
+  </Card>
+  <Card title="PRD to Tickets" icon="ballot-check">
+    Turn product document into sprint-ready Jira issues with acceptance criteria.
+  </Card>
+</CardGroup>

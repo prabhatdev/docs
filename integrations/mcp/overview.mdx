@@ -1,70 +1,96 @@
 ---
-title: "MCP (Model Context Protocol) - Advanced Executive Integration"
+title: "MCP (Model Context Protocol)"
 sidebarTitle: "MCP Overview"
 icon: "plug-circle-check"
-keywords: ['mcp', 'model context protocol', 'advanced integration', 'executive assistant', 'business intelligence', 'strategic automation']
-description: "Leverage Model Context Protocol (MCP) for advanced executive integrations that extend Dume's capabilities beyond standard business applications, enabling custom strategic intelligence and competitive advantage automation."
-"og:title": "MCP Integration - Model Context Protocol for Advanced Business Intelligence"
-"og:description": "Connect specialized business systems with Dume using Model Context Protocol. Advanced executive integrations for strategic intelligence."
+keywords: ['mcp','model context protocol','external tools','remote mcp','custom integration']
+description: "Extend Dume by connecting external tools not yet natively supported."
+"og:title": "MCP Integration"
+"og:description": "Plug unsupported external tools into Dume using MCP."
 "twitter:card": "summary"
-"twitter:title": "MCP Integration - Advanced Business Protocol"
-"twitter:description": "Model Context Protocol integration for custom executive workflows and advanced business intelligence."
+"twitter:title": "MCP Integration"
+"twitter:description": "Use MCP to add new external tool capabilities."
 ---
 
-## Advanced Executive Integration Protocol
+## 1. What Is MCP?
+MCP is an open standard that lets Dume talk to external tools and data sources it doesn’t natively integrate with. If a tool is missing from the integrations list, MCP can attach it.
 
-Model Context Protocol (MCP) enables Dume to connect with specialized business systems, proprietary tools, and custom executive workflows that standard integrations can't reach. This advanced protocol transforms Dume into a comprehensive executive command center tailored to your unique business intelligence needs.
+## 2. When To Use It
+Use MCP only when:
+- The tool/service is not yet a native integration.
+- You need a limited subset of an external API (specific endpoints, fields).
+- You want to combine new external data with existing workflows.
 
-### Executive MCP Advantages
-
+## 3. Supported Remote MCP Servers
+Only remote MCP servers from trusted catalogs are supported (self-hosted custom servers not yet).
 <CardGroup cols={2}>
-<Card title="Custom Strategic Intelligence" icon="brain-circuit">
-  Connect proprietary business systems and competitive intelligence tools for strategic insights unavailable through standard integrations.
-</Card>
-
-<Card title="Executive Workflow Automation" icon="workflow">
-  Integrate specialized executive tools, custom dashboards, and strategic planning systems for comprehensive business automation.
-</Card>
-
-<Card title="Competitive Advantage Integration" icon="shield-check">
-  Access unique business intelligence sources, market analysis tools, and strategic planning platforms for sustained competitive advantage.
-</Card>
-
-<Card title="Scalable Business Intelligence" icon="chart-network">
-  Build custom integrations that grow with your business needs, strategic priorities, and competitive landscape evolution.
-</Card>
+  <Card title="Remote MCP Servers Catalog" icon="globe" href="https://mcpservers.org/remote-mcp-servers">
+    Browse officially hosted remote MCP servers.
+  </Card>
+  <Card title="Composio MCP Catalog" icon="grid" href="https://mcp.composio.dev/">
+    Large catalog of managed MCP server integrations.
+  </Card>
 </CardGroup>
+<Note>Pick servers from these catalogs; others are not currently supported.</Note>
 
-## What MCP Enables for Executives
+### Popular Examples
+```
+GitHub (PR / issue context)
+Notion (pages & databases)
+Linear (issues)
+Figma (design file metadata)
+Sentry (alerts)
+Supabase / Neon (DB info)
+```
 
-**Strategic Business Intelligence:**
-- Connect proprietary competitive analysis tools and market intelligence platforms
-- Integrate custom executive dashboards with real-time strategic KPIs
-- Access specialized industry analysis tools and strategic planning systems
+## 4. What MCP Enables
+- Query external tool data (records, metrics, metadata)
+- Run tool actions (trigger workflows, fetch artifacts)
+- Combine MCP data with existing integrations in one reply
+- Expand capabilities without waiting for native support
 
-**Executive Workflow Enhancement:**
-- Automate complex multi-system strategic processes and executive decision workflows
-- Connect legacy business systems with modern executive intelligence requirements
-- Integrate specialized tools used by leadership teams and strategic planning departments
+## 5. Examples
+```
+Get design file summary from a Figma MCP server
+Fetch latest Sentry error alerts
+Retrieve product roadmap page from Notion via MCP
+Search code metrics from an analytics MCP endpoint
+```
 
-**Competitive Advantage Automation:**
-- Build custom integrations with unique competitive intelligence sources
-- Connect strategic planning tools that provide market positioning advantages
-- Integrate proprietary business analysis systems for executive decision support
+<Tip>Start with read‑only servers before enabling write actions.</Tip>
 
-## When to Use MCP
+## 6. Quick Commands
+```
+List available MCP servers
+Connect Figma MCP server
+Fetch Notion page 'Strategy'
+Get recent Sentry alerts
+Combine GitHub PR summary and Sentry errors
+```
 
-**Perfect for executives who need:**
-- Integration with specialized business intelligence tools not covered by standard integrations
-- Custom strategic workflows spanning multiple proprietary business systems
-- Access to unique competitive intelligence sources and market analysis platforms
-- Advanced automation of executive decision-making processes and strategic planning
+## 7. Safety & Control
+| Aspect | Summary |
+| ------ | ------- |
+| Scope | Only actions exposed by the remote server are callable |
+| Access | You can disconnect any time in Integrations |
+| Writes | May prompt for confirmation if supported |
+| Credentials | Stored/handled by the remote MCP provider, not Dume |
 
-**Technical Implementation:**
-MCP integrations require technical setup but deliver powerful executive capabilities. Consider MCP when standard integrations don't meet your strategic business intelligence requirements or when you need custom competitive advantage automation.
+## 8. Troubleshooting
+| Issue | Fix |
+| ----- | --- |
+| Server not listed | Confirm it appears in supported catalogs |
+| Auth failure | Re-run authorization; verify scopes |
+| Action unknown | Check server docs; list actions first |
+| Empty data | Confirm tool has accessible items; adjust filters |
 
----
+## 9. Flow Overview
+```
+Choose remote MCP server → Connect → Call an action → Dume uses returned data in conversation.
+```
 
-<Note>
-**Executive Advantage:** MCP transforms Dume from a standard executive assistant into a comprehensive strategic intelligence platform customized for your unique business needs and competitive requirements.
-</Note>
+## 10. Links
+- Remote MCP Servers: https://mcpservers.org/remote-mcp-servers  
+- Composio Catalog: https://mcp.composio.dev/  
+- Official MCP Spec: https://modelcontextprotocol.io/docs/getting-started/intro  
+
+<Check>MCP connected. You can now use external, previously unsupported tools directly in chat.</Check>

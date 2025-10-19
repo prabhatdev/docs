@@ -7,6 +7,11 @@
     "light": "#07C983",
     "dark": "#15803D"
   },
+  "appearance": {
+    "default": "dark",
+    "strict": true
+    
+  },
   "icons": {
     "library": "fontawesome"
   },
@@ -55,9 +60,10 @@
   "navigation": {
     "groups": [
       {
-        "group": "Get Started",
+        "group": "Overview",
         "pages": [
           "index",
+          "getting-started/getting-started",
           "getting-started/personalisation",
           "getting-started/connect-your-first-tool",
           "getting-started/chat-interface"
@@ -66,14 +72,9 @@
       {
         "group": "Integrations",
         "pages": [
-          {
-            "group": "Email",
-            "icon": "envelope",
-            "pages": [
-              "integrations/email",
-              "features/multiple_accounts"
-            ]
-          },
+          
+           "integrations/gmail",
+           "integrations/outlook",
           "integrations/calendar",
           "integrations/notion",
           "integrations/google_sheets",

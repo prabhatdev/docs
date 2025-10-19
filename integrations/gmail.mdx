@@ -1,0 +1,99 @@
+---
+title: "Email Integration - Gmail"
+sidebarTitle: "Gmail"
+icon: "inbox"
+keywords: ['email integration','Gmail','email commands','OAuth','automation']
+description: "Connect Gmail and use core email actions in Dume."
+"og:title": "Gmail Integration"
+"og:description": "Quick Gmail OAuth setup and available email actions."
+"twitter:card": "summary"
+"twitter:title": "Gmail Integration"
+"twitter:description": "Connect Gmail and run email commands."
+---
+
+## Overview
+Connect Gmail to read, summarize, compose, send, organize, and label emails with simple chat commands.
+
+## 1. Connect Gmail (OAuth)
+<Steps>
+  <Step title="Open Integrations">Go to Settings → Integrations → Gmail.</Step>
+  <Step title="Start OAuth">Click Connect Gmail.</Step>
+  <Step title="Select Account">Choose the correct Google account.</Step>
+  <Step title="Grant Scopes">Review and allow requested permissions (read, send, manage labels).</Step>
+  <Step title="Confirm">Return to Dume. Status shows Connected. Ask: "Show my recent emails."</Step>
+</Steps>
+
+<Tip>Passwords are never stored. You can revoke access anytime in Google Account → Security → Third‑party access.</Tip>
+
+## 2. Supported Gmail Actions
+| Capability | Internal Operation |
+| ---------- | ------------------ |
+| List emails | GMAIL_LIST_EMAILS |
+| Describe / summarize an email | GMAIL_DESCRIBE_EMAIL |
+| Compose draft | GMAIL_COMPOSE_EMAIL |
+| Send email (new or draft) | GMAIL_SEND_EMAIL / GMAIL_SEND_DRAFT_EMAIL |
+| List drafts | GMAIL_LIST_DRAFTS |
+| Mark read / unread | GMAIL_MARK_READ_EMAIL_UNREAD |
+| Move email (apply label / folder) | GMAIL_MOVE_EMAIL |
+| List labels | GMAIL_LIST_EMAIL_LABELS |
+| Create label | GMAIL_CREATE_EMAIL_LABEL |
+
+## 3. Quick Commands
+```
+Show unread emails from today
+Summarize the last 5 emails from finance
+Draft an email to Sarah about the Q4 plan
+Send that draft now
+Mark the design review email unread
+Move the invoice email to Finance
+List my Gmail labels
+Create label: Vendors
+```
+
+## 4. Common Patterns
+<Tabs>
+<Tab title="Read">
+```
+Show recent emails
+List unread emails from clients
+Summarize emails about contract renewal
+```
+</Tab>
+<Tab title="Compose & Send">
+```
+Draft email to product team about roadmap updates
+Edit tone: more concise
+Send the draft
+```
+</Tab>
+<Tab title="Organize">
+```
+Move all invoice emails to Finance
+Create label: Legal
+List drafts
+```
+</Tab>
+<Tab title="Follow‑Up">
+```
+Summarize action items from today's emails
+Mark all responded emails as read
+```
+</Tab>
+</Tabs>
+
+## 5. Troubleshooting (Fast)
+| Issue | Fix |
+| ----- | --- |
+| OAuth failed | Retry in incognito; ensure correct Google account. |
+| No emails returned | Check account; try: "Show recent emails" to test. |
+| Permission error | Reconnect and accept all requested scopes. |
+| Action not applied | Confirm message ID exists; retry with more specific query. |
+
+## 6. Security Notes
+- OAuth tokens only; no password storage.
+- Scoped access: read, send, labels.
+- Revoke anytime in Google security settings.
+
+<Check>Gmail connected. You can now manage email via chat efficiently.</Check>
+
+<Note>Need Outlook/Microsoft365? See separate Microsoft email guide.</Note>
