@@ -80,9 +80,43 @@ Choose from available integrated platforms or custom tools. For example, you mig
 - Project management tools (create task, update ticket)
 - Custom integrated MCP servers.
 
+ <Frame>
+    <img
+        className="block dark:hidden"
+        src="/images/light/workflow/nodes/tool_node/integration.png"
+         alt="Workflow Dume.ai tool integration"
+        title="Dume.ai Workflow Tool integration"
+            width="200"
+    />
+    <img
+        className="hidden dark:block"
+        src="/images/dark/workflow/nodes/tool_node/integration.png"
+      alt="Workflow Dume.ai tool integration"
+        title="Dume.ai Workflow Tool integration"
+            width="200"
+    />
+</Frame>
+
+
 ## 2. Choose the Tool or Action
 
 Each integration has a set of supported tools (actions). Select the appropriate one based on your automation goal.
+ <Frame>
+    <img
+        className="block dark:hidden"
+        src="/images/light/workflow/nodes/tool_node/integration_tool.png"
+         alt="Workflow Dume.ai tool integration tool"
+        title="Dume.ai Workflow Tool integration tool"
+            width="200"
+    />
+    <img
+        className="hidden dark:block"
+        src="/images/dark/workflow/nodes/tool_node/integration_tool.png"
+       alt="Workflow Dume.ai tool integration tool"
+        title="Dume.ai Workflow Tool integration tool"
+            width="200"
+    />
+</Frame>
 
 - Example: For LinkedIn, options might include "Get Profile Info" or "Publish Article".
 
@@ -90,11 +124,45 @@ Each integration has a set of supported tools (actions). Select the appropriate 
 
 Define how input data is mapped to the tool’s required fields. Utilize references from prior workflow nodes to build smart, context-driven requests.
 
+ <Frame>
+    <img
+        className="block dark:hidden"
+        src="/images/light/workflow/nodes/tool_node/tool_message.png"
+         alt="Workflow Dume.ai tool  message"
+        title="Dume.ai Workflow Tool  message"
+            width="200"
+    />
+    <img
+        className="hidden dark:block"
+        src="/images/dark/workflow/nodes/tool_node/tool_message.png"
+       alt="Workflow Dume.ai tool  message"
+        title="Dume.ai Workflow Tool  message"
+            width="200"
+    />
+</Frame>
+
 - Example: Use `{string INPUT/username}` as an input to fetch a specific user profile.
 
 ## 4. Output Mapping
 
-Specify how to handle and store the tool’s response for continued workflow execution.
+Start with **/** to use the output of the tool node in next workflow.
+
+ <Frame>
+    <img
+        className="block dark:hidden"
+        src="/images/light/workflow/nodes/tool_node/tool_output.png"
+         alt="Workflow Dume.ai tool output"
+        title="Dume.ai Workflow Tool output"
+            width="200"
+    />
+    <img
+        className="hidden dark:block"
+        src="/images/dark/workflow/nodes/tool_node/tool_output.png"
+       alt="Workflow Dume.ai tool output"
+        title="Dume.ai Workflow Tool output"
+            width="200"
+    />
+</Frame>
 
 ## Example: Fetching a LinkedIn Profile
 
