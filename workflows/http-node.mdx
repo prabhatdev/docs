@@ -7,21 +7,23 @@ description: "A concise guide to configuring and utilizing the HTTP Node for sea
 <Frame>
     <img
         className="block dark:hidden"
-        src="/images/light/workflow/nodes/http_node.png"
-        alt="Workflow Dume.ai HTTP node"
-        title="Dume.ai Workflow HTTP node"
+        src="/images/light/workflow/sample-nodes/http.png"
+        alt="Workflow Dume.ai HTTP"
+        title="Dume.ai Workflow HTTP"
             width="200"
     />
     <img
         className="hidden dark:block"
-        src="/images/dark/workflow/nodes/http_node.png"
-        alt="Workflow Dume.ai HTTP node"
-        title="Dume.ai Workflow HTTP node"
+        src="/images/dark/workflow/sample_nodes/http.png"
+       alt="Workflow Dume.ai HTTP"
+        title="Dume.ai Workflow HTTP"
             width="200"
     />
 </Frame>
 
 The **HTTP Node** is your primary tool for connecting Dume AI workflows with the outside world using APIs. It enables seamless integration with any web service, allowing you to fetch, send, or manipulate data dynamically as part of your automation pipeline.
+
+
 
 ## What Can the HTTP Node Do?
 
@@ -40,16 +42,25 @@ The **HTTP Node** is your primary tool for connecting Dume AI workflows with the
 
 ## Configuring the HTTP Node
 
-<img
-  src="/images/Screenshot2025-07-22at12.37.21AM.png"
-  alt="Screenshot 2025-07-22 at 12.37.21 AM.png"
-  title="Screenshot 2025-07-22 at 12.37.21 AM.png"
-  style={{ width:"25%" }}
-/>
+<Frame>
+    <img
+        className="block dark:hidden"
+        src="/images/light/workflow/nodes/http_node.png"
+        alt="Workflow Dume.ai HTTP node"
+        title="Dume.ai Workflow HTTP node"
+            width="200"
+    />
+    <img
+        className="hidden dark:block"
+        src="/images/dark/workflow/nodes/http_node.png"
+        alt="Workflow Dume.ai HTTP node"
+        title="Dume.ai Workflow HTTP node"
+            width="200"
+    />
+</Frame>
 
 The HTTP node configuration panel allows you to set up every detail for your API call:
 
-[image:1]
 
 **1. Basic Tab**
 
@@ -57,17 +68,85 @@ The HTTP node configuration panel allows you to set up every detail for your API
 - **URL:** Enter the API endpoint (can use dynamic variables from previous nodes).
 - **Timeout:** Set response timeout in milliseconds.
 
+<Frame>
+    <img
+        className="block dark:hidden"
+        src="/images/light/workflow/nodes/http_node/basic.png"
+       alt="Workflow Dume.ai HTTP node basic"
+        title="Dume.ai Workflow HTTP node basic"
+            width="200"
+    />
+    <img
+        className="hidden dark:block"
+        src="/images/dark/workflow/nodes/http_node/basic.png"
+        alt="Workflow Dume.ai HTTP node basic"
+        title="Dume.ai Workflow HTTP node basic"
+            width="200"
+    />
+</Frame>
+
 **2. Headers Tab**
 
 - Easily add authentication (e.g., Bearer tokens, API keys), content-type, or any required header.
+<Frame>
+    <img
+        className="block dark:hidden"
+        src="/images/light/workflow/nodes/http_node/headers.png"
+       alt="Workflow Dume.ai HTTP node headers"
+        title="Dume.ai Workflow HTTP node headers"
+            width="200"
+    />
+    <img
+        className="hidden dark:block"
+        src="/images/dark/workflow/nodes/http_node/headers.png"
+        alt="Workflow Dume.ai HTTP node headers"
+        title="Dume.ai Workflow HTTP node headers"
+            width="200"
+    />
+</Frame>
+
 
 **3. Query Tab**
 
 - Specify URL query string parameters as needed by the target API.
 
+<Frame>
+    <img
+        className="block dark:hidden"
+        src="/images/light/workflow/nodes/http_node/query.png"
+       alt="Workflow Dume.ai HTTP node query"
+        title="Dume.ai Workflow HTTP node query"
+            width="200"
+    />
+    <img
+        className="hidden dark:block"
+        src="/images/dark/workflow/nodes/http_node/query.png"
+        alt="Workflow Dume.ai HTTP node query"
+        title="Dume.ai Workflow HTTP node query"
+            width="200"
+    />
+</Frame>
+
 **4. Body Tab**
 
 - For POST/PUT requests, define JSON or form-data payload using variables from your workflow.
+
+<Frame>
+    <img
+        className="block dark:hidden"
+        src="/images/light/workflow/nodes/http_node/body.png"
+       alt="Workflow Dume.ai HTTP body query"
+        title="Dume.ai Workflow HTTP body query"
+            width="200"
+    />
+    <img
+        className="hidden dark:block"
+        src="/images/dark/workflow/nodes/http_node/body.png"
+        alt="Workflow Dume.ai HTTP node body"
+        title="Dume.ai Workflow HTTP node body"
+            width="200"
+    />
+</Frame>
 
 **5. Next Node**
 
