@@ -134,25 +134,11 @@
               "workflows/trigger-node",
               "workflows/output-node"
             ]
-          },
-          "workflows/how-to-create-workflows",
-          {
-            "group": "Setup public workflows",
-            "expanded": true,
-            "pages": [
-              "workflow-examples/linkdin-generator",
-              "workflow-examples/company-research"
-            ]
           }
-        ]
-      },
-      {
-        "group": "Agents",
-        "pages": [
-          "agents/getting-started",
-          "agents/how-to-create-agents"
+          
         ]
       }
+      
     ]
   },
   "logo": {
