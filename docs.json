@@ -81,13 +81,12 @@
             ]
           },
           
-           "integrations/outlook",
+           "integrations/microsoft_365",
           "integrations/calendar",
           "integrations/notion",
           "integrations/google_sheets",
           "integrations/google_docs",
           "integrations/github",
-          "integrations/microsoft",
           "integrations/jira",
           "integrations/confluence",
           {
@@ -101,8 +100,9 @@
         ]
       },
       {
-        "group": "Tools",
+        "group": "AI Tools",
         "pages": [
+          
           "tools/artifacts",
           "tools/charts",
           "tools/notification",

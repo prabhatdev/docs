@@ -23,7 +23,20 @@ Artifacts persist across conversations and can be saved externally for later use
 <Tabs>
   <Tab title="Text" icon="file-text">
     Create and edit rich text documents, markdown files, or plain text content.
-    
+    <Frame>
+    <img
+        className="block dark:hidden"
+        src="/images/light/artifacts/document.png"
+        alt="document artifact"
+        title="Document artifact usage"
+    />
+    <img
+        className="hidden dark:block"
+        src="/images/dark/artifacts/document.png"
+          alt="document artifact"
+        title="Document artifact usage"
+    />
+</Frame>
     **Use cases:**
     - Documentation and reports
     - Blog posts and articles  
@@ -33,7 +46,20 @@ Artifacts persist across conversations and can be saved externally for later use
   
   <Tab title="Sheet" icon="table">
     Generate and manipulate spreadsheet data with calculations and formatting.
-    
+    <Frame>
+    <img
+        className="block dark:hidden"
+        src="/images/light/artifacts/sheet.png"
+        alt="sheet artifact"
+        title="Sheet artifact usage"
+    />
+    <img
+        className="hidden dark:block"
+        src="/images/dark/artifacts/sheet.png"
+          alt="sheet artifact"
+        title="Sheet artifact usage"
+    />
+</Frame>
     **Use cases:**
     - Data analysis and calculations
     - Budget planning and tracking
@@ -42,8 +68,21 @@ Artifacts persist across conversations and can be saved externally for later use
   </Tab>
   
   <Tab title="Code" icon="code">
-    Write, edit, and manage code files with syntax highlighting.
-    
+    Write, edit, and manage code files with syntax highlighting. Also Dume.ai can execute your code and provide output.
+    <Frame>
+    <img
+        className="block dark:hidden"
+        src="/images/light/artifacts/code.png"
+        alt="code artifact"
+        title="Code artifact usage"
+    />
+    <img
+        className="hidden dark:block"
+        src="/images/dark/artifacts/code.png"
+          alt="code artifact"
+        title="Code artifact usage"
+    />
+</Frame>
     **Use cases:**
     - Script development
     - Configuration files
@@ -52,8 +91,21 @@ Artifacts persist across conversations and can be saved externally for later use
   </Tab>
   
   <Tab title="Image" icon="image">
-    Generate, edit, and manage visual content and diagrams.
-    
+    Generate, edit, and manage visual content and diagrams using Nano Banana image gen model by google.
+    <Frame>
+    <img
+        className="block dark:hidden"
+        src="/images/light/artifacts/image.png"
+        alt="image artifact"
+        title="Image artifact usage"
+    />
+    <img
+        className="hidden dark:block"
+        src="/images/dark/artifacts/image.png"
+          alt="image artifact"
+        title="Image artifact usage"
+    />
+</Frame>
     **Use cases:**
     - Illustrations and graphics
     - Charts and diagrams
@@ -119,30 +171,6 @@ You can modify any existing artifact by referencing it and describing your chang
 </CodeGroup>
 
 </Accordion>
-
-### Exporting Artifacts
-
-Request to save your artifacts in various formats or locations.
-
-<Tabs>
-  <Tab title="File Export">
-    ```bash
-    @create_artifact save the meeting notes as a markdown file
-    ```
-  </Tab>
-  
-  <Tab title="Cloud Storage">
-    ```bash
-    @create_artifact export the budget spreadsheet to Google Sheets
-    ```
-  </Tab>
-  
-  <Tab title="Version Control">
-    ```bash
-    @create_artifact save the Python code to my GitHub repository
-    ```
-  </Tab>
-</Tabs>
 
 ## Combining Artifacts with Other Tools
 
@@ -211,10 +239,3 @@ Large artifacts (>10MB) may take longer to process and save externally. Consider
 - **Reference existing context**: "@create_artifact collate the email data we just discussed into a tracking sheet"
 - **Ask for iterations**: "@create_artifact improve this code with better error handling" or "@create_artifact make this report more visual"
 - **Combine artifact types**: "@create_artifact create both the code and documentation for this API"
-
-### Workflow Integration
-
-- **Start broad, then refine**: Create a basic artifact, then ask for specific improvements
-- **Chain with other tools**: Use data from emails, calendars, or databases to populate artifacts
-- **Version control**: Ask to save important artifacts externally for backup and sharing
-- **Collaborate effectively**: Artifacts can be shared and edited collaboratively
