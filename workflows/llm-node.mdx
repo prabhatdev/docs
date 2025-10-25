@@ -4,17 +4,50 @@ description: "Large Language Model (LLM) node can be used to generate dynamic, A
 "icon": "robot"
 ---
 
-import { Alert, Card } from './components'; // Example of MDX component import
+<Frame>
+    <img
+        className="block dark:hidden"
+        src="/images/light/workflow/sample-nodes/llm.png"
+           alt="Workflow Dume.ai LLM node"
+        title="Dume.ai Workflow LLM node"
+         width="200"
+    />
+    <img
+        className="hidden dark:block"
+        src="/images/dark/workflow/sample_nodes/llm.png"
+          alt="Workflow Dume.ai LLM node"
+        title="Dume.ai Workflow LLM node"
+        width="200"
+    />
+</Frame>
 
-# Using the LLM Node
+import { Alert, Card } from './components'; // Example of MDX component import
 
 <Info>
     **Key Feature:** The LLM node's core strength is its ability to use dynamic variables from previous nodes, making your prompts context-aware and highly reusable.
 </Info>
 
-The Large Language Model (LLM) Node is the powerhouse of your Dume AI workflow, enabling you to integrate advanced AI capabilities for a wide range of tasks. Whether you need to generate creative text, summarize complex information, translate languages, or extract structured data, the LLM node provides a flexible and powerful interface to state-of-the-art AI models.
+The **Large Language Model (LLM) Node** is the powerhouse of your Dume AI workflow, enabling you to integrate advanced AI capabilities for a wide range of tasks. Whether you need to generate creative text, summarize complex information, translate languages, or extract structured data, the LLM node provides a flexible and powerful interface to state-of-the-art AI models.
 
 You can chain multiple LLM nodes together to build sophisticated pipelines, where the output of one node becomes the contextual input for the next, allowing for highly refined and specific results.
+
+
+<Frame>
+    <img
+        className="block dark:hidden"
+        src="/images/light/workflow/nodes/llm_node.png"
+        alt="Workflow Dume.ai LLM node"
+        title="Dume.ai Workflow LLM node"
+            width="200"
+    />
+    <img
+        className="hidden dark:block"
+        src="/images/dark/workflow/nodes/llm_node.png"
+         alt="Workflow Dume.ai LLM node"
+        title="Dume.ai Workflow LLM node"
+          width="200"
+    />
+</Frame>
 
 ## Configuration Panel
 
@@ -26,12 +59,22 @@ This dropdown menu allows you to select the AI model that will process your requ
 
 - **Example:** For generating marketing copy, you might select **Dume AI Chat**, which is optimized for conversational and creative text generation.
 
-  <img
-    src="/images/Screenshot2025-07-21at7.39.58AM.png"
-    alt="Screenshot 2025-07-21 at 7.39.58 AM.png"
-    title="Screenshot 2025-07-21 at 7.39.58 AM.png"
-    style={{ width:"59%" }}
-  />
+ <Frame>
+    <img
+        className="block dark:hidden"
+        src="/images/light/workflow/nodes/llm_node/llm_options.png"
+        alt="Workflow Dume.ai LLM options"
+        title="Dume.ai Workflow LLM options"
+            width="200"
+    />
+    <img
+        className="hidden dark:block"
+        src="/images/dark/workflow/nodes/llm_node/llm_options.png"
+         alt="Workflow Dume.ai LLM options"
+        title="Dume.ai Workflow LLM options"
+          width="200"
+    />
+</Frame>
 
 ### 2. Messages (The Prompt)
 
@@ -45,12 +88,23 @@ The most powerful feature here is the ability to insert data from previous nodes
 
 In this example, the prompt pulls the `tone`, `goal`, and `audience_type` from a preceding **Input Node** to generate highly targeted content.
 
-<img
-  src="/images/Screenshot2025-07-21at7.40.38AM.png"
-  alt="Screenshot 2025-07-21 at 7.40.38 AM.png"
-  title="Screenshot 2025-07-21 at 7.40.38 AM.png"
-  style={{ width:"61%" }}
-/>
+
+ <Frame>
+    <img
+        className="block dark:hidden"
+        src="/images/light/workflow/nodes/llm_node/llm_input.png"
+        alt="Workflow Dume.ai LLM input"
+        title="Dume.ai Workflow LLM input"
+            width="200"
+    />
+    <img
+        className="hidden dark:block"
+        src="/images/dark/workflow/nodes/llm_node/llm_input.png"
+         alt="Workflow Dume.ai LLM input"
+        title="Dume.ai Workflow LLM input"
+          width="200"
+    />
+</Frame>
 
 ### 3. Output Schema
 
@@ -59,20 +113,42 @@ This section defines the structure of the data that the LLM node will return. Yo
 - **Simple Output (Default):** The node returns a single text string in a field named `answer`. This is useful for straightforward text generation.
 - **Structured Output:** You can define a specific JSON schema for the output. This is incredibly useful when you need the AI to return data in a predictable format with multiple fields, such as extracting names, dates, and summaries from a block of text.
 
-  <img
-    src="/images/Screenshot2025-07-21at7.41.57AM.png"
-    alt="Screenshot 2025-07-21 at 7.41.57 AM.png"
-    title="Screenshot 2025-07-21 at 7.41.57 AM.png"
-    className="mr-auto"
-    style={{ width:"27%" }}
-  />
+  
+ <Frame>
+    <img
+        className="block dark:hidden"
+        src="/images/light/workflow/nodes/llm_node/output_schema.png"
+        alt="Workflow Dume.ai LLM schema"
+        title="Dume.ai Workflow LLM schema"
+            width="200"
+    />
+    <img
+        className="hidden dark:block"
+        src="/images/dark/workflow/nodes/llm_node/output_schema.png"
+         alt="Workflow Dume.ai LLM schema"
+        title="Dume.ai Workflow LLM schema"
+          width="200"
+    />
+</Frame>
 
-<img
-  src="/images/Screenshot2025-07-21at7.41.32AM.png"
-  alt="Screenshot 2025-07-21 at 7.41.32 AM.png"
-  title="Screenshot 2025-07-21 at 7.41.32 AM.png"
-  style={{ width:"37%" }}
-/>
+You specify the schema of the output in the JSON format, or get it generated from AI using the **Generate with AI** option at the top.
+ <Frame>
+    <img
+        className="block dark:hidden"
+        src="/images/light/workflow/nodes/llm_node/schema_editor.png"
+        alt="Workflow Dume.ai LLM schema editor"
+        title="Dume.ai Workflow LLM schema editor"
+            width="200"
+    />
+    <img
+        className="hidden dark:block"
+        src="/images/dark/workflow/nodes/llm_node/schema_editor.png"
+         alt="Workflow Dume.ai LLM schema editor"
+        title="Dume.ai Workflow LLM schema editor"
+          width="200"
+    />
+</Frame>
+
 
 ## Examples in Practice
 

@@ -3,6 +3,22 @@ title: "Input Node"
 description: "Define dynamic input fields for user-controlled automation with validation, structure, and reusability."
 "icon": "house-chimney-window"
 ---
+<Frame>
+    <img
+        className="block dark:hidden"
+        src="/images/light/workflow/sample-nodes/input.png"
+        alt="Workflow Dume.ai Condition node"
+         title="Dume.ai Workflow Input node"
+         width="200"
+    />
+    <img
+        className="hidden dark:block"
+        src="/images/dark/workflow/sample_nodes/input.png"
+          alt="Workflow Dume.ai Input node"
+        title="Dume.ai Workflow Input node"
+        width="200"
+    />
+</Frame>
 
 ## Input Node:
 
@@ -37,17 +53,6 @@ Each input field added to this node supports, for exmaple:
 | `audience_type` | Who you’re targeting             | select | ✅         |
 | `tone`          | Desired tone (e.g., formal, fun) | select | ✅         |
 
-## Visual Reference
-
-<img
-  src="/images/Screenshot2025-07-21at12.52.45AM.png"
-  alt="Screenshot 2025-07-21 at 12.52.45 AM.png"
-  title="Screenshot 2025-07-21 at 12.52.45 AM.png"
-  style={{ width:"34%" }}
-/>
-
-This is how the Input Node appears when added to your workflow. Each field is marked as **Required** and type-labeled (e.g., `string`, `select`) for easy validation.
-
 ## Field Types Supported
 
 - `string` – Plain text input.
@@ -56,6 +61,9 @@ This is how the Input Node appears when added to your workflow. Each field is ma
 - `select` – Dropdown menu with predefined values.
 - `object` – JSON-like structure for complex data (advanced).
 - `array` – Lists of items (coming soon).
+
+
+<Info>**Please note:** Default vaules of the variables are picked if the workflow is scheduled.</Info>
 
 <Frame>
     <img
@@ -74,6 +82,7 @@ This is how the Input Node appears when added to your workflow. Each field is ma
         
     />
 </Frame>
+
 ---
 
 ## Practical Use Cases
@@ -110,8 +119,9 @@ This is how the Input Node appears when added to your workflow. Each field is ma
 ## Best Practices
 
 - **Mark all essential fields as required** to avoid runtime errors.
-- `Use select for controlled vocabularies` (like tone or goal).
+- Use **Select** type to create fixed options.
 - **Avoid using long, ambiguous string fields** when options can be structured.
 - **Test with different combinations of inputs** to ensure downstream nodes handle variability.
+- Provide **Description** for each field, which helps undertand more about the input.
 
 ---
