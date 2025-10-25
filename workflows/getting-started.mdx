@@ -17,7 +17,7 @@ Building a workflow in Dume AI is a straightforward process:
 
 ## Available Nodes
 
-![Screenshot 2025-07-21 at 12.17.50 AM.png](/images/Screenshot2025-07-21at12.17.50AM.png)
+![LLM-Nodes.png](/images/llm-nodes-light.png)
 
 Below is a comprehensive list of the nodes you can use to build your workflows. Each node serves a specific function, allowing you to create highly customized and powerful automation tools.
 
@@ -51,6 +51,17 @@ Below is a comprehensive list of the nodes you can use to build your workflows. 
 
     - **Example:** If your workflow starts with a list of 10 article topics from an Input Node, you can use a Loop Node to run a series of LLM and Tool Nodes for each topic individually, generating a unique article for each one.
   </Card>
+   <Card title="Trigger Node" icon="bolt" href="/workflows/trigger-node">
+  Automatically starts a workflow via schedule, external event, or webhook.
+  - Types: Schedule (daily, interval, cron), Integration Event (issue created, meeting soon), Webhook (POST).
+  Use cases: Email Triage on email received, workflow triggered on meeting scheduled.
+</Card>
+
+<Card title="Delay Node" icon="hourglass-half" href="/workflows/delay-node">
+  Pauses workflow before next step.
+  - Uses: Rate limit API calls, wait for processing.
+  Tips: Avoid very long stale waits; pair with a Condition Node after delay if state may change.
+</Card>
   <Card title="Output Node" icon="golf-flag-hole" href="/workflows/output-node">
     The Output Node is the final step in your workflow. It collects data from any of the previous nodes and structures it as the final result of the tool's execution. This is the data that will be returned to the chatbot or the system that initiated the workflow.
   </Card>

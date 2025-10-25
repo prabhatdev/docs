@@ -23,9 +23,52 @@ Connect Gmail to read, summarize, compose, send, organize, and label emails with
   <Step title="Confirm">Return to Dume. Status shows Connected. Ask: "Show my recent emails."</Step>
 </Steps>
 
-<Tip>Passwords are never stored. You can revoke access anytime in Google Account → Security → Third‑party access.</Tip>
+<Tip>Passwords are never stored. You can revoke access anytime in Google Account → Security → Third-party access.</Tip>
 
-## 2. Supported Gmail Actions
+## 2. Background Workflows (Enable / Disable)
+Background workflows let Dume run proactive email tasks in the background (e.g., auto-triage, labeling, suggested actions).
+
+<Warning>
+Background workflows are **added automatically** once Gmail is connected. You can disable them at any time.
+</Warning>
+
+<Steps>
+  <Step title="Open Gmail Integration Modal">Settings → Integrations → Gmail → **Background workflows** tab.</Step>
+  <Step title="Toggle a Workflow">Use the switch on the right of **Email Triage** to enable/disable.</Step>
+  <Step title="Refresh Status (Optional)">Click **Refresh** to fetch the latest state.</Step>
+</Steps>
+
+<Frame>
+    <img
+        className="block dark:hidden"
+        src="/images/light/integration/gmail/bg-workflow.png"
+        alt="Gmail Background Workflows"
+        title="Gmail Background Workflows"
+    />
+    <img
+        className="hidden dark:block"
+        src="/images/dark/integration/gmail/bg-workflow.png"
+        alt="Gmail Background Workflows"
+        title="Gmail Background Workflows"
+    />
+</Frame>
+
+<Note>
+**Email Triage**: Automatically labels emails and can take proactive actions when enabled. Use **Human Approval** in workflows if you want review before actions are applied.
+</Note>
+
+## 3. Set Display Name for Connected Account
+Give your connected Gmail account a **display name** to make it easy to select in workflows/agents (useful when you have multiple Gmail accounts).
+
+<Steps>
+  <Step title="Open Settings Tab">Settings → Integrations → Gmail → **Settings** tab.</Step>
+  <Step title="Edit Display Name">Click the pencil icon next to **Display Name**, type a friendly name (e.g., “Sales Inbox” or “Support@Acme”), and save.</Step>
+  <Step title="Verify">Ensure the **Connected Account** email matches the inbox you intend to use.</Step>
+</Steps>
+
+![Gmail Display Name Settings](/images/integrations/gmail-display-name.png)
+
+## 4. Supported Gmail Actions
 | Capability | Internal Operation |
 | ---------- | ------------------ |
 | List emails | GMAIL_LIST_EMAILS |
@@ -38,8 +81,7 @@ Connect Gmail to read, summarize, compose, send, organize, and label emails with
 | List labels | GMAIL_LIST_EMAIL_LABELS |
 | Create label | GMAIL_CREATE_EMAIL_LABEL |
 
-## 3. Quick Commands
-```
+## 5. Quick Commands
 Show unread emails from today
 Summarize the last 5 emails from finance
 Draft an email to Sarah about the Q4 plan
@@ -48,48 +90,53 @@ Mark the design review email unread
 Move the invoice email to Finance
 List my Gmail labels
 Create label: Vendors
-```
 
-## 4. Common Patterns
+
+## 6. Common Patterns
 <Tabs>
 <Tab title="Read">
-```
+
+
 Show recent emails
 List unread emails from clients
 Summarize emails about contract renewal
-```
+
 </Tab>
 <Tab title="Compose & Send">
-```
+
+
 Draft email to product team about roadmap updates
 Edit tone: more concise
 Send the draft
-```
+
 </Tab>
 <Tab title="Organize">
-```
+
+
 Move all invoice emails to Finance
 Create label: Legal
 List drafts
-```
+
 </Tab>
-<Tab title="Follow‑Up">
-```
+<Tab title="Follow-Up">
+
+
 Summarize action items from today's emails
 Mark all responded emails as read
-```
+
 </Tab>
 </Tabs>
 
-## 5. Troubleshooting (Fast)
+## 7. Troubleshooting (Fast)
 | Issue | Fix |
 | ----- | --- |
 | OAuth failed | Retry in incognito; ensure correct Google account. |
 | No emails returned | Check account; try: "Show recent emails" to test. |
 | Permission error | Reconnect and accept all requested scopes. |
 | Action not applied | Confirm message ID exists; retry with more specific query. |
+| Background workflow not running | Ensure the workflow is **Enabled** on the **Background workflows** tab; click **Refresh**. |
 
-## 6. Security Notes
+## 8. Security Notes
 - OAuth tokens only; no password storage.
 - Scoped access: read, send, labels.
 - Revoke anytime in Google security settings.

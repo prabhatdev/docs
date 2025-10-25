@@ -1,0 +1,177 @@
+---
+title: "Trigger Node"
+description: "Start a workflow automatically via schedules, integration events, or webhooks."
+icon: "bolt"
+---
+
+# Using the Trigger Node
+
+<Info>
+  The Trigger Node starts a workflow without manual chat input. It listens for time-based schedules, external integration events, or incoming webhooks and then injects mapped data into downstream nodes.
+</Info>
+
+You can define multiple trigger configurations (e.g., a daily schedule plus a webhook). Only active (enabled) triggers fire. Incoming payload fields are mapped to workflow input variables, enabling fully automated runs.
+
+## Configuration Panel
+
+The Trigger Node configuration is organized into sections:
+
+### 1. Trigger Type
+Select one or more types:
+- Schedule
+- Integration Event
+- Webhook
+
+Each type has its own sub‑settings.
+
+### 2. Schedule
+Defines time-based execution.
+- Frequency: once, interval (every 15m), daily, weekly, monthly.
+- Cron Expression (advanced): e.g. `0 8 * * 1-5` (8 AM weekdays).
+- Timezone: ensures consistent execution across regions.
+- Start / End (optional): limit active window.
+- Skip Holidays (optional list): provide ISO dates to skip.
+
+### 3. Integration Event
+Runs when a connected tool emits an event.
+- Source Integration: e.g. Calendar, GitHub, Jira.
+- Event Type: new_issue, meeting_created, workflow_failed, etc.
+- Filters: key/value or logical rules (priority=high, attendee_count>3).
+- Field Selection: choose which event fields are passed downstream.
+
+### 4. Webhook
+External systems can POST to trigger.
+- Endpoint URL: auto-generated.
+- Shared Secret: required header or HMAC signature.
+- Allowed IPs (optional): restrict origin.
+- Payload Schema: declare expected fields.
+- Validation: reject malformed requests.
+
+### 5. Payload Mapping
+Map incoming fields → workflow variable names.
+```
+sourceField: totalRevenue  ->  workflowVariable: kpi_revenue
+sourceField: attendees[]   ->  workflowVariable: meeting_attendees
+```
+Supports transformation (simple expressions) and default values.
+
+### 6. Throttling / Dedup
+Prevent floods.
+- Dedup Window: ignore identical events within X seconds.
+- Max Runs Per Interval: cap executions (e.g. 10/hr).
+- Collapse Mode: queue similar events and emit one combined payload.
+
+### 7. Retry Policy
+For transient failures in initialization.
+- Attempts: number of retries.
+- Backoff: linear or exponential.
+- Jitter: randomize to avoid spikes.
+
+### 8. Enable / Disable
+Master toggle. Disabled triggers never fire.
+
+### 9. Logging & Audit
+Optional retention period and minimal/verbose mode.
+
+## Output
+The Trigger Node emits a structured payload object accessible to subsequent nodes:
+```
+{ 
+  trigger_type: "integration_event", 
+  timestamp: "...", 
+  data: { ...mappedFields } 
+}
+```
+Downstream nodes reference fields using `{string Trigger_Node/field_name}` or appropriate type.
+
+## Examples in Practice
+
+<Card title="Daily KPI Digest">
+  - Type: Schedule (08:00 daily)
+  - Maps: kpi_revenue, kpi_churn from external analytics endpoint (via later Tool Node)
+  - Flow: Trigger → Tool Node (fetch KPIs) → LLM Node (summarize) → Output
+</Card>
+
+<Card title="Meeting Follow-Up">
+  - Type: Integration Event (Calendar: meeting_created)
+  - Filter: duration >= 30m AND attendee_count > 2
+  - Maps: title, start_time, attendees
+  - Flow: Trigger → Delay (1h) → LLM summary → Send recap
+</Card>
+
+<Card title="Critical Issue Escalation">
+  - Type: Integration Event (Jira: issue_created)
+  - Filter: priority=High OR labels contains "security"
+  - Maps: issue_key, summary, priority
+  - Flow: Trigger → Condition (priority) → LLM (draft Slack alert) → Tool (post Slack)
+</Card>
+
+<Card title="Webhook: Deployment Report">
+  - Type: Webhook (POST from CI)
+  - Payload: serviceName, version, status, metrics
+  - Flow: Trigger → LLM (generate release note) → Store in Docs
+</Card>
+
+<Card title="GitHub PR Watcher">
+  - Type: Integration Event (GitHub: pull_request_opened)
+  - Filter: base_branch=main AND lines_changed > 500
+  - Flow: Trigger → LLM (summarize changes) → Tool (request reviewers) 
+</Card>
+
+## Common Patterns
+
+<Tabs>
+<Tab title="Schedule">
+```
+Daily 07:30 cron → fetch KPIs → summarize → email execs
+Weekly Mon 09:00 → compile project status → push to Notion
+```
+</Tab>
+<Tab title="Event">
+```
+On new high-priority issue → notify Slack
+On meeting creation → wait 1h → send recap
+```
+</Tab>
+<Tab title="Webhook">
+```
+POST deploy complete → generate release notes
+POST anomaly detected → escalate with risk score
+```
+</Tab>
+<Tab title="Hybrid">
+```
+Daily schedule + ad hoc webhook → same workflow path
+Event triggers + delay + conditional recheck
+```
+</Tab>
+</Tabs>
+
+## Best Practices
+| Goal | Tip |
+| ---- | ---- |
+| Noise reduction | Use filters and dedup window |
+| Reliability | Set retry with exponential backoff |
+| Clarity | Name mapped variables consistently |
+| Safety | Start read-only; add write nodes later |
+| Scaling | Monitor run volume; adjust caps |
+
+## Troubleshooting
+| Issue | Fix |
+| ----- | ---- |
+| Trigger not firing | Confirm enabled, time zone, cron syntax |
+| Duplicate runs | Adjust dedup window or filters |
+| Missing payload field | Verify mapping and incoming field name |
+| Webhook rejected | Check secret, content-type, schema |
+| Excess volume | Lower max runs per interval or refine filters |
+
+## Sample Flow
+```
+Trigger (Calendar meeting_created, filter: internal only)
+Delay 30m
+LLM summarize discussion template
+Tool send Slack recap
+Output final summary object
+```
+
+<Check>Trigger Node configured. Workflow will run automatically when conditions are met.</Check>
