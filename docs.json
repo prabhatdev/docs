@@ -71,10 +71,13 @@
       
       {
         "group": "Integrations",
+        
         "pages": [
           {
             "group": "Email",
+             "expanded": true,
             "icon": "envelope",
+            
             "pages": [
               "integrations/gmail",
               "features/multiple_accounts"
@@ -117,6 +120,7 @@
           "workflows/getting-started",
           {
             "group": "Available Nodes",
+             "expanded": true,
             "pages": [
               "workflows/input-node",
               "workflows/llm-node",

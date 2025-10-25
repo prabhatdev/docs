@@ -50,73 +50,80 @@ You can define multiple trigger configurations (e.g., a daily schedule plus a we
 
 The Trigger Node configuration is organized into sections:
 
-### 1. Trigger Type
-Select one or more types:
-- Schedule
-- Integration Event
-- Webhook
-
-Each type has its own sub‑settings.
-
-### 2. Schedule
+<Tabs>
+<Tab title="Integration">
+Runs when a connected tool emits an event.
+- Source Integration: e.g. Gmail, Calendar, GitHub, Jira.
+- Event Type: email_received, new_issue, meeting_created, workflow_failed, etc.
+<Frame>
+    <img
+        className="block dark:hidden"
+        src="/images/light/workflow/nodes/trigger_node/integration.png"
+         alt="Workflow Dume.ai trigger integration"
+        title="Dume.ai Workflow Trigger integration"
+            width="200"
+    />
+    <img
+        className="hidden dark:block"
+        src="/images/dark/workflow/nodes/trigger_node/integration.png"
+      alt="Workflow Dume.ai trigger integration"
+        title="Dume.ai Workflow Trigger integration"
+            width="200"
+    />
+</Frame>
+</Tab>
+<Tab title="Schedule">
 Defines time-based execution.
 - Frequency: once, interval (every 15m), daily, weekly, monthly.
 - Cron Expression (advanced): e.g. `0 8 * * 1-5` (8 AM weekdays).
 - Timezone: ensures consistent execution across regions.
 - Start / End (optional): limit active window.
 - Skip Holidays (optional list): provide ISO dates to skip.
+<Frame>
+    <img
+        className="block dark:hidden"
+        src="/images/light/workflow/nodes/trigger_node/schedule.png"
+         alt="Workflow Dume.ai trigger schedule"
+        title="Dume.ai Workflow Trigger schedule"
+            width="200"
+    />
+    <img
+        className="hidden dark:block"
+        src="/images/dark/workflow/nodes/trigger_node/schedule.png"
+      alt="Workflow Dume.ai trigger schedule"
+        title="Dume.ai Workflow Trigger schedule"
+            width="200"
+    />
+</Frame>
+</Tab>
 
-### 3. Integration Event
-Runs when a connected tool emits an event.
-- Source Integration: e.g. Calendar, GitHub, Jira.
-- Event Type: new_issue, meeting_created, workflow_failed, etc.
-- Filters: key/value or logical rules (priority=high, attendee_count>3).
-- Field Selection: choose which event fields are passed downstream.
-
-### 4. Webhook
-External systems can POST to trigger.
+<Tab title="Webhook">
+External systems can call the POST API to trigger the workflow. Below are the parameter required:
 - Endpoint URL: auto-generated.
 - Shared Secret: required header or HMAC signature.
 - Allowed IPs (optional): restrict origin.
 - Payload Schema: declare expected fields.
 - Validation: reject malformed requests.
+<Frame>
+    <img
+        className="block dark:hidden"
+        src="/images/light/workflow/nodes/trigger_node/webhook.png"
+         alt="Workflow Dume.ai trigger webhook"
+        title="Dume.ai Workflow Trigger webhook"
+            width="200"
+    />
+    <img
+        className="hidden dark:block"
+        src="/images/dark/workflow/nodes/trigger_node/webhook.png"
+      alt="Workflow Dume.ai trigger webhook"
+        title="Dume.ai Workflow Trigger webhook"
+            width="200"
+    />
+</Frame>
+</Tab>
+</Tabs>
 
-### 5. Payload Mapping
-Map incoming fields → workflow variable names.
-```
-sourceField: totalRevenue  ->  workflowVariable: kpi_revenue
-sourceField: attendees[]   ->  workflowVariable: meeting_attendees
-```
-Supports transformation (simple expressions) and default values.
 
-### 6. Throttling / Dedup
-Prevent floods.
-- Dedup Window: ignore identical events within X seconds.
-- Max Runs Per Interval: cap executions (e.g. 10/hr).
-- Collapse Mode: queue similar events and emit one combined payload.
-
-### 7. Retry Policy
-For transient failures in initialization.
-- Attempts: number of retries.
-- Backoff: linear or exponential.
-- Jitter: randomize to avoid spikes.
-
-### 8. Enable / Disable
-Master toggle. Disabled triggers never fire.
-
-### 9. Logging & Audit
-Optional retention period and minimal/verbose mode.
-
-## Output
-The Trigger Node emits a structured payload object accessible to subsequent nodes:
-```
-{ 
-  trigger_type: "integration_event", 
-  timestamp: "...", 
-  data: { ...mappedFields } 
-}
-```
-Downstream nodes reference fields using `{string Trigger_Node/field_name}` or appropriate type.
 
 ## Examples in Practice
 
@@ -152,34 +159,6 @@ Downstream nodes reference fields using `{string Trigger_Node/field_name}` or ap
   - Flow: Trigger → LLM (summarize changes) → Tool (request reviewers) 
 </Card>
 
-## Common Patterns
-
-<Tabs>
-<Tab title="Schedule">
-```
-Daily 07:30 cron → fetch KPIs → summarize → email execs
-Weekly Mon 09:00 → compile project status → push to Notion
-```
-</Tab>
-<Tab title="Event">
-```
-On new high-priority issue → notify Slack
-On meeting creation → wait 1h → send recap
-```
-</Tab>
-<Tab title="Webhook">
-```
-POST deploy complete → generate release notes
-POST anomaly detected → escalate with risk score
-```
-</Tab>
-<Tab title="Hybrid">
-```
-Daily schedule + ad hoc webhook → same workflow path
-Event triggers + delay + conditional recheck
-```
-</Tab>
-</Tabs>
 
 ## Best Practices
 | Goal | Tip |

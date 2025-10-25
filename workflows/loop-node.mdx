@@ -61,13 +61,6 @@ The **Loop Node** (Loop Tool) in Dume AI enables you to automate the repeated ex
 5. **Post-Loop Processing (RESULTS):**
    After all items are processed, continue your workflow with the aggregated output.
 
-<img
-  src="/images/Screenshot2025-07-22at1.05.59AM.png"
-  alt="Screenshot 2025-07-22 at 1.05.59 AM.png"
-  title="Screenshot 2025-07-22 at 1.05.59 AM.png"
-  style={{ width:"32%" }}
-/>
-
 ## Example Use Case
 
 ### Scenario: Bulk Email Personalization
@@ -77,18 +70,6 @@ The **Loop Node** (Loop Tool) in Dume AI enables you to automate the repeated ex
   - In the **FOR EACH** branch, connect a Template or LLM Node to personalize an email for each user.
 - Once all emails are generated, the **RESULTS** branch sends the full batch to an Email Tool Node for delivery.
 
-## Diagram
-
-```plaintext
-[Input Node: User List] 
-      ↓
-   [Loop Node]
-   ├─ FOR EACH ──> [Personalize Email Node]
-   ↓
- RESULTS
-   ↓
-[Bulk Send Node]
-```
 
 ## Best Practices
 
