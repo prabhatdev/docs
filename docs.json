@@ -151,6 +151,13 @@
             ]
           }
         ]
+      },
+      {
+        "group": "Agents",
+        "pages": [
+          "agents/getting-started",
+          "agents/create-agent"
+        ]
       }
       
     ]
