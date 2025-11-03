@@ -120,7 +120,7 @@
           "workflows/getting-started",
           {
             "group": "Available Nodes",
-             "expanded": true,
+             "expanded": false,
             "pages": [
               "workflows/input-node",
               "workflows/llm-node",
@@ -134,8 +134,15 @@
               "workflows/trigger-node",
               "workflows/output-node"
             ]
+          },
+          {
+            "group": "System Workflows",
+            "expanded": false,
+            "pages": [
+              "system-workflows/email-triage",
+              "system-workflows/morning-briefing"
+            ]
           }
-          
         ]
       }
       
