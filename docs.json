@@ -137,6 +137,12 @@
           }
           
         ]
+      },
+      {
+        "group": "Agents",
+        "pages": [
+          "agents/getting-started"
+        ]
       }
       
     ]
