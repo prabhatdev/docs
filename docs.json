@@ -68,6 +68,13 @@
           "getting-started/chat-interface"
         ]
       },
+      {
+        "group": "Ways to reach dume",
+        "pages": [
+          "interfaces/web",
+          "interfaces/whatsapp"
+        ]
+      },
       
       {
         "group": "Integrations",
