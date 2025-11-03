@@ -141,7 +141,8 @@
       {
         "group": "Agents",
         "pages": [
-          "agents/getting-started"
+          "agents/getting-started",
+          "agents/create-agent"
         ]
       }
       
