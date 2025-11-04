@@ -71,8 +71,11 @@
       {
         "group": "Ways to reach dume",
         "pages": [
-          "interfaces/web",
-          "interfaces/whatsapp"
+          "interfaces/whatsapp",
+          "interfaces/email",
+          "interfaces/phone",
+          "interfaces/slack",
+          "interfaces/telegram"
         ]
       },
       

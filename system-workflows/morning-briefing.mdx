@@ -185,42 +185,166 @@ When you disable Morning Briefing, you'll stop receiving daily digest emails. Yo
 Here's what a typical Morning Briefing might look like:
 
 <Frame>
-  <div style={{padding: '20px', background: '#f9fafb', borderRadius: '8px'}}>
-    <h3>☀️ Good Morning, [Your Name]!</h3>
-    <p><strong>Monday, November 3, 2025</strong></p>
+  <div className="morning-briefing-example">
+    <style jsx>{`
+      .morning-briefing-example {
+        padding: 24px;
+        background: #ffffff;
+        border-radius: 8px;
+        font-family: system-ui, -apple-system, sans-serif;
+        border: 1px solid #e5e7eb;
+      }
+      
+      :global(.dark) .morning-briefing-example {
+        background: #1f2937;
+        border-color: #374151;
+      }
+      
+      .morning-briefing-example p {
+        margin: 0;
+        font-size: 16px;
+        color: #374151;
+        line-height: 1.6;
+      }
+      
+      :global(.dark) .morning-briefing-example p {
+        color: #d1d5db;
+      }
+      
+      .highlight {
+        background: #fef3c7;
+        padding: 2px 6px;
+        border-radius: 4px;
+        color: #92400e;
+      }
+      
+      :global(.dark) .highlight {
+        background: #78350f;
+        color: #fef3c7;
+      }
+      
+      .morning-briefing-example h3 {
+        margin: 0 0 12px 0;
+        font-size: 18px;
+        font-weight: 600;
+        color: #2563eb;
+      }
+      
+      :global(.dark) .morning-briefing-example h3 {
+        color: #60a5fa;
+      }
+      
+      .morning-briefing-example a {
+        color: #2563eb;
+        text-decoration: none;
+      }
+      
+      :global(.dark) .morning-briefing-example a {
+        color: #60a5fa;
+      }
+      
+      .morning-briefing-example ul {
+        margin: 0;
+        padding-left: 20px;
+        color: #374151;
+      }
+      
+      :global(.dark) .morning-briefing-example ul {
+        color: #d1d5db;
+      }
+      
+      .morning-briefing-example li {
+        margin-bottom: 8px;
+        font-size: 15px;
+        line-height: 1.6;
+      }
+      
+      .footer {
+        margin-top: 32px;
+        padding-top: 20px;
+        border-top: 1px solid #e5e7eb;
+        font-size: 14px;
+        color: #6b7280;
+        line-height: 1.5;
+      }
+      
+      :global(.dark) .footer {
+        border-top-color: #4b5563;
+        color: #9ca3af;
+      }
+    `}</style>
     
-    <h4>🌤️ Weather</h4>
-    <p>Partly cloudy, 68°F. High of 72°F, low of 55°F. 20% chance of rain in the evening. Don't forget your light jacket!</p>
+    <div style={{marginBottom: '20px'}}>
+      <p>
+        Good <span className="highlight">morning</span>, Anmol!
+      </p>
+    </div>
     
-    <h4>📅 Today's Schedule (5 events)</h4>
-    <ul>
-      <li><strong>9:00 AM</strong> - Team Standup (30 min)</li>
-      <li><strong>11:00 AM</strong> - Product Review with Design Team (1 hour)</li>
-      <li><strong>1:00 PM</strong> - Lunch with Client (1 hour)</li>
-      <li><strong>3:00 PM</strong> - Sprint Planning (2 hours)</li>
-      <li><strong>6:00 PM</strong> - Yoga Class</li>
-    </ul>
+    <div style={{marginBottom: '24px'}}>
+      <p>
+        Here's a quick look at your schedule and key updates for Wednesday, October 15.
+      </p>
+    </div>
     
-    <h4>🔔 Top Priorities</h4>
-    <ul>
-      <li>Review Q4 budget proposal before 11 AM meeting</li>
-      <li>Respond to client contract by EOD</li>
-      <li>Prepare sprint planning topics</li>
-    </ul>
+    <div style={{marginBottom: '24px'}}>
+      <p>
+        The weather in Kanpur is currently Mist, with a comfortable 21.1°C.
+      </p>
+    </div>
     
-    <h4>📧 Urgent Emails (3)</h4>
-    <ul>
-      <li><strong>Sarah Chen</strong> - Contract approval needed today</li>
-      <li><strong>Product Team</strong> - Design review prep materials</li>
-      <li><strong>IT Support</strong> - Password reset required</li>
-    </ul>
+    <div style={{marginBottom: '24px'}}>
+      <h3>Today's Schedule</h3>
+      <p style={{marginBottom: '12px', fontStyle: 'italic'}}>
+        Heads-up: Your 1:1 with CFO later today involves travel to Bengaluru.
+      </p>
+      <div style={{marginBottom: '12px'}}>
+        <p>
+          <strong>8:15 AM – 10:15 AM</strong> — <a href="#">Team Discussion</a> (Google Meet) — 2 hours
+        </p>
+      </div>
+      <div style={{marginBottom: '12px'}}>
+        <p>
+          <strong>2:00 PM – 3:00 PM</strong> — <a href="#">Discussion about Laning page</a> (Google Meet) — 1 hour
+        </p>
+      </div>
+      <div style={{marginBottom: '12px'}}>
+        <p>
+          <strong>5:30 PM – 6:30 PM</strong> — <a href="#">1:1 with CFO</a> (Studio I Clicks, Bengaluru) — 1 hour
+        </p>
+      </div>
+    </div>
     
-    <h4>📰 News Snippets</h4>
-    <ul>
-      <li>New AI regulations announced affecting tech sector</li>
-      <li>Major competitor launches new product feature</li>
-      <li>Industry conference announces keynote speakers</li>
-    </ul>
+    <div style={{marginBottom: '24px'}}>
+      <h3>Top Priorities</h3>
+      <ul>
+        <li><strong>Team Discussion (8:15 AM - 10:15 AM):</strong> This is the first event of the day, and requires your active participation.</li>
+        <li><strong>Discussion about Laning page (2:00 PM - 3:00 PM):</strong> Actively take part in the discussion on landing page.</li>
+        <li style={{marginBottom: '0'}}><strong>1:1 with CFO (5:30 PM - 6:30 PM):</strong> This meeting is important as it concerns upcoming hiring and tech budgets. It also requires travel to Bengaluru.</li>
+      </ul>
+    </div>
+    
+    <div style={{marginBottom: '24px'}}>
+      <h3>Overnight / Urgent Emails</h3>
+      <ul>
+        <li><strong>Google</strong> — Security alert — You allowed Composio access to some of your Google Account data. (Note: Two such alerts received.)</li>
+        <li><strong>Microsoft Clarity</strong> — New team member for a Clarity Project you own — Ijaz Ahmad Shaikh joined your "Dume Ai" Clarity project.</li>
+        <li style={{marginBottom: '0'}}><strong>Pragati Kashyap (via Google Forms)</strong> — Form shared with you: "Feedback" — Pragati Kashyap shared a form with you.</li>
+      </ul>
+    </div>
+    
+    <div style={{marginBottom: '24px'}}>
+      <h3>News Snippets</h3>
+      <ul>
+        <li><strong>VCs Favor AI Startups:</strong> Venture capital is increasingly concentrated in AI, indicating that integration of AI is crucial for attracting investor interest. (Source: TechCrunch)</li>
+        <li><strong>OpenAI's Mammoth Funding Round:</strong> OpenAI has closed a $40 billion funding round, valuing the company at $300 billion, highlighting massive investment and potential returns in the AI sector. (Source: Entrepreneur)</li>
+        <li style={{marginBottom: '0'}}><strong>California's AI Safety Law:</strong> New legislation demonstrates that regulation and innovation in AI can coexist, an important trend to monitor for tech entrepreneurs.</li>
+      </ul>
+    </div>
+    
+    <div className="footer">
+      Dume.ai — Your EA<br/>
+      Sent via <span className="highlight">Morning Briefing</span> automation
+    </div>
   </div>
 </Frame>
 
