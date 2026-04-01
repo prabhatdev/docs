@@ -53,6 +53,26 @@
     {
       "source": "/deepresearch",
       "destination": "/"
+    },
+    {
+      "source": "/use-cases/dume-for-chrome",
+      "destination": "/product/chrome-extension"
+    },
+    {
+      "source": "/use-cases/chrome-extension",
+      "destination": "/product/chrome-extension"
+    },
+    {
+      "source": "/use-cases/dume-cowork",
+      "destination": "/product/dume-cowork"
+    },
+    {
+      "source": "/product/cowork-scheduled-tasks",
+      "destination": "/use-cases/cowork-scheduled-tasks"
+    },
+    {
+      "source": "/product/dume-cowork-scheduled-tasks",
+      "destination": "/use-cases/dume-cowork-scheduled-tasks"
     }
   ],
   "favicon": "/favicon.svg",
@@ -99,8 +119,11 @@
           "integrations/notion",
           "integrations/google_sheets",
           "integrations/google_docs",
+          "integrations/google-drive",
           "integrations/github",
           "integrations/jira",
+          "integrations/linear",
+          "integrations/analytics",
           "integrations/confluence",
           {
             "group": "MCP",
@@ -161,8 +184,23 @@
           "agents/getting-started",
           "agents/create-agent"
         ]
+      },
+      {
+        "group": "Product",
+        "pages": [
+          "product/chrome-extension",
+          "product/dume-cowork"
+        ]
+      },
+      {
+        "group": "Use cases",
+        "pages": [
+          "use-cases/task-automation",
+          "use-cases/cowork-scheduled-tasks",
+          "use-cases/dume-cowork-scheduled-tasks",
+          "use-cases/profile-and-data-settings"
+        ]
       }
-      
     ]
   },
   "logo": {
