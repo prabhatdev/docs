@@ -8,6 +8,8 @@ keywords: ['Dume CoWork', 'desktop AI agent', 'WhatsApp AI assistant', 'AI workf
 ---
 
 # Dume CoWork: Desktop AI Agent Guide for Beginners
+ 
+Your AI desktop coworker that executes tasks, organizes files, and builds reports directly from your WhatsApp chat.
 
 ![Dume for Chrome Overview](https://www.dume.ai/api/media/file/dume_cowork_cover_docs.png)
 
@@ -51,12 +53,11 @@ Dume CoWork helps teams:
   <Tab title="Organize Files" icon="folder-tree">
     Clean and sort folders by type, date, and naming pattern.
     
-    <div className="flex flex-col gap-2 my-6">
-      <div className="self-end bg-[#16A34A] text-white px-5 py-3 rounded-2xl rounded-tr-none max-w-[85%] shadow-md">
-        "Refactor the workspace directory by grouping files into logically organized folders based on their content type and contextual purpose."
-      </div>
-      <div className="self-end text-xs text-gray-500 mr-2">Sent to Dume</div>
-    </div>
+    <CodeGroup>
+      ```text
+      Refactor the workspace directory by grouping files into logically organized folders based on their content type and contextual purpose.
+      ```
+    </CodeGroup>
 
     <Frame>
       <img src="https://www.dume.ai/api/media/file/image%208.png" width="500" />
@@ -67,13 +68,11 @@ Dume CoWork helps teams:
   <Tab title="Build Spreadsheets" icon="table">
     Extract structured fields from receipts, invoices, and mixed documents.
     
-    <div className="flex flex-col gap-2 my-6">
-      <div className="self-end bg-[#16A34A] text-white px-5 py-3 rounded-2xl rounded-tr-none max-w-[85%] shadow-md whitespace-pre-line">
-        "Extract data from this folder of receipts and invoices.
-        Create a spreadsheet and save it as expense_report_q1.csv"
-      </div>
-      <div className="self-end text-xs text-gray-500 mr-2">Sent to Dume</div>
-    </div>
+    <CodeGroup>
+      ```text
+      Extract data from this folder of receipts and invoices. Create a spreadsheet and save it as expense_report_q1.csv
+      ```
+    </CodeGroup>
 
     <Frame>
        <img src="https://www.dume.ai/api/media/file/build_spreadsheets.png" width="500" />
@@ -84,12 +83,11 @@ Dume CoWork helps teams:
   <Tab title="Prepare Notes" icon="file-lines">
     Combine updates from tools and notes into polished documents.
     
-    <div className="flex flex-col gap-2 my-6">
-      <div className="self-end bg-[#16A34A] text-white px-5 py-3 rounded-2xl rounded-tr-none max-w-[85%] shadow-md whitespace-pre-line">
-        "Prepare structured notes from this information, organizing key points into clear sections like agenda, discussion, and next steps."
-      </div>
-      <div className="self-end text-xs text-gray-500 mr-2">Sent to Dume</div>
-    </div>
+    <CodeGroup>
+      ```text
+      Prepare structured notes from this information, organizing key points into clear sections like agenda, discussion, and next steps.
+      ```
+    </CodeGroup>
 
     <Frame>
        <img src="https://www.dume.ai/api/media/file/prepare_notes.png" width="500" />
@@ -100,12 +98,11 @@ Dume CoWork helps teams:
   <Tab title="Extract Insights" icon="brain">
     Convert raw meeting notes into themes, decisions, and open questions.
     
-    <div className="flex flex-col gap-2 my-6">
-      <div className="self-end bg-[#16A34A] text-white px-5 py-3 rounded-2xl rounded-tr-none max-w-[85%] shadow-md whitespace-pre-line">
-        "Analyze my meeting notes from this month regarding the 'Project Phoenix' redesign. Identify Themes, Decisions, and Unresolved questions visually."
-      </div>
-      <div className="self-end text-xs text-gray-500 mr-2">Sent to Dume</div>
-    </div>
+    <CodeGroup>
+      ```text
+      Analyze my meeting notes from this month regarding the 'Project Phoenix' redesign. Identify Themes, Decisions, and Unresolved questions visually.
+      ```
+    </CodeGroup>
 
     <Frame>
        <img src="https://www.dume.ai/api/media/file/extraact_insights.png" width="500" />
@@ -148,11 +145,17 @@ Dume CoWork helps teams:
 
 ## WhatsApp-Controlled Workflow
 
-When you are away from your desktop:
-
-1. Send a task from WhatsApp.
-2. Dume starts execution on your connected desktop environment.
-3. Review progress and outputs when you return.
+<Steps>
+  <Step title="Send a task from WhatsApp">
+    Describe what you need in plain English directly in your WhatsApp thread with Dume.
+  </Step>
+  <Step title="Dume starts execution">
+    The AI agent begins work on your connected desktop environment immediately.
+  </Step>
+  <Step title="Review the results">
+    Monitor progress and review the completed outputs once you are back at your computer.
+  </Step>
+</Steps>
 
 <Note>
 Use WhatsApp requests for high-level tasks, and include folder paths or output format when you want more precise results.
@@ -191,15 +194,20 @@ Use WhatsApp requests for high-level tasks, and include folder paths or output f
 **Pro Tip:** The best beginner prompt format is: **goal + folder + output format + approval rule**.
 </Note>
 
-## FAQ
-
-### Do I need technical skills?
-No. Dume CoWork is designed for plain-language task instructions.
-
-### What kind of work is best for CoWork?
-File organization, spreadsheet generation, reporting, web-assisted research, and note analysis.
-
-### How is this different from a regular chat AI?
-CoWork is task-execution focused: it plans, acts on approved steps, and delivers concrete outputs.
-
-
+## Frequently Asked Questions
+ 
+<AccordionGroup>
+  <Accordion title="Do I need technical skills?">
+    No. Dume CoWork is designed for plain-language task instructions. You just describe what you want in plain English.
+  </Accordion>
+  <Accordion title="What kind of work is best for CoWork?">
+    File organization, spreadsheet generation, reporting, web-assisted research, and complex note analysis that requires local file access.
+  </Accordion>
+  <Accordion title="How is this different from a regular chat AI?">
+    CoWork is task-execution focused: it doesn't just talk; it plans, acts on approved steps, and delivers concrete outputs like files and spreadsheets.
+  </Accordion>
+</AccordionGroup>
+ 
+<Tip>
+**Pro Tip:** For the best results, always specify your desired output format (like `.csv`, `.docx`, or Markdown) in your initial prompt.
+</Tip>

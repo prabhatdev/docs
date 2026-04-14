@@ -8,6 +8,8 @@ keywords: ['Dume for Chrome', 'Chrome AI assistant', 'browser productivity exten
 ---
 
 # Dume for Chrome: Beginner Guide to Faster Browser Work
+ 
+An all-in-one AI companion that summarizes pages, drafts replies, and automates your browser research instantly.
 
 ![Dume for Chrome Overview](https://www.dume.ai/api/media/file/chrome-extension-docs.png)
 
@@ -51,24 +53,52 @@ Dume for Chrome is an AI browser assistant that understands your current tab and
 <Tabs>
   <Tab title="Ask About This Page" icon="comments">
     Ask Dume to explain, summarize, or answer questions about the active tab.
+
+    <CodeGroup>
+      ```text
+      Explain the main argument of this article in 3 simple bullet points.
+      ```
+    </CodeGroup>
+
     <Frame>
       <img src="https://www.dume.ai/api/media/file/explain_page.png" width="500" />
     </Frame>
   </Tab>
   <Tab title="Summarize Fast" icon="file-lines">
     Compress long articles and docs into quick bullet summaries.
+
+    <CodeGroup>
+      ```text
+      Summarize this documentation, highlighting the key installation steps and configuration requirements.
+      ```
+    </CodeGroup>
+
     <Frame>
       <img src="https://www.dume.ai/api/media/file/Chrome_extension_summarize.png" width="500" />
     </Frame>
   </Tab>
   <Tab title="Tab Grouping" icon="layer-group">
     Automatically group related tabs and manage your workspace with ease.
+
+    <CodeGroup>
+      ```text
+      Group all my open tabs related to market research and project planning into separate tab groups.
+      ```
+    </CodeGroup>
+
     <Frame>
       <img src="https://www.dume.ai/api/media/file/tab_grouping.png" width="500" />
     </Frame>
   </Tab>
   <Tab title="Deep Research" icon="magnifying-glass-chart">
     Research 10 sources at once to get a comprehensive view of any topic.
+
+    <CodeGroup>
+      ```text
+      Research the top 10 articles on AI in healthcare and identify the 5 most common ethical concerns discussed.
+      ```
+    </CodeGroup>
+
     <Frame>
       <img src="https://www.dume.ai/api/media/file/research_multiple_tabs.png" width="500" />
     </Frame>
@@ -100,11 +130,23 @@ Pinning keeps Dume visible in your toolbar so you can open it in one click on an
 
 Use this quick routine to get immediate value:
 
-1. Open any article or documentation page.
-2. Open Dume from the toolbar (or your keyboard shortcut).
-3. Ask for a short summary.
-4. Ask one follow-up question.
-5. Save or copy the output to your workflow tool.
+<Steps>
+  <Step title="Open a page">
+    Open any article, report, or documentation page in your browser.
+  </Step>
+  <Step title="Open Dume">
+    Open the Dume sidebar from the toolbar or use the keyboard shortcut.
+  </Step>
+  <Step title="Ask for a summary">
+    Request a short summary or key takeaways to quickly understand the core message.
+  </Step>
+  <Step title="Ask follow-up questions">
+    Dive deeper by asking specific questions about the content on the page.
+  </Step>
+  <Step title="Save or copy">
+    Save the insights or copy the output directly to your notes or workflow tool.
+  </Step>
+</Steps>
 
 
 ## Beginner Use Cases
@@ -149,24 +191,25 @@ You can open the Dume sidebar instantly:
 You can also customize this in `chrome://extensions/shortcuts`.
 
 
-## Troubleshooting (Quick Fixes)
-
-### Extension not opening
-- Refresh the current tab
-- Make sure the extension is pinned
-- Disable conflicting extensions temporarily
-### Not logged in
-- Open the extension popup and sign in again
-- Confirm you are using the same login method as the web app
-### Action buttons not showing on a site
-- Some site layouts load slowly; refresh once
-- Check that the page is fully loaded before opening Dume
+## Frequently Asked Questions
+ 
+<AccordionGroup>
+  <Accordion title="What should I do if the extension isn't opening?">
+    Try refreshing the current tab. Also, ensure the extension is pinned for easy access and that there are no conflicting extensions active.
+  </Accordion>
+  <Accordion title="Why am I seeing 'Not logged in'?">
+    Open the extension popup and sign in again using the same method (Google or email) that you use for the Dume web app.
+  </Accordion>
+  <Accordion title="Why aren't action buttons showing on some sites?">
+    Some complex site layouts load slowly; try refreshing the page once. Also, ensure the page is fully loaded before opening the Dume sidebar.
+  </Accordion>
+</AccordionGroup>
+ 
+<Tip>
+**Pro Tip:** Start with simple summary prompts first to get a feel for the AI's logic. Once you trust the outputs, move to advanced tasks like data extraction and drafting.
+</Tip>
 
 ---
-
-<Note>
-**Pro Tip:** Start with summary prompts first. Once you trust the outputs, move to advanced tasks like extraction and drafting.
-</Note>
 
 ## Why Teams Keep It Enabled
 
