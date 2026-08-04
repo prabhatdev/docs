@@ -1,0 +1,61 @@
+---
+title: "Multiple Accounts"
+sidebarTitle: "Multiple Accounts"
+icon: "users"
+keywords: ['multiple accounts', 'multi-account', 'account management', 'Gmail multiple accounts', 'integration accounts']
+description: "Connect more than one account to the same integration and keep work and personal separate."
+"og:title": "Multiple Accounts Support - Dume.ai"
+"og:description": "Connect multiple Gmail accounts and keep work and personal separate."
+"twitter:card": "summary"
+"twitter:title": "Multiple Accounts - Dume.ai"
+"twitter:description": "Connect and manage multiple accounts for the same integration."
+---
+
+{/* TODO: Phase 3 screenshot — Integrations page with a second Gmail account connected */}
+
+Some integrations support connecting more than one account. Gmail is the clearest case: connect your work and personal inboxes separately, and ask Dume to work with either one by name.
+
+<CardGroup cols={2}>
+<Card title="Unified access" icon="layer-group">
+  Manage every connected account from one place, no switching apps.
+</Card>
+<Card title="Separation with control" icon="users-gear">
+  Keep work and personal data apart while still working from one chat.
+</Card>
+<Card title="Cross-account queries" icon="bolt">
+  Ask Dume to search or act across every connected account at once.
+</Card>
+</CardGroup>
+
+## How it works
+
+<Steps>
+  <Step title="Connect your main account">
+    Connect the integration normally from [Integrations](/integrations/overview).
+  </Step>
+  <Step title="Add another account">
+    Use **Add Another Account** on the same integration card to connect a second one.
+  </Step>
+  <Step title="Give each one a name">
+    Label accounts something you'll recognize, like "Work Gmail" and "Personal Gmail."
+  </Step>
+  <Step title="Reference them by name in chat">
+    "Show emails from my work account" or "Send from my personal Gmail" tells Dume which one to use.
+  </Step>
+</Steps>
+
+## Example commands
+
+```
+Show emails from my work account
+Send from my personal Gmail
+Search all Gmail accounts for "invoice"
+```
+
+<Info>
+How many accounts you can connect per integration depends on your plan. See [Billing & plans](/account-settings/billing-and-plans).
+</Info>
+
+## Security
+
+Each connected account keeps its own authentication token and permissions, so disconnecting one doesn't affect the others.

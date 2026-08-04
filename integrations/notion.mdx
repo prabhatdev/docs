@@ -1,0 +1,120 @@
+---
+title: "Notion Integration"
+icon: "notion"
+sidebarTitle: "Notion"
+keywords: ['Notion','integration','pages','databases','search','comments']
+description: "Connect Notion to search, fetch, create, update, organize pages and databases with simple commands."
+---
+
+## Overview
+Connect Notion to quickly search content, create/update pages, manage databases, move/duplicate pages, and work with comments, users, and teams via chat.
+
+<Note>
+Notion connects through Notion's own official server, so the exact list of actions below reflects what Notion currently exposes, not something Dume controls directly. It's accurate as of this writing and may expand as Notion adds capabilities.
+</Note>
+
+## 1. Connect (OAuth)
+<Steps>
+  <Step title="Open Integrations">Settings → Integrations → Notion.</Step>
+  <Step title="Authenticate">Click Connect Notion and approve workspace access.</Step>
+  <Step title="Select Scope">Choose pages/databases to expose.</Step>
+  <Step title="Test">Ask: "Search Notion for OKR draft."</Step>
+</Steps>
+
+<Tip>Revoke anytime in Notion → Settings → Connections.</Tip>
+
+## 2. Supported actions
+- Search workspace content
+- Fetch page or database details
+- Create pages
+- Update page properties or content
+- Move pages to another parent
+- Duplicate a page
+- Create a database
+- Update database schema or properties
+- Add a comment
+- List comments on a page or block
+- Get teams and users
+- Get the current connected user's profile
+
+## 3. Quick commands
+```
+Search Notion for product roadmap
+Fetch page 'Q4 Strategy'
+Create a page: Weekly Standup Notes under Team Hub
+Update page 'Launch Plan' set status = In Review
+Move page 'Design Specs' under /Archive
+Duplicate page 'Pricing Model'
+Create database: Customer Feedback (Properties: Source, Sentiment, Priority)
+Update database 'Project Tracker' add property Risk Level
+Add comment to page 'Roadmap' -> "Clarify timeline for phase 2"
+List comments on 'Launch Plan'
+List Notion users
+Get my Notion profile
+```
+
+## 4. Common patterns
+<Tabs>
+<Tab title="Search & retrieve">
+```
+Search pages about retention metrics
+Fetch database 'Feature Requests'
+Describe page 'Marketing Brief'
+```
+</Tab>
+<Tab title="Page ops">
+```
+Create page: Sprint 18 Retro under Engineering
+Update page Sprint 18 Retro add summary
+Move page Sprint 17 Retro to Archive
+Duplicate page Template: Meeting Notes
+```
+</Tab>
+<Tab title="Database ops">
+```
+Create database: Competitive Analysis (Properties: Competitor, Score, Notes)
+Update database Competitive Analysis add property Risk
+Fetch database Project Tracker
+```
+</Tab>
+<Tab title="Comments & collaboration">
+```
+Add comment to page Strategy -> "Need exec summary"
+Get comments on page Strategy
+List teams
+List users
+```
+</Tab>
+</Tabs>
+
+## 5. Best practices
+| Goal | Tip |
+| ---- | ---- |
+| Faster search | Use clear titles + add tags property |
+| Clean structure | Archive or move obsolete pages regularly |
+| Reliable updates | Reference exact page name + property |
+| Scalable databases | Keep property names short & consistent |
+
+## 6. Troubleshooting
+| Issue | Fix |
+| ----- | --- |
+| Page not found | Use exact title or fetch by link |
+| Permission denied | Reconnect and expand selected pages/databases |
+| Missing property | Update database schema first |
+| Search empty | Add more specific keywords or tags |
+
+## 7. Security
+- OAuth tokens only, no passwords stored
+- You choose pages/databases exposed
+- Revoke access anytime
+- Write actions can require confirmation
+
+## 8. Sample flow
+```
+Search Notion for quarterly objectives
+Fetch page 'Q1 Objectives'
+Create page 'Q1 Review' under Strategy
+Add comment "Add metrics section"
+```
+
+<Note>Need advanced automation? Ask Dume to combine Notion with Calendar or Drive in the same conversation, or set it up as a [routine](/routines/overview).</Note>

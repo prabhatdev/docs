@@ -1,0 +1,97 @@
+---
+title: "Connect Your First Tool"
+sidebarTitle: "Connect Your First Tool"
+description: "Step-by-step guide to connecting your first integration in Dume: how OAuth works, what each connection can access, and how to test it."
+keywords: ['integration', 'OAuth', 'tool connection', 'getting started', 'authentication', 'setup', 'Gmail', 'Google Calendar']
+"og:title": "Connect Your First Tool - Dume.ai Integration Guide"
+"og:description": "Step-by-step guide to connecting your first integration in Dume."
+"twitter:card": "summary"
+"twitter:title": "Tool Integration Setup - Dume.ai"
+"twitter:description": "Quick setup guide for connecting your first tool to Dume."
+---
+
+## Why connect tools?
+
+Without a connected tool, Dume can only work with what you type into the chat. Connect Gmail or Calendar and it can read your actual inbox and schedule, not just talk about them in the abstract.
+
+<Tip>Start with the tool you use most, usually email or calendar.</Tip>
+
+## Available integrations
+
+<CardGroup cols={3}>
+<Card title="Email & docs" icon="envelope">
+  Gmail, Google Docs, Google Sheets, Google Drive, Microsoft 365
+</Card>
+
+<Card title="Calendar" icon="calendar">
+  Google Calendar
+</Card>
+
+<Card title="Team tools" icon="comments">
+  Slack, Notion
+</Card>
+
+<Card title="Development" icon="code">
+  GitHub
+</Card>
+</CardGroup>
+
+Need something that isn't listed? Connect it yourself through [MCP Servers](/integrations/mcp/overview) instead of waiting on a native integration.
+
+## Step-by-step
+
+<Steps>
+  <Step title="Open Integrations">
+    From the sidebar, go to **Integrations**.
+
+    {/* TODO: Phase 3 screenshot — Integrations page grid */}
+
+    Each card shows what the integration can access before you connect it.
+  </Step>
+
+  <Step title="Choose an integration and connect">
+    Click **Connect Integration** on the tool you want.
+
+    <Warning>
+    Dume never asks for your password directly. Connecting always redirects you to the tool's own login page.
+    </Warning>
+
+    Most integrations (Gmail, Google Calendar, Docs, Sheets, Drive, GitHub, Slack) open an OAuth window right away. Notion and Microsoft 365 connect from your [Dume dashboard settings](https://app.dume.ai/integrations) instead of a popup. Same process, different entry point.
+  </Step>
+
+  <Step title="Authorize on the provider's site">
+    Log in to the service if you aren't already, review what Dume is asking to access, and approve it.
+
+    **What you'll typically see requested:**
+    - Read access to your data (email, calendar events, files)
+    - Write access, if the integration supports creating or updating things
+  </Step>
+
+  <Step title="Confirm the connection">
+    You're returned to Dume, and the integration card now shows as connected.
+
+    {/* TODO: Phase 3 screenshot — a connected integration card */}
+
+    Test it right away: ask Dume something that requires the tool, like "What's on my calendar today?"
+  </Step>
+</Steps>
+
+<Info>
+Free plans have a limit on how many integrations and connected accounts you can have at once. If a card shows as locked, that's the limit. See [Billing & plans](/account-settings/billing-and-plans).
+</Info>
+
+## Managing a connection
+
+Go to **Settings → Connectors** (for WhatsApp and phone) or the **Integrations** page (for everything else) to disconnect a tool. Revoking access on the provider's side, through Google, GitHub, or Slack's own "connected apps" settings, also cuts off Dume's access immediately.
+
+## Next steps
+
+<CardGroup cols={2}>
+<Card title="Connect more tools" icon="plus" href="/integrations/overview">
+  See the full list of integrations and what each one unlocks.
+</Card>
+
+<Card title="Set up a routine" icon="clock" href="/routines/overview">
+  Turn a task you'd repeat manually into something Dume runs on a schedule.
+</Card>
+</CardGroup>

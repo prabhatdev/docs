@@ -1,0 +1,116 @@
+---
+title: "Google Calendar Integration"
+sidebarTitle: "Google Calendar"
+icon: "calendar"
+keywords: ['Google Calendar', 'calendar integration', 'calendar events', 'OAuth', 'automation']
+description: "Connect Google Calendar and manage events, meetings, and schedules from chat."
+"og:title": "Google Calendar Integration - Dume.ai"
+"og:description": "Connect Google Calendar to create, update, and manage events from chat."
+"twitter:card": "summary"
+"twitter:title": "Google Calendar Integration - Dume.ai"
+"twitter:description": "Connect Google Calendar and manage events with Dume."
+---
+
+## Overview
+Connect Google Calendar to list, search, create, update, delete, and describe events, and manage calendars and settings from chat.
+
+## 1. Connect (OAuth)
+<Steps>
+  <Step title="Open Integrations">Go to **Integrations**.</Step>
+  <Step title="Authenticate">Click **Connect Integration** on the Google Calendar card and choose the right Google account.</Step>
+  <Step title="Grant access">Allow the requested calendar permissions.</Step>
+  <Step title="Test">Ask: "What's on my calendar today?"</Step>
+</Steps>
+
+<Tip>Revoke anytime: Google Account → Security → Third-party access.</Tip>
+
+## 2. Supported actions
+- List events in a time window
+- Search events by keyword
+- Describe an event (details and attendees)
+- Create a new event
+- Update an existing event (time, attendees, title)
+- Delete an event
+- List your calendars
+- Create a calendar
+- Delete a calendar
+- View calendar settings (timezone, reminders)
+- Update calendar settings
+
+## 3. Quick commands
+```
+What's on my calendar today?
+Show meetings tomorrow afternoon
+Create an event: Design Review tomorrow 2-3 PM with Sarah and Mike
+Move my 11 AM meeting to 1 PM
+Delete the 'Old Weekly Sync' event
+Search events about quarterly planning
+Describe the next board meeting
+List my calendars
+Create a calendar: Product Roadmap
+Update my default reminder settings
+```
+
+## 4. Common patterns
+<Tabs>
+<Tab title="View & search">
+```
+List events this week
+Search events with "investor" next month
+Describe my first meeting tomorrow
+```
+</Tab>
+<Tab title="Create & modify">
+```
+Schedule 30m sync with Alex Friday 10 AM
+Reschedule design review to 3 PM
+Add Sarah to the strategy meeting
+```
+</Tab>
+<Tab title="Delete & clean up">
+```
+Remove cancelled planning session
+Delete all past draft events named Test
+```
+</Tab>
+<Tab title="Calendars & settings">
+```
+List my calendars
+Create calendar: Team Operations
+Update default event duration to 45 minutes
+```
+</Tab>
+</Tabs>
+
+## 5. Best practices
+| Goal | Tip |
+| ---- | ---- |
+| Precise scheduling | Include date, start/end time, attendees |
+| Faster updates | Refer to event by clear title and day |
+| Avoid conflicts | Ask: "Find a 1h slot tomorrow afternoon" |
+| Clean calendar | Periodically: "List events older than last week named Draft" |
+
+## 6. Troubleshooting
+| Issue | Fix |
+| ----- | --- |
+| No events returned | Specify a timeframe: "this week" or "today" |
+| Wrong account | Reconnect with the correct Google account |
+| Time zone off | Ask: "What is my calendar time zone?" then update settings |
+| Event not found | Use the exact title and date, or try the search command |
+| Permission error | Reconnect and approve all calendar scopes |
+
+## 7. Security
+- OAuth tokens only, no password storage
+- Scoped access (events and selected calendars)
+- Revocable anytime in Google security settings
+- Modification actions can request confirmation
+
+## 8. Sample multi-step flow
+```
+What's on my calendar tomorrow?
+Find a 45m slot with Sarah and Mike next week
+Schedule strategy sync in that slot
+Add agenda: roadmap review + risks
+```
+
+<Note>Need Outlook or Microsoft 365 calendar instead? See [Microsoft 365](/integrations/microsoft_365).</Note>

@@ -1,0 +1,94 @@
+---
+title: "Google Docs Integration"
+sidebarTitle: "Google Docs"
+icon: "google"
+keywords: ['Google Docs', 'document integration', 'document commands', 'OAuth', 'automation']
+description: "Connect Google Docs to find, create, and update documents from chat."
+"og:title": "Google Docs Integration - Dume.ai"
+"og:description": "Connect Google Docs to create, search, and update documents from chat."
+"twitter:card": "summary"
+"twitter:title": "Google Docs Integration - Dume.ai"
+"twitter:description": "Connect Google Docs and manage documents with Dume."
+---
+
+## Overview
+Connect Google Docs to search for documents, generate new ones, update existing content, and get structured descriptions using natural language.
+
+## 1. Connect (OAuth)
+<Steps>
+  <Step title="Open Integrations">Go to **Integrations**.</Step>
+  <Step title="Authenticate">Click **Connect Integration** on the Google Docs card and choose the right Google account.</Step>
+  <Step title="Grant access">Allow the requested Docs/Drive permissions.</Step>
+  <Step title="Test">Ask: "Find my recent Google Docs."</Step>
+</Steps>
+
+<Tip>Revoke anytime: Google Account → Security → Third-party access.</Tip>
+
+## 2. Supported actions
+- Find documents by name or keyword
+- Describe a document (structure, sections, length)
+- Create a document (optionally with headings or starter content)
+- Update a document (append, replace section, add summary)
+- Download a document's contents into the conversation
+
+## 3. Quick commands
+```
+Find documents about Q4 strategy
+Describe document "Product Vision"
+Create document: Launch Checklist (Sections: Overview, Tasks, Owners)
+Add a summary to "Marketing Plan"
+Append competitive analysis to "Strategy Draft"
+```
+
+## 4. Common patterns
+<Tabs>
+<Tab title="Find & describe">
+```
+Find docs with "pricing"
+Describe document "Sales Playbook"
+```
+</Tab>
+<Tab title="Create">
+```
+Create document: Sprint Retro Template (Sections: Highlights, Issues, Actions)
+```
+</Tab>
+<Tab title="Update">
+```
+Add conclusion to "Board Report"
+Replace introduction in "Investor Overview" with updated market positioning
+```
+</Tab>
+</Tabs>
+
+## 5. Best practices
+| Goal | Tip |
+| ---- | ---- |
+| Faster search | Use clear, specific titles |
+| Clean updates | Reference exact section or heading |
+| Summaries | Ask: "Summarize document X for execs" |
+| Structured docs | Provide section list when creating |
+
+## 6. Troubleshooting
+| Issue | Fix |
+| ----- | --- |
+| Doc not found | Use exact title or fewer keywords |
+| Permission error | Reconnect and grant Docs/Drive scopes |
+| Update failed | Confirm the section exists; describe the doc first |
+| Wrong doc edited | Mention the full title and confirm before proceeding |
+
+## 7. Security
+- OAuth tokens only, no passwords
+- Scoped Docs/Drive access
+- Revocable anytime
+- Write actions may request confirmation
+
+## 8. Sample flow
+```
+Find docs with "roadmap"
+Describe document "2025 Roadmap"
+Create document "2025 Roadmap Summary" (Sections: Goals, Risks, Opportunities)
+Add executive summary to "2025 Roadmap Summary"
+```
+
+<Note>Need deeper analysis? Ask Dume to combine data from Docs with Sheets or Calendar in the same conversation, or set it up as a [routine](/routines/overview).</Note>

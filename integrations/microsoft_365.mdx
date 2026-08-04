@@ -1,0 +1,125 @@
+---
+title: "Microsoft 365 Integration"
+sidebarTitle: "Microsoft 365"
+icon: "windows"
+keywords: ['Microsoft 365', 'OneDrive', 'SharePoint', 'Teams', 'OAuth', 'automation']
+description: "Connect Microsoft 365 to access files, calendar, Teams, tasks, and SharePoint content from chat."
+"og:title": "Microsoft 365 Integration - Dume.ai"
+"og:description": "Connect Microsoft 365 to manage files, calendar, Teams, and tasks from chat."
+"twitter:card": "summary"
+"twitter:title": "Microsoft 365 Integration - Dume.ai"
+"twitter:description": "Connect Microsoft 365 and manage your workspace with Dume."
+---
+
+## Overview
+Connect Microsoft 365 to access files, calendar, chats, tasks, notes, Excel data, contacts, Teams, and SharePoint content through natural language. Email actions aren't covered on this page.
+
+<Note>
+Microsoft 365 connects through a Dume-hosted server that talks to Microsoft Graph, so the action categories below reflect what that server currently exposes and may expand over time rather than being a fixed, permanent list.
+</Note>
+
+## 1. Connect Microsoft 365 (OAuth)
+<Steps>
+  <Step title="Open Integrations">Click **Connect Integration** on the Microsoft 365 card.</Step>
+  <Step title="Continue on your Dume dashboard">Microsoft 365 connects from your [Dume dashboard settings](https://app.dume.ai/integrations) rather than a popup in the app itself.</Step>
+  <Step title="Select account">Choose your work or school account.</Step>
+  <Step title="Grant access">Allow the requested permissions (files, calendar, Teams, tasks, and so on).</Step>
+  <Step title="Confirm">Status shows Connected. Test: "List my upcoming meetings."</Step>
+</Steps>
+
+<Tip>You can revoke access anytime in Azure/My Account → Privacy & security → Apps with access.</Tip>
+
+## 2. Supported action categories
+
+| Category | What you can do |
+| -------- | ---------------- |
+| User & Teams | Get your profile, list joined Teams, view team details and members, list users |
+| Teams / Chat | List and read chats, send and reply to chat messages |
+| Channels | List channels, read channel messages, send a channel message |
+| Calendar | List calendars and events, view, create, update, and delete events |
+| Files (Drive/OneDrive) | List drives and folders, upload and download files, delete a file |
+| SharePoint sites & lists | Search sites, browse site drives and lists, read list items |
+| OneNote | List notebooks and sections, list pages, create a page, read page content |
+| Tasks (To Do) | List task lists and tasks, create, update, and delete a task |
+| Planner | View plans and tasks, create and update a Planner task |
+| Excel | Read a range, format it, sort it, create a chart |
+| Contacts | List, create, update, and delete Outlook contacts |
+| Search | Search across connected Microsoft 365 content |
+
+## 3. Quick commands
+```
+Show my meetings for tomorrow
+List files in my OneDrive root
+Upload this file to my Project folder
+Search SharePoint for "Q4 roadmap"
+List my Teams chats
+Send a Teams message to marketing: Status updated
+Create a Planner task: Finalize launch assets due Friday
+Show my To Do tasks due this week
+Get the Design notebook sections in OneNote
+Format the Excel range A1:D10 bold
+Create a bar chart for sales worksheet range A1:B13
+List Outlook contacts named Sarah
+Create contact: Jane Doe, jane@company.com, Product Manager
+```
+
+## 4. Common patterns
+<Tabs>
+<Tab title="Calendar">
+```
+What's on my calendar this afternoon?
+Create a 30m sync with Alex tomorrow at 10 AM
+Move the 2 PM meeting to 3 PM
+```
+</Tab>
+<Tab title="Files & SharePoint">
+```
+List files in /Reports
+Download the latest budget file
+Search SharePoint sites for "policy"
+```
+</Tab>
+<Tab title="Teams & chat">
+```
+Show recent messages in Marketing Team channel
+Send a channel message: Launch is green
+Summarize today's chat messages
+```
+</Tab>
+<Tab title="Tasks & Planner">
+```
+List my Planner tasks due this week
+Create Planner task: Prepare release notes, due Friday
+Update task: mark 'Prepare release notes' completed
+```
+</Tab>
+<Tab title="OneNote & notes">
+```
+List notebooks
+List pages in Strategy section
+Create a OneNote page: Meeting notes for Q4 planning
+```
+</Tab>
+<Tab title="Excel">
+```
+Get range A1:D20 in Sales worksheet
+Sort range A2:D50 by column C descending
+Create a line chart for range A1:B13 in Metrics worksheet
+```
+</Tab>
+</Tabs>
+
+## 5. Troubleshooting
+| Issue | Fix |
+| ----- | --- |
+| OAuth fails | Retry, and confirm you're using the correct account with pop-ups allowed |
+| Empty results | Confirm the resource exists, then try a simpler list command |
+| Permission denied | Reconnect and accept the scopes; an admin may need to approve |
+| File not found | Provide the full path or ID, or list the folder's files first |
+| Excel range error | Verify the worksheet name and cell range syntax |
+
+## 6. Security
+- Token-based OAuth, no password storage
+- Granular Microsoft Graph scopes
+- Revocable anytime in account security settings
+- Actions that create, update, or delete may prompt for confirmation

@@ -1,0 +1,69 @@
+---
+title: "Personalize Dume"
+sidebarTitle: "Personalisation"
+keywords: ['personalization', 'AI customization', 'profile setup', 'Dume settings', 'user preferences', 'AI assistant setup']
+description: "Set up your Dume profile so responses match your role, timezone, and communication style instead of reading generic."
+"og:title": "Personalize Your AI Executive Assistant - Dume.ai"
+"og:description": "Set up your profile, timezone, and communication style for more relevant responses."
+"twitter:card": "summary"
+"twitter:title": "AI Personalization Guide - Dume.ai"
+"twitter:description": "Customize your Dume profile for more relevant responses."
+---
+
+## Why it matters
+
+Dume reads your profile before it answers, so the same question gets a different answer depending on who's asking. "Summarize this PRD" reads differently for a solo founder tracking activation metrics than it does for an engineering manager tracking sprint velocity, once you've told Dume which one you are.
+
+This profile follows you everywhere — web, Cowork desktop, WhatsApp, or a phone call all read the same one.
+
+## Set up your profile
+
+Go to **Settings → Profile**.
+
+{/* TODO: Phase 3 screenshot — Settings, Profile tab */}
+
+<Steps>
+  <Step title="Identity">
+    Your name, email, username, timezone, and location. Timezone and location matter more than they look: they're what keep a briefing landing in your morning instead of someone else's.
+
+    <Tip>Location has a **Detect** button if you'd rather not type it in.</Tip>
+  </Step>
+
+  <Step title="Goals & context">
+    **Occupation** and **Bio** — this is where specificity pays off. "Software developer" gets you generic answers; "backend engineer specializing in Node.js" gets you answers pitched at that level.
+  </Step>
+
+  <Step title="Agent preferences">
+    - **Communication style** — Balanced, Formal, Casual, or Concise
+    - **Measurement system** — Imperial or Metric
+    - **Use emojis** — on or off
+    - **Custom instructions** — anything else you want Dume to always keep in mind
+  </Step>
+
+  <Step title="System preferences">
+    **Language** (English, Español, or 中文) and your **default AI model**.
+  </Step>
+
+  <Step title="Save changes">
+    Changes take effect on your next message — there's no waiting period.
+  </Step>
+</Steps>
+
+## Before and after
+
+| Prompt | Without a profile | With a profile (backend engineer, concise style, Asia/Dubai) |
+|----------|--------|-------|
+| "Summarize this PRD." | A generic high-level summary. | A summary weighted toward implementation details and technical risk, kept short per your communication style. |
+| "Triage my unread inbox." | Emails listed with generic priority labels. | Emails grouped by relevance to your stated focus, with meeting times already converted to your timezone. |
+
+## FAQ
+
+<AccordionGroup>
+<Accordion title="I don't see the personalization option">
+  Make sure you're logged in and on the latest version of the app. It lives under Settings → Profile.
+</Accordion>
+
+<Accordion title="Responses still feel generic">
+  Give Dume a few exchanges to pick up on your profile, and add more specifics to Occupation and Bio rather than one-word answers — the more concrete, the better the match.
+</Accordion>
+</AccordionGroup>

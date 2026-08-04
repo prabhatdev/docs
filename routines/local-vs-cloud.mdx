@@ -1,0 +1,27 @@
+---
+title: "Local vs. Cloud Routines"
+sidebarTitle: "Local vs. Cloud"
+description: "Local routines run on your desktop using its own scheduler. Cloud routines run on Dume's servers on a cron schedule, desktop app open or not."
+icon: "server"
+keywords: ['local routines', 'cloud routines', 'Dume Cowork', 'scheduling']
+---
+
+Your Routines list can hold both kinds side by side, tagged so you can tell them apart at a glance.
+
+## Local routines
+
+Available only in the Cowork desktop app. A local routine runs on your machine, using the operating system's own scheduler (launchd on macOS, Task Scheduler on Windows), so it survives sleep and restarts without Dume having to track it separately. If your desktop app isn't running when a local routine is due, it catches up the next time it opens.
+
+## Cloud routines
+
+Available from both the web app and Cowork. A cloud routine runs on Dume's servers on a real cron schedule, so it fires on time whether or not you have anything open. This is the type you'll use for anything you want to keep running unattended, like a daily briefing.
+
+## Which to use
+
+Default to a cloud routine. Reach for a local routine specifically when the task needs something only your machine has, like a particular file on disk or an app installed locally. This choice is locked in at creation; switching later means deleting the routine and creating it again, so it's worth getting right upfront.
+
+## Limits worth knowing
+
+- Cloud routines cap how many of your routines can run at the same time; if you have several due at once, extras queue and start as soon as a slot frees up rather than failing outright.
+- If a routine gets stuck mid-run (a crash, a lost connection), it's automatically released after a short timeout so it isn't stuck "running" forever and can fire again on its next scheduled time.
+

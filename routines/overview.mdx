@@ -1,0 +1,39 @@
+---
+title: "Routines"
+sidebarTitle: "Overview"
+description: "A routine is a plain-language instruction on a schedule. Set one up once and Dume runs it without you asking again."
+icon: "clock"
+keywords: ['routines', 'scheduled tasks', 'automation', 'Dume', 'recurring tasks']
+---
+
+A routine is an instruction paired with a schedule: "Send me a morning briefing every weekday at 8am," "Check my inbox for anything urgent every hour." Once it's set up, Dume runs it on its own and the result lands in [History](/core-workspace/history) like any other session.
+
+{/* TODO: Phase 3 screenshot — Routines list with an active routine card */}
+
+## Creating one
+
+From **Routines**, click **New Routine** and fill in:
+
+- **Name** — how it shows up in your list
+- **Instruction** — what Dume should do each time it runs, in plain language
+- **Model** — which model handles it (see [Choosing a model](/features/multiple_llm))
+- **Schedule** — see [Scheduling & templates](/routines/scheduling-and-templates)
+- **Run type** — local (Cowork desktop only) or cloud; see [Local vs. cloud routines](/routines/local-vs-cloud)
+
+{/* TODO: Phase 3 screenshot — New Routine dialog */}
+
+Rather not start from a blank instruction? Click **Templates** for a set of pre-built routines you can customize before saving; see the full list in [Scheduling & templates](/routines/scheduling-and-templates).
+
+## Managing a routine
+
+Hover over an active routine's card for three buttons: pause or resume it, edit it, or delete it. Editing lets you change the name, instruction, schedule, or model, but not the run type. Local and cloud are locked in at creation; to switch a routine from one to the other, delete it and create it again.
+
+## What it costs
+
+Running a routine isn't a separate line item. It's billed exactly like sending Dume a message: by the tokens the model actually uses, at that model's rate, converted to credits. A routine on a cheap or free model costs less per run than the same instruction on a premium one. See [Billing & plans](/account-settings/billing-and-plans) for how credits work.
+
+If your account runs out of credits, a scheduled routine fails to run rather than pushing you into debt; you'll need to wait for your next billing cycle or upgrade to get it running again.
+
+## Local or cloud
+
+Routines run one of two ways: local on your desktop, or in the cloud. The difference matters for where a routine can run and what it needs to keep running; see [Local vs. cloud routines](/routines/local-vs-cloud).

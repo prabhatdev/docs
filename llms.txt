@@ -1,0 +1,47 @@
+# Dume.ai Documentation
+
+Dume.ai is an AI executive assistant you talk to like a person. It reads your inbox, calendar, and docs, drafts replies, files tickets, and runs recurring routines on a schedule — from the web app, the Cowork desktop app, or WhatsApp.
+
+## Getting Started
+- [Introduction](/index) - Overview of Dume.ai and quick start guide
+- [Personalization](/getting-started/personalisation) - Customize your AI assistant
+- [Connect Tools](/getting-started/connect-your-first-tool) - Link your first integration
+- [Chat Interface](/getting-started/chat-interface) - Learn to communicate with your AI assistant
+
+## Integrations
+- [Gmail](/integrations/gmail) - Email summarization, triage, search, and drafting
+- [Google Calendar](/integrations/calendar) - Scheduling and meeting management
+- [Google Docs](/integrations/google_docs) - Document creation and editing
+- [Google Sheets](/integrations/google_sheets) - Spreadsheet management
+- [Google Drive](/integrations/google-drive) - File search and storage
+- [GitHub](/integrations/github) - Repository management and PR reviews
+- Slack - Tool access for messages and channels (dedicated page coming in the integrations rewrite)
+- [Notion](/integrations/notion) - Knowledge base management
+- [Microsoft 365](/integrations/microsoft_365) - Outlook and Office document access
+- [MCP Servers](/integrations/mcp/overview) - Connect any custom MCP server by URL
+
+## Tools
+- [Artifacts](/tools/artifacts) - Create and manage documents, spreadsheets, code, and images
+- [Charts](/tools/charts) - Interactive data visualization and chart creation
+- [Web Search](/tools/web-search) - AI-powered internet research tools
+- [Web Scraper](/tools/web-scraper) - Intelligent data extraction from websites
+- [People Search](/tools/people-search) - Professional contact discovery
+- [Notifications](/tools/notification) - Automated email alerts and notifications
+
+## Key Features
+- **Real integrations**: Gmail, Google Calendar, Docs, Sheets, Drive, GitHub, Slack, Notion, Microsoft 365, plus any custom MCP server
+- **Routines**: schedule a recurring instruction and Dume runs it on its own, locally or in the cloud
+- **Natural language interface**: no commands to memorize, just ask
+- **WhatsApp and phone**: message or call Dume directly, no app required
+- **Cross-platform**: web app and Cowork desktop app share the same experience
+
+## Common Use Cases
+- Email management and drafting
+- Calendar scheduling and meeting coordination
+- Document creation and editing
+- Project management and task tracking
+- Data analysis and visualization
+- Research and information gathering
+- Recurring reports and daily briefings
+
+For comprehensive documentation and tutorials, visit https://docs.dume.ai

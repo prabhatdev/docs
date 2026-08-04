@@ -1,0 +1,48 @@
+---
+title: "MCP Servers"
+sidebarTitle: "MCP Overview"
+icon: "plug-circle-check"
+keywords: ['mcp', 'model context protocol', 'custom integration', 'API integration', 'extensibility', 'developer tools', 'custom connectors']
+description: "Connect any Model Context Protocol server to Dume by URL to reach a tool that isn't a native integration."
+"og:title": "MCP Servers - Extend Dume.ai with Custom Tools"
+"og:description": "Connect any MCP server by URL to extend Dume beyond its native integrations."
+"twitter:card": "summary"
+"twitter:title": "MCP Servers - Dume.ai"
+"twitter:description": "Extend Dume with custom tool integrations using the Model Context Protocol."
+---
+
+## What is MCP?
+
+MCP (Model Context Protocol) is an open standard that lets Dume talk to external tools and data sources it doesn't natively integrate with. If a tool isn't in the [Integrations](/integrations/overview) list, connecting its MCP server closes the gap.
+
+## When to use it
+
+- The tool isn't a native Dume integration.
+- You need access to an internal or self-hosted system.
+- You want to combine an external API with your existing integrations in the same conversation.
+
+## Connecting a server
+
+Unlike the native integrations, there's no catalog to browse: you connect any MCP server by pasting its URL. See [MCP Server Setup](/integrations/mcp/setup) for the full walkthrough.
+
+```
+http://localhost:8080
+https://mcp.example.com
+```
+
+## What it enables
+
+- Query data from the connected server (records, metrics, documents)
+- Run actions the server exposes
+- Combine MCP data with your native integrations in one reply
+
+## Safety and control
+
+| Aspect | Summary |
+| ------ | ------- |
+| Scope | Only the actions the server exposes are callable |
+| Access | Disconnect any time from [MCP Servers](https://app.dume.ai/mcp-servers) |
+| Writes | May prompt for confirmation, depending on the server |
+| Credentials | Handled by the MCP server itself, not stored by Dume |
+
+<Tip>Start with a read-only server before connecting one that can write.</Tip>

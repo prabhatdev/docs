@@ -1,0 +1,164 @@
+---
+title: "Chat With Dume"
+sidebarTitle: "Chat Interface"
+keywords: ['chat interface', 'AI conversation', 'connected tools', 'natural language', 'AI assistant', 'productivity']
+description: "How to talk to Dume: sessions, connected tools, attachments, and getting a useful answer on the first try."
+"og:title": "How to Chat With Dume.ai - Interface Guide"
+"og:description": "Learn to work with Dume's chat interface and connected tools effectively."
+"twitter:card": "summary"
+"twitter:title": "Chat With Dume.ai"
+"twitter:description": "Effective communication patterns for getting more out of Dume."
+---
+
+## What makes Dume different
+
+<CardGroup cols={2}>
+<Card title="Context-aware" icon="brain">
+  Dume remembers your profile and previous sessions instead of starting cold every time.
+</Card>
+
+<Card title="Tool access" icon="plug">
+  Acts on your connected tools directly. No copy-pasting between apps.
+</Card>
+
+<Card title="Plain language" icon="comments">
+  Ask for what you want the way you'd ask a person, not a command syntax.
+</Card>
+
+<Card title="Live data" icon="bolt">
+  Pulls current information from your connected tools, not a cached snapshot.
+</Card>
+</CardGroup>
+
+Once you've [personalized Dume](/getting-started/personalisation) and [connected a tool](/getting-started/connect-your-first-tool), the dashboard is where you'll spend most of your time.
+
+## The dashboard
+
+{/* TODO: Phase 3 screenshot — Dashboard with an active session */}
+
+You can have several conversations open as tabs at once. A tab keeps working in the background while you look at another one, so you can check back later and it'll already be done.
+
+<AccordionGroup>
+<Accordion title="Conversation area">
+  Your messages appear on the right, Dume's on the left. While Dume is working on something multi-step, a live to-do list shows what it's doing and what's left.
+</Accordion>
+
+<Accordion title="Message box">
+  - **Shift + Enter** for a new line, **Enter** to send
+  - The **+** button lets you attach files (web app only) or reach connected tools
+  - The **mic** icon dictates your message. A separate **voice mode** button opens a live spoken conversation; see [Voice mode](/core-workspace/voice-mode)
+</Accordion>
+
+<Accordion title="History">
+  Every session is saved. Use the menu on a conversation to pin, rename, or delete it; see [History](/core-workspace/history).
+</Accordion>
+</AccordionGroup>
+
+## Talking to your connected tools
+
+<Steps>
+  <Step title="Start with plain language">
+    Dume figures out which connected tool to use from what you ask. You don't have to name it.
+
+    ```
+    What's on my calendar today?
+    Find emails from John about the launch
+    Summarize the open pull requests on my repo
+    ```
+  </Step>
+
+  <Step title="Review what comes back">
+    Responses pull real data from the tool involved: a calendar event, an email thread, a GitHub PR. Not a paraphrase.
+
+    <Check>
+    If a tool doesn't have the data yet (nothing scheduled, no matching emails), Dume says so rather than inventing something.
+    </Check>
+  </Step>
+
+  <Step title="Take action, not just look">
+    Ask Dume to create or change things, not just report on them.
+
+    ```
+    Schedule a 30-minute call with Sarah tomorrow at 2pm
+    Create a GitHub issue for the bug we just discussed
+    Post a summary of today's standup to Slack
+    ```
+
+    <Warning>
+    Anything that modifies data, like sending, creating, or deleting, asks for confirmation first. Review before you approve.
+    </Warning>
+  </Step>
+
+  <Step title="Chain multiple tools in one request">
+    ```
+    Check today's calendar events, then email the attendees of any meeting after 4pm to say I'll be 10 minutes late.
+
+    Find GitHub issues assigned to me and summarize them in a Slack message to the team.
+    ```
+  </Step>
+</Steps>
+
+## Staying in context
+
+Dume keeps track of what you just asked, so follow-ups don't need to repeat context:
+
+```
+You: Show me my calendar for tomorrow
+Dume: [lists tomorrow's events]
+
+You: Move the 2pm to 3pm
+Dume: Moved "Design Review" from 2:00 PM to 3:00 PM tomorrow.
+
+You: Add John to that one
+Dume: Added john@company.com to Design Review at 3:00 PM.
+```
+
+## Writing a better prompt
+
+<Tabs>
+<Tab title="Be specific">
+  Instead of "Check my schedule," try "What meetings do I have tomorrow afternoon?"
+
+  Instead of "Find files," try "Find slide decks about the Q3 launch from last month."
+</Tab>
+<Tab title="Reference what came before">
+  ```
+  You: Show me the budget spreadsheet
+  Dume: [displays it]
+  You: Share this with finance@company.com
+  ```
+</Tab>
+<Tab title="Combine steps">
+  ```
+  Check my calendar for next week and flag anything that overlaps with the Acme deal timeline.
+
+  Find all emails about Project X and summarize them in one message.
+  ```
+</Tab>
+</Tabs>
+
+## When Dume asks you something back
+
+Dume will ask for clarification rather than guess, especially before anything irreversible:
+
+- **Multiple matches**: "Which John do you mean, John Smith or John Doe?"
+- **Ambiguous timing**: "This Thursday or next Thursday?"
+- **Confirming a destructive action**: "This will delete 15 files. Proceed?"
+
+Answer with the specific detail it's asking for, and it'll continue where it left off.
+
+## Troubleshooting
+
+<AccordionGroup>
+<Accordion title="A connected tool isn't responding">
+  Rephrase and try again, then check the integration's status on the [Integrations](/integrations/overview) page. It may need to be reconnected.
+</Accordion>
+
+<Accordion title="Dume misunderstood the request">
+  Be more specific about what you want, or name the tool explicitly: "In Slack, find messages about the outage."
+</Accordion>
+
+<Accordion title="An action didn't go through">
+  Check that the integration has write access, not just read. Some connections default to read-only until you grant more.
+</Accordion>
+</AccordionGroup>

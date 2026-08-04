@@ -1,0 +1,83 @@
+---
+title: "Dume Cowork"
+sidebarTitle: "Dume Cowork"
+description: "Dume Cowork is the desktop version of Dume: local file access, browser automation, a Skill Library, on-device routines, and WhatsApp control."
+keywords: ['Dume Cowork', 'desktop AI assistant', 'WhatsApp AI assistant', 'Electron app']
+"og:title": "Dume Cowork - Desktop AI Assistant"
+"og:description": "The desktop app for Dume: the same assistant as the web app, plus local file access, browser automation, a Skill Library, and on-device routines."
+---
+
+Dume Cowork is the desktop app version of Dume, for macOS and Windows. It's the same assistant you get on the web, plus things that only make sense running natively on your machine: reading and writing your local files, automating your actual browser, a local Skill Library, routines that run on your own scheduler, and control over WhatsApp when you're away from your desk.
+
+{/* TODO: Phase 3 screenshot — Cowork desktop Dashboard */}
+
+## What running locally actually gets you
+
+<CardGroup cols={2}>
+  <Card title="Local file access" icon="folder-open">
+    Point Dume at a folder on your machine and it can read, organize, and write files there directly, not just talk about them.
+  </Card>
+  <Card title="Browser automation" icon="window-maximize">
+    The agent-browser skill drives an actual browser session (navigate, click, fill forms, scrape) and can optionally reuse your existing Chrome profile, so you don't lose your logins.
+  </Card>
+  <Card title="Skill Library" icon="puzzle-piece">
+    Manage bundled skills and build your own locally; not available on web. See [Skills](/skills/overview).
+  </Card>
+  <Card title="Local routines" icon="hard-drive">
+    Routines that run on your machine's own scheduler, independent of Dume's servers. See [Local vs. cloud routines](/routines/local-vs-cloud).
+  </Card>
+</CardGroup>
+
+## Setup
+
+<Steps>
+  <Step title="Install and open Cowork">
+    First launch walks you through a short onboarding: an intro, then linking [WhatsApp](/interfaces/whatsapp), then a settings step before you land on the dashboard.
+  </Step>
+  <Step title="Grant system permissions">
+    macOS and Windows both ask for explicit permission before Dume can use your microphone (for voice mode and dictation) or, if you use browser automation, access accessibility features. You can review or change these later in [Desktop app settings](/account-settings/desktop-app).
+  </Step>
+  <Step title="Connect your tools">
+    Same as the web app: see [Connect your first tool](/getting-started/connect-your-first-tool).
+  </Step>
+  <Step title="Explore the Skill Library">
+    Browse the [bundled skills](/skills/bundled-skills) or add your own; see [Building a custom skill](/skills/custom-skills).
+  </Step>
+</Steps>
+
+See [Web app vs. Cowork desktop](/product/web-vs-cowork) for the full comparison, including what the web app has that Cowork doesn't (file attachments in chat).
+
+## Example local tasks
+
+```
+Refactor the files in my Downloads folder into dated subfolders
+Extract the line items from these receipts into a spreadsheet
+Go to our internal dashboard and pull this week's numbers into a summary
+```
+
+The last one is a browser-automation example: Dume opens a real browser tab, navigates, and reads what's on the page, the same as if you'd done it yourself.
+
+## Controlling Cowork from WhatsApp
+
+Once WhatsApp is linked, you can send a task from your phone and Dume works on it using your desktop environment. Review the result once you're back at your computer, or ask for the summary right there in WhatsApp.
+
+<Note>
+Use WhatsApp for describing what you want; if a task needs a specific file path or output format, say so explicitly rather than leaving it to guesswork.
+</Note>
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Do I need to keep Cowork open for routines to run?">
+    Local routines need Cowork running (they use your machine's own scheduler and catch up after sleep). Cloud routines run on Dume's servers regardless, whether Cowork is open or not. See [Local vs. cloud routines](/routines/local-vs-cloud).
+  </Accordion>
+  <Accordion title="Does closing the window stop Dume?">
+    No. Cowork keeps running in your system tray so background sessions and local routines keep going. Quit from the tray icon to actually exit.
+  </Accordion>
+  <Accordion title="Is this different from a regular chat AI?">
+    Cowork can act on your actual filesystem and browser, not just generate text about them, on top of the Skill Library and local routines the web app doesn't have.
+  </Accordion>
+  <Accordion title="Does Dume see my whole computer?">
+    No. Dume works within the folders and browser sessions you point it at for a given task; it doesn't have standing access to your entire filesystem.
+  </Accordion>
+</AccordionGroup>

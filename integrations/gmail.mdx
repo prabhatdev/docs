@@ -1,0 +1,102 @@
+---
+title: "Gmail Integration"
+sidebarTitle: "Gmail"
+icon: "inbox"
+keywords: ['Gmail', 'email integration', 'email commands', 'OAuth', 'automation']
+description: "Connect Gmail and use core email actions in Dume."
+"og:title": "Gmail Integration - Dume.ai"
+"og:description": "Connect Gmail to read, compose, send, and organize email from chat."
+"twitter:card": "summary"
+"twitter:title": "Gmail Integration - Dume.ai"
+"twitter:description": "Connect Gmail and run email commands with Dume."
+---
+
+## Overview
+Connect Gmail so Dume can read, summarize, compose, send, and organize email from chat.
+
+## 1. Connect Gmail (OAuth)
+<Steps>
+  <Step title="Open Integrations">Go to **Integrations**.</Step>
+  <Step title="Authenticate">Click **Connect Integration** on the Gmail card and choose the right Google account.</Step>
+  <Step title="Grant access">Review and allow the requested permissions (read, send, manage labels).</Step>
+  <Step title="Test">Ask: "Show my recent emails."</Step>
+</Steps>
+
+<Tip>Passwords are never stored. Revoke anytime in Google Account → Security → Third-party access.</Tip>
+
+## 2. Supported actions
+- List and search emails
+- Summarize an email or thread
+- Compose and send a draft
+- Reply to an email
+- Delete an email
+- Mark an email read or unread
+- Move an email to a label or folder
+- Create and list labels
+
+## 3. Quick commands
+```
+Show unread emails from today
+Summarize the last 5 emails from finance
+Draft an email to Sarah about the Q4 plan
+Send that draft now
+Mark the design review email unread
+Move the invoice email to Finance
+List my Gmail labels
+Create label: Vendors
+```
+
+## 4. Common patterns
+<Tabs>
+<Tab title="Read">
+```
+Show recent emails
+List unread emails from clients
+Summarize emails about contract renewal
+```
+</Tab>
+<Tab title="Compose & send">
+```
+Draft email to product team about roadmap updates
+Edit tone: more concise
+Send the draft
+```
+</Tab>
+<Tab title="Organize">
+```
+Move all invoice emails to Finance
+Create label: Legal
+List drafts
+```
+</Tab>
+<Tab title="Follow-up">
+```
+Summarize action items from today's emails
+Mark all responded emails as read
+```
+</Tab>
+</Tabs>
+
+## 5. Multiple Gmail accounts
+
+Connect more than one Gmail account, work and personal, for instance, and ask Dume to use either one by name. See [Multiple accounts](/features/multiple_accounts) for how to add and name a second account.
+
+## 6. Automate with routines
+
+Connecting Gmail doesn't turn on any background automation by itself. For a recurring inbox summary or a morning briefing, set up a [routine](/routines/overview): the **Morning Briefing** template pulls from your inbox, calendar, and the news on a daily schedule, and you can write your own instruction for anything more specific, like triaging unread mail every hour.
+
+## 7. Troubleshooting
+| Issue | Fix |
+| ----- | --- |
+| OAuth failed | Retry in incognito, and confirm you're using the correct Google account |
+| No emails returned | Check the account is right, then try "Show recent emails" to test |
+| Permission error | Reconnect and accept all requested scopes |
+| Action didn't apply | Confirm the email still exists, and retry with a more specific query |
+| Routine not running | Check its status on the [Routines](/routines/overview) page |
+
+## 8. Security
+- OAuth tokens only, no passwords stored
+- Scoped access: read, send, and label management
+- Revocable anytime in Google's own security settings
+
+<Note>Need Outlook or Microsoft 365 email instead? See [Microsoft 365](/integrations/microsoft_365).</Note>

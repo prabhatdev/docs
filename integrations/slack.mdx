@@ -1,0 +1,57 @@
+---
+title: "Slack Integration"
+sidebarTitle: "Slack"
+icon: "slack"
+keywords: ['Slack', 'messaging', 'channels', 'OAuth', 'team communication']
+description: "Connect Slack so Dume can post messages and see your channels and workspace members."
+"og:title": "Slack Integration - Dume.ai"
+"og:description": "Connect Slack to post messages and access channel and workspace info from Dume."
+"twitter:card": "summary"
+"twitter:title": "Slack Integration - Dume.ai"
+"twitter:description": "Connect Slack for messaging and workspace access with Dume."
+---
+
+## Overview
+Connect Slack so Dume can post messages to a channel on your behalf and look up channels and workspace members.
+
+<Warning>
+This integration is newer than the others and still expanding. Reading and summarizing existing message history isn't part of it yet, only posting and directory lookups. If a request needs Dume to read past Slack messages, it may not work today.
+</Warning>
+
+## 1. Connect (OAuth)
+<Steps>
+  <Step title="Open Integrations">Go to **Integrations**.</Step>
+  <Step title="Authenticate">Click **Connect Integration** on the Slack card and authorize your workspace.</Step>
+  <Step title="Test">Ask: "What Slack channels am I in?"</Step>
+</Steps>
+
+<Tip>Revoke anytime from Slack's own **Apps and integrations** settings, or disconnect from Dume's Integrations page.</Tip>
+
+## 2. What it can do today
+- List channels you're a member of
+- Look up workspace members
+- Post a message to a channel
+
+## 3. Quick commands
+```
+What Slack channels am I in?
+Post to #marketing: Launch is live
+Who's in the #eng-standup channel?
+```
+
+## 4. Troubleshooting
+| Issue | Fix |
+| ----- | --- |
+| Channel not found | Confirm you're a member of the channel and use its exact name |
+| Permission error | Reconnect and approve the requested workspace scopes |
+| Message didn't post | Check that Dume has posting permission in that channel |
+
+## 5. Security
+- OAuth tokens only, no passwords stored
+- Scoped to the workspace you authorize
+- Revocable anytime
+- Posting a message asks for confirmation first
+
+<Note>
+Slack is a data integration, not a messaging channel. To reach Dume from outside the app, use [WhatsApp](/interfaces/whatsapp) or [phone](/interfaces/phone) instead.
+</Note>

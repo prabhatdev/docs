@@ -1,0 +1,94 @@
+---
+title: "Google Sheets Integration"
+sidebarTitle: "Google Sheets"
+icon: "table"
+keywords: ['Google Sheets', 'spreadsheet integration', 'spreadsheet commands', 'OAuth', 'automation']
+description: "Connect Google Sheets to create, analyze, and update spreadsheets from chat."
+"og:title": "Google Sheets Integration - Dume.ai"
+"og:description": "Connect Google Sheets to create, analyze, and update spreadsheets from chat."
+"twitter:card": "summary"
+"twitter:title": "Google Sheets Integration - Dume.ai"
+"twitter:description": "Connect Google Sheets and manage spreadsheets with Dume."
+---
+
+## Overview
+Connect Google Sheets to find sheets, describe structure, create new sheets, and update content or metadata using natural language.
+
+## 1. Connect (OAuth)
+<Steps>
+  <Step title="Open Integrations">Go to **Integrations**.</Step>
+  <Step title="Authenticate">Click **Connect Integration** on the Google Sheets card and sign into the correct Google account.</Step>
+  <Step title="Grant access">Allow the requested Sheets/Drive permissions.</Step>
+  <Step title="Test">Ask: "Find my recent Google Sheets."</Step>
+</Steps>
+
+<Tip>Revoke anytime: Google Account → Security → Third-party access.</Tip>
+
+## 2. Supported actions
+- Find sheets by name or keyword (search/filter)
+- Describe a sheet (tabs, columns, basic stats)
+- Create a sheet (optionally with starter headers)
+- Update a sheet (add/rename sheet/tab, modify headers, append rows)
+- Download a sheet's contents into the conversation
+
+## 3. Quick commands
+```
+Find sheets about Q4 forecast
+Describe sheet "Sales Pipeline"
+Create a sheet: Team Capacity Plan (Headers: Name, Role, Hours)
+Add a row to "Team Capacity Plan": Alice, Designer, 30
+Rename sheet "Old Metrics" to "Legacy Metrics"
+```
+
+## 4. Common patterns
+<Tabs>
+<Tab title="Find & describe">
+```
+Find sheets with "budget"
+Describe sheet "Marketing Spend"
+```
+</Tab>
+<Tab title="Create">
+```
+Create sheet: Product Launch Tracker (Headers: Task, Owner, Status, Due)
+```
+</Tab>
+<Tab title="Update">
+```
+Add row to Product Launch Tracker: Final QA, Sarah, In Progress, Friday
+Rename tab 'Sheet1' to 'Raw Data'
+```
+</Tab>
+</Tabs>
+
+## 5. Best practices
+| Goal | Tip |
+| ---- | ---- |
+| Faster search | Use clear sheet names and consistent prefixes |
+| Clean structure | Standardize headers; avoid merged cells |
+| Reliable updates | Reference the exact sheet name and tab if needed |
+| Append accuracy | List values in header order |
+
+## 6. Troubleshooting
+| Issue | Fix |
+| ----- | --- |
+| Sheet not found | Use exact title or simplify keywords |
+| Permission denied | Reconnect and grant Drive/Sheets scopes |
+| Update failed | Confirm the tab exists; describe the sheet first |
+| Wrong sheet modified | Include the full sheet name in the command |
+
+## 7. Security
+- OAuth tokens only, no passwords stored
+- Limited to the granted Sheets/Drive scope
+- Revocable anytime
+- Write operations may request confirmation
+
+## 8. Sample flow
+```
+Find sheets with "targets"
+Describe sheet "2025 Targets"
+Create sheet "2025 Hiring Plan" (Headers: Role, Start Date, Status)
+Add row: Backend Engineer, Feb 3, Approved
+```
+
+<Note>Need advanced analysis? Ask Dume to combine data from Sheets with Calendar or another connected tool in the same conversation, or set it up as a [routine](/routines/overview).</Note>

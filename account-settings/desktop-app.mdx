@@ -1,0 +1,23 @@
+---
+title: "Desktop App Settings"
+sidebarTitle: "Desktop App"
+description: "Settings only available in the Cowork desktop app: updates, system tray, permissions, and background behavior."
+icon: "desktop"
+keywords: ['Cowork desktop settings', 'auto-update', 'Dume desktop app', 'system tray']
+---
+
+The Cowork desktop app has a **Desktop App** tab under Settings that doesn't exist in the web app, covering everything that only makes sense when Dume is running as a native app on your machine.
+
+{/* TODO: Phase 3 screenshot — Settings, Desktop App tab (requires Cowork desktop) */}
+
+## What lives here
+
+- **Updates** — Cowork checks for updates automatically and can install them in the background; this is where you'd check your current version or trigger a manual check.
+- **System tray** — Cowork runs in your system tray so it can keep routines and background sessions going without a window open. Close the window and Dume keeps running; quit from the tray icon to actually exit.
+- **Sleep prevention** — a toggle to keep your machine from sleeping while Dume is actively working on something, useful for a long-running local routine or task you don't want interrupted.
+- **System permissions** — macOS and Windows both gate microphone access (for voice mode and dictation) and other OS-level permissions behind explicit consent; this is where Cowork surfaces those prompts and lets you jump to system preferences if you denied one by accident.
+- **Chrome profile access** — if you use the [agent-browser skill](/skills/bundled-skills) for browser automation, Cowork can optionally reuse your existing Chrome profile and its logged-in sessions instead of starting from a blank browser. This requires your explicit consent and is off by default.
+
+## Why some of this doesn't exist on web
+
+The web app runs in your browser, which can't manage its own updates, doesn't have a system tray, can't prevent your OS from sleeping, and can't reach into a local Chrome profile. See [Web app vs. Cowork desktop](/product/web-vs-cowork) for the full comparison.

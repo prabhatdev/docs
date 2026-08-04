@@ -1,0 +1,103 @@
+---
+title: "Phone Calls"
+description: "Call Dume directly, or have Dume call you back. What it costs, and which countries support it."
+sidebarTitle: "Phone Calls"
+icon: "phone"
+keywords: ['phone AI assistant', 'voice assistant', 'phone call assistant', 'voice AI', 'call assistant', 'AI phone calls']
+"og:title": "Phone Calls - Voice AI Assistant | Dume.ai"
+"og:description": "Call your Dume assistant directly, or have Dume call you back through natural voice conversation."
+"twitter:card": "summary_large_image"
+"twitter:title": "Phone Calls - Dume.ai"
+"twitter:description": "Talk to Dume over a real phone call, no app required."
+---
+
+Phone calling works two ways: you can call Dume, and Dume can call you.
+
+{/* TODO: Phase 3 screenshot — Settings, Connectors, Phone Calling card */}
+
+## Calling Dume
+
+Dial **+1 (315) 888-5569** from any phone, mobile or landline, and talk to your assistant the way you'd talk to a person. Inbound calling works from any number worldwide; there's no country restriction on calling in.
+
+## Dume calling you
+
+Ask Dume to call you back the same way you'd instruct a real assistant: right now, at a set time, or when something finishes, like a background research task. Dume calls your linked number when the trigger you set fires, from the same number: **+1 (315) 888-5569**. Save it so you recognize the call. This is also how a **call-user** routine works, like the Daily Standup Call or Evening Wind-Down Call templates — set one up once, and Dume calls at the same time every day.
+
+<Note>
+Outbound calling (Dume calling you) currently supports these countries: **United States, Canada, United Kingdom, Australia, India, United Arab Emirates, Germany, France, Brazil, and Japan.** If your number isn't in one of these, you can still call in yourself.
+</Note>
+
+## What it costs
+
+A call is billed two ways at once, for as long as it's connected:
+
+1. **A fixed per-minute rate**, charged every minute the call is connected:
+
+   | Direction | Cost |
+   |---|---|
+   | Calling Dume (inbound) | 5 credits/minute |
+   | Dume calling you (outbound) | 8 credits/minute |
+
+2. **An AI usage charge**, billed continuously on top, based on how much is actually said on the call. This works the same way a chat message does: more back-and-forth costs more, a short call costs less. See the [Credit Cost Guide](/account-settings/credit-cost-guide) for how usage-based credit costs work generally.
+
+Both charges apply to every call; the per-minute rate isn't the full cost by itself. You need a minimum credit balance to start a call (a small buffer, not tied to a specific call length); if your balance is too low, the call won't connect. See [Billing & plans](/account-settings/billing-and-plans) for your plan's monthly calling-minute allowance, which is separate from and in addition to the credit cost.
+
+<Warning>
+Credit costs cover Dume's side of the call only. Your own phone carrier may bill you separately for the call, especially at international or long-distance rates. That charge is between you and your carrier and isn't something Dume controls or covers.
+</Warning>
+
+## Setting up your number
+
+<Steps>
+  <Step title="Open Connectors">
+    Go to **Settings → Connectors** and find **Phone Calling**.
+  </Step>
+  <Step title="Add your number">
+    Enter your phone number and verify it with the SMS code Dume sends.
+  </Step>
+  <Step title="Confirm">
+    Once verified, the card shows **Active** with your number, and both calling directions are ready to use (subject to the country note above).
+  </Step>
+</Steps>
+
+To remove your number, click **Remove Number** on the same card.
+
+## Example uses
+
+```
+Call me now with a summary of today's unread emails
+Call me every weekday at 8am with my calendar for the day
+Call me when the competitor research is done
+```
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Dume isn't calling me back">
+    Check that outbound calling supports your country under Settings → Connectors → Phone Calling. If it doesn't yet, you can still call in directly.
+  </Accordion>
+
+  <Accordion title="Can I use my existing phone number?">
+    Yes. You verify your own number with an SMS code; there's no separate number to set up on your end.
+  </Accordion>
+
+  <Accordion title="Why did my call get cut off or refuse to connect?">
+    Check your credit balance under Settings → Billing. Calls need a minimum balance to start and are billed per minute while connected.
+  </Accordion>
+</AccordionGroup>
+
+## Also available
+
+<CardGroup cols={2}>
+  <Card title="WhatsApp" icon="whatsapp" href="/interfaces/whatsapp">
+    Message your assistant directly in WhatsApp.
+  </Card>
+
+  <Card title="Web app" icon="browser" href="/product/web-app">
+    Full-featured web app, accessible from any browser.
+  </Card>
+
+  <Card title="Routines" icon="clock" href="/routines/overview">
+    Schedule a recurring call, like a daily briefing, and let Dume run it automatically.
+  </Card>
+</CardGroup>

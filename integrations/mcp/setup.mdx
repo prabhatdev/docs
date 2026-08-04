@@ -1,0 +1,44 @@
+---
+title: "MCP Server Setup"
+sidebarTitle: "MCP Setup"
+icon: "gear"
+keywords: ['mcp setup', 'server configuration', 'custom integrations', 'model context protocol']
+description: "Connect a Model Context Protocol server to Dume by pasting its URL, no catalog or marketplace required."
+"og:title": "MCP Server Setup - Dume.ai"
+"og:description": "Connect any MCP server to Dume by URL."
+"twitter:card": "summary"
+"twitter:title": "MCP Server Setup - Dume.ai"
+"twitter:description": "Set up a custom MCP server connection in Dume."
+---
+
+<Steps>
+  <Step title="Open MCP Servers">
+    Go to **MCP Servers** in the sidebar.
+
+    {/* TODO: Phase 3 screenshot — MCP Servers page, empty state */}
+  </Step>
+  <Step title="Enter the server URL">
+    Paste the server's URL into **Connect New Server** (for example, `http://localhost:8080` or `https://mcp.example.com`) and click **Add Server**.
+
+    {/* TODO: Phase 3 screenshot — Connect New Server form filled in */}
+  </Step>
+  <Step title="Authorize if the server requires it">
+    If the server needs authentication, Dume starts an OAuth flow for it automatically. Servers that don't require auth connect right away.
+  </Step>
+  <Step title="Confirm it's connected">
+    The server shows as **Connected** in your list. If something's wrong, it shows as **Needs Auth**, **Error**, or **Disconnected** instead, with the reason.
+
+    {/* TODO: Phase 3 screenshot — a connected server in the list */}
+  </Step>
+  <Step title="Use it in chat">
+    Once connected, Dume can call the server's tools automatically when a request needs them, alongside your native integrations.
+  </Step>
+</Steps>
+
+<Note>
+There's no server catalog inside Dume. You provide the URL for a server you already have, whether that's self-hosted, from your team, or from a public MCP directory you found elsewhere.
+</Note>
+
+## Managing a connection
+
+Disable, re-authenticate, or remove a server from the same **MCP Servers** page at any time.

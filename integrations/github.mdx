@@ -1,0 +1,193 @@
+---
+title: "GitHub Integration"
+sidebarTitle: "GitHub"
+icon: "github"
+keywords: ['GitHub', 'repos', 'issues', 'pull requests', 'code review', 'CI', 'automation']
+description: "Connect GitHub to Dume so it can read and act on your repos, issues, and pull requests from chat."
+"og:title": "GitHub Integration - Dume.ai"
+"og:description": "Connect GitHub to Dume for repository, issue, and pull request access from chat."
+"twitter:card": "summary"
+"twitter:title": "GitHub Integration - Dume.ai"
+"twitter:description": "Manage GitHub repositories, issues, and PRs with AI assistance."
+---
+
+## Overview
+Connect GitHub so Dume can work with your repos, branches, issues, and pull requests from chat.
+
+<Warning>
+The specific action list below (create branches, merge PRs, manage security alerts, and so on) reflects what this integration is built to support. Some of these actions are still rolling out; if something in the list doesn't work yet when you try it, that's why, not a bug on your end.
+</Warning>
+
+## 1. Connect (OAuth)
+<Steps>
+  <Step title="Open Integrations">Settings → Integrations → GitHub.</Step>
+  <Step title="Authenticate">Click Connect GitHub and approve scopes (repo, workflow, org).</Step>
+  <Step title="Select Scope">Choose orgs / repos to expose (start small).</Step>
+  <Step title="Test">Ask: “List my open pull requests.”</Step>
+</Steps>
+
+<Tip>Revoke anytime in GitHub → Settings → Applications.</Tip>
+
+## 2. Capabilities
+<CardGroup cols={3}>
+  <Card title="Repos & branches" icon="code-fork">
+    Create/list repos, fork, create/list branches.
+  </Card>
+  <Card title="Files & content" icon="file-code">
+    View, create, update, delete files; push multiple changes.
+  </Card>
+  <Card title="Issues & sub-issues" icon="exclamation-circle">
+    Search/create/update issues, comments, manage sub-issues, assign Copilot.
+  </Card>
+  <Card title="Pull requests & reviews" icon="git-pull-request">
+    Create/update PRs, diffs, files, status, request/submit reviews, merge, update branch.
+  </Card>
+  <Card title="Discussions" icon="comments">
+    List/create/fetch discussions, categories, comments.
+  </Card>
+  <Card title="Gists" icon="sticky-note">
+    List, create, update personal gists.
+  </Card>
+  <Card title="Notifications" icon="bell">
+    List, detail, mark read, dismiss, manage subscriptions.
+  </Card>
+  <Card title="CI / workflows" icon="robot">
+    List workflows/runs/jobs, run/rerun/cancel, artifacts, logs, usage.
+  </Card>
+  <Card title="Security & quality" icon="shield">
+    Code scanning, secret scanning, Dependabot, advisories (repo/org/global).
+  </Card>
+  <Card title="Releases & tags" icon="tag">
+    List releases/tags, latest release, release by tag.
+  </Card>
+  <Card title="Search & discovery" icon="search">
+    Search code, issues, PRs, repos, users, orgs.
+  </Card>
+  <Card title="Teams & org" icon="users">
+    List teams, members, get profile (me).
+  </Card>
+  <Card title="Advanced" icon="wand-magic">
+    Request Copilot review, structured automation actions.
+  </Card>
+</CardGroup>
+
+<Note>Write actions can prompt for confirmation before execution.</Note>
+
+## 3. Quick commands
+```
+List my open pull requests
+Create branch feature/refactor-auth from main
+Create issue: Improve onboarding flow (labels: enhancement, ux)
+Add comment to issue 42: Clarify acceptance criteria
+Request review on PR 87
+Show diff for PR 87
+Merge PR 87 after checks pass
+Search code for "retryPolicy" in backend repo
+Run workflow "Deploy" on main
+List failed workflow runs today
+List Dependabot alerts in api-service
+Describe code scanning alerts for security-service
+List discussions in platform repo
+Create discussion: Release Planning Q1
+List my notifications
+Mark all notifications read
+Push updated README and CHANGELOG to main
+```
+
+## 4. Common patterns
+<Tabs>
+<Tab title="Issues">
+```
+Create issue: Payment timeout bug (labels: bug, high-priority)
+Add sub-issue under issue 55: Investigate gateway logs
+Reprioritize sub-issue 55.2 to High
+Search issues: label=security state=open
+```
+</Tab>
+<Tab title="Pull requests">
+```
+Create pull request: feature/cleanup → main title "Refactor caching layer"
+Request Copilot review for PR 103
+Add comment to pending review: Consider extracting helper
+Submit pending review approving with summary
+Merge PR 103
+```
+</Tab>
+<Tab title="Security">
+```
+List code scanning alerts in auth-service
+List secret scanning alerts in infra repo
+List Dependabot alerts severity=high
+Get global security advisories about OpenSSL
+```
+</Tab>
+<Tab title="Workflows">
+```
+List workflows in infra
+Run workflow Deploy with ref=main
+Rerun failed jobs for run 8921
+Cancel workflow run 9002
+Get workflow run logs 9100
+```
+</Tab>
+<Tab title="Files & branches">
+```
+Create branch hotfix/session-leak from main
+Get file contents src/auth/session.ts
+Update file src/auth/session.ts with patch
+Delete file docs/old-architecture.md
+```
+</Tab>
+<Tab title="Search">
+```
+Search repositories "analytics"
+Search pull requests author:alice state=open
+Search code "featureFlag" in web-frontend
+```
+</Tab>
+</Tabs>
+
+## 5. Best practices
+| Goal | Tip |
+| ---- | ---- |
+| Clean PRs | Small focused branches + clear titles |
+| Fast reviews | Provide context & tests before requesting |
+| Issue clarity | Use labels + consistent templates |
+| Security hygiene | Triage new alerts daily |
+| Workflow efficiency | Retry only failed jobs, not entire runs |
+| Branch discipline | Delete merged branches regularly |
+| Noise reduction | Dismiss obsolete notifications in bulk |
+| Traceability | Link issues, PRs, discussions, releases |
+
+## 6. Troubleshooting
+| Issue | Fix |
+| ----- | --- |
+| Missing repo | Expand scope or verify access rights |
+| Permission denied | Reconnect with required scopes / org approval |
+| PR merge blocked | Check required checks / branch protection |
+| File update failed | Verify branch exists & latest commit base |
+| Workflow run not found | Confirm workflow file path & branch |
+| Empty search | Broaden keywords or remove filters |
+| Security alerts missing | Ensure security scanning enabled in repo |
+| Notifications stale | Refresh after marking read |
+
+## 7. Security
+- OAuth tokens only; revocable anytime
+- Scoped access (org/repo granularity)
+- No persistent code storage; processed transiently
+- Confirmation prompts for destructive actions (delete, merge, cancel)
+
+## 8. Sample flow
+```
+Search issues label=bug in payments
+Create branch fix/payment-retry from main
+Get file contents src/payments/retry.ts
+Update file with improved exponential backoff
+Create pull request fix/payment-retry → main title "Fix payment retry logic"
+Request review on PR
+Run workflow Tests
+Merge PR after checks pass
+List Dependabot alerts (ensure none new)
+```
+
+<Note>Need deeper analytics? Ask Dume to combine GitHub data with other connected tools in the same conversation, or set it up as a [routine](/routines/overview).</Note>

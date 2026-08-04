@@ -1,0 +1,29 @@
+---
+title: "Chat Sessions"
+sidebarTitle: "Sessions"
+description: "How Dume's dashboard handles multiple conversations, tracks progress on multi-step tasks, and asks before it does anything sensitive."
+icon: "message-lines"
+keywords: ['chat sessions', 'dashboard', 'tabs', 'progress tracking', 'AI assistant']
+---
+
+The Dashboard is where you talk to Dume. Every conversation is a session, and you can keep several open as tabs at once.
+
+{/* TODO: Phase 3 screenshot — Dashboard with two open session tabs */}
+
+## Tabs run in the background
+
+Open a new tab from the **+** next to your current tabs, or click into a saved session from History. There's no cap on how many you can have open at once. A tab you're not looking at keeps working: start a research task in one tab, switch to another, and come back once it's done instead of waiting on it.
+
+## Watching a task run
+
+For anything with more than one step, a **Progress** panel on the right lists what Dume is doing and checks items off as it finishes them. A **Context** panel below it shows which model is handling the session and how much of its context window is in use.
+
+{/* TODO: Phase 3 screenshot — Progress and Context panels during a multi-step task */}
+
+## Sending a message
+
+Every session shares the same message box: text, attachments, connected tools, and voice input. See [Chat with Dume](/getting-started/chat-interface) for how to write an effective prompt and what each control does.
+
+## Permission and clarifying prompts
+
+A session stops and asks before anything hard to undo, and asks for missing details instead of guessing. See [When Dume asks you something back](/getting-started/chat-interface#when-dume-asks-you-something-back) for what that looks like in practice.
