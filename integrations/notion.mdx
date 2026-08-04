@@ -23,23 +23,21 @@ Notion connects through Notion's own official server, so the exact list of actio
 
 <Tip>Revoke anytime in Notion → Settings → Connections.</Tip>
 
-## 2. Supported Actions
-- Search workspace content (notion-search)
-- Fetch page or database details (notion-fetch)
-- Create pages (notion-create-pages)
-- Update page properties/content (notion-update-page)
-- Move pages to another parent (notion-move-pages)
-- Duplicate a page (notion-duplicate-page)
-- Create a database (notion-create-database)
-- Update database schema/properties (notion-update-database)
-- Add a comment (notion-create-comment)
-- List comments on a page/block (notion-get-comments)
-- Get teams (notion-get-teams)
-- Get users / specific user (notion-get-users, notion-get-user)
-- List agents / integrations (notion-list-agents)
-- Get current connected user (notion-get-self)
+## 2. Supported actions
+- Search workspace content
+- Fetch page or database details
+- Create pages
+- Update page properties or content
+- Move pages to another parent
+- Duplicate a page
+- Create a database
+- Update database schema or properties
+- Add a comment
+- List comments on a page or block
+- Get teams and users
+- Get the current connected user's profile
 
-## 3. Quick Commands
+## 3. Quick commands
 ```
 Search Notion for product roadmap
 Fetch page 'Q4 Strategy'
@@ -55,16 +53,16 @@ List Notion users
 Get my Notion profile
 ```
 
-## 4. Common Patterns
+## 4. Common patterns
 <Tabs>
-<Tab title="Search & Retrieve">
+<Tab title="Search & retrieve">
 ```
 Search pages about retention metrics
 Fetch database 'Feature Requests'
 Describe page 'Marketing Brief'
 ```
 </Tab>
-<Tab title="Page Ops">
+<Tab title="Page ops">
 ```
 Create page: Sprint 18 Retro under Engineering
 Update page Sprint 18 Retro add summary
@@ -72,14 +70,14 @@ Move page Sprint 17 Retro to Archive
 Duplicate page Template: Meeting Notes
 ```
 </Tab>
-<Tab title="Database Ops">
+<Tab title="Database ops">
 ```
 Create database: Competitive Analysis (Properties: Competitor, Score, Notes)
 Update database Competitive Analysis add property Risk
 Fetch database Project Tracker
 ```
 </Tab>
-<Tab title="Comments & Collaboration">
+<Tab title="Comments & collaboration">
 ```
 Add comment to page Strategy -> "Need exec summary"
 Get comments on page Strategy
@@ -89,7 +87,7 @@ List users
 </Tab>
 </Tabs>
 
-## 5. Best Practices
+## 5. Best practices
 | Goal | Tip |
 | ---- | ---- |
 | Faster search | Use clear titles + add tags property |
@@ -111,14 +109,12 @@ List users
 - Revoke access anytime
 - Write actions can require confirmation
 
-## 8. Sample Flow
+## 8. Sample flow
 ```
 Search Notion for quarterly objectives
 Fetch page 'Q1 Objectives'
 Create page 'Q1 Review' under Strategy
 Add comment "Add metrics section"
 ```
-
-<Check>Notion connected. You can now search, create, update, organize, and comment via chat.</Check>
 
 <Note>Need advanced automation? Ask Dume to combine Notion with Calendar or Drive in the same conversation, or set it up as a [routine](/routines/overview).</Note>

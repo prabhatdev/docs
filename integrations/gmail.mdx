@@ -1,74 +1,41 @@
 ---
-title: "Email Integration - Gmail"
+title: "Gmail Integration"
 sidebarTitle: "Gmail"
 icon: "inbox"
-keywords: ['email integration','Gmail','email commands','OAuth','automation']
+keywords: ['Gmail', 'email integration', 'email commands', 'OAuth', 'automation']
 description: "Connect Gmail and use core email actions in Dume."
-"og:title": "Gmail Integration"
-"og:description": "Quick Gmail OAuth setup and available email actions."
+"og:title": "Gmail Integration - Dume.ai"
+"og:description": "Connect Gmail to read, compose, send, and organize email from chat."
 "twitter:card": "summary"
-"twitter:title": "Gmail Integration"
-"twitter:description": "Connect Gmail and run email commands."
+"twitter:title": "Gmail Integration - Dume.ai"
+"twitter:description": "Connect Gmail and run email commands with Dume."
 ---
 
 ## Overview
-Connect Gmail to read, summarize, compose, send, organize, and label emails with simple chat commands.
+Connect Gmail so Dume can read, summarize, compose, send, and organize email from chat.
 
 ## 1. Connect Gmail (OAuth)
 <Steps>
-  <Step title="Open Integrations">Go to Settings → Integrations → Gmail.</Step>
-  <Step title="Start OAuth">Click Connect Gmail.</Step>
-  <Step title="Select Account">Choose the correct Google account.</Step>
-  <Step title="Grant Scopes">Review and allow requested permissions (read, send, manage labels).</Step>
-  <Step title="Confirm">Return to Dume. Status shows Connected. Ask: "Show my recent emails."</Step>
+  <Step title="Open Integrations">Go to **Integrations**.</Step>
+  <Step title="Authenticate">Click **Connect Integration** on the Gmail card and choose the right Google account.</Step>
+  <Step title="Grant access">Review and allow the requested permissions (read, send, manage labels).</Step>
+  <Step title="Test">Ask: "Show my recent emails."</Step>
 </Steps>
 
-<Tip>Passwords are never stored. You can revoke access anytime in Google Account → Security → Third-party access.</Tip>
+<Tip>Passwords are never stored. Revoke anytime in Google Account → Security → Third-party access.</Tip>
 
-## 2. Automate Inbox Tasks with Routines
+## 2. Supported actions
+- List and search emails
+- Summarize an email or thread
+- Compose and send a draft
+- Reply to an email
+- Delete an email
+- Mark an email read or unread
+- Move an email to a label or folder
+- Create and list labels
 
-Connecting Gmail doesn't turn on any background automation by itself. To get a recurring inbox summary or a morning briefing, set up a [routine](/routines/overview): the **Morning Briefing** template pulls from your inbox, calendar, and the news on a daily schedule, and you can write your own instruction for anything more specific, like triaging unread mail every hour.
-
-## 3. Set Display Name for Connected Account
-Give your connected Gmail account a **display name** to make it easy to pick the right one in chat (useful when you have multiple Gmail accounts).
-
-<Steps>
-  <Step title="Open Settings Tab">Settings → Integrations → Gmail → **Settings** tab.</Step>
-  <Step title="Edit Display Name">Click the pencil icon next to **Display Name**, type a friendly name (e.g., “Sales Inbox” or “Support@Acme”), and save.</Step>
-  <Step title="Verify">Ensure the **Connected Account** email matches the inbox you intend to use.</Step>
-</Steps>
-
-<Frame>
-    <img
-        className="block dark:hidden"
-        src="/images/light/integration/gmail/integration-name.png"
-        alt="Gmail Display Name Settings"
-        title="Gmail Display Name Settings"
-    />
-    <img
-        className="hidden dark:block"
-        src="/images/dark/integration/gmail/integration-name.png"
-        alt="Gmail Display Name Settings"
-        title="Gmail Display Name Settings"
-    />
-</Frame>
-
-## 4. Supported Gmail Actions
-| Capability | Internal Operation |
-| ---------- | ------------------ |
-| List emails | GMAIL_LIST_EMAILS |
-| Describe / summarize an email | GMAIL_DESCRIBE_EMAIL |
-| Compose draft | GMAIL_COMPOSE_EMAIL |
-| Reply to an email | GMAIL_REPLY_TO_EMAIL |
-| Send email (new or draft) | GMAIL_SEND_EMAIL / GMAIL_SEND_DRAFT_EMAIL |
-| Delete an email | GMAIL_DELETE_EMAIL |
-| List drafts | GMAIL_LIST_DRAFTS |
-| Mark read / unread | GMAIL_MARK_READ_EMAIL_UNREAD |
-| Move email (apply label / folder) | GMAIL_MOVE_EMAIL |
-| List labels | GMAIL_LIST_EMAIL_LABELS |
-| Create label | GMAIL_CREATE_EMAIL_LABEL |
-
-## 5. Quick Commands
+## 3. Quick commands
+```
 Show unread emails from today
 Summarize the last 5 emails from finance
 Draft an email to Sarah about the Q4 plan
@@ -77,57 +44,59 @@ Mark the design review email unread
 Move the invoice email to Finance
 List my Gmail labels
 Create label: Vendors
+```
 
-
-## 6. Common Patterns
+## 4. Common patterns
 <Tabs>
 <Tab title="Read">
-
-
+```
 Show recent emails
 List unread emails from clients
 Summarize emails about contract renewal
-
+```
 </Tab>
-<Tab title="Compose & Send">
-
-
+<Tab title="Compose & send">
+```
 Draft email to product team about roadmap updates
 Edit tone: more concise
 Send the draft
-
+```
 </Tab>
 <Tab title="Organize">
-
-
+```
 Move all invoice emails to Finance
 Create label: Legal
 List drafts
-
+```
 </Tab>
-<Tab title="Follow-Up">
-
-
+<Tab title="Follow-up">
+```
 Summarize action items from today's emails
 Mark all responded emails as read
-
+```
 </Tab>
 </Tabs>
 
-## 7. Troubleshooting (Fast)
+## 5. Multiple Gmail accounts
+
+Connect more than one Gmail account, work and personal, for instance, and ask Dume to use either one by name. See [Multiple accounts](/features/multiple_accounts) for how to add and name a second account.
+
+## 6. Automate with routines
+
+Connecting Gmail doesn't turn on any background automation by itself. For a recurring inbox summary or a morning briefing, set up a [routine](/routines/overview): the **Morning Briefing** template pulls from your inbox, calendar, and the news on a daily schedule, and you can write your own instruction for anything more specific, like triaging unread mail every hour.
+
+## 7. Troubleshooting
 | Issue | Fix |
 | ----- | --- |
-| OAuth failed | Retry in incognito; ensure correct Google account. |
-| No emails returned | Check account; try: "Show recent emails" to test. |
-| Permission error | Reconnect and accept all requested scopes. |
-| Action not applied | Confirm message ID exists; retry with more specific query. |
-| Routine not running | Check its status on the [Routines](/routines/overview) page. |
+| OAuth failed | Retry in incognito, and confirm you're using the correct Google account |
+| No emails returned | Check the account is right, then try "Show recent emails" to test |
+| Permission error | Reconnect and accept all requested scopes |
+| Action didn't apply | Confirm the email still exists, and retry with a more specific query |
+| Routine not running | Check its status on the [Routines](/routines/overview) page |
 
-## 8. Security Notes
-- OAuth tokens only; no password storage.
-- Scoped access: read, send, labels.
-- Revoke anytime in Google security settings.
+## 8. Security
+- OAuth tokens only, no passwords stored
+- Scoped access: read, send, and label management
+- Revocable anytime in Google's own security settings
 
-<Check>Gmail connected. You can now manage email via chat efficiently.</Check>
-
-<Note>Need Outlook or Microsoft 365 email? See [Microsoft 365](/integrations/microsoft_365).</Note>
+<Note>Need Outlook or Microsoft 365 email instead? See [Microsoft 365](/integrations/microsoft_365).</Note>

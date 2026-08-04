@@ -2,17 +2,17 @@
 title: "Microsoft 365 Integration"
 sidebarTitle: "Microsoft 365"
 icon: "windows"
-keywords: ['Microsoft 365','OneDrive','SharePoint','Teams','Planner','To Do','Excel','OneNote','OAuth','automation', 'enterprise integration', 'productivity suite', 'collaboration tools']
-description: "Connect Microsoft 365 to Dume.ai for comprehensive workspace management. Access files, calendar, Teams, tasks, notes, and SharePoint content through AI-powered natural language commands."
-"og:title": "Microsoft 365 Integration - AI-Powered Workspace Management"
-"og:description": "Connect Microsoft 365 to Dume.ai for complete workspace integration. Manage files, Teams, tasks, and collaboration tools through natural language."
+keywords: ['Microsoft 365', 'OneDrive', 'SharePoint', 'Teams', 'OAuth', 'automation']
+description: "Connect Microsoft 365 to access files, calendar, Teams, tasks, and SharePoint content from chat."
+"og:title": "Microsoft 365 Integration - Dume.ai"
+"og:description": "Connect Microsoft 365 to manage files, calendar, Teams, and tasks from chat."
 "twitter:card": "summary"
 "twitter:title": "Microsoft 365 Integration - Dume.ai"
-"twitter:description": "Manage your entire Microsoft 365 workspace with AI assistance. Teams, files, tasks, and more."
+"twitter:description": "Connect Microsoft 365 and manage your workspace with Dume."
 ---
 
 ## Overview
-Connect Microsoft 365 to access files, calendar, chats, tasks, notes, Excel data, contacts, teams, and SharePoint content through natural language. (Email actions are documented separately.)
+Connect Microsoft 365 to access files, calendar, chats, tasks, notes, Excel data, contacts, Teams, and SharePoint content through natural language. Email actions aren't covered on this page.
 
 <Note>
 Microsoft 365 connects through a Dume-hosted server that talks to Microsoft Graph, so the action categories below reflect what that server currently exposes and may expand over time rather than being a fixed, permanent list.
@@ -22,39 +22,36 @@ Microsoft 365 connects through a Dume-hosted server that talks to Microsoft Grap
 <Steps>
   <Step title="Open Integrations">Click **Connect Integration** on the Microsoft 365 card.</Step>
   <Step title="Continue on your Dume dashboard">Microsoft 365 connects from your [Dume dashboard settings](https://app.dume.ai/integrations) rather than a popup in the app itself.</Step>
-  <Step title="Select Account">Choose your work or school account.</Step>
-  <Step title="Grant Scopes">Allow requested permissions (files, calendar, Teams, tasks, etc.).</Step>
+  <Step title="Select account">Choose your work or school account.</Step>
+  <Step title="Grant access">Allow the requested permissions (files, calendar, Teams, tasks, and so on).</Step>
   <Step title="Confirm">Status shows Connected. Test: "List my upcoming meetings."</Step>
 </Steps>
 
 <Tip>You can revoke access anytime in Azure/My Account → Privacy & security → Apps with access.</Tip>
 
-## 2. Supported Action Categories
+## 2. Supported action categories
 
-| Category | Tool to use |
-| -------- | ----------------------- |
-| User & Teams | get-current-user, list-joined-teams, get-team, list-team-members, list-users |
-| Teams / Chat | list-chats, get-chat, list-chat-messages, send-chat-message, reply-to-chat-message, list-chat-message-replies, get-chat-message |
-| Channels | list-team-channels, get-team-channel, list-channel-messages, send-channel-message, get-channel-message |
-| Calendar | list-calendars, list-calendar-events, get-calendar-event, create-calendar-event, update-calendar-event, delete-calendar-event, get-calendar-view |
-| Files (Drive/OneDrive) | list-drives, get-drive-root-item, list-folder-files, upload-file-content, download-onedrive-file-content, delete-onedrive-file |
-| SharePoint Sites & Lists | search-sharepoint-sites, get-sharepoint-site, list-sharepoint-site-drives, get-sharepoint-site-drive-by-id, get-sharepoint-site-by-path, list-sharepoint-site-items, get-sharepoint-site-item, list-sharepoint-site-lists, get-sharepoint-site-list, list-sharepoint-site-list-items, get-sharepoint-site-list-item, get-sharepoint-sites-delta |
-| OneNote | list-onenote-notebooks, list-onenote-notebook-sections, list-onenote-section-pages, create-onenote-page, get-onenote-page-content |
-| Tasks (To Do) | list-todo-task-lists, list-todo-tasks, create-todo-task, get-todo-task, update-todo-task, delete-todo-task |
-| Planner | get-planner-plan, list-plan-tasks, create-planner-task, get-planner-task, update-planner-task, update-planner-task-details, list-planner-tasks |
-| Excel | list-excel-worksheets, get-excel-range, format-excel-range, sort-excel-range, create-excel-chart |
-| Contacts | list-outlook-contacts, get-outlook-contact, create-outlook-contact, update-outlook-contact, delete-outlook-contact |
-| Search | search-query |
-| Shared Mailbox (Non-send listing) | (Excluded here; see Outlook Email guide) |
+| Category | What you can do |
+| -------- | ---------------- |
+| User & Teams | Get your profile, list joined Teams, view team details and members, list users |
+| Teams / Chat | List and read chats, send and reply to chat messages |
+| Channels | List channels, read channel messages, send a channel message |
+| Calendar | List calendars and events, view, create, update, and delete events |
+| Files (Drive/OneDrive) | List drives and folders, upload and download files, delete a file |
+| SharePoint sites & lists | Search sites, browse site drives and lists, read list items |
+| OneNote | List notebooks and sections, list pages, create a page, read page content |
+| Tasks (To Do) | List task lists and tasks, create, update, and delete a task |
+| Planner | View plans and tasks, create and update a Planner task |
+| Excel | Read a range, format it, sort it, create a chart |
+| Contacts | List, create, update, and delete Outlook contacts |
+| Search | Search across connected Microsoft 365 content |
 
-<Note>Email operations (reading/sending messages, attachments) are intentionally excluded on this page. See Outlook Email Integration.</Note>
-
-## 3. Quick Commands
+## 3. Quick commands
 ```
 Show my meetings for tomorrow
 List files in my OneDrive root
 Upload this file to my Project folder
-Search SharePoint for “Q4 roadmap”
+Search SharePoint for "Q4 roadmap"
 List my Teams chats
 Send a Teams message to marketing: Status updated
 Create a Planner task: Finalize launch assets due Friday
@@ -66,11 +63,11 @@ List Outlook contacts named Sarah
 Create contact: Jane Doe, jane@company.com, Product Manager
 ```
 
-## 4. Common Patterns
+## 4. Common patterns
 <Tabs>
 <Tab title="Calendar">
 ```
-What’s on my calendar this afternoon?
+What's on my calendar this afternoon?
 Create a 30m sync with Alex tomorrow at 10 AM
 Move the 2 PM meeting to 3 PM
 ```
@@ -79,14 +76,14 @@ Move the 2 PM meeting to 3 PM
 ```
 List files in /Reports
 Download the latest budget file
-Search SharePoint sites for “policy”
+Search SharePoint sites for "policy"
 ```
 </Tab>
-<Tab title="Teams & Chat">
+<Tab title="Teams & chat">
 ```
 Show recent messages in Marketing Team channel
 Send a channel message: Launch is green
-Summarize today’s chat messages
+Summarize today's chat messages
 ```
 </Tab>
 <Tab title="Tasks & Planner">
@@ -96,7 +93,7 @@ Create Planner task: Prepare release notes, due Friday
 Update task: mark 'Prepare release notes' completed
 ```
 </Tab>
-<Tab title="OneNote & Notes">
+<Tab title="OneNote & notes">
 ```
 List notebooks
 List pages in Strategy section
@@ -112,21 +109,17 @@ Create a line chart for range A1:B13 in Metrics worksheet
 </Tab>
 </Tabs>
 
-## 5. Troubleshooting (Fast)
+## 5. Troubleshooting
 | Issue | Fix |
 | ----- | --- |
-| OAuth fails | Retry; ensure correct account and pop-ups allowed. |
-| Empty results | Confirm resource exists; try a simpler list command. |
-| Permission denied | Reconnect and accept scopes; admin may need to approve. |
-| File not found | Provide full path or ID; list folder files first. |
-| Excel range error | Verify worksheet name and cell range syntax. |
+| OAuth fails | Retry, and confirm you're using the correct account with pop-ups allowed |
+| Empty results | Confirm the resource exists, then try a simpler list command |
+| Permission denied | Reconnect and accept the scopes; an admin may need to approve |
+| File not found | Provide the full path or ID, or list the folder's files first |
+| Excel range error | Verify the worksheet name and cell range syntax |
 
-## 6. Security Notes
-- Token-based OAuth; no password storage.
-- Granular Microsoft Graph scopes.
-- You can revoke in account security any time.
-- Actions requiring modification (create/update/delete) may prompt for confirmation.
-
-<Check>Microsoft 365 connected. You can now work across calendar, files, tasks, Teams, notes, Excel, and more from chat.</Check>
-
-<Note>Need email send/read? See Outlook Email guide.</Note>
+## 6. Security
+- Token-based OAuth, no password storage
+- Granular Microsoft Graph scopes
+- Revocable anytime in account security settings
+- Actions that create, update, or delete may prompt for confirmation

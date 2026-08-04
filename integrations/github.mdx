@@ -2,7 +2,7 @@
 title: "GitHub Integration"
 sidebarTitle: "GitHub"
 icon: "github"
-keywords: ['GitHub','repos','issues','pull requests','code review','security','CI','automation', 'version control', 'repository management', 'developer tools', 'code collaboration']
+keywords: ['GitHub', 'repos', 'issues', 'pull requests', 'code review', 'CI', 'automation']
 description: "Connect GitHub to Dume so it can read and act on your repos, issues, and pull requests from chat."
 "og:title": "GitHub Integration - Dume.ai"
 "og:description": "Connect GitHub to Dume for repository, issue, and pull request access from chat."
@@ -30,16 +30,16 @@ The specific action list below (create branches, merge PRs, manage security aler
 
 ## 2. Capabilities
 <CardGroup cols={3}>
-  <Card title="Repos & Branches" icon="code-fork">
+  <Card title="Repos & branches" icon="code-fork">
     Create/list repos, fork, create/list branches.
   </Card>
-  <Card title="Files & Content" icon="file-code">
+  <Card title="Files & content" icon="file-code">
     View, create, update, delete files; push multiple changes.
   </Card>
-  <Card title="Issues & Sub-Issues" icon="exclamation-circle">
+  <Card title="Issues & sub-issues" icon="exclamation-circle">
     Search/create/update issues, comments, manage sub-issues, assign Copilot.
   </Card>
-  <Card title="Pull Requests & Reviews" icon="git-pull-request">
+  <Card title="Pull requests & reviews" icon="git-pull-request">
     Create/update PRs, diffs, files, status, request/submit reviews, merge, update branch.
   </Card>
   <Card title="Discussions" icon="comments">
@@ -51,19 +51,19 @@ The specific action list below (create branches, merge PRs, manage security aler
   <Card title="Notifications" icon="bell">
     List, detail, mark read, dismiss, manage subscriptions.
   </Card>
-  <Card title="CI / Workflows" icon="robot">
+  <Card title="CI / workflows" icon="robot">
     List workflows/runs/jobs, run/rerun/cancel, artifacts, logs, usage.
   </Card>
-  <Card title="Security & Quality" icon="shield">
+  <Card title="Security & quality" icon="shield">
     Code scanning, secret scanning, Dependabot, advisories (repo/org/global).
   </Card>
-  <Card title="Releases & Tags" icon="tag">
+  <Card title="Releases & tags" icon="tag">
     List releases/tags, latest release, release by tag.
   </Card>
-  <Card title="Search & Discovery" icon="search">
+  <Card title="Search & discovery" icon="search">
     Search code, issues, PRs, repos, users, orgs.
   </Card>
-  <Card title="Teams & Org" icon="users">
+  <Card title="Teams & org" icon="users">
     List teams, members, get profile (me).
   </Card>
   <Card title="Advanced" icon="wand-magic">
@@ -73,7 +73,7 @@ The specific action list below (create branches, merge PRs, manage security aler
 
 <Note>Write actions can prompt for confirmation before execution.</Note>
 
-## 3. Quick Commands
+## 3. Quick commands
 ```
 List my open pull requests
 Create branch feature/refactor-auth from main
@@ -94,7 +94,7 @@ Mark all notifications read
 Push updated README and CHANGELOG to main
 ```
 
-## 4. Common Patterns
+## 4. Common patterns
 <Tabs>
 <Tab title="Issues">
 ```
@@ -104,7 +104,7 @@ Reprioritize sub-issue 55.2 to High
 Search issues: label=security state=open
 ```
 </Tab>
-<Tab title="Pull Requests">
+<Tab title="Pull requests">
 ```
 Create pull request: feature/cleanup → main title "Refactor caching layer"
 Request Copilot review for PR 103
@@ -130,7 +130,7 @@ Cancel workflow run 9002
 Get workflow run logs 9100
 ```
 </Tab>
-<Tab title="Files & Branches">
+<Tab title="Files & branches">
 ```
 Create branch hotfix/session-leak from main
 Get file contents src/auth/session.ts
@@ -147,7 +147,7 @@ Search code "featureFlag" in web-frontend
 </Tab>
 </Tabs>
 
-## 5. Best Practices
+## 5. Best practices
 | Goal | Tip |
 | ---- | ---- |
 | Clean PRs | Small focused branches + clear titles |
@@ -177,7 +177,7 @@ Search code "featureFlag" in web-frontend
 - No persistent code storage; processed transiently
 - Confirmation prompts for destructive actions (delete, merge, cancel)
 
-## 8. Sample Flow
+## 8. Sample flow
 ```
 Search issues label=bug in payments
 Create branch fix/payment-retry from main
@@ -189,7 +189,5 @@ Run workflow Tests
 Merge PR after checks pass
 List Dependabot alerts (ensure none new)
 ```
-
-<Check>GitHub connected. You can now manage repos, issues, PRs, workflows, security, and code via chat.</Check>
 
 <Note>Need deeper analytics? Ask Dume to combine GitHub data with other connected tools in the same conversation, or set it up as a [routine](/routines/overview).</Note>

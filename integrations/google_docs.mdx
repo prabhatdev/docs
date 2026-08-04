@@ -2,13 +2,13 @@
 title: "Google Docs Integration"
 sidebarTitle: "Google Docs"
 icon: "google"
-keywords: ['Google Docs','documents','search','create','update','OAuth','automation', 'document management', 'content creation', 'collaborative editing', 'AI writing']
-description: "Connect Google Docs to Dume.ai for intelligent document management. Find, create, and update documents through natural language commands with AI assistance."
-"og:title": "Google Docs Integration - AI-Powered Document Management"
-"og:description": "Connect Google Docs to Dume.ai for smart document handling. Create, search, and update documents through natural language commands."
+keywords: ['Google Docs', 'document integration', 'document commands', 'OAuth', 'automation']
+description: "Connect Google Docs to find, create, and update documents from chat."
+"og:title": "Google Docs Integration - Dume.ai"
+"og:description": "Connect Google Docs to create, search, and update documents from chat."
 "twitter:card": "summary"
 "twitter:title": "Google Docs Integration - Dume.ai"
-"twitter:description": "Manage Google Docs with AI assistance. Smart document creation and editing made simple."
+"twitter:description": "Connect Google Docs and manage documents with Dume."
 ---
 
 ## Overview
@@ -16,22 +16,22 @@ Connect Google Docs to search for documents, generate new ones, update existing 
 
 ## 1. Connect (OAuth)
 <Steps>
-  <Step title="Open Integrations">Settings → Integrations → Google Docs.</Step>
-  <Step title="Authenticate">Click Connect and choose the correct Google account.</Step>
-  <Step title="Grant Access">Allow requested Docs/Drive permissions.</Step>
+  <Step title="Open Integrations">Go to **Integrations**.</Step>
+  <Step title="Authenticate">Click **Connect Integration** on the Google Docs card and choose the right Google account.</Step>
+  <Step title="Grant access">Allow the requested Docs/Drive permissions.</Step>
   <Step title="Test">Ask: "Find my recent Google Docs."</Step>
 </Steps>
 
-<Tip>Revoke anytime: Google Account → Security → Third‑party access.</Tip>
+<Tip>Revoke anytime: Google Account → Security → Third-party access.</Tip>
 
-## 2. Supported Actions
+## 2. Supported actions
 - Find documents by name or keyword
 - Describe a document (structure, sections, length)
-- Create a document (optionally with headings / starter content)
+- Create a document (optionally with headings or starter content)
 - Update a document (append, replace section, add summary)
 - Download a document's contents into the conversation
 
-## 3. Quick Commands
+## 3. Quick commands
 ```
 Find documents about Q4 strategy
 Describe document "Product Vision"
@@ -40,9 +40,9 @@ Add a summary to "Marketing Plan"
 Append competitive analysis to "Strategy Draft"
 ```
 
-## 4. Common Patterns
+## 4. Common patterns
 <Tabs>
-<Tab title="Find & Describe">
+<Tab title="Find & describe">
 ```
 Find docs with "pricing"
 Describe document "Sales Playbook"
@@ -61,7 +61,7 @@ Replace introduction in "Investor Overview" with updated market positioning
 </Tab>
 </Tabs>
 
-## 5. Best Practices
+## 5. Best practices
 | Goal | Tip |
 | ---- | ---- |
 | Faster search | Use clear, specific titles |
@@ -74,23 +74,21 @@ Replace introduction in "Investor Overview" with updated market positioning
 | ----- | --- |
 | Doc not found | Use exact title or fewer keywords |
 | Permission error | Reconnect and grant Docs/Drive scopes |
-| Update failed | Ensure section exists; describe first |
-| Wrong doc edited | Mention full title + confirmation |
+| Update failed | Confirm the section exists; describe the doc first |
+| Wrong doc edited | Mention the full title and confirm before proceeding |
 
 ## 7. Security
-- OAuth tokens only (no passwords)
+- OAuth tokens only, no passwords
 - Scoped Docs/Drive access
 - Revocable anytime
 - Write actions may request confirmation
 
-## 8. Sample Flow
+## 8. Sample flow
 ```
 Find docs with "roadmap"
 Describe document "2025 Roadmap"
 Create document "2025 Roadmap Summary" (Sections: Goals, Risks, Opportunities)
 Add executive summary to "2025 Roadmap Summary"
 ```
-
-<Check>Google Docs connected. You can now find, describe, create, and update documents via chat.</Check>
 
 <Note>Need deeper analysis? Ask Dume to combine data from Docs with Sheets or Calendar in the same conversation, or set it up as a [routine](/routines/overview).</Note>

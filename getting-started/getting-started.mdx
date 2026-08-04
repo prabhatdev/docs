@@ -15,7 +15,7 @@ Dume is most useful once you've connected at least one inbox and your calendar. 
 </Tip>
 
 <CardGroup cols={2}>
-  <Card title="Templates" icon="bolt" href="#">
+  <Card title="Templates" icon="bolt">
     Ready-made prompts on the dashboard: meeting briefs, cold outreach, competitive research, and more.
   </Card>
   <Card title="Routines" icon="clock" href="/routines/overview">
@@ -43,6 +43,19 @@ Dume is most useful once you've connected at least one inbox and your calendar. 
   </Step>
 </Steps>
 
+## Beyond the browser
+
+The three steps above happen in the web app, but that's not the only place Dume lives.
+
+<CardGroup cols={2}>
+  <Card title="WhatsApp" icon="whatsapp" href="/interfaces/whatsapp">
+    Link your number once, then message Dume directly. No app to open.
+  </Card>
+  <Card title="Phone calls" icon="phone" href="/interfaces/phone">
+    Call Dume, or have Dume call you — when a task finishes, at a time you set, or right now.
+  </Card>
+</CardGroup>
+
 ## Example prompts
 
 <Tabs>
@@ -57,6 +70,13 @@ Dume is most useful once you've connected at least one inbox and your calendar. 
     <CodeGroup>
       <CodeBlock language="markdown">
         {"I have a call with Acme Corp tomorrow at 2pm. Research the company and give me a one-page brief: what they do, recent news, and likely talking points.\n"}
+      </CodeBlock>
+    </CodeGroup>
+  </Tab>
+  <Tab title="Morning call">
+    <CodeGroup>
+      <CodeBlock language="markdown">
+        {"Call me every weekday at 8am with my calendar for the day and anything urgent in my inbox.\n"}
       </CodeBlock>
     </CodeGroup>
   </Tab>

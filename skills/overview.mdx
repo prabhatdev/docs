@@ -6,8 +6,19 @@ icon: "puzzle-piece"
 keywords: ['Dume skills', 'Skill Library', 'AI capabilities', 'Cowork desktop']
 ---
 
-A skill is a defined capability Dume can use during a conversation: sending an email, researching the web, generating an OAuth connect link. Dume ships with a set of pre-packaged skills (see [Bundled skills](/skills/bundled-skills)), and you can add your own (see [Building a custom skill](/skills/custom-skills)).
+A skill is a defined capability Dume uses during a conversation: sending an email, researching the web, generating an OAuth connect link. It's a different layer from an [integration](/integrations/overview) — connecting Gmail gives Dume access to your account, and a skill like Email sending is what it does with that access.
+
+Dume ships with a set of pre-packaged skills, and you can add your own.
 
 {/* TODO: Phase 3 screenshot — Skill Library, Cowork desktop app */}
+
+<CardGroup cols={2}>
+  <Card title="Bundled skills" icon="box-archive" href="/skills/bundled-skills">
+    Every skill Dume ships with, and which ones need Cowork desktop.
+  </Card>
+  <Card title="Custom skills" icon="wand-magic-sparkles" href="/skills/custom-skills">
+    Add your own: describe it to the AI, import a file, or point at a GitHub repo.
+  </Card>
+</CardGroup>
 
 The Skill Library, where you manage which skills are active, is available in the Cowork desktop app. See [Web app vs. Cowork desktop](/product/web-vs-cowork) for what else differs between the two.
