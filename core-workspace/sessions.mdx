@@ -1,0 +1,29 @@
+---
+title: "Chat Sessions"
+sidebarTitle: "Sessions"
+description: "How Dume's dashboard handles multiple conversations, tracks progress on multi-step tasks, and asks before it does anything sensitive."
+icon: "message-lines"
+keywords: ['chat sessions', 'dashboard', 'tabs', 'progress tracking', 'AI assistant']
+---
+
+The Dashboard is where you talk to Dume. Every conversation is a session, and you can keep several open as tabs at once.
+
+{/* TODO: Phase 3 screenshot — Dashboard with two open session tabs */}
+
+## Tabs run in the background
+
+Open a new tab from the **+** next to your current tabs, or click into a saved session from History. A tab you're not looking at keeps working: start a research task in one tab, switch to another, and come back once it's done instead of waiting on it.
+
+## Watching a task run
+
+For anything with more than one step, a **Progress** panel on the right lists what Dume is doing and checks items off as it finishes them. A **Context** panel below it shows which model is handling the session and how much of its context window is in use.
+
+{/* TODO: Phase 3 screenshot — Progress and Context panels during a multi-step task */}
+
+## Sending a message
+
+Type in the message box at the bottom of a session. Shift + Enter adds a line break; Enter sends. The **+** button opens attachments (web app only, see [Web app vs. Cowork desktop](/product/web-vs-cowork)) and any connected skills or MCP tools. A microphone icon dictates your message, and a separate button next to it opens [voice mode](/core-workspace/voice-mode) for a spoken conversation instead of typing.
+
+## Permission and clarifying prompts
+
+Before Dume sends an email, deletes something, or takes any other action that's hard to undo, it stops and asks first. If it's missing information it needs, like which of two people named John you meant, it asks that too rather than guessing. Answer in the same message box and the session continues from there.

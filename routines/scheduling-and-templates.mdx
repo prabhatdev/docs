@@ -1,0 +1,36 @@
+---
+title: "Scheduling and Templates"
+sidebarTitle: "Scheduling & Templates"
+description: "Set a routine to run on a schedule, or start from one of seven built-in templates instead of writing one from scratch."
+icon: "calendar-clock"
+keywords: ['routine scheduling', 'cron', 'routine templates', 'Dume']
+---
+
+## Setting a schedule
+
+The options depend on whether the routine is [local or cloud](/routines/local-vs-cloud):
+
+- **Local routines** run once at a specific date and time, or repeat every N minutes, hours, or days, with a time-of-day picker for anything daily or longer.
+- **Cloud routines** use standard 5-field cron expressions (minute, hour, day-of-month, month, day-of-week), with presets for Hourly, Daily, Weekdays, Weekly, and Monthly so you're not writing cron syntax by hand. Pick Custom if none of the presets fit. Schedules run in your account's timezone, not UTC, so "9am" means 9am for you.
+
+<Note>
+Cron granularity is per-minute. There's no way to schedule something to run more than once a minute.
+</Note>
+
+## Starting from a template
+
+Click **Templates** on the Routines page for seven ready-made routines, grouped by category:
+
+| Template | Category | Default schedule | What it does |
+|---|---|---|---|
+| Morning Briefing | News | Daily, 7:00 AM | Builds an executive-style briefing from your inbox, calendar, and the news, and emails it to you |
+| Daily Standup Call | Productivity | Weekdays, 9:00 AM | Calls you with a 30-second voice standup: one motivational line, three priorities, one focus reminder |
+| Weekly Wrap-Up | Productivity | Friday, 5:00 PM | Emails a reflection on the week: wins, lessons, next week's priorities, one thing to improve |
+| Feature Tips | Productivity | Wednesday, 10:00 AM | Sends one tip a week about a Dume capability you haven't used yet, over WhatsApp if it's linked, otherwise email |
+| Daily Learning Call | Learning | Daily, 8:00 AM | Calls you with one surprising insight, under 30 seconds |
+| Weekly Finance Check-In | Finance | Monday, 9:00 AM | Emails a personal finance check-in: expenses, savings progress, a tip, upcoming bills |
+| Evening Wind-Down Call | Health | Daily, 9:00 PM | Calls you with a 45-second calm wind-down before bed |
+
+{/* TODO: Phase 3 screenshot — Templates modal with category filters */}
+
+Picking a template pre-fills the name, instruction, and schedule so you can adjust before saving, rather than writing it from a blank form. Templates that place phone calls or send WhatsApp messages need those [channels](/interfaces/whatsapp) linked first; if they aren't, the template falls back to email where that makes sense (Feature Tips does this automatically).

@@ -1,217 +1,67 @@
 ---
 title: "Personalize Dume"
 sidebarTitle: "Personalisation"
-keywords: ['personalization', 'AI customization', 'profile setup', 'Dume configuration', 'user preferences', 'auto-research', 'better responses', 'AI assistant setup', 'custom AI behavior']
-description: "Customize Dume to understand your background and preferences for more relevant, tailored AI responses. Complete setup guide for personalizing your AI executive assistant in minutes."
+keywords: ['personalization', 'AI customization', 'profile setup', 'Dume settings', 'user preferences', 'AI assistant setup']
+description: "Set up your Dume profile so responses match your role, timezone, and communication style instead of reading generic."
 "og:title": "Personalize Your AI Executive Assistant - Dume.ai"
-"og:description": "Learn how to configure Dume.ai for personalized AI assistance. Set up your profile, preferences, and context for better responses."
+"og:description": "Set up your profile, timezone, and communication style for more relevant responses."
 "twitter:card": "summary"
 "twitter:title": "AI Personalization Guide - Dume.ai"
-"twitter:description": "Customize your AI executive assistant for better, more relevant responses tailored to your needs."
+"twitter:description": "Customize your Dume profile for more relevant responses."
 ---
-## Why Personalize Dume?
 
-<CardGroup cols={2}>
-  <Card title="Contextual Responses" icon="sparkles">
-    Tailors answers to your role, industry, and current focus areas instead of generic output.
-  </Card>
-  <Card title="Right Technical Depth" icon="gear-complex-code">
-    Adjusts complexity (high-level vs detailed) based on your stated experience level.
-  </Card>
-  <Card title="Relevant Interests" icon="bullseye-pointer">
-    Weaves in your specialty domains (e.g. activation, onboarding) when generating suggestions.
-  </Card>
-  <Card title="Time Savings" icon="clock">
-    Removes repetitive re‑explaining of background; persistent profile informs every interaction.
-  </Card>
-</CardGroup>
+## Why it matters
 
-<Tip>
-Adding precise role + focus areas (e.g. “B2B SaaS PM, activation funnels”) improves relevance across workflows and agents.
-</Tip>
+Dume reads your profile before it answers, so the same question gets a different answer depending on who's asking. "Summarize this PRD" reads differently for a solo founder tracking activation metrics than it does for an engineering manager tracking sprint velocity, once you've told Dume which one you are.
 
-## Setup Process
+## Set up your profile
+
+Go to **Settings → Profile**.
+
+{/* TODO: Phase 3 screenshot — Settings, Profile tab */}
 
 <Steps>
-  <Step title="Access Personalization Settings">
-    Navigate to the personalization menu to begin customizing your Dume experience.
+  <Step title="Identity">
+    Your name, email, username, timezone, and location. Timezone and location matter more than they look: they're what keep a briefing landing in your morning instead of someone else's.
 
-    <Frame>
-        <img
-            className="block dark:hidden"
-          src="/images/light/personalisation/personalization.png"
-          alt="Dume personalization menu highlighting the personalization option in the main navigation"
-          title="Accessing Dume personalization settings"
-        />
-          <img
-              className="hidden dark:block"
-          src="/images/dark/personalisation/personalization.png"
-              alt="Dume personalization menu highlighting the personalization option in the main navigation (dark mode)"
-              title="Accessing Dume personalization settings (dark mode)"
-          />
-    </Frame>
-    
-    <Info>
-    The personalization option is typically found in the main menu or settings area of your Dume interface.
-    </Info>
-  </Step>
-  
-  <Step title="Complete Your Profile Information">
-    Provide essential details about yourself to help Dume understand your background and expertise.
-
-      <Frame>
-          <img
-              className="block dark:hidden"
-              src="/images/light/personalisation/personalise-profile.png"
-              alt="Dume profile input form showing fields for name, role, interests, and background information"
-              title="Profile information input form"
-          />
-          <img
-              className="hidden dark:block"
-              src="/images/dark/personalisation/personalise-profile.png"
-              alt="Dume profile input form showing fields for name, role, interests, and background information (dark mode)"
-              title="Profile information input form (dark mode)"
-          />
-      </Frame>
-      
-      **Key information to include:**
-      - Your name and professional title
-      - Industry or field of expertise
-      - Areas of interest or specialization
-      - Experience level in relevant topics
-      
-      <Tip>
-      Be specific about your role and interests. Instead of "developer," try "full-stack developer specializing in React and Node.js."
-      </Tip>
-  </Step>
-  
-  <Step title="Enable Auto-Research (Optional)">
-    Let Dume automatically gather additional context about you from your online presence.
-
-      <Frame>
-          <img
-              className="block dark:hidden"
-              src="/images/light/personalisation/auto-research.png"
-              alt="Auto-research toggle and input field for website or social media profile URL"
-              title="Auto-research feature configuration"
-          />
-          <img
-              className="hidden dark:block"
-              src="/images/dark/personalisation/auto-research.png"
-              alt="Auto-research toggle and input field for website or social media profile URL (dark mode)"
-              title="Auto-research feature configuration (dark mode)"
-          />
-      </Frame>
-      
-      **Auto-research can gather information from:**
-      - Your personal or professional website
-      - LinkedIn profile
-      - GitHub profile
-      - Other publicly available professional profiles
-      
-      <Warning>
-      Only provide URLs to public profiles you're comfortable having analyzed. Dume will only access publicly available information.
-      </Warning>
-  </Step>
-  
-  <Step title="Save and Confirm Your Preferences">
-    Review your personalization settings and save them to activate your customized Dume experience.
-    
-    <Check>
-    Once saved, Dume will immediately begin using your profile information to provide more relevant and personalized responses.
-    </Check>
-    
-    <Note>
-    You can update your personalization settings at any time to refine Dume's understanding of your preferences and expertise.
-    </Note>
+    <Tip>Location has a **Detect** button if you'd rather not type it in.</Tip>
   </Step>
 
-  <Step title="Set Up Your Profile & Preferences">
-  Go to **Accounts** > **Profile** to configure your **profile details, location, and measurement preferences** to help Dume provide regionally relevant results, timezone-accurate scheduling, and more consistent experience across workflows.
+  <Step title="Goals & context">
+    **Occupation** and **Bio** — this is where specificity pays off. "Software developer" gets you generic answers; "backend engineer specializing in Node.js" gets you answers pitched at that level.
+  </Step>
 
-  <Frame>
-      <img
-          className="block dark:hidden"
-          src="/images/light/personalisation/profile-setup.png"
-          alt="Profile settings page showing location, timezone, and measurement system options"
-          title="Profile settings and preferences configuration"
-      />
-      <img
-          className="hidden dark:block"
-          src="/images/dark/personalisation/profile-setup.png"
-          alt="Profile settings page showing location, timezone, and measurement system options (dark mode)"
-          title="Profile settings and preferences configuration (dark mode)"
-      />
-  </Frame>
+  <Step title="Agent preferences">
+    - **Communication style** — Balanced, Formal, Casual, or Concise
+    - **Measurement system** — Imperial or Metric
+    - **Use emojis** — on or off
+    - **Custom instructions** — anything else you want Dume to always keep in mind
+  </Step>
 
-  **You can customize:**
-  - **Display Name** — The name shown across your Dume account  
-  - **Email Address** — The primary email associated with your Dume account  
-  - **Current Location** — Helps Dume surface location-aware content and event data  
-  - **Timezone** — Ensures workflows, meeting summaries, and briefings sync to your local time  
-  - **Measurement System** — Choose between Metric or Imperial for data display consistency  
+  <Step title="System preferences">
+    **Language** (English, Español, or 中文) and your **default AI model**.
+  </Step>
 
-  <Tip>
-  Keeping your location and timezone accurate allows Dume to deliver timely reminders, morning briefs, and calendar-aware insights.
-  </Tip>
-</Step>
-
+  <Step title="Save changes">
+    Changes take effect on your next message — there's no waiting period.
+  </Step>
 </Steps>
 
-## What Happens Next?
+## Before and after
 
-After completing personalization:
+| Prompt | Without a profile | With a profile (backend engineer, concise style, Asia/Dubai) |
+|----------|--------|-------|
+| "Summarize this PRD." | A generic high-level summary. | A summary weighted toward implementation details and technical risk, kept short per your communication style. |
+| "Triage my unread inbox." | Emails listed with generic priority labels. | Emails grouped by relevance to your stated focus, with meeting times already converted to your timezone. |
 
-1. **Immediate Impact**: Dume begins incorporating your profile information into its responses
-2. **Learning Process**: The AI continues to learn from your interactions and feedback
-3. **Ongoing Refinement**: You can update your profile as your interests or role evolve
-
-
-## Before vs After
-
-#### Profile
-<CodeGroup>
-  <CodeBlock language="json" title="Sample Profile JSON (Solopreneur)">
-{`{
-  //Example Profile
-  "name": "Leo Martinez",
-  "title": "Founder / Solo SaaS Builder",
-  "industry": "Indie B2B SaaS",
-  "focus": ["automation", "growth experiments", "customer onboarding"],
-  "experienceLevel": "founder",
-  "preferredTone": "pragmatic",
-  "stack": ["Next.js", "Node.js", "PostgreSQL"],
-  "currentGoal": "reach first 200 paying users"
-}`}
-  </CodeBlock>
-</CodeGroup>
-
-| Scenario | Prompt | Before | After |
-|----------|--------|--------|-------|
-| PRD Summary | `Summarize this PRD.` | High-level summary without growth or onboarding emphasis. | Highlights onboarding funnel steps, activation KPIs, lean implementation, quick experiment sequence. |
-| Email Triage | `Triage my unread inbox.` | Lists emails with generic priority labels. | Groups by growth experiments, flags investor updates, suggests follow-ups tied to 200-user goal, surfaces billing risk emails first. |
-
-<Tip type="info">
-Each improvement is driven by role, focus areas, current goal and tone settings in your profile.
-</Tip>
-
-
-## FAQs
+## FAQ
 
 <AccordionGroup>
 <Accordion title="I don't see the personalization option">
-  Ensure you're logged into your Dume account and have the latest version. The personalization feature may not be available in all regions or account types.
+  Make sure you're logged in and on the latest version of the app. It lives under Settings → Profile.
 </Accordion>
 
-<Accordion title="Auto-research isn't finding information">
-  - Verify your URL is correct and publicly accessible
-  - Ensure your profiles contain relevant professional information
-  - Try different profile URLs (LinkedIn, personal website, etc.)
-</Accordion>
-
-<Accordion title="Responses aren't more personalized">
-  - Give Dume a few interactions to learn from your new profile
-  - Provide more specific information in your profile
-  - Try asking questions related to your stated expertise areas
+<Accordion title="Responses still feel generic">
+  Give Dume a few exchanges to pick up on your profile, and add more specifics to Occupation and Bio rather than one-word answers — the more concrete, the better the match.
 </Accordion>
 </AccordionGroup>

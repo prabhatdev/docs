@@ -1,96 +1,48 @@
 ---
-title: "MCP (Model Context Protocol)"
+title: "MCP Servers"
 sidebarTitle: "MCP Overview"
 icon: "plug-circle-check"
-keywords: ['mcp','model context protocol','external tools','remote mcp','custom integration', 'API integration', 'extensibility', 'developer tools', 'custom connectors']
-description: "Extend Dume.ai by connecting external tools and data sources not yet natively supported through Model Context Protocol (MCP). Complete guide to custom integrations."
-"og:title": "MCP Integration - Extend Dume.ai with Custom Tools"
-"og:description": "Use Model Context Protocol (MCP) to connect any external tool to Dume.ai. Extend capabilities beyond native integrations."
+keywords: ['mcp', 'model context protocol', 'custom integration', 'API integration', 'extensibility', 'developer tools', 'custom connectors']
+description: "Connect any Model Context Protocol server to Dume by URL to reach a tool that isn't a native integration."
+"og:title": "MCP Servers - Extend Dume.ai with Custom Tools"
+"og:description": "Connect any MCP server by URL to extend Dume beyond its native integrations."
 "twitter:card": "summary"
-"twitter:title": "MCP Integration - Dume.ai"
-"twitter:description": "Extend Dume.ai with custom tool integrations using Model Context Protocol (MCP)."
+"twitter:title": "MCP Servers - Dume.ai"
+"twitter:description": "Extend Dume with custom tool integrations using the Model Context Protocol."
 ---
 
-## 1. What Is MCP?
-MCP is an open standard that lets Dume talk to external tools and data sources it doesn’t natively integrate with. If a tool is missing from the integrations list, MCP can attach it.
+## What is MCP?
 
-## 2. When To Use It
-Use MCP only when:
-- The tool/service is not yet a native integration.
-- You need a limited subset of an external API (specific endpoints, fields).
-- You want to combine new external data with existing workflows.
+MCP (Model Context Protocol) is an open standard that lets Dume talk to external tools and data sources it doesn't natively integrate with. If a tool isn't in the [Integrations](/integrations/overview) list, connecting its MCP server closes the gap.
 
-## 3. Supported Remote MCP Servers
-Only remote MCP servers from trusted catalogs are supported (self-hosted custom servers not yet).
-<CardGroup cols={2}>
-  <Card title="Remote MCP Servers Catalog" icon="globe" href="https://mcpservers.org/remote-mcp-servers">
-    Browse officially hosted remote MCP servers.
-  </Card>
-  <Card title="Composio MCP Catalog" icon="grid" href="https://mcp.composio.dev/">
-    Large catalog of managed MCP server integrations.
-  </Card>
-</CardGroup>
-<Note>Pick servers from these catalogs; others are not currently supported.</Note>
+## When to use it
 
-### Popular Examples
+- The tool isn't a native Dume integration.
+- You need access to an internal or self-hosted system.
+- You want to combine an external API with your existing integrations in the same conversation.
+
+## Connecting a server
+
+Unlike the native integrations, there's no catalog to browse: you connect any MCP server by pasting its URL. See [MCP Server Setup](/integrations/mcp/setup) for the full walkthrough.
+
 ```
-GitHub (PR / issue context)
-Notion (pages & databases)
-Linear (issues)
-Figma (design file metadata)
-Sentry (alerts)
-Supabase / Neon (DB info)
+http://localhost:8080
+https://mcp.example.com
 ```
 
-## 4. What MCP Enables
-- Query external tool data (records, metrics, metadata)
-- Run tool actions (trigger workflows, fetch artifacts)
-- Combine MCP data with existing integrations in one reply
-- Expand capabilities without waiting for native support
+## What it enables
 
-## 5. Examples
-```
-Get design file summary from a Figma MCP server
-Fetch latest Sentry error alerts
-Retrieve product roadmap page from Notion via MCP
-Search code metrics from an analytics MCP endpoint
-```
+- Query data from the connected server (records, metrics, documents)
+- Run actions the server exposes
+- Combine MCP data with your native integrations in one reply
 
-<Tip>Start with read‑only servers before enabling write actions.</Tip>
+## Safety and control
 
-## 6. Quick Commands
-```
-List available MCP servers
-Connect Figma MCP server
-Fetch Notion page 'Strategy'
-Get recent Sentry alerts
-Combine GitHub PR summary and Sentry errors
-```
-
-## 7. Safety & Control
 | Aspect | Summary |
 | ------ | ------- |
-| Scope | Only actions exposed by the remote server are callable |
-| Access | You can disconnect any time in Integrations |
-| Writes | May prompt for confirmation if supported |
-| Credentials | Stored/handled by the remote MCP provider, not Dume |
+| Scope | Only the actions the server exposes are callable |
+| Access | Disconnect any time from [MCP Servers](https://app.dume.ai/mcp-servers) |
+| Writes | May prompt for confirmation, depending on the server |
+| Credentials | Handled by the MCP server itself, not stored by Dume |
 
-## 8. Troubleshooting
-| Issue | Fix |
-| ----- | --- |
-| Server not listed | Confirm it appears in supported catalogs |
-| Auth failure | Re-run authorization; verify scopes |
-| Action unknown | Check server docs; list actions first |
-| Empty data | Confirm tool has accessible items; adjust filters |
-
-## 9. Flow Overview
-```
-Choose remote MCP server → Connect → Call an action → Dume uses returned data in conversation.
-```
-
-## 10. Links
-- Remote MCP Servers: https://mcpservers.org/remote-mcp-servers  
-- Composio Catalog: https://mcp.composio.dev/  
-- Official MCP Spec: https://modelcontextprotocol.io/docs/getting-started/intro  
-
-<Check>MCP connected. You can now use external, previously unsupported tools directly in chat.</Check>
+<Tip>Start with a read-only server before connecting one that can write.</Tip>

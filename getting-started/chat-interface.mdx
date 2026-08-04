@@ -1,497 +1,164 @@
 ---
-title: "Master the Dume.ai Chat Interface"
-sidebarTitle: "Master Chat Interface"
-keywords: ['chat interface', 'AI conversation', 'connected tools', 'queries', 'commands', 'tool integration', 'natural language', 'communication patterns', 'AI assistant', 'productivity']
-description: "Master Dume's chat interface to seamlessly interact with your connected tools through natural language queries and commands. Learn effective communication patterns and maximize productivity."
-"og:title": "Master Dume.ai Chat Interface - AI Communication Guide"
-"og:description": "Learn to effectively communicate with your AI executive assistant through natural language. Master the chat interface for maximum productivity."
+title: "Chat With Dume"
+sidebarTitle: "Chat Interface"
+keywords: ['chat interface', 'AI conversation', 'connected tools', 'natural language', 'AI assistant', 'productivity']
+description: "How to talk to Dume: sessions, connected tools, attachments, and getting a useful answer on the first try."
+"og:title": "How to Chat With Dume.ai - Interface Guide"
+"og:description": "Learn to work with Dume's chat interface and connected tools effectively."
 "twitter:card": "summary"
-"twitter:title": "Master Dume.ai Chat Interface"
-"twitter:description": "Learn effective communication patterns with your AI executive assistant for maximum productivity."
+"twitter:title": "Chat With Dume.ai"
+"twitter:description": "Effective communication patterns for getting more out of Dume."
 ---
 
-
-### What Makes Dume.ai Different
+### What makes Dume different
 
 <CardGroup cols={2}>
-<Card title="Context-Aware Conversations" icon="brain">
-  Dume remembers your profile, preferences, and previous interactions to provide personalized responses.
+<Card title="Context-aware" icon="brain">
+  Dume remembers your profile and previous sessions instead of starting cold every time.
 </Card>
 
-<Card title="Tool Integration" icon="plug">
-  Access data and perform actions across all your connected services without switching apps.
+<Card title="Tool access" icon="plug">
+  Acts on your connected tools directly. No copy-pasting between apps.
 </Card>
 
-<Card title="Natural Language" icon="comments">
-  Ask questions and give commands in plain English - no complex syntax or APIs required.
+<Card title="Plain language" icon="comments">
+  Ask for what you want the way you'd ask a person, not a command syntax.
 </Card>
 
-<Card title="Real-Time Data" icon="bolt">
-  Get live information from your connected tools, not outdated cached data.
+<Card title="Live data" icon="bolt">
+  Pulls current information from your connected tools, not a cached snapshot.
 </Card>
 </CardGroup>
 
-Now that you've personalized Dume and connected your first tool, it's time to experience the power of unified AI conversations. The chat interface is where your personalized AI assistant meets your connected tools, creating a seamless workspace where you can accomplish tasks across multiple platforms through simple conversations.
+Once you've [personalized Dume](/getting-started/personalisation) and [connected a tool](/getting-started/connect-your-first-tool), the dashboard is where you'll spend most of your time.
 
+## The dashboard
 
-## Understanding the Chat Interface
+{/* TODO: Phase 3 screenshot — Dashboard with an active session */}
 
-<Frame>
-    <img
-        className="block dark:hidden"
-        src="/images/light/chat-interfafce/chat.png"
-        alt="Dume chat interface showing conversation area, input field, tool indicators, and sidebar navigation"
-        title="Dume chat interface overview"
-    />
-    <img
-        className="hidden dark:block"
-        src="/images/dark/chat-interface/chat.png"
-        alt="Dume chat interface showing conversation area, input field, tool indicators, and sidebar navigation (dark mode)"
-        title="Dume chat interface overview"
-    />
-</Frame>
-
-### Key Interface Elements
+You can have several conversations open as tabs at once. A tab keeps working in the background while you look at another one, so you can check back later and it'll already be done.
 
 <AccordionGroup>
-<Accordion title="Conversation Area">
-  **Main chat window** where your conversations with Dume appear:
-  - **Your messages** appear on the right in colored bubbles
-  - **Dume's responses** appear on the left with profile avatar
-  - **Tool actions** are highlighted with service icons
-  - **Code blocks** and data tables are formatted for readability
-  - **Rate responses** with 👍 or 👎 to help improve future answers.
+<Accordion title="Conversation area">
+  Your messages appear on the right, Dume's on the left. While Dume is working on something multi-step, a live to-do list shows what it's doing and what's left.
 </Accordion>
 
-<Accordion title="Message Input Field">
-  **Where you type your queries and commands:**
-  - Support for **multi-line messages** with Shift + Enter
-  - **Upload attachments** like documents or images
-  - **Voice input** for hands-free interaction (if enabled)
-  - **Type @** then start typing a tool name to target specific integrations in your message.
+<Accordion title="Message box">
+  - **Shift + Enter** for a new line, **Enter** to send
+  - The **+** button lets you attach files (web app only) or reach connected tools
+  - The **mic** icon dictates your message. A separate **voice mode** button opens a live spoken conversation; see [Voice mode](/core-workspace/voice-mode)
 </Accordion>
 
-<Accordion title="Conversation History">
-  Use **3 dot menu** in conversation history to:
-  - **Pin** important threads to keep them at the top
-  - **Rename** a conversation for quick recall
-  - **Delete** a conversation to remove it permanently
+<Accordion title="History">
+  Every session is saved. Use the menu on a conversation to pin, rename, or delete it; see [History](/core-workspace/history).
 </Accordion>
 </AccordionGroup>
 
-## How to Use Connected Tools in Chat
+## Talking to your connected tools
 
 <Steps>
-  <Step title="Start a Natural Conversation">
-    Begin by asking questions or making requests in plain language. Dume understands context and can access your connected tools automatically.
+  <Step title="Start with plain language">
+    Dume figures out which connected tool to use from what you ask. You don't have to name it.
 
-    <Frame>
-        <img
-            className="block dark:hidden"
-            src="/images/light/chat-interfafce/chat-box.png"
-            alt="Example of natural language query in chat interface asking about calendar events"
-            title="Natural language query example"
-        />
-        <img
-            className="hidden dark:block"
-            src="/images/dark/chat-interface/chat-box.png"
-            alt="Example of natural language query in chat interface asking about calendar events (dark mode)"
-            title="Natural language query example"
-        />
-    </Frame>
-
-    **Example conversation starters:**
     ```
-    "What's on my calendar today?"
-    "Show me my recent GitHub commits"
-    "Find emails from John about the project"
-    "What tasks are due this week in Todoist?"
+    What's on my calendar today?
+    Find emails from John about the launch
+    Summarize the open pull requests on my repo
     ```
-
-    <Tip>
-    You don't need to specify which tool to use - Dume automatically determines the best integration based on your query.
-    </Tip>
   </Step>
 
-  <Step title="Review Tool Responses">
-    When Dume accesses your connected tools, you'll see clear indicators and formatted responses.
-
-    <Frame>
-        <img
-            className="block dark:hidden"
-            src="/images/light/chat-interfafce/chat-reply.png"
-            alt="Chat interface showing formatted response from connected calendar tool with event details"
-            title="Tool response with formatted data"
-        />
-        <img
-            className="hidden dark:block"
-            src="/images/dark/chat-interface/chat-reply.png"
-            alt="Chat interface showing formatted response from connected calendar tool with event details (dark mode)"
-            title="Tool response with formatted data (dark mode)"
-        />
-    </Frame>
-
-    **What you'll see:**
-    - **Tool icons** indicating which service provided the data
-    - **Formatted data** in tables, lists, or cards for easy reading
-    - **Action buttons** for quick follow-up actions
-    - **Source links** to view original data in the external tool
-    - **Timestamps** showing when data was last updated
+  <Step title="Review what comes back">
+    Responses pull real data from the tool involved: a calendar event, an email thread, a GitHub PR. Not a paraphrase.
 
     <Check>
-    Dume provides real-time data, so you're always seeing the most current information from your connected tools.
+    If a tool doesn't have the data yet (nothing scheduled, no matching emails), Dume says so rather than inventing something.
     </Check>
   </Step>
 
-  <Step title="Take Action Across Tools">
-    Go beyond just viewing data - perform actions and create content using your connected integrations.
+  <Step title="Take action, not just look">
+    Ask Dume to create or change things, not just report on them.
 
-    <Frame>
-        <img
-            className="block dark:hidden"
-            src="/images/light/chat-interfafce/chat-multi-step.png"
-            alt="Example of creating calendar event through chat interface with confirmation"
-            title="Taking action across connected tools"
-        />
-        <img
-            className="hidden dark:block"
-            src="/images/dark/chat-interface/chat-multi-step.png"
-            alt="Example of creating calendar event through chat interface with confirmation (dark mode)"
-            title="Taking action across connected tools (dark mode)"
-        />
-    </Frame>
-
-    **Action examples:**
     ```
-    "Schedule a meeting with Sarah next Tuesday at 2 PM"
-    "Create a GitHub issue for the bug I just described"
-    "Send a Slack message to the dev team about the deployment"
-    "Add a task to Todoist: Review quarterly reports"
+    Schedule a 30-minute call with Sarah tomorrow at 2pm
+    Create a GitHub issue for the bug we just discussed
+    Post a summary of today's standup to Slack
     ```
 
     <Warning>
-    Actions that modify or create data require confirmation. Always review the details before confirming changes.
+    Anything that modifies data, like sending, creating, or deleting, asks for confirmation first. Review before you approve.
     </Warning>
   </Step>
 
-  <Step title="Chain Multiple Tool Operations">
-    Combine data from multiple tools in a single conversation.
-
-    <Frame>
-        <img
-            className="block dark:hidden"
-            src="/images/light/chat-interfafce/chat-multi-step.png"
-            alt="Chat conversation showing workflow combining calendar, email, and task management tools"
-            title="Multi-tool workflow example"
-        />
-        <img
-            className="hidden dark:block"
-            src="/images/dark/chat-interface/chat-multi-step.png"
-            alt="Chat conversation showing workflow combining calendar, email, and task management tools (dark mode)"
-            title="Multi-tool workflow example (dark mode)"
-        />
-    </Frame>
-
-    **Multiple Tool examples:**
+  <Step title="Chain multiple tools in one request">
     ```
-    "Check for all my google calendar events for today, then send an email to attendees stating I won't be able to join."
-    
-    "Find all GitHub issues assigned to me, create a Todoist task for each one, and block time on my calendar"
-    
-    "Summarize today's Slack messages, add important items to my notes, and schedule follow-ups"
+    Check today's calendar events, then email the attendees of any meeting after 4pm to say I'll be 10 minutes late.
+
+    Find GitHub issues assigned to me and summarize them in a Slack message to the team.
     ```
-
-    <Check>
-    Dume can execute multiple tools step by step or at once that would normally require switching between multiple applications and copying data manually.
-    </Check>
-  </Step>
-
-  <Step title="Run Workflows or Target Tools with @">
-    Type **@** in the input to open the tool & workflow picker. Keep typing to filter.  
-    - Select a tool to scope your next command (only that integration is used)  
-    - Select a saved workflow to launch it directly  
-    - Dume will prompt for any missing required fields before execution
-
-    <Frame>
-        <img
-            className="block dark:hidden"
-            src="/images/light/chat-interfafce/chat-workflow-run.png"
-            alt="Chat showing @ picker and a workflow being executed across calendar, email, and tasks"
-            title="Selecting a tool or workflow with @"
-        />
-        <img
-            className="hidden dark:block"
-            src="/images/dark/chat-interface/chat-workflow-run.png"
-            alt="Chat showing @ picker and a workflow being executed across calendar, email, and tasks (dark mode)"
-            title="Selecting a tool or workflow with @ (dark mode)"
-        />
-    </Frame>
-
-    **Examples:**
-    ```
-    "@GitHub create an issue: Login fails on Safari"
-
-    "@Calendar schedule 30m with Sarah tomorrow 2pm"
-    
-    "Run @Daily Digest"
-    
-    "@Company Research run company research on Dume.ai"
-    ```
-
-    <Check>
-      Workflows run once all required inputs are confirmed.
-    </Check>
   </Step>
 </Steps>
 
-## Practical Examples by Tool Category
+## Staying in context
+
+Dume keeps track of what you just asked, so follow-ups don't need to repeat context:
+
+```
+You: Show me my calendar for tomorrow
+Dume: [lists tomorrow's events]
+
+You: Move the 2pm to 3pm
+Dume: Moved "Design Review" from 2:00 PM to 3:00 PM tomorrow.
+
+You: Add John to that one
+Dume: Added john@company.com to Design Review at 3:00 PM.
+```
+
+## Writing a better prompt
 
 <Tabs>
-<Tab title="Productivity Tools">
-  **Calendar Integration (Google Calendar, Outlook)**
+<Tab title="Be specific">
+  Instead of "Check my schedule," try "What meetings do I have tomorrow afternoon?"
+
+  Instead of "Find files," try "Find slide decks about the Q3 launch from last month."
+</Tab>
+<Tab title="Reference what came before">
   ```
-  User: "What meetings do I have this week?"
-  Dume: "Here are your upcoming meetings this week..."
-
-  User: "Move my 3 PM meeting tomorrow to 4 PM"
-  Dume: "I'll move your Product Review meeting from 3:00 PM to 4:00 PM tomorrow. Shall I send updates to attendees?"
-
-  User: "Block 2 hours Friday afternoon for project work"
-  Dume: "I've created a 'Project Work' block from 2:00-4:00 PM on Friday. Marked as busy."
-  ```
-
-  **Task Management (Todoist, Trello, Asana)**
-  ```
-  User: "What tasks are overdue?"
-  Dume: "You have 3 overdue tasks: [list with details and due dates]"
-
-  User: "Create a task to review the budget report, due next Monday"
-  Dume: "Created task 'Review budget report' due Monday, March 25th. Added to your Work project."
-
-  User: "Show me all tasks related to the website project"
-  Dume: "Here are 8 tasks for the website project: [formatted list with status and assignees]"
+  You: Show me the budget spreadsheet
+  Dume: [displays it]
+  You: Share this with finance@company.com
   ```
 </Tab>
-
-<Tab title="Communication Tools">
-  **Slack Integration**
+<Tab title="Combine steps">
   ```
-  User: "Any important messages today?"
-  Dume: "You have 12 unread messages. 3 are marked as urgent: [summary of urgent messages]"
+  Check my calendar for next week and flag anything that overlaps with the Acme deal timeline.
 
-  User: "Send a message to the marketing team about tomorrow's launch"
-  Dume: "I'll send a message to #marketing. What would you like to say about the launch?"
-
-  User: "Find all messages about the budget meeting"
-  Dume: "Found 15 messages about the budget meeting across 3 channels: [organized summary]"
-  ```
-
-  **Email (Gmail, Outlook)**
-  ```
-  User: "Draft an email to the client about project delays"
-  Dume: "I'll help you draft that email. Based on your previous communications with this client, here's a professional draft..."
-
-  User: "Find emails from Sarah about the contract"
-  Dume: "Found 8 emails from Sarah about the contract. Most recent: [preview and summary]"
-  ```
-</Tab>
-
-<Tab title="Development Tools">
-  **GitHub Integration**
-  ```
-  User: "What pull requests need my review?"
-  Dume: "You have 4 PRs awaiting review: [list with titles, authors, and summaries]"
-
-  User: "Create an issue for the login bug we discussed"
-  Dume: "I'll create a GitHub issue. Based on our conversation, here's the draft: [bug report with details]"
-
-  User: "Show me my commits from last week"
-  Dume: "Here are your 23 commits from last week, organized by repository: [formatted commit history]"
-  ```
-
-  **Jira Integration**
-  ```
-  User: "What tickets are assigned to me?"
-  Dume: "You have 7 assigned tickets: 3 in progress, 2 in review, 2 in backlog: [detailed list]"
-
-  User: "Update the API bug ticket - it's been fixed"
-  Dume: "I'll update ticket API-123. Shall I move it to 'Done' status and add a resolution comment?"
-  ```
-</Tab>
-
-<Tab title="File Management">
-  **Google Drive / Dropbox**
-  ```
-  User: "Find the quarterly report document"
-  Dume: "Found 3 documents matching 'quarterly report': [list with preview links and modification dates]"
-
-  User: "Create a folder for the new project"
-  Dume: "Created folder 'Project Phoenix' in your Drive. Would you like me to share it with team members?"
-
-  User: "What files did I modify today?"
-  Dume: "You modified 8 files today: [chronological list with file types and locations]"
+  Find all emails about Project X and summarize them in one message.
   ```
 </Tab>
 </Tabs>
 
+## When Dume asks you something back
 
-Dume maintains context throughout your conversation, allowing for natural follow-up questions:
+Dume will ask for clarification rather than guess, especially before anything irreversible:
 
-```
-User: "Show me my calendar for tomorrow"
-Dume: [displays tomorrow's calendar]
+- **Multiple matches**: "Which John do you mean, John Smith or John Doe?"
+- **Ambiguous timing**: "This Thursday or next Thursday?"
+- **Confirming a destructive action**: "This will delete 15 files. Proceed?"
 
-User: "Move the 2 PM meeting to 3 PM"
-Dume: "Moving your Design Review meeting from 2:00 PM to 3:00 PM tomorrow."
+Answer with the specific detail it's asking for, and it'll continue where it left off.
 
-User: "Also invite John to that meeting"
-Dume: "Added john@company.com to the Design Review meeting at 3:00 PM tomorrow."
-```
-
-## Best Practices for Effective Communication
-
-### Crafting Clear Queries
-
-<Tabs>
-<Tab title="Be Specific">
-  **Instead of:** "Check my schedule"
-  **Try:** "What meetings do I have tomorrow afternoon?"
-
-  **Instead of:** "Find files"
-  **Try:** "Find PowerPoint files about the marketing campaign from last month"
-
-  **Instead of:** "Send a message"
-  **Try:** "Send a Slack message to the dev team about the deployment delay"
-</Tab>
-
-<Tab title="Use Context">
-  **Leverage conversation history:**
-  ```
-  User: "Show me the budget spreadsheet"
-  Dume: [displays spreadsheet]
-  User: "Share this with the finance team"
-  ```
-
-  **Reference previous tools:**
-  ```
-  User: "Create a task for each action item from that meeting"
-  Dume: "Based on the calendar meeting we just reviewed, I'll create tasks for..."
-  ```
-</Tab>
-
-<Tab title="Combine Operations">
-  **Single query for multiple actions:**
-  ```
-  "Check my calendar for next week and create Todoist tasks for meeting prep"
-  
-  "Find all emails about Project X and create a summary document in Drive"
-  
-  "Review today's GitHub activity and update the team in Slack"
-  ```
-</Tab>
-</Tabs>
-
-### Understanding Dume's Responses
+## Troubleshooting
 
 <AccordionGroup>
-<Accordion title="When Dume asks for clarification">
-  **Dume might ask for more details when:**
-  - Multiple options exist: "Which John do you mean - John Smith or John Doe?"
-  - Ambiguous timeframes: "Did you mean this Thursday or next Thursday?"
-  - Action confirmation needed: "This will delete 15 files. Are you sure?"
-  
-  **How to respond:**
-  - Provide the specific detail requested
-  - Use numbers or exact names when possible
-  - Confirm destructive actions explicitly
+<Accordion title="A connected tool isn't responding">
+  Rephrase and try again, then check the integration's status on the [Integrations](/integrations/overview) page. It may need to be reconnected.
 </Accordion>
 
-<Accordion title="Reading tool indicators">
-  **Visual cues in responses:**
-  - 🟢 **Green checkmark**: Action completed successfully
-  - 🔄 **Loading spinner**: Tool is processing your request
-  - ⚠️ **Warning triangle**: Action needs confirmation or has risks
-  - 🔗 **Link icon**: Click to view in original tool
-  - 🕒 **Clock icon**: Shows when data was last updated
+<Accordion title="Dume misunderstood the request">
+  Be more specific about what you want, or name the tool explicitly: "In Slack, find messages about the outage."
 </Accordion>
 
-<Accordion title="Error handling and recovery">
-  **When something goes wrong:**
-  - **Connection errors**: "I can't connect to Slack right now. Let me try again."
-  - **Permission issues**: "I need additional permissions to access your Drive files."
-  - **Rate limits**: "GitHub API limit reached. I'll retry in a few minutes."
+<Accordion title="An action didn't go through">
+  Check that the integration has write access, not just read. Some connections default to read-only until you grant more.
 </Accordion>
 </AccordionGroup>
-
-## Troubleshooting Common Issues
-
-<AccordionGroup>
-<Accordion title="Tool not responding or data seems outdated">
-  **Possible causes and solutions:**
-  
-  - **Connection timeout** - Try rephrasing your query or wait a moment
-  - **Rate limits** - Some tools limit API calls; wait and retry
-  - **Permissions changed** - Check if tool permissions were modified
-  - **Service outage** - Verify the external service is operational
-  
-  **Quick fixes:**
-  1. Try a simpler query to test basic connectivity
-  2. Check your integrations page for connection status.
-  3. Disconnect and reconnect the problematic tool
-</Accordion>
-
-<Accordion title="Dume doesn't understand my query">
-  **Common issues:**
-  - **Ambiguous language** - Be more specific about what you want
-  - **Unsupported action** - Check if the tool supports the requested action
-  - **Missing context** - Provide more details about the task
-  
-  **Improvement strategies:**
-  - Start with simpler queries and build complexity
-  - Use tool names explicitly: "In Slack, find messages about..."
-  - Provide examples: "Create a task like the ones I made yesterday"
-  - Ask "What can you do with [tool name]?" for capabilities
-</Accordion>
-
-<Accordion title="Actions aren't working as expected">
-  **Diagnostic steps:**
-  
-  1. **Verify permissions**: Ensure Dume has write access to the tool
-  2. **Check tool status**: Confirm the external service is working
-  3. **Review action details**: Make sure the action is possible in the tool
-  4. **Test with simple actions**: Try basic operations first
-  
-  **Example troubleshooting:**
-  ```
-  User: "Create a calendar event isn't working"
-  Dume: "Let me check your calendar permissions. I see I only have read access. You'll need to re-authorize with write permissions."
-  ```
-</Accordion>
-
-<Accordion title="Performance is slow or timing out">
-  **Optimization tips:**
-  
-  - **Break down complex queries** into smaller, specific requests
-  - **Limit data ranges** - instead of "all emails" try "emails from this week"
-  - **Use filters** - be specific about what data you need
-  - **Check connection** - ensure stable internet connectivity
-  
-  **Performance-friendly queries:**
-  ```
-  ✅ "Show me meetings for tomorrow"
-  ❌ "Show me all meetings ever"
-  
-  ✅ "Find emails from Sarah this month"
-  ❌ "Find all emails from everyone"
-  ```
-</Accordion>
-</AccordionGroup>
-
-<Check>
-You're now ready to harness the full power of Dume's connected chat interface!
-</Check>
-
-## Next Steps: Mastering Workflows
-  Set up automated workflows that connect multiple tools and trigger based on events or schedules.
-
-

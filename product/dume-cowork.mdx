@@ -1,213 +1,83 @@
 ---
-title: "Dume CoWork"
-sidebarTitle: "Dume CoWork"
-description: "Beginner-friendly guide to Dume CoWork, the desktop AI agent controlled from WhatsApp. Learn setup, capabilities, workflows, security, and best practices."
-keywords: ['Dume CoWork', 'desktop AI agent', 'WhatsApp AI assistant', 'AI workflow automation', 'local AI workspace', 'file automation tool']
-"og:image": "https://www.dume.ai/api/media/file/dume_cowork_cover_docs.png"
-"twitter:image": "/api/media/file/dume_cowork_cover_docs.png"
+title: "Dume Cowork"
+sidebarTitle: "Dume Cowork"
+description: "Dume Cowork is the desktop version of Dume: local file access, browser automation, a Skill Library, on-device routines, and WhatsApp control."
+keywords: ['Dume Cowork', 'desktop AI assistant', 'WhatsApp AI assistant', 'Electron app']
+"og:title": "Dume Cowork - Desktop AI Assistant"
+"og:description": "The desktop app for Dume: the same assistant as the web app, plus local file access, browser automation, a Skill Library, and on-device routines."
 ---
 
-# Dume CoWork: Desktop AI Agent Guide for Beginners
- 
-Your AI desktop coworker that executes tasks, organizes files, and builds reports directly from your WhatsApp chat.
+Dume Cowork is the desktop app version of Dume, for macOS and Windows. It's the same assistant you get on the web, plus things that only make sense running natively on your machine: reading and writing your local files, automating your actual browser, a local Skill Library, routines that run on your own scheduler, and control over WhatsApp when you're away from your desk.
 
-![Dume for Chrome Overview](https://www.dume.ai/api/media/file/dume_cowork_cover_docs.png)
+{/* TODO: Phase 3 screenshot — Cowork desktop Dashboard */}
 
-Dume CoWork is an AI coworker that runs on your desktop and can be controlled from WhatsApp. You assign tasks in plain English, Dume plans the work, asks for approval on major actions, and delivers outputs like reports, sheets, summaries, and organized files.
-
-This page is designed for first-time users and teams who want a simple, practical setup.
-
-
-<Info>
-Dume CoWork works best when you give clear goals, target folders, and output format instructions (for example: "save as CSV" or "use this report template").
-</Info>
-
-## Why Teams Use Dume CoWork
-
-Dume CoWork helps teams:
-
-- Automate repetitive file and reporting work
-- Create spreadsheets and summaries from messy data
-- Run multi-step desktop tasks with human approval
-- Stay in control while reducing manual busywork
-- Trigger and monitor work from WhatsApp when away from desk
+## What running locally actually gets you
 
 <CardGroup cols={2}>
-  <Card title="Runs on Your Desktop" icon="desktop">
-    Your files and actions stay local to your machine unless you explicitly connect external services.
+  <Card title="Local file access" icon="folder-open">
+    Point Dume at a folder on your machine and it can read, organize, and write files there directly, not just talk about them.
   </Card>
-  <Card title="WhatsApp Control" icon="comments">
-    Send tasks from your phone and return to completed work on your computer.
+  <Card title="Browser automation" icon="window-maximize">
+    The agent-browser skill drives an actual browser session (navigate, click, fill forms, scrape) and can optionally reuse your existing Chrome profile, so you don't lose your logins.
   </Card>
-  <Card title="Approval Before Big Actions" icon="shield-check">
-    Dume proposes a plan first for major actions like move, rename, write, or multi-step execution.
+  <Card title="Skill Library" icon="puzzle-piece">
+    Manage bundled skills and build your own locally; not available on web. See [Skills](/skills/overview).
   </Card>
-  <Card title="Beginner-Friendly Workflow" icon="lightbulb">
-    No coding or prompt engineering required. Just describe the task in plain language.
+  <Card title="Local routines" icon="hard-drive">
+    Routines that run on your machine's own scheduler, independent of Dume's servers. See [Local vs. cloud routines](/routines/local-vs-cloud).
   </Card>
 </CardGroup>
 
-## Usecases
-
-<Tabs>
-  <Tab title="Organize Files" icon="folder-tree">
-    Clean and sort folders by type, date, and naming pattern.
-    
-    <CodeGroup>
-      ```text
-      Refactor the workspace directory by grouping files into logically organized folders based on their content type and contextual purpose.
-      ```
-    </CodeGroup>
-
-    <Frame>
-      <img src="https://www.dume.ai/api/media/file/image%208.png" width="500" />
-    </Frame>
-
-    **Typical output:** sorted folders + rename suggestions + review list.
-  </Tab>
-  <Tab title="Build Spreadsheets" icon="table">
-    Extract structured fields from receipts, invoices, and mixed documents.
-    
-    <CodeGroup>
-      ```text
-      Extract data from this folder of receipts and invoices. Create a spreadsheet and save it as expense_report_q1.csv
-      ```
-    </CodeGroup>
-
-    <Frame>
-       <img src="https://www.dume.ai/api/media/file/build_spreadsheets.png" width="500" />
-    </Frame>
-
-    **Typical output:** clean CSV/XLSX report ready to share.
-  </Tab>
-  <Tab title="Prepare Notes" icon="file-lines">
-    Combine updates from tools and notes into polished documents.
-    
-    <CodeGroup>
-      ```text
-      Prepare structured notes from this information, organizing key points into clear sections like agenda, discussion, and next steps.
-      ```
-    </CodeGroup>
-
-    <Frame>
-       <img src="https://www.dume.ai/api/media/file/prepare_notes.png" width="500" />
-    </Frame>
-
-    **Typical output:** leadership-ready report with blockers and highlights.
-  </Tab>
-  <Tab title="Extract Insights" icon="brain">
-    Convert raw meeting notes into themes, decisions, and open questions.
-    
-    <CodeGroup>
-      ```text
-      Analyze my meeting notes from this month regarding the 'Project Phoenix' redesign. Identify Themes, Decisions, and Unresolved questions visually.
-      ```
-    </CodeGroup>
-
-    <Frame>
-       <img src="https://www.dume.ai/api/media/file/extraact_insights.png" width="500" />
-    </Frame>
-
-    **Typical output:** action-oriented summary for faster follow-up.
-  </Tab>
-</Tabs>
-
-## Quick Start in 3 Steps
+## Setup
 
 <Steps>
-  <Step title="Tell Dume what you need">
-    Describe the task in plain language and point Dume to a working folder or source.
-    
-    Example: "Analyze receipts in `/Documents/Q1 Receipts` and build an expense sheet."
+  <Step title="Install and open Cowork">
+    First launch walks you through a short onboarding: an intro, then linking [WhatsApp](/interfaces/whatsapp), then a settings step before you land on the dashboard.
   </Step>
-  <Step title="Review the execution plan">
-    Dume breaks the task into steps and shows what it will do before major actions.
-    
-    You can approve, refine, or cancel before it proceeds.
+  <Step title="Grant system permissions">
+    macOS and Windows both ask for explicit permission before Dume can use your microphone (for voice mode and dictation) or, if you use browser automation, access accessibility features. You can review or change these later in [Desktop app settings](/account-settings/desktop-app).
   </Step>
-  <Step title="Get completed output">
-    Dume executes and returns files, reports, or summaries in the requested format.
-    
-    You can ask for edits in the same thread until it matches your needs.
+  <Step title="Connect your tools">
+    Same as the web app: see [Connect your first tool](/getting-started/connect-your-first-tool).
+  </Step>
+  <Step title="Explore the Skill Library">
+    Browse the [bundled skills](/skills/bundled-skills) or add your own; see [Building a custom skill](/skills/custom-skills).
   </Step>
 </Steps>
 
+See [Web app vs. Cowork desktop](/product/web-vs-cowork) for the full comparison, including what the web app has that Cowork doesn't (file attachments in chat).
 
-## Beginner Prompt Templates
+## Example local tasks
 
-| Use Case | Prompt to Use |
-| :--- | :--- |
-| Refactor workspace | "Refactor the workspace directory by grouping files into logically organized folders based on their content type and contextual purpose." |
-| Build expense sheet | "Extract data from this folder of receipts and invoices. Create a spreadsheet and save it as expense_report_q1.csv" |
-| Prepare Notes | "Prepare structured notes from this information, organizing key points into clear sections like agenda, discussion, and next steps." |
-| Extract Insights | "Analyze my meeting notes from this month regarding the 'Project Phoenix' redesign. Identify Themes, Decisions, and Unresolved questions visually." |
-| Competitor snapshot | "Research competitor updates this week and generate a simple comparison table with key changes." |
+```
+Refactor the files in my Downloads folder into dated subfolders
+Extract the line items from these receipts into a spreadsheet
+Go to our internal dashboard and pull this week's numbers into a summary
+```
 
-## WhatsApp-Controlled Workflow
+The last one is a browser-automation example: Dume opens a real browser tab, navigates, and reads what's on the page, the same as if you'd done it yourself.
 
-<Steps>
-  <Step title="Send a task from WhatsApp">
-    Describe what you need in plain English directly in your WhatsApp thread with Dume.
-  </Step>
-  <Step title="Dume starts execution">
-    The AI agent begins work on your connected desktop environment immediately.
-  </Step>
-  <Step title="Review the results">
-    Monitor progress and review the completed outputs once you are back at your computer.
-  </Step>
-</Steps>
+## Controlling Cowork from WhatsApp
+
+Once WhatsApp is linked, you can send a task from your phone and Dume works on it using your desktop environment. Review the result once you're back at your computer, or ask for the summary right there in WhatsApp.
 
 <Note>
-Use WhatsApp requests for high-level tasks, and include folder paths or output format when you want more precise results.
+Use WhatsApp for describing what you want; if a task needs a specific file path or output format, say so explicitly rather than leaving it to guesswork.
 </Note>
 
+## FAQ
 
-
-## Security and Control
-
-<CardGroup cols={2}>
-  <Card title="Local-First Execution" icon="lock">
-    Dume runs on your machine and works on folders you explicitly assign.
-  </Card>
-  <Card title="Approval Gates" icon="circle-check">
-    For major actions, Dume presents a plan and asks before proceeding.
-  </Card>
-  <Card title="Action Transparency" icon="list-check">
-    You can inspect intended steps, redirect, or cancel before completion.
-  </Card>
-  <Card title="Predictable Outputs" icon="file-export">
-    Specify output type and destination to keep workflows reliable.
-  </Card>
-</CardGroup>
-
-## Best Practices for Better Results
-
-- Start with one concrete task and one folder scope
-- Always specify desired output format (`.csv`, `.docx`, markdown)
-- Ask Dume to show the plan before execution for sensitive tasks
-- Save reusable prompt templates for recurring work
-- Review first outputs and tune wording before scaling to larger batches
-
----
-
-<Note>
-**Pro Tip:** The best beginner prompt format is: **goal + folder + output format + approval rule**.
-</Note>
-
-## Frequently Asked Questions
- 
 <AccordionGroup>
-  <Accordion title="Do I need technical skills?">
-    No. Dume CoWork is designed for plain-language task instructions. You just describe what you want in plain English.
+  <Accordion title="Do I need to keep Cowork open for routines to run?">
+    Local routines need Cowork running (they use your machine's own scheduler and catch up after sleep). Cloud routines run on Dume's servers regardless, whether Cowork is open or not. See [Local vs. cloud routines](/routines/local-vs-cloud).
   </Accordion>
-  <Accordion title="What kind of work is best for CoWork?">
-    File organization, spreadsheet generation, reporting, web-assisted research, and complex note analysis that requires local file access.
+  <Accordion title="Does closing the window stop Dume?">
+    No. Cowork keeps running in your system tray so background sessions and local routines keep going. Quit from the tray icon to actually exit.
   </Accordion>
-  <Accordion title="How is this different from a regular chat AI?">
-    CoWork is task-execution focused: it doesn't just talk; it plans, acts on approved steps, and delivers concrete outputs like files and spreadsheets.
+  <Accordion title="Is this different from a regular chat AI?">
+    Cowork can act on your actual filesystem and browser, not just generate text about them, on top of the Skill Library and local routines the web app doesn't have.
+  </Accordion>
+  <Accordion title="Does Dume see my whole computer?">
+    No. Dume works within the folders and browser sessions you point it at for a given task; it doesn't have standing access to your entire filesystem.
   </Accordion>
 </AccordionGroup>
- 
-<Tip>
-**Pro Tip:** For the best results, always specify your desired output format (like `.csv`, `.docx`, or Markdown) in your initial prompt.
-</Tip>

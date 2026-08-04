@@ -1,0 +1,35 @@
+---
+title: "Credit Cost Guide"
+sidebarTitle: "Credit Costs"
+description: "Approximately how many credits common tasks cost, by model, so you can budget your monthly allowance."
+icon: "calculator"
+keywords: ['Dume credits', 'credit cost', 'AI model pricing', 'how many credits']
+---
+
+Every response costs credits based on two things: which model handled it, and how much it actually had to read and write. There's no flat per-message fee. A one-line answer on a light model can cost a single credit; a long research task on a premium model can cost dozens.
+
+<Note>
+The numbers below are illustrative estimates based on typical token counts for each task, not measured averages. Your actual cost depends on your conversation history, how much context is loaded (connected integrations, prior messages, your profile), and how the model responds. Costs always round up to the nearest whole credit, so even a tiny request costs at least 1 credit once anything is generated.
+</Note>
+
+## Approximate cost by task
+
+Costs shown for four models spanning the range: **Ternary Bonsai 27B** (always free), **GPT 5 Nano** (cheapest paid model), **Kimi K2.6** (the default for paid plans), and **GPT 5.6 Sol** (one of the most expensive).
+
+| Task | Ternary Bonsai 27B | GPT 5 Nano | Kimi K2.6 | GPT 5.6 Sol |
+|---|---|---|---|---|
+| Quick question ("What's on my calendar today?") | Free | ~1 credit | ~1 credit | ~5 credits |
+| Draft and send a short email | Free | ~1 credit | ~3 credits | ~11 credits |
+| Summarize 50 unread emails | Free | ~1 credit | ~8 credits | ~34 credits |
+| Research brief on a company or person | Free | ~1 credit | ~13 credits | ~60 credits |
+| Full routine (e.g. a morning briefing: gather calendar, email, news, then write and send) | Free | ~1 credit | ~18 credits | ~81 credits |
+
+At [Go plan](/account-settings/billing-and-plans) allowance (2,500 credits/month), that's room for hundreds of quick questions on Nano, or dozens of full routines on a premium model, in the same month.
+
+## Why the gap is so large
+
+A premium model like GPT 5.6 Sol costs roughly 100x more per token than GPT 5 Nano. That difference is invisible in response quality for a simple question, but it compounds fast on longer tasks with a lot of input (a 50-email summary reads far more tokens than it writes). See [Choosing a model](/features/multiple_llm) for the full model list and when a cheaper model is the better call.
+
+## Phone calls
+
+Calls aren't purely per-minute. Every call is billed two ways at once: a fixed per-minute rate, plus an AI usage charge on top based on how much is actually said, the same usage-based mechanism as everything above. A quiet, short call costs closer to just the per-minute rate; a long, talkative one costs noticeably more. See [Phone Calls](/interfaces/phone) for the per-minute rates.

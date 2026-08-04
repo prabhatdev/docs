@@ -2,191 +2,43 @@
 title: "MCP Server Setup"
 sidebarTitle: "MCP Setup"
 icon: "gear"
-keywords: ['mcp setup', 'server configuration', 'custom integrations', 'executive intelligence', 'business automation', 'strategic tools', 'competitive intelligence', 'advanced setup']
-description: "MCP servers let Dume connect with custom business tools and proprietary systems beyond standard integrations — ideal for executives needing competitive intelligence, market insights, or advanced automation unavailable elsewhere."
-"og:title": "MCP Server Setup"
-"og:description": "Set up MCP servers to extend Dume with specialized business tools and strategic intelligence systems for executive automation."
+keywords: ['mcp setup', 'server configuration', 'custom integrations', 'model context protocol']
+description: "Connect a Model Context Protocol server to Dume by pasting its URL, no catalog or marketplace required."
+"og:title": "MCP Server Setup - Dume.ai"
+"og:description": "Connect any MCP server to Dume by URL."
 "twitter:card": "summary"
-"twitter:title": "MCP Server Setup - Custom Integrations"
-"twitter:description": "Connect specialized business tools and strategic intelligence systems through MCP server setup."
+"twitter:title": "MCP Server Setup - Dume.ai"
+"twitter:description": "Set up a custom MCP server connection in Dume."
 ---
 
-**When to Use MCP:** When you need to integrate tools outside Dume’s standard library, such as internal analytics or strategic planning platforms.
+<Steps>
+  <Step title="Open MCP Servers">
+    Go to **MCP Servers** in the sidebar.
 
-## Executive MCP Server Marketplace
+    {/* TODO: Phase 3 screenshot — MCP Servers page, empty state */}
+  </Step>
+  <Step title="Enter the server URL">
+    Paste the server's URL into **Connect New Server** (for example, `http://localhost:8080` or `https://mcp.example.com`) and click **Add Server**.
+
+    {/* TODO: Phase 3 screenshot — Connect New Server form filled in */}
+  </Step>
+  <Step title="Authorize if the server requires it">
+    If the server needs authentication, Dume starts an OAuth flow for it automatically. Servers that don't require auth connect right away.
+  </Step>
+  <Step title="Confirm it's connected">
+    The server shows as **Connected** in your list. If something's wrong, it shows as **Needs Auth**, **Error**, or **Disconnected** instead, with the reason.
+
+    {/* TODO: Phase 3 screenshot — a connected server in the list */}
+  </Step>
+  <Step title="Use it in chat">
+    Once connected, Dume can call the server's tools automatically when a request needs them, alongside your native integrations.
+  </Step>
+</Steps>
 
 <Note>
-    **Recommended:** Use [Composio MCP Marketplace](https://mcp.composio.dev/dashboard) for pre-built executive integrations and business intelligence tools.
+There's no server catalog inside Dume. You provide the URL for a server you already have, whether that's self-hosted, from your team, or from a public MCP directory you found elsewhere.
 </Note>
 
-<CardGroup cols={2}>
-    <Card title="Strategic Planning Tools" icon="sparkles" href="https://mcp.composio.dev/notion">
-        Connect specialized strategic planning platforms and competitive intelligence tools for executive decision-making and market analysis.
-    </Card>
-    <Card title="Business Intelligence Systems" icon="sparkles" href="https://mcp.composio.dev/figma">
-        Access proprietary business analytics, market research platforms, and competitive analysis tools for strategic advantage.
-    </Card>
-    <Card title="Executive Data Sources" icon="sparkles" href="https://mcp.composio.dev/supabase/681b0022-3a6b-441f-af2c-6e4797e2b29f">
-        Integrate custom databases, strategic KPI systems, and executive reporting platforms for comprehensive business intelligence.
-    </Card>
-    <Card title="Communication Intelligence" icon="sparkles" href="https://mcp.composio.dev/zoom">
-        Connect advanced communication platforms, stakeholder management tools, and strategic collaboration systems.
-    </Card>
-</CardGroup>
+## Managing a connection
 
-## Quick MCP Server Setup for Executives
-
-<Steps>
-    <Step title="Access MCP Integration">
-        Navigate to MCP servers section in your Dume.ai sidebar.
-    </Step>
-    <Step title="Add Executive Integration">
-        Click "Add Server" to connect specialized business intelligence tools.
-
-        <Frame>
-    <img
-        className="block dark:hidden"
-        src="/images/light/integration/mcp/add_first_server.png"
-        alt="MCP Server Setup Interface"
-        title="MCP Server Setup"
-    />
-    <img
-        className="hidden dark:block"
-        src="/images/dark/integration/mcp/add_first_server.png"
-        alt="MCP Server Setup Interface"
-        title="MCP Server Setup"
-    />
-</Frame>
-    </Step>
-    <Step title="Choose Integration Protocol">
-        Select SSE or HTTP based. MCP servers starring with *sse://* are SSE and the ones starting with *https://* are HTTP streamable mcp server.
-
-       
-         <Frame>
-    <img
-        className="block dark:hidden"
-        src="/images/light/integration/mcp/add_mcp_type.png"
-        alt="MCP choose protocol"
-        title="MCP choose server type"
-    />
-    <img
-        className="hidden dark:block"
-        src="/images/dark/integration/mcp/add_mcp_type.png"
-        alt="MCP choose protocol"
-        title="MCP choose server type"
-    />
-</Frame>
-    </Step>
-    <Step title="Configure Business Intelligence">
-        Enter MCP server details: <b>server name</b>, <b>URL</b>, and <b>description</b>. Description helps AI understand what the MCP server does and helps AI select this server when required.
-
-        <Frame>
-    <img
-        className="block dark:hidden"
-        src="/images/light/integration/mcp/add_mcp.png"
-        alt="MCP configuration"
-        title="Configure MCP"
-    />
-    <img
-        className="hidden dark:block"
-        src="/images/dark/integration/mcp/add_mcp.png"
-        alt="MCP configuration"
-        title="Configure MCP"
-    />
-</Frame>
-    </Step>
-    <Step title="Add MCP Server">
-        Click Add Server and wait for [Dume.ai](http://Dume.ai) to connect to the server. Once added, Dume ai will call the MCP server automatically whenever required.
-    </Step>
-    <Step title="Test MCP server">
-        Once connected, you can test the MCP servers and it should show the MCP server as connected.
-
-         <Frame>
-    <img
-        className="block dark:hidden"
-        src="/images/light/integration/mcp/you_servers_test.png"
-        alt=" Test MCP server"
-        title="Test MCP"
-    />
-    <img
-        className="hidden dark:block"
-        src="/images/dark/integration/mcp/your_servers_test.png"
-        alt=" Test MCP server"
-        title="Test MCP"
-    />
-</Frame>
-        
-        You can also click on view view tools to see the supported tools the MCP server supports.
-
-        <Frame>
-    <img
-        className="block dark:hidden"
-        src="/images/light/integration/mcp/your_server_tools.png"
-        alt="Tools MCP server option"
-        title="View MCP tools option"
-    />
-    <img
-        className="hidden dark:block"
-        src="/images/dark/integration/mcp/your_server_tools.png"
-        alt="Tools MCP server option"
-        title="View MCP tools option"
-    />
-</Frame>
-    </Step>
-    <Step title="Check out the tools the MCP server supports">
-        Clicking on view tools will show you the dialog with the list of tools supported by the MCP server. Go through the tools and it'll help you understand the strengths and limitations of the MCP server.
-
-         <Frame>
-    <img
-        className="block dark:hidden"
-        src="/images/light/integration/mcp/available_tools.png"
-        alt="Tools MCP server"
-        title="View MCP tools"
-    />
-    <img
-        className="hidden dark:block"
-        src="/images/dark/integration/mcp/available_tools.png"
-        alt="Tools MCP server"
-        title="View MCP tools"
-    />
-</Frame>
-
-    </Step>
-    <Step title="Use the MCP server">
-    Type <b>@</b> to select the MCP server
-    <Frame>
-    <img
-        className="block dark:hidden"
-        src="/images/light/integration/mcp/select_mcp.png"
-        alt="Use MCP using @"
-        title="How to use MCP in chatbox using @"
-    />
-    <img
-        className="hidden dark:block"
-        src="/images/dark/integration/mcp/select_mcp.png"
-         alt="Use MCP using @"
-        title="How to use MCP in chatbox using @"
-    />
-</Frame>
-        
-    </Step>
-    <Step title="Response from MCP server">
-        Once connected, you can easily ask the MCP server for any request directly from chat.\
-        **Example**- Can you write a linkdIn post on how MCP servers with AI are great for crypto startups.
-
-        <Frame>
-    <img
-        className="block dark:hidden"
-        src="/images/light/integration/mcp/use_mcp.png"
-        alt="Use MCP"
-        title="How to use MCP in chatbox"
-    />
-    <img
-        className="hidden dark:block"
-        src="/images/dark/integration/mcp/use_mcp.png"
-         alt="Use MCP"
-        title="How to use MCP in chatbox"
-    />
-</Frame>
-    </Step>
-</Steps>
+Disable, re-authenticate, or remove a server from the same **MCP Servers** page at any time.

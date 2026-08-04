@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Dume.ai- AI Executive assistant",
+  "name": "Dume.ai - AI Executive Assistant",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
@@ -17,19 +17,19 @@
   "seo": {
     "indexing": "all",
     "metatags": {
-      "description": "Dume.ai is your AI Executive Assistant that simplifies your workday by integrating with your tools, automating workflows, and providing intelligent assistance for productivity.",
-      "keywords": "AI assistant, executive assistant, workflow automation, productivity tools, AI integration, task automation, business intelligence, smart assistant",
+      "description": "Dume.ai is your AI Executive Assistant that simplifies your workday by integrating with your tools, running recurring routines, and providing intelligent assistance for productivity.",
+      "keywords": "AI assistant, executive assistant, AI integration, routines, productivity tools, task automation, business intelligence, smart assistant",
       "author": "Dume.ai Team",
       "robots": "index, follow",
       "og:type": "website",
       "og:title": "Dume.ai - AI Executive Assistant to Simplify Your Workday",
-      "og:description": "Transform your productivity with Dume.ai, the AI Executive Assistant that connects your tools, automates workflows, and provides intelligent assistance.",
+      "og:description": "Transform your productivity with Dume.ai, the AI Executive Assistant that connects your tools, runs recurring routines, and provides intelligent assistance.",
       "og:image": "/images/default_meta_tag.png",
       "og:url": "https://docs.dume.ai",
       "og:site_name": "Dume.ai Documentation",
       "twitter:card": "summary_large_image",
       "twitter:title": "Dume.ai - AI Executive Assistant Documentation",
-      "twitter:description": "Learn how to use Dume.ai to automate workflows, integrate tools, and boost productivity with AI assistance.",
+      "twitter:description": "Learn how to use Dume.ai to connect your tools, automate routines, and boost productivity with AI assistance.",
       "twitter:image": "/images/default_meta_tag.png",
       "viewport": "width=device-width, initial-scale=1.0",
       "theme-color": "#16A34A",
@@ -40,15 +40,23 @@
   "redirects": [
     {
       "source": "/Github",
-      "destination": "/github"
+      "destination": "/integrations/github"
     },
     {
       "source": "/Calender",
-      "destination": "/calendar"
+      "destination": "/integrations/google-calendar"
     },
     {
       "source": "/calender",
-      "destination": "/calendar"
+      "destination": "/integrations/google-calendar"
+    },
+    {
+      "source": "/calendar",
+      "destination": "/integrations/google-calendar"
+    },
+    {
+      "source": "/integrations/calendar",
+      "destination": "/integrations/google-calendar"
     },
     {
       "source": "/deepresearch",
@@ -68,18 +76,106 @@
     },
     {
       "source": "/product/cowork-scheduled-tasks",
-      "destination": "/use-cases/cowork-scheduled-tasks"
+      "destination": "/routines/overview"
     },
     {
       "source": "/product/dume-cowork-scheduled-tasks",
-      "destination": "/use-cases/dume-cowork-scheduled-tasks"
+      "destination": "/routines/overview"
+    },
+    {
+      "source": "/use-cases/cowork-scheduled-tasks",
+      "destination": "/routines/overview"
+    },
+    {
+      "source": "/use-cases/dume-cowork-scheduled-tasks",
+      "destination": "/routines/overview"
+    },
+    {
+      "source": "/use-cases/task-automation",
+      "destination": "/routines/overview"
+    },
+    {
+      "source": "/use-cases/profile-and-data-settings",
+      "destination": "/account-settings/profile-and-security"
+    },
+    {
+      "source": "/workflows/:slug*",
+      "destination": "/"
+    },
+    {
+      "source": "/agents/:slug*",
+      "destination": "/"
+    },
+    {
+      "source": "/system-workflows/:slug*",
+      "destination": "/"
+    },
+    {
+      "source": "/workflow-examples/:slug*",
+      "destination": "/"
+    },
+    {
+      "source": "/integrations/confluence",
+      "destination": "/integrations/overview"
+    },
+    {
+      "source": "/integrations/jira",
+      "destination": "/integrations/overview"
+    },
+    {
+      "source": "/integrations/linear",
+      "destination": "/integrations/overview"
+    },
+    {
+      "source": "/integrations/analytics",
+      "destination": "/integrations/overview"
+    },
+    {
+      "source": "/integrations/microsoft",
+      "destination": "/integrations/microsoft_365"
+    },
+    {
+      "source": "/interfaces/email",
+      "destination": "/interfaces/whatsapp"
+    },
+    {
+      "source": "/interfaces/slack",
+      "destination": "/integrations/slack"
+    },
+    {
+      "source": "/interfaces/telegram",
+      "destination": "/interfaces/whatsapp"
+    },
+    {
+      "source": "/tools/people-search",
+      "destination": "/skills/bundled-skills"
+    },
+    {
+      "source": "/tools/notification",
+      "destination": "/skills/bundled-skills"
+    },
+    {
+      "source": "/tools/artifacts",
+      "destination": "/skills/bundled-skills"
+    },
+    {
+      "source": "/tools/charts",
+      "destination": "/skills/bundled-skills"
+    },
+    {
+      "source": "/tools/web-search",
+      "destination": "/skills/bundled-skills"
+    },
+    {
+      "source": "/tools/web-scraper",
+      "destination": "/skills/bundled-skills"
     }
   ],
   "favicon": "/favicon.svg",
   "navigation": {
     "groups": [
       {
-        "group": "Overview",
+        "group": "Get Started",
         "pages": [
           "index",
           "getting-started/getting-started",
@@ -89,42 +185,51 @@
         ]
       },
       {
-        "group": "Ways to reach dume",
+        "group": "Core Workspace",
         "pages": [
-          "interfaces/whatsapp",
-          "interfaces/email",
-          "interfaces/phone",
-          "interfaces/slack",
-          "interfaces/telegram"
+          "core-workspace/sessions",
+          "core-workspace/voice-mode",
+          "core-workspace/history",
+          "features/multiple_llm"
         ]
       },
-      
+      {
+        "group": "Routines",
+        "pages": [
+          "routines/overview",
+          "routines/local-vs-cloud",
+          "routines/scheduling-and-templates"
+        ]
+      },
+      {
+        "group": "Skills",
+        "pages": [
+          "skills/overview",
+          "skills/bundled-skills",
+          "skills/custom-skills"
+        ]
+      },
       {
         "group": "Integrations",
-        
         "pages": [
+          "integrations/overview",
           {
             "group": "Email",
-             "expanded": true,
+            "expanded": true,
             "icon": "envelope",
-            
             "pages": [
               "integrations/gmail",
               "features/multiple_accounts"
             ]
           },
-          
-           "integrations/microsoft_365",
-          "integrations/calendar",
-          "integrations/notion",
-          "integrations/google_sheets",
+          "integrations/google-calendar",
           "integrations/google_docs",
+          "integrations/google_sheets",
           "integrations/google-drive",
           "integrations/github",
-          "integrations/jira",
-          "integrations/linear",
-          "integrations/analytics",
-          "integrations/confluence",
+          "integrations/slack",
+          "integrations/notion",
+          "integrations/microsoft_365",
           {
             "group": "MCP",
             "icon": "arrow-up-right-from-square",
@@ -136,69 +241,34 @@
         ]
       },
       {
-        "group": "AI Tools",
+        "group": "Channels",
         "pages": [
-          
-          "tools/artifacts",
-          "tools/charts",
-          "tools/notification",
-          "tools/people-search",
-          "tools/web-search",
-          "tools/web-scraper"
+          "interfaces/whatsapp",
+          "interfaces/phone"
         ]
       },
       {
-        "group": "Workflows",
+        "group": "Account & Settings",
         "pages": [
-          "workflows/getting-started",
-          {
-            "group": "Available Nodes",
-             "expanded": false,
-            "pages": [
-              "workflows/input-node",
-              "workflows/llm-node",
-              "workflows/condition-node",
-              "workflows/tool-node",
-              "workflows/http-node",
-              "workflows/loop-node",
-              "workflows/template-node",
-              "workflows/note-node",
-              "workflows/delay-node",
-              "workflows/trigger-node",
-              "workflows/output-node"
-            ]
-          },
-          {
-            "group": "System Workflows",
-            "expanded": false,
-            "pages": [
-              "system-workflows/email-triage",
-              "system-workflows/morning-briefing"
-            ]
-          }
+          "account-settings/profile-and-security",
+          "account-settings/billing-and-plans",
+          "account-settings/credit-cost-guide",
+          "account-settings/desktop-app",
+          "account-settings/troubleshooting"
         ]
       },
       {
-        "group": "Agents",
+        "group": "Web app vs. Cowork desktop",
         "pages": [
-          "agents/getting-started",
-          "agents/create-agent"
+          "product/dume-cowork",
+          "product/web-app",
+          "product/web-vs-cowork"
         ]
       },
       {
         "group": "Product",
         "pages": [
-          "product/chrome-extension",
-          "product/dume-cowork"
-        ]
-      },
-      {
-        "group": "Use cases",
-        "pages": [
-          "use-cases/task-automation",
-          "use-cases/cowork-scheduled-tasks",
-          "use-cases/dume-cowork-scheduled-tasks",
-          "use-cases/profile-and-data-settings"
+          "product/chrome-extension"
         ]
       }
     ]

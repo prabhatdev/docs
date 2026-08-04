@@ -1,17 +1,75 @@
 ---
-title: "Google Drive integration"
+title: "Google Drive Integration"
 sidebarTitle: "Google Drive"
 icon: "google-drive"
-keywords: ['Google Drive', 'files', 'storage', 'integration']
-description: "Connect Google Drive to Dume.ai. Full documentation coming soon."
-"og:title": "Google Drive integration - Dume.ai"
+keywords: ['Google Drive', 'files', 'storage', 'integration', 'OAuth', 'file search']
+description: "Connect Google Drive to Dume so it can find and organize files through chat."
+"og:title": "Google Drive Integration - Dume.ai"
+"og:description": "Connect Google Drive to find and organize files through natural language commands."
 "twitter:card": "summary"
+"twitter:title": "Google Drive Integration - Dume.ai"
+"twitter:description": "Manage Google Drive files with AI assistance."
 ---
 
-## Coming soon
+## Overview
+Connect Google Drive so Dume can find files, check what's in a folder, move files around, and pull a file's contents into a conversation.
 
-OAuth setup, supported file actions, and example workflows for Google Drive will be added here.
+<Warning>
+Google Drive is one of the newer integrations and still being rolled out. If a Drive request doesn't work yet, try again shortly, or fall back to [Google Docs](/integrations/google_docs) or [Google Sheets](/integrations/google_sheets) if the file is one of those types.
+</Warning>
 
-<Note>
-Content is in progress. For document editing, see [Google Docs](/integrations/google_docs).
-</Note>
+## 1. Connect (OAuth)
+<Steps>
+  <Step title="Open Integrations">Go to **Integrations**.</Step>
+  <Step title="Authenticate">Click **Connect Integration** on the Google Drive card and choose the right Google account.</Step>
+  <Step title="Grant Access">Allow the requested Drive permissions.</Step>
+  <Step title="Test">Ask: "Find my recent Google Drive files."</Step>
+</Steps>
+
+<Tip>Revoke anytime: Google Account → Security → Third-party access.</Tip>
+
+## 2. Supported actions
+- Find files or folders by name or keyword
+- Download a file's contents into the conversation
+- Create a folder
+- Move a file to a different folder
+- Delete a file
+
+## 3. Quick commands
+```
+Find files about the Q4 budget
+List everything in my "Marketing" folder
+Move "Old Contract.pdf" to Archive
+Create a folder called "2025 Contracts"
+```
+
+## 4. Common patterns
+<Tabs>
+<Tab title="Find & review">
+```
+Find spreadsheets modified this week
+What's in my "Q1 Planning" folder?
+```
+</Tab>
+<Tab title="Organize">
+```
+Move all files tagged "draft" to Archive
+Create a folder called "2025 Contracts"
+```
+</Tab>
+</Tabs>
+
+## 5. Troubleshooting
+| Issue | Fix |
+| ----- | --- |
+| File not found | Use the exact filename, or search by keyword instead |
+| Permission error | Reconnect and grant Drive access |
+| Wrong file affected | Include the full filename and folder to disambiguate |
+
+## 6. Security
+- OAuth tokens only, no passwords stored
+- Scoped to the Drive access you grant
+- Revocable anytime
+- Move and delete actions can request confirmation
+
+<Check>Google Drive connected. You can now find and organize files via chat.</Check>

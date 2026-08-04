@@ -1,85 +1,88 @@
 ---
 title: "Getting Started"
 sidebarTitle: "Quick Start"
-keywords: ['getting started', 'quick setup', 'automation', 'workflow', 'Gmail integration', 'Calendar integration', 'first automation', 'tool connection', 'productivity']
-description: "Connect your first tools and launch your first automation workflow with Dume.ai in under 3 minutes. Learn how to integrate Gmail, Calendar, and create powerful automations."
-"og:title": "Getting Started with Dume.ai - Quick Setup in 3 Minutes"
-"og:description": "Connect your first tools and launch your first automation workflow with Dume.ai in under 3 minutes. Step-by-step guide for beginners."
+keywords: ['getting started', 'quick setup', 'Gmail integration', 'Calendar integration', 'first task', 'tool connection', 'productivity']
+description: "Create a Dume account, connect Gmail and Calendar, and send your first message in under three minutes."
+"og:title": "Getting Started with Dume.ai - Quick Setup"
+"og:description": "Connect your first tools and send your first message to Dume in under three minutes."
 "twitter:card": "summary"
-"twitter:title": "Getting Started with Dume.ai - Quick Setup Guide"
-"twitter:description": "Connect Gmail, Calendar, and create your first automation in under 3 minutes with Dume.ai."
+"twitter:title": "Getting Started with Dume.ai"
+"twitter:description": "Connect Gmail and Calendar, then send your first message to Dume."
 ---
 
 <Tip>
-Dume.ai becomes extremely useful when you connect at least email + one knowledge source (Notion / Confluence) + one task system (Jira / Linear).
+Dume is most useful once you've connected at least one inbox and your calendar. Most of the built-in templates draw on both.
 </Tip>
 
-<CardGroup cols={3}>
+<CardGroup cols={2}>
   <Card title="Templates" icon="bolt" href="#">
-    Ready-made automations (Inbox Summary, Standup, Company Research).
+    Ready-made prompts on the dashboard: meeting briefs, cold outreach, competitive research, and more.
   </Card>
-  <Card title="Workflow Studio" icon="arrow-progress" href="/workflows/getting-started">
-    Drag‑and‑drop multi-step workflows across tools.
-  </Card>
-  <Card title="Agent Studio" icon="robot" href="#">
-    Configure autonomous agents with memory + tool access.
+  <Card title="Routines" icon="clock" href="/routines/overview">
+    Schedule a recurring instruction, like a daily briefing, that runs on its own.
   </Card>
 </CardGroup>
 
-<Image src="/images/getting-started.png" alt="Quick Start" />
+{/* TODO: Phase 3 screenshot — Dashboard with Suggested Templates */}
 
 <Steps>
   <Step title="Create an account">
-    Go to <a href="https://app.dume.ai" target="_blank" rel="noopener noreferrer">Dume.ai</a>, enter your email and OTP, set password and login.
+    Go to <a href="https://app.dume.ai" target="_blank" rel="noopener noreferrer">app.dume.ai</a>, enter your email and OTP, set a password, and log in.
   </Step>
   <Step title="Connect core tools">
     Visit <a href="https://app.dume.ai/integrations" target="_blank" rel="noopener noreferrer">Integrations</a> and connect:
     <ul>
-      <li><strong>Gmail</strong> (email summarization+ triage + search + reply context)</li>
-      <li><strong>Calendar</strong> (meeting scheduling & follow-ups)</li>
+      <li><strong>Gmail</strong> — read, search, and reply to email</li>
+      <li><strong>Google Calendar</strong> — see and manage your schedule</li>
     </ul>
-    All via OAuth. Revocable anytime. Multi-account supported.
-    <Image src="/images/integrations.png" alt="Integrations" />
+    Both connect over OAuth, and you can revoke access at any time. See [Connect your first tool](/getting-started/connect-your-first-tool) for the full walkthrough.
+    {/* TODO: Phase 3 screenshot — Integrations page with Gmail and Google Calendar cards */}
   </Step>
-  <Step title="Clone and run a workflow">
-    Open <a href="https://app.dume.ai/workflow" target="_blank" rel="noopener noreferrer">Workflow</a> page → Switch to Public Workflows Tab→ choose <em>Email Triage</em> → <strong>Clone Workflow</strong> → <strong>Run</strong>.
-    <br/><em>Connected email account's emails will be auto triaged once workflow executes.</em>
+  <Step title="Send your first message">
+    Ask Dume something real: "Summarize my unread emails from today" or "What's on my calendar tomorrow?" Dume pulls live data from the tools you just connected, not a cached summary.
   </Step>
 </Steps>
 
+## Example prompts
+
 <Tabs>
-  <Tab title="Quick Prompt">
-    Example prompt to convert unread emails to tasks:
+  <Tab title="Inbox to priorities">
     <CodeGroup>
       <CodeBlock language="markdown">
-        {"Summarize my last 50 unread emails. Flag any that need a reply today. Output JSON with fields: subject, sender, priority, suggested_action.\n"}
+        {"Summarize my last 50 unread emails. Flag any that need a reply today, and tell me why.\n"}
       </CodeBlock>
     </CodeGroup>
   </Tab>
-  <Tab title="PRD → Jira">
-    Use the PRD Generator template then:
+  <Tab title="Meeting brief">
     <CodeGroup>
       <CodeBlock language="markdown">
-        {"Prompt:\nFrom the PRD in Notion titled 'Mobile Onboarding Revamp', create Jira stories with acceptance criteria, labels=onboarding,mobile, estimate story points by complexity.\n"}
+        {"I have a call with Acme Corp tomorrow at 2pm. Research the company and give me a one-page brief: what they do, recent news, and likely talking points.\n"}
       </CodeBlock>
     </CodeGroup>
   </Tab>
 </Tabs>
 
+## Suggested templates
 
-## Popular Automation Templates
+These show up on the dashboard the first time you sign in:
 
 <CardGroup cols={2}>
-  <Card title="Morning Digest" icon="envelope-open-text">
-    Unified summary: overnight emails, calendar changes, new tasks, relevant docs.
+  <Card title="Prepare a Meeting Brief" icon="file-lines">
+    Research a company or person before a call and get back a concise summary.
   </Card>
-  <Card title="Standup Automation" icon="wand-sparkles">
-    Agent compiles yesterday's commits, tickets moved, meeting notes → posts to Slack.
+  <Card title="Draft a Cold Outreach Email" icon="paper-plane">
+    Research a target prospect and write a personalized outreach email.
   </Card>
-  <Card title="Company Research" icon="search">
-    Enter domain → collects site, LinkedIn, funding, news → structured profile.
+  <Card title="Competitive Intelligence Report" icon="chart-line">
+    Research key competitors and summarize their positioning and pricing.
   </Card>
-  <Card title="PRD to Tickets" icon="ballot-check">
-    Turn product document into sprint-ready Jira issues with acceptance criteria.
+  <Card title="Send Me a Daily Briefing" icon="envelope-open-text">
+    Research today's top news in your industry and email you a morning summary.
+  </Card>
+  <Card title="Call Me When My Task Is Done" icon="phone">
+    Run a background task and call your phone to report the result.
+  </Card>
+  <Card title="Summarise Industry News" icon="newspaper">
+    Search the web for the latest news in a sector and deliver a summary.
   </Card>
 </CardGroup>

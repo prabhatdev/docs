@@ -1,6 +1,6 @@
 # Dume.ai Documentation
 
-Dume.ai is an AI Executive Assistant that simplifies your workday through intelligent automation, tool integration, and workflow management.
+Dume.ai is an AI executive assistant you talk to like a person. It reads your inbox, calendar, and docs, drafts replies, files tickets, and runs recurring routines on a schedule — from the web app, the Cowork desktop app, or WhatsApp.
 
 ## Getting Started
 - [Introduction](/index) - Overview of Dume.ai and quick start guide
@@ -9,15 +9,16 @@ Dume.ai is an AI Executive Assistant that simplifies your workday through intell
 - [Chat Interface](/getting-started/chat-interface) - Learn to communicate with your AI assistant
 
 ## Integrations
-- [Email Integration](/integrations/email) - Gmail integration and email management
-- [Calendar Integration](/integrations/calendar) - Google Calendar scheduling and management
-- [GitHub Integration](/integrations/github) - Repository management and PR reviews
-- [Jira Integration](/integrations/jira) - Ticket creation and project management
-- [Confluence Integration](/integrations/confluence) - Document search and creation
-- [Notion Integration](/integrations/notion) - Knowledge base management
+- [Gmail](/integrations/gmail) - Email summarization, triage, search, and drafting
+- [Google Calendar](/integrations/calendar) - Scheduling and meeting management
 - [Google Docs](/integrations/google_docs) - Document creation and editing
 - [Google Sheets](/integrations/google_sheets) - Spreadsheet management
-- [Microsoft Integration](/integrations/microsoft) - Office 365 and Teams integration
+- [Google Drive](/integrations/google-drive) - File search and storage
+- [GitHub](/integrations/github) - Repository management and PR reviews
+- Slack - Tool access for messages and channels (dedicated page coming in the integrations rewrite)
+- [Notion](/integrations/notion) - Knowledge base management
+- [Microsoft 365](/integrations/microsoft_365) - Outlook and Office document access
+- [MCP Servers](/integrations/mcp/overview) - Connect any custom MCP server by URL
 
 ## Tools
 - [Artifacts](/tools/artifacts) - Create and manage documents, spreadsheets, code, and images
@@ -27,18 +28,12 @@ Dume.ai is an AI Executive Assistant that simplifies your workday through intell
 - [People Search](/tools/people-search) - Professional contact discovery
 - [Notifications](/tools/notification) - Automated email alerts and notifications
 
-## Workflows
-- [Workflow Builder](/workflows/getting-started) - Create custom automation sequences
-- [Workflow Nodes](/workflows/input-node) - Available workflow building blocks
-- [Workflow Examples](/workflow-examples/linkdin-generator) - Pre-built workflow templates
-
 ## Key Features
-- **20+ Tool Integrations**: Connect with popular business tools
-- **Workflow Automation**: Create custom automation sequences
-- **Natural Language Interface**: Communicate using conversational language
-- **AI-Powered Assistance**: Intelligent help with daily tasks
-- **Executive Productivity**: Designed for business professionals and leaders
-- **Cross-Platform**: Available on web, mobile, and desktop
+- **Real integrations**: Gmail, Google Calendar, Docs, Sheets, Drive, GitHub, Slack, Notion, Microsoft 365, plus any custom MCP server
+- **Routines**: schedule a recurring instruction and Dume runs it on its own, locally or in the cloud
+- **Natural language interface**: no commands to memorize, just ask
+- **WhatsApp and phone**: message or call Dume directly, no app required
+- **Cross-platform**: web app and Cowork desktop app share the same experience
 
 ## Common Use Cases
 - Email management and drafting
@@ -47,7 +42,6 @@ Dume.ai is an AI Executive Assistant that simplifies your workday through intell
 - Project management and task tracking
 - Data analysis and visualization
 - Research and information gathering
-- Team collaboration and communication
-- Workflow automation and process optimization
+- Recurring reports and daily briefings
 
 For comprehensive documentation and tutorials, visit https://docs.dume.ai
