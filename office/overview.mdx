@@ -1,0 +1,76 @@
+---
+title: "Dume Office"
+sidebarTitle: "Overview"
+description: "Native Word, Excel, PowerPoint, and PDF editors built into Cowork desktop, with Dume's AI copilot working inside every file."
+icon: "grid-2"
+keywords: ['Dume Office', 'native document editor', 'AI Word editor', 'AI Excel editor', 'AI PowerPoint editor', 'AI PDF editor', 'Cowork desktop']
+---
+
+<Note>
+Dume Office is in **beta**. It's available today on macOS and Windows, but expect rough edges while it's being finished.
+</Note>
+
+Dume Office is a set of four native editors built into Cowork desktop: **Docs**, **Sheets**, **Slides**, and **PDF**. They open and save real `.docx`, `.xlsx`, `.pptx`, and `.pdf` files on your machine, not a proprietary format, and each one has Dume's AI copilot working inside it.
+
+{/* TODO: screenshot — Dume Office app grid in Cowork desktop */}
+
+<Warning>
+Dume Office runs locally and needs local file access, so it's only in [Cowork desktop](/product/dume-cowork), not the web app. See [Web app vs. Cowork desktop](/product/web-vs-cowork).
+</Warning>
+
+## The AI copilot works inside the file
+
+Every Dume Office app has the same Dume agent built in, not a separate assistant. Ask it to do anything you'd otherwise do by hand: write a first draft, rewrite or reformat a selection, restructure a whole document, clean up a spreadsheet, redesign a slide, or answer a question about a PDF you have open. It reads and edits the file directly, so you stay in the app instead of copying generated text in from a chat window.
+
+## Three ways to open a file
+
+<Steps>
+  <Step title="Ask in chat">
+    Describe what you want in any Dume session, e.g. "Create a slide deck about our Q3 launch," and Dume opens the matching editor with a first draft ready to review.
+  </Step>
+  <Step title="Start from Dume Office directly">
+    Open Dume Office in Cowork and use **New File** to start a blank Doc, Sheet, Slide deck, or PDF without going through chat first.
+  </Step>
+  <Step title="Open an existing file">
+    Open a local `.docx`, `.xlsx`, `.pptx`, or `.pdf` from Cowork and it launches in the matching native editor, already editable.
+  </Step>
+</Steps>
+
+## Working with Google Drive files
+
+Dume Office edits files on your machine, it doesn't edit a Google Doc or Sheet live the way the [Google Docs](/integrations/google_docs) and [Google Sheets](/integrations/google_sheets) integrations do. To edit a Drive file in Dume Office: download it, edit it locally with the AI copilot, then push the updated file back to Drive when you're done.
+
+<Tip>
+Use the Google Docs/Sheets integrations when you want Dume to edit a file that lives in Drive and stays there. Use Dume Office when you want a real native file on disk, or you're working with a format those integrations don't cover (PowerPoint, PDF).
+</Tip>
+
+## The four apps
+
+<CardGroup cols={2}>
+  <Card title="Dume Docs" icon="file-word" href="/office/docs">
+    A native `.docx` word processor with the AI copilot built in.
+  </Card>
+  <Card title="Dume Sheets" icon="file-excel" href="/office/sheets">
+    A native `.xlsx` spreadsheet editor with the AI copilot built in.
+  </Card>
+  <Card title="Dume Slides" icon="file-powerpoint" href="/office/slides">
+    A native `.pptx` presentation editor with the AI copilot built in.
+  </Card>
+  <Card title="Dume PDF" icon="file-pdf" href="/office/pdf">
+    Open, read, and edit `.pdf` files with the AI copilot built in.
+  </Card>
+</CardGroup>
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="How is this different from the Google Docs / Sheets integrations?">
+    The integrations edit a file that lives in Google Drive, over the API, and it never leaves Drive. Dume Office edits a real file on your machine. You can move a file between the two by downloading it from Drive into Dume Office, or pushing a local file back up to Drive.
+  </Accordion>
+  <Accordion title="Is Dume Office available on the web app?">
+    No. It needs local file access, which is a Cowork desktop feature. See [Web app vs. Cowork desktop](/product/web-vs-cowork).
+  </Accordion>
+  <Accordion title="Is it stable enough for real work?">
+    It's in beta. It's usable day to day, but expect occasional rough edges while it's actively being finished. If something breaks, [file it in the community](https://discord.gg/8qVb5tC4) or check [Troubleshooting](/account-settings/troubleshooting).
+  </Accordion>
+</AccordionGroup>
