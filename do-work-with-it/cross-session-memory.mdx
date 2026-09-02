@@ -1,0 +1,31 @@
+---
+title: "Cross-Session Memory"
+sidebarTitle: "Cross-Session Memory"
+description: "How Dume can look up and answer from a different past session, not just the one you're in."
+icon: "brain"
+keywords: ['session memory', 'past conversations', 'chat history', 'Dume memory']
+---
+
+Dume isn't limited to what's happened in the session you're currently in. From any session, you can ask about a different past one, and Dume looks it up in [History](/core-workspace/history), opens it, and answers from what's actually in it.
+
+```
+What did I decide in the session about the Acme deal?
+Find the session where we discussed the Q3 launch and remind me what was next.
+What did I ask you to do in yesterday's onboarding session?
+```
+
+## What happens
+
+Give Dume whatever clue you have, a title, a rough topic, a project or person's name, and it matches that against your session History:
+
+- **One clear match** — Dume opens it, reads it, and answers.
+- **A few likely matches** — Dume asks which one you meant instead of guessing.
+- **No confident match** — Dume says so rather than making something up, the same as it does when a connected tool has no data. See [When Dume asks you something back](/getting-started/chat-interface#when-dume-asks-you-something-back).
+
+## Getting a better match
+
+This isn't a search over every message you've ever sent, it matches on what's findable in History. A clear, specific session title makes this far more reliable than a generic one; rename a session from the three-dot menu as soon as it's clear what it's about. See [History](/core-workspace/history) for pin, rename, and delete.
+
+<Tip>
+If Dume can't find what you're after, the fastest fix is opening the session yourself from History and pointing Dume at it directly: "Look at the session titled 'Acme renewal' and summarize what we agreed."
+</Tip>

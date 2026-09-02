@@ -1,0 +1,24 @@
+---
+title: "What Uses Credits"
+sidebarTitle: "What Uses Credits"
+description: "When Dume actually spends credits, and how to keep usage down."
+icon: "coins"
+keywords: ['Dume credits', 'token usage', 'credit cost', 'billing', 'usage control']
+---
+
+Setup doesn't cost anything on its own. Connecting an integration, enabling a skill, or creating a routine just configures Dume, it doesn't run the model. Credits get spent when a session actually runs and Dume generates a response.
+
+## When usage starts
+
+- **Sending a message** runs the model on your request and costs credits.
+- **A skill running inside a task** costs the same way; the skill's instructions get loaded in and the model follows them.
+- **A routine firing on schedule** costs credits the same as if you'd sent that message yourself, since it's still a session running.
+
+There's no flat per-message fee. Cost scales with how much the model actually reads and writes: a short answer on a light model can be a single credit, a long research task on a premium model can run into the dozens. See the [Credit Cost Guide](/account-settings/credit-cost-guide) for real numbers by task and model.
+
+## Keeping usage down
+
+- Use a cheaper or free model (like Ternary Bonsai 27B) for quick questions, and save premium models for work that actually needs the extra reasoning; see [Choosing a model](/features/multiple_llm).
+- Be specific in your prompt. A vague request often costs more in back-and-forth clarification than a precise one would have upfront.
+- Scope routines to what you actually need summarized or done, not everything a tool could return.
+- For a repeated task, a well-scoped custom skill can make each run shorter and more predictable than starting from scratch every time; see [Building a custom skill](/skills/custom-skills).

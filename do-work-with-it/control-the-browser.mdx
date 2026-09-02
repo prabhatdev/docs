@@ -1,0 +1,32 @@
+---
+title: "Control the Browser"
+sidebarTitle: "Control the Browser"
+description: "How Dume automates a real browser session inside Cowork desktop."
+icon: "window-maximize"
+keywords: ['browser automation', 'agent browser', 'Cowork desktop', 'web scraping', 'form filling']
+---
+
+Dume can drive an actual browser: open a page, click, fill in forms, scrape content, and take screenshots, the same as if you'd done it yourself. This runs through the **Agent browser** skill, which is only in [Cowork desktop](/product/dume-cowork), not the web app; driving a real browser only makes sense running locally.
+
+## How to use it
+
+Just ask for the task in plain language. Dume picks the Agent browser skill on its own, the same way it picks any other skill:
+
+```
+Go to our internal dashboard and pull this week's numbers into a summary
+Check our competitor's pricing page and tell me if anything changed
+Fill out this form on the vendor portal with the details from my last email
+```
+
+## Using your existing logins
+
+By default, Dume automates a blank browser session with no logins. If you'd rather it reuse your actual Chrome profile, so it can act on sites you're already signed into, turn that on under **Settings → Desktop App → Chrome profile access**. This is off by default and requires your explicit consent to enable. See [Desktop App settings](/account-settings/desktop-app).
+
+<Note>
+This is browser automation, not full desktop control. Dume can act inside the browser it's driving; it doesn't yet control other apps on your machine.
+</Note>
+
+## Related
+
+- [Bundled skills](/skills/bundled-skills) — the Agent browser skill alongside everything else Cowork ships with
+- [Dume Cowork](/product/dume-cowork) — what else running locally gets you

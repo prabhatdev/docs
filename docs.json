@@ -194,6 +194,24 @@
         ]
       },
       {
+        "group": "Do Work With It",
+        "pages": [
+          "do-work-with-it/control-the-browser",
+          "do-work-with-it/cross-session-memory",
+          "do-work-with-it/what-uses-credits"
+        ]
+      },
+      {
+        "group": "Dume Office",
+        "pages": [
+          "office/overview",
+          "office/docs",
+          "office/sheets",
+          "office/slides",
+          "office/pdf"
+        ]
+      },
+      {
         "group": "Routines",
         "pages": [
           "routines/overview",
